@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
-using Ivi.Visa;
 using Ivi.Visa.Interop;
 using System.Threading;
 
@@ -35,7 +28,6 @@ namespace FlexRFCableTester
         {
             using (var insertComboBox = new StreamReader("settings.ini"))
             {
-
                 string line;
                 while ((line = insertComboBox.ReadLine()) != null)
                 {
@@ -45,10 +37,8 @@ namespace FlexRFCableTester
                         line = line.Replace("]", "");
                         comboBoxCableSettings.Items.Add(line);
                     }
-
                 }
             }
-
         }
 
         private void comboBoxCableSettings_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +66,7 @@ namespace FlexRFCableTester
             try
             {
                 var MyIni = new IniFile("Settings.ini");
-                
+
                 if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                 {
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
@@ -86,8 +76,6 @@ namespace FlexRFCableTester
                 {
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
                 }
-
-      
 
             }
             catch
@@ -136,26 +124,24 @@ namespace FlexRFCableTester
                 MessageBox.Show("Error: " + ex);
             }
         }
-
-        private void buttonZeroCal_Click(object sender, EventArgs e)
+        private void zeroCalProcess()
         {
             bool statusGetIdnSignalGen = false;
             bool statusGetIdnPowerMeter = false;
+            string errorResponse = string.Empty;
             try
             {
                 textBoxResponse.Text = "Waiting response...." + Environment.NewLine;
                 if (checkBoxPowerM.Checked)
                 {
                     statusGetIdnPowerMeter = getEquipmentIdnbyGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
-
                     if (statusGetIdnPowerMeter)
                     {
                         try
                         {
                             writeCommand("*CLS", visaPowerMeter);
                             writeCommand("SYST:ERR?", visaPowerMeter);
-
-                            string errorResponse = visaPowerMeter.ReadString();
+                            errorResponse = visaPowerMeter.ReadString();
                             textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
                             Application.DoEvents();
 
@@ -167,7 +153,6 @@ namespace FlexRFCableTester
                             {
                                 Thread.Sleep(1000);
                                 Application.DoEvents();
-
                             }
                             if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                             {
@@ -198,7 +183,7 @@ namespace FlexRFCableTester
                             writeCommand("*CLS", visaSignalGen);
                             writeCommand("SYST:ERR?", visaSignalGen);
 
-                            string errorResponse = visaSignalGen.ReadString();
+                            errorResponse = visaSignalGen.ReadString();
                             textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
 
                             zeroCalSignalGenerator zCsG = new zeroCalSignalGenerator();
@@ -231,12 +216,18 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Erro ao comunicar com o PowerMeter!!!" + ex);
             }
+
+        }
+        private void buttonZeroCal_Click(object sender, EventArgs e)
+        {
+            zeroCalProcess();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (zeroCalstatus)
             {
+                //to do!!!!
             }
             else
                 MessageBox.Show("Realize o Zero Cal antes de começar!!!");
