@@ -645,11 +645,11 @@
         private System.Windows.Forms.Label labelEquipmentNames;
         private System.Windows.Forms.GroupBox groupBoxCableSettings;
         private System.Windows.Forms.PictureBox pictureBoxImg;
-        private System.Windows.Forms.TextBox textBoxAverage;
-        private System.Windows.Forms.TextBox textBoxIntervalFrequency;
-        private System.Windows.Forms.TextBox textBoxDbm;
-        private System.Windows.Forms.TextBox textBoxStopFrequency;
-        private System.Windows.Forms.TextBox textBoxStartFrequency;
+        public System.Windows.Forms.TextBox textBoxAverage;
+        public System.Windows.Forms.TextBox textBoxIntervalFrequency;
+        public System.Windows.Forms.TextBox textBoxDbm;
+        public System.Windows.Forms.TextBox textBoxStopFrequency;
+        public System.Windows.Forms.TextBox textBoxStartFrequency;
         private System.Windows.Forms.ComboBox comboBoxCableSettings;
         private System.Windows.Forms.Label labelAverage;
         private System.Windows.Forms.Label labelIntervalFrequency;

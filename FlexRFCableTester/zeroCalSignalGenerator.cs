@@ -8,6 +8,10 @@ namespace FlexRFCableTester
         public static string resultZeroCalSigGen = string.Empty;
         public MessageBasedSession visaSignalGen;
         FormApp frmMain = new FormApp();
+        string startFreq = string.Empty;
+        string stopFreq = string.Empty;
+        string interval = string.Empty;
+        string powerLevel = string.Empty;
 
         public zeroCalSignalGenerator()
         {
@@ -17,21 +21,21 @@ namespace FlexRFCableTester
         {
             string visaResourceName = frmMain.textBoxAddressSignalGen.Text;
             mBs = new MessageBasedSession(visaResourceName);
+
+            startFreq = frmMain.textBoxStartFrequency.Text;
+            stopFreq = frmMain.textBoxStopFrequency.Text;
+            interval = frmMain.textBoxIntervalFrequency.Text;
+            powerLevel = frmMain.textBoxDbm.Text;
+
             //to do! zerocal commands for SignalGen
 
-            var MyIni = new IniFile("Settings.ini");
-
-            if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-            {
-                var startFrequency = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-            }
 
             return true;
         }
 
         private void buttonOkSg_Click(object sender, System.EventArgs e)
         {
-           
+
             bool result = zeroCalSignalGenMtd(visaSignalGen);
 
             if (result)
