@@ -9,7 +9,7 @@ namespace FlexRFCableTester
     {
         public static string resultZeroCalPowerMeter = string.Empty;
         FormApp frmMain = new FormApp();
-        public MessageBasedSession visaPowerMeter2;
+        public MessageBasedSession visaPowerMeter;
 
         public zeroCalPowerMeter()
         {
@@ -17,6 +17,9 @@ namespace FlexRFCableTester
         }
         public bool zeroCalPowerMeterMtd(MessageBasedSession mBs)
         {
+            string visaResourceName = frmMain.textBoxAddressPowerM.Text;
+            mBs = new MessageBasedSession(visaResourceName);
+
             frmMain.writeCommand("CAL?", mBs);
             int count = 45;
             do
@@ -40,6 +43,17 @@ namespace FlexRFCableTester
                 labelCalStatusPm.Text = "Power Meter Zero Cal Failed!!!";
             }
             return false;
+        }
+
+        private void buttonOkPm_Click(object sender, EventArgs e)
+        {
+            bool result = zeroCalPowerMeterMtd(visaPowerMeter);
+
+            if (result)
+                resultZeroCalPowerMeter = "Finished";
+            else
+                resultZeroCalPowerMeter = "Failed";
+
         }
     }
 }

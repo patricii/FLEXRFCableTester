@@ -46,6 +46,7 @@
             this.buttonOkSg.TabIndex = 0;
             this.buttonOkSg.Text = "OK";
             this.buttonOkSg.UseVisualStyleBackColor = false;
+            this.buttonOkSg.Click += new System.EventHandler(this.buttonOkSg_Click);
             // 
             // labelCalStatusSg
             // 

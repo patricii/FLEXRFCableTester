@@ -55,6 +55,7 @@
             this.buttonOkPm.TabIndex = 2;
             this.buttonOkPm.Text = "OK";
             this.buttonOkPm.UseVisualStyleBackColor = false;
+            this.buttonOkPm.Click += new System.EventHandler(this.buttonOkPm_Click);
             // 
             // labelCalStatusPm
             // 

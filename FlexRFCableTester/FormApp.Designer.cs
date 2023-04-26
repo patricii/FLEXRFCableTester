@@ -637,8 +637,8 @@
         private System.Windows.Forms.Label labelLanAlias;
         private System.Windows.Forms.Label labelEquipmentsLAN;
         private System.Windows.Forms.GroupBox groupBoxGPIB;
-        private System.Windows.Forms.TextBox textBoxAddressSignalGen;
-        private System.Windows.Forms.TextBox textBoxAddressPowerM;
+        public System.Windows.Forms.TextBox textBoxAddressSignalGen;
+        public System.Windows.Forms.TextBox textBoxAddressPowerM;
         private System.Windows.Forms.CheckBox checkBoxSignalGen;
         private System.Windows.Forms.CheckBox checkBoxPowerM;
         private System.Windows.Forms.Label labelAddressGPIB;
