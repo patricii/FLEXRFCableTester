@@ -22,6 +22,7 @@ namespace FlexRFCableTester
         {
             InitializeComponent();
             readSettingsAndFillComboBox();
+            getFrequencyFromFile();
         }
 
         public void readSettingsAndFillComboBox()
@@ -61,7 +62,7 @@ namespace FlexRFCableTester
             }
         }
 
-        private void fillFrequency()
+        private void getFrequencyFromFile()
         {
             try
             {
