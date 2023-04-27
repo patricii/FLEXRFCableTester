@@ -1,20 +1,3 @@
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe.config
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.pdb
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.FormApp.resources
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.Properties.Resources.resources
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.zeroCalPowerMeter.resources
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.zeroCalSignalGenerator.resources
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.GenerateResource.cache
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CoreCompileInputs.cache
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.pdb
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.Common.dll
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.Common.Native.dll
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.VisaNS.dll
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe.config
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.ResolveComReference.cache
-C:\Projetos\FlexRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CopyComplete
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe.config
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.pdb
@@ -32,3 +15,21 @@ C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCabl
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CopyComplete
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe.config
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.exe
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.Common.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Debug\NationalInstruments.VisaNS.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe.config
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.ResolveComReference.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.FormApp.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.Properties.Resources.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.zeroCalPowerMeter.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.zeroCalSignalGenerator.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.GenerateResource.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CoreCompileInputs.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CopyComplete
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csprojAssemblyReference.cache

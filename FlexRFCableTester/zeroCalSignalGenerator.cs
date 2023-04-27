@@ -12,6 +12,7 @@ namespace FlexRFCableTester
         string stopFreq = string.Empty;
         string interval = string.Empty;
         string powerLevel = string.Empty;
+        string average = string.Empty;
 
         public zeroCalSignalGenerator()
         {
@@ -26,6 +27,7 @@ namespace FlexRFCableTester
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
+            average = frmMain.textBoxAverage.Text;
 
             //to do! zerocal commands for SignalGen
 
@@ -39,9 +41,15 @@ namespace FlexRFCableTester
             bool result = zeroCalSignalGenMtd(visaSignalGen);
 
             if (result)
+            {
                 resultZeroCalSigGen = "Finished";
+                frmMain.logMessage("Zero Cal Signal Generator Finished Successfully");
+            }
             else
+            {
                 resultZeroCalSigGen = "Failed";
+                frmMain.logMessage("Zero Cal Signal Generator Failed!!!");
+            }
         }
     }
 }

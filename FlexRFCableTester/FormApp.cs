@@ -102,8 +102,9 @@ namespace FlexRFCableTester
                 string visaResourceName = gpibAddress; // GPIB adapter 0, Instrument address 20
                 visaEquip = new MessageBasedSession(visaResourceName);
                 writeCommand("*IDN?", visaEquip); // write to instrument
+                logMessage("Write *IDN?");
                 string response = visaEquip.ReadString(); // read from instrument
-                logMessage(response);
+                logMessage("Read " + response);
             }
             catch
             {
@@ -114,7 +115,7 @@ namespace FlexRFCableTester
         public void logMessage(string message)
         {
             DateTime now = DateTime.Now;
-            textBoxResponse.Text += now.ToString() + " - [ -> "  + message + " ]"+ Environment.NewLine;
+            textBoxResponse.Text += now.ToString() +" - [ -> "  + message + " ]"+ Environment.NewLine;
         }
 
         public void getEquipmentIdnByLAN(string equipAlias)
@@ -125,8 +126,9 @@ namespace FlexRFCableTester
                 rMng = new Ivi.Visa.Interop.ResourceManager();
                 ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
                 ioTestSet.WriteString("*IDN?", true);
+                logMessage("Write *IDN?");
                 string response = ioTestSet.ReadString();
-                logMessage(response); 
+                logMessage("Read " + response); 
             }
             catch (Exception ex)
             {
@@ -144,9 +146,11 @@ namespace FlexRFCableTester
                 try
                 {
                     writeCommand("*CLS", visaPowerMeter);
+                    logMessage("Write *CLS");
                     writeCommand("SYST:ERR?", visaPowerMeter);
+                    logMessage("Write SYST:ERR?");
                     errorResponse = visaPowerMeter.ReadString();
-                    logMessage(errorResponse);
+                    logMessage("Read " + errorResponse);
                     Application.DoEvents();
 
                     zeroCalPowerMeter zCp = new zeroCalPowerMeter();
@@ -160,7 +164,7 @@ namespace FlexRFCableTester
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                     {
-                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!"):
+                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!");
                         zeroCalstatus = true;
                     }
                     else

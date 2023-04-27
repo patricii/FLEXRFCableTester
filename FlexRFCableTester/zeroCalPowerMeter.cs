@@ -21,12 +21,14 @@ namespace FlexRFCableTester
             mBs = new MessageBasedSession(visaResourceName);
 
             frmMain.writeCommand("CAL?", mBs);
+            frmMain.logMessage("Write CAL?");
             int count = 45;
             do
             {
                 Thread.Sleep(1000);
                 count--;
                 labelCalStatusPm.Text = "Aguarde o Zero Cal do Power Meter... " + count + "s";
+                frmMain.logMessage("Aguarde o Zero Cal do Power Meter... " + count + "s");
                 Application.DoEvents();
             }
             while (count != 0);
@@ -41,6 +43,7 @@ namespace FlexRFCableTester
             else
             {
                 labelCalStatusPm.Text = "Power Meter Zero Cal Failed!!!";
+                frmMain.logMessage("Power Meter Zero Cal Failed!!!");
             }
             return false;
         }
@@ -50,10 +53,16 @@ namespace FlexRFCableTester
             bool result = zeroCalPowerMeterMtd(visaPowerMeter);
 
             if (result)
+            {
                 resultZeroCalPowerMeter = "Finished";
-            else
-                resultZeroCalPowerMeter = "Failed";
+                frmMain.logMessage("Zero Cal Power Meter Finished Successfully");
+            }
 
+            else
+            {
+                resultZeroCalPowerMeter = "Failed";
+                frmMain.logMessage("Zero Cal Power Meter Failed!!!");
+            }
         }
     }
 }
