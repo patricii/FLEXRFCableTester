@@ -124,99 +124,66 @@ namespace FlexRFCableTester
                 MessageBox.Show("Error: " + ex);
             }
         }
-        private void zeroCalProcess()
+        private void setZeroCalGPIB(MessageBasedSession mBS, string equipAddress)
         {
-            bool statusGetIdnSignalGen = false;
-            bool statusGetIdnPowerMeter = false;
+            bool statusGetIdn = false;
             string errorResponse = string.Empty;
+            statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
+
+            if (statusGetIdn)
+            {
+                try
+                {
+                    writeCommand("*CLS", visaPowerMeter);
+                    writeCommand("SYST:ERR?", visaPowerMeter);
+                    errorResponse = visaPowerMeter.ReadString();
+                    textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
+                    Application.DoEvents();
+
+                    zeroCalPowerMeter zCp = new zeroCalPowerMeter();
+                    zCp.Show();
+                    Application.DoEvents();
+
+                    while (zeroCalPowerMeter.resultZeroCalPowerMeter != "Finished" && zeroCalPowerMeter.resultZeroCalPowerMeter == string.Empty)
+                    {
+                        Thread.Sleep(1000);
+                        Application.DoEvents();
+                    }
+                    if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
+                    {
+                        textBoxResponse.Text += ("->Equipamento: " + equipAddress +  "Zero Cal OK!") + Environment.NewLine;
+                        zeroCalstatus = true;
+                    }
+                    else
+                        textBoxResponse.Text += ("->Equipamento: " + equipAddress + "Zero Cal FAILED!") + Environment.NewLine;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!!");
+            }
+        }
+        private void zeroCalProcess()
+        {      
             try
             {
                 textBoxResponse.Text = "Waiting response...." + Environment.NewLine;
+
                 if (checkBoxPowerM.Checked)
-                {
-                    statusGetIdnPowerMeter = getEquipmentIdnbyGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
-                    if (statusGetIdnPowerMeter)
-                    {
-                        try
-                        {
-                            writeCommand("*CLS", visaPowerMeter);
-                            writeCommand("SYST:ERR?", visaPowerMeter);
-                            errorResponse = visaPowerMeter.ReadString();
-                            textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
-                            Application.DoEvents();
-
-                            zeroCalPowerMeter zCp = new zeroCalPowerMeter();
-                            zCp.Show();
-                            Application.DoEvents();
-
-                            while (zeroCalPowerMeter.resultZeroCalPowerMeter != "Finished" && zeroCalPowerMeter.resultZeroCalPowerMeter == string.Empty)
-                            {
-                                Thread.Sleep(1000);
-                                Application.DoEvents();
-                            }
-                            if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
-                            {
-                                textBoxResponse.Text += ("->Power Meter Zero Cal OK!") + Environment.NewLine;
-                                zeroCalstatus = true;
-                            }
-                            else
-                                textBoxResponse.Text += ("->Power Meter Zero Cal FAILED!!!") + Environment.NewLine;
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Erro ao conectar com o PowerMeter!!! reason: " + ex);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro ao conectar com o PowerMeter!!!");
-                    }
-                }
+                    setZeroCalGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
+                   
                 if (checkBoxSignalGen.Checked)
-                {
-                    statusGetIdnSignalGen = getEquipmentIdnbyGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
-                    if (statusGetIdnSignalGen)
-                    {
-                        try
-                        {
-                            writeCommand("*CLS", visaSignalGen);
-                            writeCommand("SYST:ERR?", visaSignalGen);
-
-                            errorResponse = visaSignalGen.ReadString();
-                            textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
-
-                            zeroCalSignalGenerator zCsG = new zeroCalSignalGenerator();
-                            zCsG.Show();
-                            Application.DoEvents();
-
-                            while (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished" && zeroCalSignalGenerator.resultZeroCalSigGen == string.Empty)
-                            {
-                                Thread.Sleep(1000);
-                                Application.DoEvents();
-
-                            }
-                            if (zeroCalSignalGenerator.resultZeroCalSigGen == "Finished")
-                                textBoxResponse.Text += ("->Signal Generator Zero Cal OK!") + Environment.NewLine;
-                            else
-                                textBoxResponse.Text += ("->Signal Generator Zero Cal FAILED!!!") + Environment.NewLine;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Erro ao conectar com o SignalGenerator!!! reason : " + ex);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro ao  conectar com o SignalGenerator!!!");
-                    }
-                }
+                    setZeroCalGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao comunicar com o PowerMeter!!!" + ex);
+                MessageBox.Show("Erro ao comunicar com o Equipamento!!!" + ex);
             }
-
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
