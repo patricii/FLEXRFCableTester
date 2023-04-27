@@ -28,12 +28,12 @@ namespace FlexRFCableTester
         {
             frmMain.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", mBs);//colocar a opção da freq
             response = frmMain.readCommand(mBs);
-            if (Convert.ToDouble(response) != 1)
+            if (Convert.ToInt32(response) != 1)
                 return false;
 
             frmMain.writeCommand("*ESR?", mBs);
             response = frmMain.readCommand(mBs);
-            if (response != "+0")
+            if (!response.Contains("+0"))
                 return false;
 
             return true;
@@ -55,9 +55,9 @@ namespace FlexRFCableTester
                 visaPowerMeter = new MessageBasedSession(visaResourceNamePm);
 
                 frmMain.writeCommand("*RST;*OPC?", visaSigGen);
-                frmMain.readCommand(visaSigGen);
+                response = frmMain.readCommand(visaSigGen);
 
-                if (visaSigGen.ReadString() == "1")
+                if (Convert.ToInt32(response) == 1)
                 {
                     frmMain.writeCommand(":FREQ:CW?", visaSigGen);
                     maxFrequency = frmMain.readCommand(visaSigGen);
@@ -85,7 +85,7 @@ namespace FlexRFCableTester
 
                         frmMain.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
-                        if (Convert.ToDouble(response) != 1)
+                        if (Convert.ToInt32(response) != 1)
                             return false;
 
                         bool status = writeFreqCMDSignalGen(visaSigGen, frmMain.textBoxStartFrequency.Text);
@@ -94,12 +94,12 @@ namespace FlexRFCableTester
 
                         frmMain.writeCommand("OUTP ON;*OPC?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
-                        if (Convert.ToDouble(response) != 1)
+                        if (Convert.ToInt32(response) != 1)
                             return false;
 
                         frmMain.writeCommand("SOUR: POW " + frmMain.textBoxDbm.Text + " dBm; *OPC ?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
-                        if (Convert.ToDouble(response) != 1)
+                        if (Convert.ToInt32(response) != 1)
                             return false;
 
                         frmMain.writeCommand("*ESR?", visaSigGen);
