@@ -16,6 +16,7 @@ namespace FlexRFCableTester
         string powerLevel = string.Empty;
         string average = string.Empty;
         string response = string.Empty;
+        string message = string.Empty;
         string maxFrequency = string.Empty;
         double result = 0.0;
         //int count = 0;
@@ -65,15 +66,17 @@ namespace FlexRFCableTester
 
                     if (Convert.ToDouble(maxFrequency) < Convert.ToDouble(stopFreq))
                     {
-                        MessageBox.Show("Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!");
-                        frmMain.logMessage("Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!");
+                        message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
+                        MessageBox.Show(message);
+                        frmMain.logMessage(message);
                     }
                     else
                     {
                         if (Convert.ToDouble(maxFrequency) < 6000) //to do - verificar a resposta do equipamento
                         {
-                            frmMain.labelWarning.Text = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
-                            frmMain.logMessage("MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!! - Frequencia maxima alterada para 3Ghz");
+                            message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
+                            frmMain.labelWarning.Text = message;
+                            frmMain.logMessage(message);
                             frmMain.textBoxStopFrequency.Text = "3000";
                         }
 

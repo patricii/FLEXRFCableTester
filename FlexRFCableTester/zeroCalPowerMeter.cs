@@ -11,6 +11,8 @@ namespace FlexRFCableTester
         FormApp frmMain = new FormApp();
         public MessageBasedSession visaPowerMeter;
         int count = 45;
+        int delay = 1000;
+        string message = string.Empty;
 
         public zeroCalPowerMeter()
         {
@@ -24,10 +26,11 @@ namespace FlexRFCableTester
             frmMain.writeCommand("CAL?", mBs);
             do
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(delay);
                 count--;
-                labelCalStatusPm.Text = "Aguarde o Zero Cal do Power Meter... " + count + "s";
-                frmMain.logMessage("Aguarde o Zero Cal do Power Meter... " + count + "s");
+                message = "Aguarde o Zero Cal do Power Meter... " + count + "s";
+                labelCalStatusPm.Text = message;
+                frmMain.logMessage(message);
                 Application.DoEvents();
             }
             while (count != 0);
@@ -41,8 +44,9 @@ namespace FlexRFCableTester
             }
             else
             {
-                labelCalStatusPm.Text = "Power Meter Zero Cal Failed!!!";
-                frmMain.logMessage("Power Meter Zero Cal Failed!!!");
+                message = "Power Meter Zero Cal Failed!!!";
+                labelCalStatusPm.Text = message;
+                frmMain.logMessage(message);
             }
             return false;
         }

@@ -15,6 +15,8 @@ namespace FlexRFCableTester
         public Ivi.Visa.Interop.ResourceManager rMng; //LAN
         private FormattedIO488 ioTestSet;
         public static bool zeroCalstatus = false;
+        string message = string.Empty;
+        int delay = 200;
 
         public FormApp()
         {
@@ -34,6 +36,7 @@ namespace FlexRFCableTester
                     {
                         line = line.Replace("[", "");
                         line = line.Replace("]", "");
+                        if(!line.Contains("ZeroCalFrequency"))
                         comboBoxCableSettings.Items.Add(line);
                     }
                 }
@@ -80,8 +83,9 @@ namespace FlexRFCableTester
             }
             catch
             {
-                logMessage("Frequências não encontradas no arquivo settings.ini");
-                MessageBox.Show("Frequências não encontradas no arquivo settings.ini");
+                message = "Frequências não encontradas no arquivo settings.ini";
+                logMessage(message);
+                MessageBox.Show(message);
             }
         }
 
@@ -89,12 +93,12 @@ namespace FlexRFCableTester
         {
             mBS.Write(cmd); // write to instrument
             logMessage("Write " + cmd);
-            Thread.Sleep(200);
+            Thread.Sleep(delay);
             Application.DoEvents();
         }
         public string readCommand(MessageBasedSession mBS)
         {
-            Thread.Sleep(200);
+            Thread.Sleep(delay);
             string resp = mBS.ReadString(); //read from instrument
             logMessage("Read " + resp);
             return resp;
@@ -171,14 +175,16 @@ namespace FlexRFCableTester
                 }
                 catch (Exception ex)
                 {
-                    logMessage("Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex);
-                    MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex);
+                    message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex;
+                    logMessage(message);
+                    MessageBox.Show(message);
                 }
             }
             else
             {
-                logMessage("Erro ao conectar com o Equipamento: " + equipAddress + "!!!");
-                MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!!");
+                message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!!";
+                logMessage(message);
+                MessageBox.Show(message);
             }
         }
         private void zeroCalProcess()
@@ -195,8 +201,9 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
-                logMessage("Erro ao comunicar com o Equipamento!!!" + ex);
-                MessageBox.Show("Erro ao comunicar com o Equipamento!!!" + ex);
+                message = "Erro ao comunicar com o Equipamento!!!" + ex;
+                logMessage(message);
+                MessageBox.Show(message);
             }
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
@@ -231,8 +238,9 @@ namespace FlexRFCableTester
             }
             else
             {
-                logMessage("Error: Realize o Zero Cal antes de começar!!!");
-                MessageBox.Show("Realize o Zero Cal antes de começar!!!");
+                message = "Error: Realize o Zero Cal antes de começar!!!";
+                logMessage(message);
+                MessageBox.Show(message);
             }
         }
     }
