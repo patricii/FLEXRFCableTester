@@ -113,7 +113,7 @@ namespace FlexRFCableTester
                         if (!response.Contains("+0"))
                             return false;
 
-                        while (result < Convert.ToDouble(stopFreq) || !status)
+                        while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
                             frmMain.textBoxStartFrequency.Text = (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text)).ToString();
                             Application.DoEvents();
