@@ -151,11 +151,11 @@ namespace FlexRFCableTester
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                     {
-                        textBoxResponse.Text += ("->Equipamento: " + equipAddress +  "Zero Cal OK!") + Environment.NewLine;
+                        textBoxResponse.Text += "->Equipamento: " + equipAddress +  "Zero Cal OK!" + Environment.NewLine;
                         zeroCalstatus = true;
                     }
                     else
-                        textBoxResponse.Text += ("->Equipamento: " + equipAddress + "Zero Cal FAILED!") + Environment.NewLine;
+                        textBoxResponse.Text += "->Equipamento: " + equipAddress + "Zero Cal FAILED!" + Environment.NewLine;
 
                 }
                 catch (Exception ex)
