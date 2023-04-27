@@ -50,9 +50,7 @@ namespace FlexRFCableTester
                 string pictureName = string.Empty;
 
                 if (MyIni.KeyExists("Picture", comboBoxCableSettings.Text))
-                {
                     pictureName = MyIni.Read("Picture", comboBoxCableSettings.Text);
-                }
 
                 pictureBoxImg.Image = Image.FromFile(@"img\" + pictureName + ".jpg");
             }
@@ -67,32 +65,20 @@ namespace FlexRFCableTester
             try
             {
                 var MyIni = new IniFile("Settings.ini");
-
                 if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                {
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-                }
 
                 if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                {
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
-                }
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
-                {
                     textBoxIntervalFrequency.Text = MyIni.Read("Interval", "ZeroCalFrequency");
-                }
 
                 if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
-                {
                     textBoxAverage.Text = MyIni.Read("MeasureAverage", "ZeroCalFrequency");
-                }
 
                 if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
-                {
                     textBoxDbm.Text = MyIni.Read("PowerLevel", "ZeroCalFrequency");
-                }
-
             }
             catch
             {
@@ -167,7 +153,7 @@ namespace FlexRFCableTester
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                     {
-                        textBoxResponse.Text += "->Equipamento: " + equipAddress +  "Zero Cal OK!" + Environment.NewLine;
+                        textBoxResponse.Text += "->Equipamento: " + equipAddress + "Zero Cal OK!" + Environment.NewLine;
                         zeroCalstatus = true;
                     }
                     else
@@ -185,14 +171,14 @@ namespace FlexRFCableTester
             }
         }
         private void zeroCalProcess()
-        {      
+        {
             try
             {
                 textBoxResponse.Text = "Waiting response...." + Environment.NewLine;
 
                 if (checkBoxPowerM.Checked)
                     setZeroCalGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
-                   
+
                 if (checkBoxSignalGen.Checked)
                     setZeroCalGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
             }
@@ -203,7 +189,26 @@ namespace FlexRFCableTester
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
+            writeValuesToIniFile();
             zeroCalProcess();
+        }
+        private void writeValuesToIniFile()
+        {
+            var MyIni = new IniFile("Settings.ini");
+            if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                MyIni.Write("StartFrequency", textBoxStartFrequency.Text, "ZeroCalFrequency");
+
+            if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                MyIni.Write("StopFrequency", textBoxStopFrequency.Text, "ZeroCalFrequency");
+
+            if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
+                MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
+
+            if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
+                MyIni.Write("MeasureAverage", textBoxAverage.Text, "ZeroCalFrequency");
+
+            if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
+                MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
