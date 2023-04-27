@@ -17,6 +17,8 @@ namespace FlexRFCableTester
         public static bool zeroCalstatus = false;
         string message = string.Empty;
         int delay = 200;
+        string filepath = string.Empty;
+        string logString = string.Empty;
 
         public FormApp()
         {
@@ -36,8 +38,8 @@ namespace FlexRFCableTester
                     {
                         line = line.Replace("[", "");
                         line = line.Replace("]", "");
-                        if(!line.Contains("ZeroCalFrequency"))
-                        comboBoxCableSettings.Items.Add(line);
+                        if (!line.Contains("ZeroCalFrequency"))
+                            comboBoxCableSettings.Items.Add(line);
                     }
                 }
             }
@@ -93,7 +95,7 @@ namespace FlexRFCableTester
         {
             mBS.Write(cmd); // write to instrument
             logMessage("Write " + cmd);
-            Thread.Sleep(delay);
+            Thread.Sleep(delay);           
             Application.DoEvents();
         }
         public string readCommand(MessageBasedSession mBS)
@@ -138,7 +140,26 @@ namespace FlexRFCableTester
         public void logMessage(string message)
         {
             DateTime now = DateTime.Now;
-            textBoxResponse.Text += now.ToString() +" - [ -> "  + message + " ]"+ Environment.NewLine;
+            logString = now.ToString() + " - [ -> " + message + " ]" + Environment.NewLine;
+            textBoxResponse.Text += logString;
+            filepath = @".\log\FlexRFCableTester_logger.txt";
+
+            if (!File.Exists(filepath))
+            {
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath,
+            FileMode.Create, FileAccess.Write)))
+                {
+                    writer.WriteLine(logString);
+                }
+            }
+            else
+            {
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath,
+            FileMode.Append, FileAccess.Write)))
+                {
+                    writer.WriteLine(logString);
+                }
+            }
         }
         private void setZeroCalGPIB(MessageBasedSession mBS, string equipAddress)
         {
