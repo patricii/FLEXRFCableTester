@@ -16,6 +16,7 @@ namespace FlexRFCableTester
         string powerLevel = string.Empty;
         string average = string.Empty;
         string response = string.Empty;
+        string maxFrequency = string.Empty;
         double result = 0.0;
         int count = 0;
 
@@ -41,6 +42,12 @@ namespace FlexRFCableTester
         }
         public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen)
         {
+            startFreq = frmMain.textBoxStartFrequency.Text;
+            stopFreq = frmMain.textBoxStopFrequency.Text;
+            interval = frmMain.textBoxIntervalFrequency.Text;
+            powerLevel = frmMain.textBoxDbm.Text;
+            average = frmMain.textBoxAverage.Text;
+
             try
             {
                 string visaResourceName = frmMain.textBoxAddressSignalGen.Text;
@@ -49,19 +56,13 @@ namespace FlexRFCableTester
                 string visaResourceNamePm = frmMain.textBoxAddressPowerM.Text;
                 visaPowerMeter = new MessageBasedSession(visaResourceNamePm);
 
-                startFreq = frmMain.textBoxStartFrequency.Text;
-                stopFreq = frmMain.textBoxStopFrequency.Text;
-                interval = frmMain.textBoxIntervalFrequency.Text;
-                powerLevel = frmMain.textBoxDbm.Text;
-                average = frmMain.textBoxAverage.Text;
-
                 frmMain.writeCommand("*RST;*OPC?", visaSigGen);
                 frmMain.logMessage("Read " + visaSigGen.ReadString());
 
                 if (visaSigGen.ReadString() == "1")
                 {
                     frmMain.writeCommand(":FREQ:CW?", visaSigGen);
-                    string maxFrequency = visaSigGen.ReadString();
+                    maxFrequency = visaSigGen.ReadString();
                     frmMain.logMessage("Read " + maxFrequency);
                     frmMain.logMessage("Máxima Frequência permitida " + maxFrequency);
                     if (Convert.ToDouble(maxFrequency) < Convert.ToDouble(stopFreq))
@@ -76,7 +77,7 @@ namespace FlexRFCableTester
 
                         frmMain.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
 
-                        //to do - comandos para equip
+                        //to do - comandos PowerMeter
                         frmMain.writeCommand("RST;*OPC?", visaPowerMeter);
                         //Read	+1 - PM
                         //Write	DET:FUNC AVER;*OPC? - PM
@@ -117,15 +118,15 @@ namespace FlexRFCableTester
                             Application.DoEvents();
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             status = writeFreqCMDSignalGen(visaSigGen, result.ToString());
-                            if (!status)
-                                return false;
                         }
+                        if (!status)
+                            return false;
                     }
                 }
             }
             catch (Exception ex)
             {
-
+                frmMain.logMessage("Exception: " + ex);
             }
 
             return true;
