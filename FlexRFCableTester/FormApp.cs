@@ -89,9 +89,8 @@ namespace FlexRFCableTester
 
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
-            //To do!
             mBS.Write(cmd); // write to instrument
-            //textBoxRes.Text += "->" + cmd + Environment.NewLine;
+            logMessage("Write " + cmd);
             Thread.Sleep(200);
             Application.DoEvents();
         }
@@ -102,7 +101,6 @@ namespace FlexRFCableTester
                 string visaResourceName = gpibAddress; // GPIB adapter 0, Instrument address 20
                 visaEquip = new MessageBasedSession(visaResourceName);
                 writeCommand("*IDN?", visaEquip); // write to instrument
-                logMessage("Write *IDN?");
                 string response = visaEquip.ReadString(); // read from instrument
                 logMessage("Read " + response);
             }
@@ -126,7 +124,6 @@ namespace FlexRFCableTester
                 rMng = new Ivi.Visa.Interop.ResourceManager();
                 ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
                 ioTestSet.WriteString("*IDN?", true);
-                logMessage("Write *IDN?");
                 string response = ioTestSet.ReadString();
                 logMessage("Read " + response); 
             }
@@ -146,9 +143,7 @@ namespace FlexRFCableTester
                 try
                 {
                     writeCommand("*CLS", visaPowerMeter);
-                    logMessage("Write *CLS");
                     writeCommand("SYST:ERR?", visaPowerMeter);
-                    logMessage("Write SYST:ERR?");
                     errorResponse = visaPowerMeter.ReadString();
                     logMessage("Read " + errorResponse);
                     Application.DoEvents();

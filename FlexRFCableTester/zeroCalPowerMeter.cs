@@ -21,7 +21,6 @@ namespace FlexRFCableTester
             mBs = new MessageBasedSession(visaResourceName);
 
             frmMain.writeCommand("CAL?", mBs);
-            frmMain.logMessage("Write CAL?");
             int count = 45;
             do
             {
