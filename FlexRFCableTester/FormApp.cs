@@ -95,7 +95,7 @@ namespace FlexRFCableTester
         {
             mBS.Write(cmd); // write to instrument
             logMessage("Write " + cmd);
-            Thread.Sleep(delay);           
+            Thread.Sleep(delay);
             Application.DoEvents();
         }
         public string readCommand(MessageBasedSession mBS)
@@ -146,16 +146,14 @@ namespace FlexRFCableTester
 
             if (!File.Exists(filepath))
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath,
-            FileMode.Create, FileAccess.Write)))
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
                 {
                     writer.WriteLine(logString);
                 }
             }
             else
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath,
-            FileMode.Append, FileAccess.Write)))
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
                 {
                     writer.WriteLine(logString);
                 }
