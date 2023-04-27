@@ -78,6 +78,21 @@ namespace FlexRFCableTester
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
                 }
 
+                if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
+                {
+                    textBoxIntervalFrequency.Text = MyIni.Read("Interval", "ZeroCalFrequency");
+                }
+
+                if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
+                {
+                    textBoxAverage.Text = MyIni.Read("MeasureAverage", "ZeroCalFrequency");
+                }
+
+                if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
+                {
+                    textBoxDbm.Text = MyIni.Read("PowerLevel", "ZeroCalFrequency");
+                }
+
             }
             catch
             {
