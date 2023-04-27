@@ -659,16 +659,16 @@
         private System.Windows.Forms.Button buttonZeroCal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TextBox textBoxResponse;
-        private System.Windows.Forms.DataGridView dataGridViewMeasureTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frequency;
-        private System.Windows.Forms.DataGridViewTextBoxColumn level;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reading;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
+        public System.Windows.Forms.TextBox textBoxResponse;
+        public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
+        public System.Windows.Forms.DataGridViewTextBoxColumn frequency;
+        public System.Windows.Forms.DataGridViewTextBoxColumn level;
+        public System.Windows.Forms.DataGridViewTextBoxColumn reading;
+        public System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
+        public System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
+        public System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
+        public System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
+        public System.Windows.Forms.DataGridViewTextBoxColumn testTime;
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
     }

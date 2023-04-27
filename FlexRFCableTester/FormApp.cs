@@ -103,7 +103,7 @@ namespace FlexRFCableTester
                 visaEquip = new MessageBasedSession(visaResourceName);
                 writeCommand("*IDN?", visaEquip); // write to instrument
                 string response = visaEquip.ReadString(); // read from instrument
-                textBoxResponse.Text += response + Environment.NewLine;
+                logMessage(response);
             }
             catch
             {
@@ -111,6 +111,12 @@ namespace FlexRFCableTester
             }
             return true;
         }
+        public void logMessage(string message)
+        {
+            DateTime now = DateTime.Now;
+            textBoxResponse.Text += now.ToString() + " - [ -> "  + message + " ]"+ Environment.NewLine;
+        }
+
         public void getEquipmentIdnByLAN(string equipAlias)
         {
             try
@@ -120,7 +126,7 @@ namespace FlexRFCableTester
                 ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
                 ioTestSet.WriteString("*IDN?", true);
                 string response = ioTestSet.ReadString();
-                textBoxResponse.Text += response + Environment.NewLine;
+                logMessage(response); 
             }
             catch (Exception ex)
             {
@@ -140,7 +146,7 @@ namespace FlexRFCableTester
                     writeCommand("*CLS", visaPowerMeter);
                     writeCommand("SYST:ERR?", visaPowerMeter);
                     errorResponse = visaPowerMeter.ReadString();
-                    textBoxResponse.Text += "-> " + errorResponse + Environment.NewLine;
+                    logMessage(errorResponse);
                     Application.DoEvents();
 
                     zeroCalPowerMeter zCp = new zeroCalPowerMeter();
@@ -154,11 +160,11 @@ namespace FlexRFCableTester
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                     {
-                        textBoxResponse.Text += "->Equipamento: " + equipAddress + "Zero Cal OK!" + Environment.NewLine;
+                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!"):
                         zeroCalstatus = true;
                     }
                     else
-                        textBoxResponse.Text += "->Equipamento: " + equipAddress + "Zero Cal FAILED!" + Environment.NewLine;
+                        logMessage("Equipamento: " + equipAddress + "Zero Cal FAILED!");
 
                 }
                 catch (Exception ex)
@@ -175,7 +181,7 @@ namespace FlexRFCableTester
         {
             try
             {
-                textBoxResponse.Text = "Waiting response...." + Environment.NewLine;
+                logMessage("Waiting response....");
 
                 if (checkBoxPowerM.Checked)
                     setZeroCalGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
