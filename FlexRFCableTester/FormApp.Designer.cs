@@ -49,6 +49,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
+            this.labelFF = new System.Windows.Forms.Label();
+            this.labelSF = new System.Windows.Forms.Label();
             this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
@@ -78,8 +80,7 @@
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelSF = new System.Windows.Forms.Label();
-            this.labelFF = new System.Windows.Forms.Label();
+            this.labelWarning = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -277,6 +278,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.labelWarning);
             this.tabPage2.Controls.Add(this.buttonStart);
             this.tabPage2.Controls.Add(this.groupBoxCableSettings);
             this.tabPage2.Controls.Add(this.buttonZeroCal);
@@ -324,6 +326,26 @@
             this.groupBoxCableSettings.TabIndex = 0;
             this.groupBoxCableSettings.TabStop = false;
             this.groupBoxCableSettings.Text = "Cable Settings";
+            // 
+            // labelFF
+            // 
+            this.labelFF.AutoSize = true;
+            this.labelFF.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelFF.Location = new System.Drawing.Point(182, 188);
+            this.labelFF.Name = "labelFF";
+            this.labelFF.Size = new System.Drawing.Size(59, 30);
+            this.labelFF.TabIndex = 15;
+            this.labelFF.Text = "MHz";
+            // 
+            // labelSF
+            // 
+            this.labelSF.AutoSize = true;
+            this.labelSF.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelSF.Location = new System.Drawing.Point(182, 116);
+            this.labelSF.Name = "labelSF";
+            this.labelSF.Size = new System.Drawing.Size(59, 30);
+            this.labelSF.TabIndex = 14;
+            this.labelSF.Text = "MHz";
             // 
             // pictureBoxImg
             // 
@@ -563,25 +585,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // labelSF
+            // labelWarning
             // 
-            this.labelSF.AutoSize = true;
-            this.labelSF.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelSF.Location = new System.Drawing.Point(182, 116);
-            this.labelSF.Name = "labelSF";
-            this.labelSF.Size = new System.Drawing.Size(59, 30);
-            this.labelSF.TabIndex = 14;
-            this.labelSF.Text = "MHz";
-            // 
-            // labelFF
-            // 
-            this.labelFF.AutoSize = true;
-            this.labelFF.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelFF.Location = new System.Drawing.Point(182, 188);
-            this.labelFF.Name = "labelFF";
-            this.labelFF.Size = new System.Drawing.Size(59, 30);
-            this.labelFF.TabIndex = 15;
-            this.labelFF.Text = "MHz";
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
+            this.labelWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelWarning.Location = new System.Drawing.Point(516, 526);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(0, 31);
+            this.labelWarning.TabIndex = 17;
             // 
             // FormApp
             // 
@@ -606,6 +618,7 @@
             this.groupBoxGPIB.ResumeLayout(false);
             this.groupBoxGPIB.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
@@ -671,6 +684,7 @@
         public System.Windows.Forms.DataGridViewTextBoxColumn testTime;
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
+        public System.Windows.Forms.Label labelWarning;
     }
 }
 
