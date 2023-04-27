@@ -80,6 +80,7 @@ namespace FlexRFCableTester
             }
             catch
             {
+                logMessage("Frequências não encontradas no arquivo settings.ini");
                 MessageBox.Show("Frequências não encontradas no arquivo settings.ini");
             }
         }
@@ -111,6 +112,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
+                logMessage("Error: " + ex);
                 MessageBox.Show("Error: " + ex);
             }
         }
@@ -169,11 +171,13 @@ namespace FlexRFCableTester
                 }
                 catch (Exception ex)
                 {
+                    logMessage("Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex);
                     MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex);
                 }
             }
             else
             {
+                logMessage("Erro ao conectar com o Equipamento: " + equipAddress + "!!!");
                 MessageBox.Show("Erro ao conectar com o Equipamento: " + equipAddress + "!!!");
             }
         }
@@ -191,6 +195,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
+                logMessage("Erro ao comunicar com o Equipamento!!!" + ex);
                 MessageBox.Show("Erro ao comunicar com o Equipamento!!!" + ex);
             }
         }
@@ -225,7 +230,10 @@ namespace FlexRFCableTester
                 //to do!!!!
             }
             else
+            {
+                logMessage("Error: Realize o Zero Cal antes de começar!!!");
                 MessageBox.Show("Realize o Zero Cal antes de começar!!!");
+            }
         }
     }
 }
