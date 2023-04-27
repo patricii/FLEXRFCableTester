@@ -131,10 +131,8 @@ namespace FlexRFCableTester
 
             return true;
         }
-
         private void buttonOkSg_Click(object sender, System.EventArgs e)
         {
-
             bool result = zeroCalSignalGenMtd(visaSignalGen);
 
             if (result)

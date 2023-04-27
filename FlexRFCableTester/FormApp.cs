@@ -12,10 +12,8 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter; //GPIB
         public MessageBasedSession visaSignalGen; //GPIB
-
         public Ivi.Visa.Interop.ResourceManager rMng; //LAN
         private FormattedIO488 ioTestSet;
-
         public static bool zeroCalstatus = false;
 
         public FormApp()
@@ -180,7 +178,7 @@ namespace FlexRFCableTester
         {
             try
             {
-                logMessage("Waiting response....");
+                logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
                     setZeroCalGPIB(visaPowerMeter, textBoxAddressPowerM.Text);

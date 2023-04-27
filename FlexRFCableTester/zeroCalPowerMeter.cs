@@ -10,6 +10,7 @@ namespace FlexRFCableTester
         public static string resultZeroCalPowerMeter = string.Empty;
         FormApp frmMain = new FormApp();
         public MessageBasedSession visaPowerMeter;
+        int count = 45;
 
         public zeroCalPowerMeter()
         {
@@ -21,7 +22,6 @@ namespace FlexRFCableTester
             mBs = new MessageBasedSession(visaResourceName);
 
             frmMain.writeCommand("CAL?", mBs);
-            int count = 45;
             do
             {
                 Thread.Sleep(1000);
