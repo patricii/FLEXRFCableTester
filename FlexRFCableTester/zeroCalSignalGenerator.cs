@@ -18,7 +18,7 @@ namespace FlexRFCableTester
         string response = string.Empty;
         string maxFrequency = string.Empty;
         double result = 0.0;
-        int count = 0;
+        //int count = 0;
 
         public zeroCalSignalGenerator()
         {
@@ -27,14 +27,12 @@ namespace FlexRFCableTester
         private bool writeFreqCMDSignalGen(MessageBasedSession mBs, string freq)
         {
             frmMain.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", mBs);//colocar a opção da freq
-            response = mBs.ReadString();
-            frmMain.logMessage("Read " + response);
+            response = frmMain.readCommand(mBs);
             if (Convert.ToDouble(response) != 1)
                 return false;
 
             frmMain.writeCommand("*ESR?", mBs);
-            response = mBs.ReadString();
-            frmMain.logMessage("Read " + response);
+            response = frmMain.readCommand(mBs);
             if (response != "+0")
                 return false;
 
@@ -57,16 +55,17 @@ namespace FlexRFCableTester
                 visaPowerMeter = new MessageBasedSession(visaResourceNamePm);
 
                 frmMain.writeCommand("*RST;*OPC?", visaSigGen);
-                frmMain.logMessage("Read " + visaSigGen.ReadString());
+                frmMain.readCommand(visaSigGen);
 
                 if (visaSigGen.ReadString() == "1")
                 {
                     frmMain.writeCommand(":FREQ:CW?", visaSigGen);
-                    maxFrequency = visaSigGen.ReadString();
-                    frmMain.logMessage("Read " + maxFrequency);
+                    maxFrequency = frmMain.readCommand(visaSigGen);
                     frmMain.logMessage("Máxima Frequência permitida " + maxFrequency);
+
                     if (Convert.ToDouble(maxFrequency) < Convert.ToDouble(stopFreq))
                         MessageBox.Show("Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!");
+
                     else
                     {
                         if (Convert.ToDouble(maxFrequency) < 6000) //to do - verificar a resposta do equipamento
@@ -85,8 +84,7 @@ namespace FlexRFCableTester
                         //Write AVER OFF - PM
 
                         frmMain.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
-                        response = visaSigGen.ReadString();
-                        frmMain.logMessage("Read " + response);
+                        response = frmMain.readCommand(visaSigGen);
                         if (Convert.ToDouble(response) != 1)
                             return false;
 
@@ -95,21 +93,18 @@ namespace FlexRFCableTester
                             return false;
 
                         frmMain.writeCommand("OUTP ON;*OPC?", visaSigGen);
-                        response = visaSigGen.ReadString();
-                        frmMain.logMessage("Read " + response);
+                        response = frmMain.readCommand(visaSigGen);
                         if (Convert.ToDouble(response) != 1)
                             return false;
 
                         frmMain.writeCommand("SOUR: POW " + frmMain.textBoxDbm.Text + " dBm; *OPC ?", visaSigGen);
-                        response = visaSigGen.ReadString();
-                        frmMain.logMessage("Read " + response);
+                        response = frmMain.readCommand(visaSigGen);
                         if (Convert.ToDouble(response) != 1)
                             return false;
 
                         frmMain.writeCommand("*ESR?", visaSigGen);
-                        response = visaSigGen.ReadString();
-                        frmMain.logMessage("Read " + response);
-                        if (response != "+0")
+                        response = frmMain.readCommand(visaSigGen);
+                        if (!response.Contains("+0"))
                             return false;
 
                         while (result < Convert.ToDouble(stopFreq) || !status)

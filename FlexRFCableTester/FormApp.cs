@@ -66,7 +66,6 @@ namespace FlexRFCableTester
                 if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
 
-
                 if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
 
@@ -92,6 +91,29 @@ namespace FlexRFCableTester
             Thread.Sleep(200);
             Application.DoEvents();
         }
+        public string readCommand(MessageBasedSession mBS)
+        {
+            Thread.Sleep(200);
+            string resp = mBS.ReadString(); //read from instrument
+            logMessage("Read " + resp);
+            return resp;
+        }
+        public void getEquipmentIdnByLAN(string equipAlias)
+        {
+            try
+            {
+                ioTestSet = new FormattedIO488();
+                rMng = new Ivi.Visa.Interop.ResourceManager();
+                ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
+                ioTestSet.WriteString("*IDN?", true);
+                string response = ioTestSet.ReadString();
+                logMessage("Read " + response);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         public bool getEquipmentIdnbyGPIB(MessageBasedSession visaEquip, string gpibAddress)
         {
             try
@@ -99,8 +121,7 @@ namespace FlexRFCableTester
                 string visaResourceName = gpibAddress; // GPIB adapter 0, Instrument address 20
                 visaEquip = new MessageBasedSession(visaResourceName);
                 writeCommand("*IDN?", visaEquip); // write to instrument
-                string response = visaEquip.ReadString(); // read from instrument
-                logMessage("Read " + response);
+                readCommand(visaEquip);
             }
             catch
             {
@@ -113,27 +134,10 @@ namespace FlexRFCableTester
             DateTime now = DateTime.Now;
             textBoxResponse.Text += now.ToString() +" - [ -> "  + message + " ]"+ Environment.NewLine;
         }
-
-        public void getEquipmentIdnByLAN(string equipAlias)
-        {
-            try
-            {
-                ioTestSet = new FormattedIO488();
-                rMng = new Ivi.Visa.Interop.ResourceManager();
-                ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
-                ioTestSet.WriteString("*IDN?", true);
-                string response = ioTestSet.ReadString();
-                logMessage("Read " + response); 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-        }
         private void setZeroCalGPIB(MessageBasedSession mBS, string equipAddress)
         {
             bool statusGetIdn = false;
-            string errorResponse = string.Empty;
+            string response = string.Empty;
             statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
 
             if (statusGetIdn)
@@ -142,8 +146,7 @@ namespace FlexRFCableTester
                 {
                     writeCommand("*CLS", visaPowerMeter);
                     writeCommand("SYST:ERR?", visaPowerMeter);
-                    errorResponse = visaPowerMeter.ReadString();
-                    logMessage("Read " + errorResponse);
+                    response = readCommand(visaPowerMeter);
                     Application.DoEvents();
 
                     zeroCalPowerMeter zCp = new zeroCalPowerMeter();
