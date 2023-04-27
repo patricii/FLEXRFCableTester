@@ -49,8 +49,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
-            this.comboBoxFFreq = new System.Windows.Forms.ComboBox();
-            this.comboBoxSFreq = new System.Windows.Forms.ComboBox();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
             this.textBoxDbm = new System.Windows.Forms.TextBox();
@@ -65,11 +64,6 @@
             this.labelCableModel = new System.Windows.Forms.Label();
             this.buttonZeroCal = new System.Windows.Forms.Button();
             this.dataGridViewMeasureTable = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,18 +72,24 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
+            this.labelSF = new System.Windows.Forms.Label();
+            this.labelFF = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
             this.groupBoxGPIB.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -303,8 +303,8 @@
             // 
             // groupBoxCableSettings
             // 
-            this.groupBoxCableSettings.Controls.Add(this.comboBoxFFreq);
-            this.groupBoxCableSettings.Controls.Add(this.comboBoxSFreq);
+            this.groupBoxCableSettings.Controls.Add(this.labelFF);
+            this.groupBoxCableSettings.Controls.Add(this.labelSF);
             this.groupBoxCableSettings.Controls.Add(this.pictureBoxImg);
             this.groupBoxCableSettings.Controls.Add(this.textBoxAverage);
             this.groupBoxCableSettings.Controls.Add(this.textBoxIntervalFrequency);
@@ -325,29 +325,15 @@
             this.groupBoxCableSettings.TabStop = false;
             this.groupBoxCableSettings.Text = "Cable Settings";
             // 
-            // comboBoxFFreq
+            // pictureBoxImg
             // 
-            this.comboBoxFFreq.FormattingEnabled = true;
-            this.comboBoxFFreq.Items.AddRange(new object[] {
-            "MHz",
-            "GHz"});
-            this.comboBoxFFreq.Location = new System.Drawing.Point(182, 188);
-            this.comboBoxFFreq.Name = "comboBoxFFreq";
-            this.comboBoxFFreq.Size = new System.Drawing.Size(75, 29);
-            this.comboBoxFFreq.TabIndex = 15;
-            this.comboBoxFFreq.Text = "MHz";
-            // 
-            // comboBoxSFreq
-            // 
-            this.comboBoxSFreq.FormattingEnabled = true;
-            this.comboBoxSFreq.Items.AddRange(new object[] {
-            "MHz",
-            "GHz"});
-            this.comboBoxSFreq.Location = new System.Drawing.Point(182, 116);
-            this.comboBoxSFreq.Name = "comboBoxSFreq";
-            this.comboBoxSFreq.Size = new System.Drawing.Size(75, 29);
-            this.comboBoxSFreq.TabIndex = 14;
-            this.comboBoxSFreq.Text = "MHz";
+            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MXHS83SK2800;
+            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 13;
+            this.pictureBoxImg.TabStop = false;
             // 
             // textBoxAverage
             // 
@@ -481,6 +467,46 @@
             this.dataGridViewMeasureTable.Size = new System.Drawing.Size(854, 494);
             this.dataGridViewMeasureTable.TabIndex = 16;
             // 
+            // frequency
+            // 
+            this.frequency.HeaderText = "Frequency";
+            this.frequency.Name = "frequency";
+            // 
+            // level
+            // 
+            this.level.HeaderText = "Level";
+            this.level.Name = "level";
+            // 
+            // reading
+            // 
+            this.reading.HeaderText = "Reading";
+            this.reading.Name = "reading";
+            // 
+            // lowLimit
+            // 
+            this.lowLimit.HeaderText = "Low Limit";
+            this.lowLimit.Name = "lowLimit";
+            // 
+            // highLimit
+            // 
+            this.highLimit.HeaderText = "High Limit";
+            this.highLimit.Name = "highLimit";
+            // 
+            // calFactor
+            // 
+            this.calFactor.HeaderText = "Cal Factor";
+            this.calFactor.Name = "calFactor";
+            // 
+            // passOrFail
+            // 
+            this.passOrFail.HeaderText = "P/F";
+            this.passOrFail.Name = "passOrFail";
+            // 
+            // testTime
+            // 
+            this.testTime.HeaderText = "Test Time";
+            this.testTime.Name = "testTime";
+            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -527,46 +553,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Developed by Arquimedes / A. Patrício";
             // 
-            // frequency
-            // 
-            this.frequency.HeaderText = "Frequency";
-            this.frequency.Name = "frequency";
-            // 
-            // level
-            // 
-            this.level.HeaderText = "Level";
-            this.level.Name = "level";
-            // 
-            // reading
-            // 
-            this.reading.HeaderText = "Reading";
-            this.reading.Name = "reading";
-            // 
-            // lowLimit
-            // 
-            this.lowLimit.HeaderText = "Low Limit";
-            this.lowLimit.Name = "lowLimit";
-            // 
-            // highLimit
-            // 
-            this.highLimit.HeaderText = "High Limit";
-            this.highLimit.Name = "highLimit";
-            // 
-            // calFactor
-            // 
-            this.calFactor.HeaderText = "Cal Factor";
-            this.calFactor.Name = "calFactor";
-            // 
-            // passOrFail
-            // 
-            this.passOrFail.HeaderText = "P/F";
-            this.passOrFail.Name = "passOrFail";
-            // 
-            // testTime
-            // 
-            this.testTime.HeaderText = "Test Time";
-            this.testTime.Name = "testTime";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -577,15 +563,25 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBoxImg
+            // labelSF
             // 
-            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MXHS83SK2800;
-            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 13;
-            this.pictureBoxImg.TabStop = false;
+            this.labelSF.AutoSize = true;
+            this.labelSF.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelSF.Location = new System.Drawing.Point(182, 116);
+            this.labelSF.Name = "labelSF";
+            this.labelSF.Size = new System.Drawing.Size(59, 30);
+            this.labelSF.TabIndex = 14;
+            this.labelSF.Text = "MHz";
+            // 
+            // labelFF
+            // 
+            this.labelFF.AutoSize = true;
+            this.labelFF.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelFF.Location = new System.Drawing.Point(182, 188);
+            this.labelFF.Name = "labelFF";
+            this.labelFF.Size = new System.Drawing.Size(59, 30);
+            this.labelFF.TabIndex = 15;
+            this.labelFF.Text = "MHz";
             // 
             // FormApp
             // 
@@ -612,11 +608,11 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,8 +655,6 @@
         private System.Windows.Forms.Label labelCableModel;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ComboBox comboBoxFFreq;
-        private System.Windows.Forms.ComboBox comboBoxSFreq;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonZeroCal;
         private System.Windows.Forms.Label label2;
@@ -675,6 +669,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
         private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
         private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
+        private System.Windows.Forms.Label labelFF;
+        private System.Windows.Forms.Label labelSF;
     }
 }
 
