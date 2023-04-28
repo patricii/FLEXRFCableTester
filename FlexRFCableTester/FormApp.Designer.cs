@@ -47,6 +47,7 @@
             this.labelAddressGPIB = new System.Windows.Forms.Label();
             this.labelEquipmentNames = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelStatusRFTester = new System.Windows.Forms.Label();
             this.labelWarning = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
@@ -81,7 +82,6 @@
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelStatusRFTester = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -293,6 +293,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "RF Cable Tester";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // labelStatusRFTester
+            // 
+            this.labelStatusRFTester.AutoSize = true;
+            this.labelStatusRFTester.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelStatusRFTester.Location = new System.Drawing.Point(570, 521);
+            this.labelStatusRFTester.Name = "labelStatusRFTester";
+            this.labelStatusRFTester.Size = new System.Drawing.Size(0, 30);
+            this.labelStatusRFTester.TabIndex = 18;
             // 
             // labelWarning
             // 
@@ -596,15 +605,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // labelStatusRFTester
-            // 
-            this.labelStatusRFTester.AutoSize = true;
-            this.labelStatusRFTester.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelStatusRFTester.Location = new System.Drawing.Point(570, 521);
-            this.labelStatusRFTester.Name = "labelStatusRFTester";
-            this.labelStatusRFTester.Size = new System.Drawing.Size(0, 30);
-            this.labelStatusRFTester.TabIndex = 18;
             // 
             // FormApp
             // 

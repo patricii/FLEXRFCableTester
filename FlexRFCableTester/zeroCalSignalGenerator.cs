@@ -126,7 +126,6 @@ namespace FlexRFCableTester
 
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
-                            fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
                             frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                             do
                             {
@@ -134,8 +133,10 @@ namespace FlexRFCableTester
                                 frmMain.writeCommand("FETC1?", visaPowerMeter);
                                 measure = Convert.ToDouble(frmMain.readCommand(visaPowerMeter));
                                 count++;
+
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
                                 countResults++;
-                                fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
+
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
@@ -181,18 +182,6 @@ namespace FlexRFCableTester
                 resultZeroCalSigGen = "Failed";
                 frmMain.logMessage("Zero Cal Signal Generator Failed!!!");
             }
-        }
-        private void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string callFactor, string passFail, string testTime)
-        {
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[0].Value = freq;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[1].Value = level;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
-            frmMain.dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
-            Application.DoEvents();
         }
     }
 }

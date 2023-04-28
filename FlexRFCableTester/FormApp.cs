@@ -280,7 +280,7 @@ namespace FlexRFCableTester
                 }
                 else
                     MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
-                
+
                 if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
                     MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
                 else
@@ -294,7 +294,7 @@ namespace FlexRFCableTester
             }
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
-        {
+        {         
             writeValuesToIniFile();
             zeroCalProcess();
         }
@@ -329,6 +329,19 @@ namespace FlexRFCableTester
                 logMessage(message);
                 MessageBox.Show(message);
             }
+        }
+        public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string callFactor, string passFail, string testTime)
+        {
+            dataGridViewMeasureTable.Rows.Add();
+            dataGridViewMeasureTable.Rows[count].Cells[0].Value = freq;
+            dataGridViewMeasureTable.Rows[count].Cells[1].Value = level;
+            dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
+            dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
+            dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
+            dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
+            dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+            dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
+            Application.DoEvents();
         }
     }
 }
