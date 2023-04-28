@@ -177,5 +177,17 @@ namespace FlexRFCableTester
                 frmMain.logMessage("Zero Cal Signal Generator Failed!!!");
             }
         }
+        private void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string callFactor, string passFail, string testTime)
+        {
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[0].Value = freq;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[1].Value = level;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+            frmMain.dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
+            Application.DoEvents();
+        }
     }
 }
