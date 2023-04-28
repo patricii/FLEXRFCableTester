@@ -21,7 +21,8 @@ namespace FlexRFCableTester
         string message = string.Empty;
         string maxFrequency = string.Empty;
         double result = 0.0;
-        //int count = 0;
+        double measure = 0.0;
+        int count = 0;
 
         public zeroCalSignalGenerator()
         {
@@ -78,7 +79,7 @@ namespace FlexRFCableTester
                     }
                     else
                     {
-                        if (maxFreqSg < 6000) //to do - verificar a resposta do equipamento
+                        if (maxFreqSg < 6000)
                         {
                             message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
                             frmMain.labelWarning.Text = message;
@@ -88,12 +89,18 @@ namespace FlexRFCableTester
 
                         frmMain.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
 
-                        //to do - comandos PowerMeter
-                        frmMain.writeCommand("RST;*OPC?", visaPowerMeter);
-                        //Read	+1 - PM
-                        //Write	DET:FUNC AVER;*OPC? - PM
-                        //Read	+1 - PM
-                        //Write AVER OFF - PM
+
+                        frmMain.writeCommand("*RST;*OPC?", visaPowerMeter);
+                        response = frmMain.readCommand(visaPowerMeter);
+                        if (!response.Contains("+1"))
+                            return false;
+
+                        frmMain.writeCommand("DET:FUNC AVER;*OPC?", visaPowerMeter);
+                        response = frmMain.readCommand(visaPowerMeter);
+                        if (!response.Contains("+1"))
+                            return false;
+
+                        frmMain.writeCommand("AVER OFF", visaPowerMeter);
 
                         frmMain.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
@@ -119,8 +126,19 @@ namespace FlexRFCableTester
                         if (!response.Contains("+0"))
                             return false;
 
+
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
+                            frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
+                            do
+                            {
+                                frmMain.writeCommand("INIT1", visaPowerMeter);
+                                frmMain.writeCommand("FETC1?", visaPowerMeter);
+                                measure = Convert.ToDouble(frmMain.readCommand(visaPowerMeter));
+                                count++;
+                            }
+                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
+
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             status = writeFreqCMDSignalGen(visaSigGen, result.ToString());
                             frmMain.textBoxStartFrequency.Text = result.ToString();

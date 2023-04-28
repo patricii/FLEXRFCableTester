@@ -282,8 +282,15 @@ namespace FlexRFCableTester
                 if (checkBoxPowerM.Checked)
                     setZeroCalPMGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
 
-                if (checkBoxSignalGen.Checked)
-                    setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
+                if (zeroCalSignalGenerator.resultZeroCalSigGen == "Finished")
+                {
+                    if (checkBoxSignalGen.Checked)
+                        setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+                }
             }
             catch (Exception ex)
             {
