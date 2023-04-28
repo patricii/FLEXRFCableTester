@@ -332,16 +332,23 @@ namespace FlexRFCableTester
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string callFactor, string passFail, string testTime)
         {
-            dataGridViewMeasureTable.Rows.Add();
-            dataGridViewMeasureTable.Rows[count].Cells[0].Value = freq;
-            dataGridViewMeasureTable.Rows[count].Cells[1].Value = level;
-            dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
-            dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
-            dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
-            dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
-            dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
-            dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
-            Application.DoEvents();
+            try
+            {
+                dataGridViewMeasureTable.Rows.Add();
+                dataGridViewMeasureTable.Rows[count].Cells[0].Value = freq;
+                dataGridViewMeasureTable.Rows[count].Cells[1].Value = level;
+                dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
+                dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
+                dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
+                dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
+                dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+                dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
+                Application.DoEvents();
+            }
+            catch(Exception ex)
+            {
+                logMessage("Error to add values to DataGridView - reason: " + ex);
+            }
         }
     }
 }
