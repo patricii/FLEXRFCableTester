@@ -140,7 +140,9 @@ namespace FlexRFCableTester
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
+                            if(result < Convert.ToDouble(stopFreq))
                             status = writeFreqCMDSignalGen(visaSigGen, result.ToString());
+
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
                             Application.DoEvents();

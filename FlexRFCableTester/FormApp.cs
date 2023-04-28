@@ -142,6 +142,7 @@ namespace FlexRFCableTester
             DateTime now = DateTime.Now;
             logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
             textBoxResponse.Text += logString;
+            Application.DoEvents();
             filepath = @".\log\FlexRFCableTester_logger.txt";
 
             if (!File.Exists(filepath))
@@ -282,11 +283,14 @@ namespace FlexRFCableTester
                 if (checkBoxPowerM.Checked)
                     setZeroCalPMGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
 
-                if (zeroCalSignalGenerator.resultZeroCalSigGen == "Finished")
+                if (checkBoxSignalGen.Checked)
+                    setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
+
+              /*  if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                 {
                     if (checkBoxSignalGen.Checked)
                         setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
-                }
+                }*/
                 else
                 {
                     MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
