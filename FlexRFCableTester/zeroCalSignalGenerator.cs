@@ -23,6 +23,7 @@ namespace FlexRFCableTester
         double result = 0.0;
         double measure = 0.0;
         int count = 0;
+        int countResults = 0;
         public zeroCalSignalGenerator()
         {
             InitializeComponent();
@@ -125,6 +126,7 @@ namespace FlexRFCableTester
 
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
+                            fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
                             frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                             do
                             {
@@ -132,6 +134,8 @@ namespace FlexRFCableTester
                                 frmMain.writeCommand("FETC1?", visaPowerMeter);
                                 measure = Convert.ToDouble(frmMain.readCommand(visaPowerMeter));
                                 count++;
+                                countResults++;
+                                fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
@@ -142,6 +146,7 @@ namespace FlexRFCableTester
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
                             Application.DoEvents();
+                            countResults++;
                         }
                         if (status)
                         {
