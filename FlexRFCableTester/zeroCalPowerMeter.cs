@@ -1,5 +1,6 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -37,13 +38,17 @@ namespace FlexRFCableTester
 
             string zeroPowerMeter = mBs.ReadString();
 
-            if (Convert.ToDouble(zeroPowerMeter) == 0)
+            if (zeroPowerMeter.Contains("+0"))
             {
+                labelCalStatusPm.Text = "Power Meter Zero Cal realizado com sucesso!!!";
                 Application.DoEvents();
+                Thread.Sleep(3000);
                 return true;
             }
             else
             {
+                labelCalStatusPm.Text = "Power Meter falhou no Zero Cal!!!";
+                Thread.Sleep(3000);
                 message = "Power Meter Zero Cal Failed!!!";
                 labelCalStatusPm.Text = message;
                 frmMain.logMessage(message);
@@ -53,6 +58,9 @@ namespace FlexRFCableTester
 
         private void buttonOkPm_Click(object sender, EventArgs e)
         {
+            buttonOkPm.BackColor = Color.Green;
+            buttonOkPm.Enabled = false;
+
             bool result = zeroCalPowerMeterMtd(visaPowerMeter);
 
             if (result)

@@ -140,7 +140,7 @@ namespace FlexRFCableTester
         public void logMessage(string message)
         {
             DateTime now = DateTime.Now;
-            logString = now.ToString() + " - [ -> " + message + " ]" + Environment.NewLine;
+            logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
             textBoxResponse.Text += logString;
             filepath = @".\log\FlexRFCableTester_logger.txt";
 
@@ -159,23 +159,27 @@ namespace FlexRFCableTester
                 }
             }
         }
-        private void setZeroCalGPIB(MessageBasedSession mBS, string equipAddress)
+        private void setZeroCalPMGPIB(MessageBasedSession mBS, string equipAddress)
         {
             bool statusGetIdn = false;
             string response = string.Empty;
             statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
 
+
+
             if (statusGetIdn)
             {
+                zeroCalPowerMeter equip = new zeroCalPowerMeter();
                 try
                 {
+                    visaPowerMeter = new MessageBasedSession(equipAddress);
                     writeCommand("*CLS", visaPowerMeter);
                     writeCommand("SYST:ERR?", visaPowerMeter);
                     response = readCommand(visaPowerMeter);
                     Application.DoEvents();
 
-                    zeroCalPowerMeter zCp = new zeroCalPowerMeter();
-                    zCp.Show();
+
+                    equip.Show();
                     Application.DoEvents();
 
                     while (zeroCalPowerMeter.resultZeroCalPowerMeter != "Finished" && zeroCalPowerMeter.resultZeroCalPowerMeter == string.Empty)
@@ -187,16 +191,20 @@ namespace FlexRFCableTester
                     {
                         logMessage("Equipamento: " + equipAddress + "Zero Cal OK!");
                         zeroCalstatus = true;
+                        equip.Close();
                     }
                     else
+                    {
                         logMessage("Equipamento: " + equipAddress + "Zero Cal FAILED!");
-
+                        equip.Close();
+                    }
                 }
                 catch (Exception ex)
                 {
                     message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex;
                     logMessage(message);
                     MessageBox.Show(message);
+                    equip.Close();
                 }
             }
             else
@@ -204,7 +212,66 @@ namespace FlexRFCableTester
                 message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!!";
                 logMessage(message);
                 MessageBox.Show(message);
+
             }
+
+        }
+        private void setZeroCalSGGPIB(MessageBasedSession mBS, string equipAddress)
+        {
+            bool statusGetIdn = false;
+            string response = string.Empty;
+            statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
+
+
+
+            if (statusGetIdn)
+            {
+                zeroCalSignalGenerator equip = new zeroCalSignalGenerator();
+                try
+                {
+                    visaSignalGen = new MessageBasedSession(equipAddress);
+                    writeCommand("*CLS", visaSignalGen);
+                    writeCommand("SYST:ERR?", visaSignalGen);
+                    response = readCommand(visaSignalGen);
+                    Application.DoEvents();
+
+
+                    equip.Show();
+                    Application.DoEvents();
+
+                    while (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished" && zeroCalSignalGenerator.resultZeroCalSigGen == string.Empty)
+                    {
+                        Thread.Sleep(1000);
+                        Application.DoEvents();
+                    }
+                    if (zeroCalSignalGenerator.resultZeroCalSigGen == "Finished")
+                    {
+                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!");
+                        zeroCalstatus = true;
+                        equip.Close();
+                    }
+                    else
+                    {
+                        logMessage("Equipamento: " + equipAddress + "Zero Cal FAILED!");
+                        equip.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex;
+                    logMessage(message);
+                    MessageBox.Show(message);
+                    equip.Close();
+                }
+            }
+            else
+            {
+                message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!!";
+                logMessage(message);
+                MessageBox.Show(message);
+
+            }
+
         }
         private void zeroCalProcess()
         {
@@ -213,10 +280,10 @@ namespace FlexRFCableTester
                 logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
-                    setZeroCalGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
+                    setZeroCalPMGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
 
                 if (checkBoxSignalGen.Checked)
-                    setZeroCalGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
+                    setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
             }
             catch (Exception ex)
             {

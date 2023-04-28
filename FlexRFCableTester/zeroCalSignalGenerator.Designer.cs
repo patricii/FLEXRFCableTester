@@ -40,7 +40,7 @@
             // 
             this.buttonOkSg.BackColor = System.Drawing.SystemColors.Window;
             this.buttonOkSg.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonOkSg.Location = new System.Drawing.Point(400, 530);
+            this.buttonOkSg.Location = new System.Drawing.Point(385, 528);
             this.buttonOkSg.Name = "buttonOkSg";
             this.buttonOkSg.Size = new System.Drawing.Size(80, 30);
             this.buttonOkSg.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.labelCalStatusSg.AutoSize = true;
             this.labelCalStatusSg.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelCalStatusSg.Location = new System.Drawing.Point(153, 497);
+            this.labelCalStatusSg.Location = new System.Drawing.Point(80, 493);
             this.labelCalStatusSg.Name = "labelCalStatusSg";
             this.labelCalStatusSg.Size = new System.Drawing.Size(0, 30);
             this.labelCalStatusSg.TabIndex = 1;
@@ -60,12 +60,13 @@
             // labelZeroCalSignalGen
             // 
             this.labelZeroCalSignalGen.AutoSize = true;
-            this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(164, 19);
+            this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelZeroCalSignalGen.ForeColor = System.Drawing.Color.Blue;
+            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(108, 19);
             this.labelZeroCalSignalGen.Name = "labelZeroCalSignalGen";
-            this.labelZeroCalSignalGen.Size = new System.Drawing.Size(538, 30);
+            this.labelZeroCalSignalGen.Size = new System.Drawing.Size(663, 32);
             this.labelZeroCalSignalGen.TabIndex = 3;
-            this.labelZeroCalSignalGen.Text = "Conecte o Power Sensor no Cabo do Signal Generator";
+            this.labelZeroCalSignalGen.Text = "-> Conecte o Power Sensor no Cabo do Signal Generator";
             // 
             // pictureBoxZeroCalSg
             // 

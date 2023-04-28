@@ -1,5 +1,7 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
+using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -46,6 +48,7 @@ namespace FlexRFCableTester
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
             average = frmMain.textBoxAverage.Text;
+            labelCalStatusSg.Text = "           Aguarde o processo de Zero Cal do Signal Generator!!!";
 
             try
             {
@@ -63,8 +66,11 @@ namespace FlexRFCableTester
                     frmMain.writeCommand(":FREQ:CW?", visaSigGen);
                     maxFrequency = frmMain.readCommand(visaSigGen);
                     frmMain.logMessage("Máxima Frequência permitida " + maxFrequency);
+                    double maxFreqSg = Convert.ToDouble(maxFrequency);
+                    maxFreqSg = maxFreqSg / 1000;
+                    maxFreqSg = maxFreqSg / 1000;
 
-                    if (Convert.ToDouble(maxFrequency) < Convert.ToDouble(stopFreq))
+                    if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
                         message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
                         MessageBox.Show(message);
@@ -72,7 +78,7 @@ namespace FlexRFCableTester
                     }
                     else
                     {
-                        if (Convert.ToDouble(maxFrequency) < 6000) //to do - verificar a resposta do equipamento
+                        if (maxFreqSg < 6000) //to do - verificar a resposta do equipamento
                         {
                             message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
                             frmMain.labelWarning.Text = message;
@@ -103,7 +109,7 @@ namespace FlexRFCableTester
                         if (Convert.ToInt32(response) != 1)
                             return false;
 
-                        frmMain.writeCommand("SOUR: POW " + frmMain.textBoxDbm.Text + " dBm; *OPC ?", visaSigGen);
+                        frmMain.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
                             return false;
@@ -115,11 +121,20 @@ namespace FlexRFCableTester
 
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
-                            frmMain.textBoxStartFrequency.Text = (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text)).ToString();
-                            Application.DoEvents();
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             status = writeFreqCMDSignalGen(visaSigGen, result.ToString());
+                            frmMain.textBoxStartFrequency.Text = result.ToString();
+                            labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
+                            Application.DoEvents();
+
                         }
+                        if (status)
+                        {
+                            labelCalStatusSg.Text = "Processo de Zero Cal do Signal Generator realizado com sucesso!!!";
+                            Application.DoEvents();
+                            Thread.Sleep(3000);
+                        }
+
                         if (!status)
                             return false;
                     }
@@ -134,6 +149,8 @@ namespace FlexRFCableTester
         }
         private void buttonOkSg_Click(object sender, System.EventArgs e)
         {
+            buttonOkSg.BackColor = Color.Green;
+            buttonOkSg.Enabled = false;
             bool result = zeroCalSignalGenMtd(visaSignalGen);
 
             if (result)

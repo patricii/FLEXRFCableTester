@@ -38,12 +38,13 @@
             // labelZeroCalPm
             // 
             this.labelZeroCalPm.AutoSize = true;
-            this.labelZeroCalPm.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelZeroCalPm.Location = new System.Drawing.Point(230, 19);
+            this.labelZeroCalPm.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
+            this.labelZeroCalPm.ForeColor = System.Drawing.Color.Blue;
+            this.labelZeroCalPm.Location = new System.Drawing.Point(179, 9);
             this.labelZeroCalPm.Name = "labelZeroCalPm";
-            this.labelZeroCalPm.Size = new System.Drawing.Size(412, 30);
+            this.labelZeroCalPm.Size = new System.Drawing.Size(530, 35);
             this.labelZeroCalPm.TabIndex = 0;
-            this.labelZeroCalPm.Text = "Conecte o Power Sensor no Power Meter";
+            this.labelZeroCalPm.Text = "-> Conecte o Power Sensor no Power Meter";
             // 
             // buttonOkPm
             // 
@@ -61,7 +62,7 @@
             // 
             this.labelCalStatusPm.AutoSize = true;
             this.labelCalStatusPm.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelCalStatusPm.Location = new System.Drawing.Point(153, 497);
+            this.labelCalStatusPm.Location = new System.Drawing.Point(208, 486);
             this.labelCalStatusPm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCalStatusPm.Name = "labelCalStatusPm";
             this.labelCalStatusPm.Size = new System.Drawing.Size(0, 30);
