@@ -23,7 +23,6 @@ namespace FlexRFCableTester
         double result = 0.0;
         double measure = 0.0;
         int count = 0;
-
         public zeroCalSignalGenerator()
         {
             InitializeComponent();
@@ -88,9 +87,8 @@ namespace FlexRFCableTester
                         }
 
                         frmMain.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
-
-
                         frmMain.writeCommand("*RST;*OPC?", visaPowerMeter);
+
                         response = frmMain.readCommand(visaPowerMeter);
                         if (!response.Contains("+1"))
                             return false;
@@ -101,7 +99,6 @@ namespace FlexRFCableTester
                             return false;
 
                         frmMain.writeCommand("AVER OFF", visaPowerMeter);
-
                         frmMain.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
                         response = frmMain.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
@@ -126,7 +123,6 @@ namespace FlexRFCableTester
                         if (!response.Contains("+0"))
                             return false;
 
-
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
                             frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
@@ -146,7 +142,6 @@ namespace FlexRFCableTester
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
                             Application.DoEvents();
-
                         }
                         if (status)
                         {
@@ -154,7 +149,6 @@ namespace FlexRFCableTester
                             Application.DoEvents();
                             Thread.Sleep(3000);
                         }
-
                         if (!status)
                             return false;
                     }
@@ -164,7 +158,6 @@ namespace FlexRFCableTester
             {
                 frmMain.logMessage("Exception: " + ex);
             }
-
             return true;
         }
         private void buttonOkSg_Click(object sender, System.EventArgs e)

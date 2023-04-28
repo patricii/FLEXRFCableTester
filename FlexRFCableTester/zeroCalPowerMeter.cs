@@ -14,7 +14,6 @@ namespace FlexRFCableTester
         int count = 45;
         int delay = 1000;
         string message = string.Empty;
-
         public zeroCalPowerMeter()
         {
             InitializeComponent();
@@ -68,7 +67,6 @@ namespace FlexRFCableTester
                 resultZeroCalPowerMeter = "Finished";
                 frmMain.logMessage("Zero Cal Power Meter Finished Successfully");
             }
-
             else
             {
                 resultZeroCalPowerMeter = "Failed";

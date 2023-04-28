@@ -47,6 +47,7 @@
             this.labelAddressGPIB = new System.Windows.Forms.Label();
             this.labelEquipmentNames = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelWarning = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
             this.labelFF = new System.Windows.Forms.Label();
@@ -80,7 +81,7 @@
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelWarning = new System.Windows.Forms.Label();
+            this.labelStatusRFTester = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -278,6 +279,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.labelStatusRFTester);
             this.tabPage2.Controls.Add(this.labelWarning);
             this.tabPage2.Controls.Add(this.buttonStart);
             this.tabPage2.Controls.Add(this.groupBoxCableSettings);
@@ -291,6 +293,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "RF Cable Tester";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
+            this.labelWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelWarning.Location = new System.Drawing.Point(516, 526);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(0, 31);
+            this.labelWarning.TabIndex = 17;
             // 
             // buttonStart
             // 
@@ -585,15 +597,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // labelWarning
+            // labelStatusRFTester
             // 
-            this.labelWarning.AutoSize = true;
-            this.labelWarning.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.labelWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelWarning.Location = new System.Drawing.Point(516, 526);
-            this.labelWarning.Name = "labelWarning";
-            this.labelWarning.Size = new System.Drawing.Size(0, 31);
-            this.labelWarning.TabIndex = 17;
+            this.labelStatusRFTester.AutoSize = true;
+            this.labelStatusRFTester.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelStatusRFTester.Location = new System.Drawing.Point(570, 521);
+            this.labelStatusRFTester.Name = "labelStatusRFTester";
+            this.labelStatusRFTester.Size = new System.Drawing.Size(0, 30);
+            this.labelStatusRFTester.TabIndex = 18;
             // 
             // FormApp
             // 
@@ -685,6 +696,7 @@
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
         public System.Windows.Forms.Label labelWarning;
+        private System.Windows.Forms.Label labelStatusRFTester;
     }
 }
 
