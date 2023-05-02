@@ -18,12 +18,10 @@ namespace FlexRFCableTester
         {
             InitializeComponent();
         }
-        public bool zeroCalPowerMeterMtd(MessageBasedSession mBs)
+        public bool zeroCalPowerMeterMtd()
         {
-            string visaResourceName = frmMain.textBoxAddressPowerM.Text;
-            mBs = new MessageBasedSession(visaResourceName);
-
-            frmMain.writeCommand("CAL?", mBs);
+            Equipment equipmentvisaPowerMeter = new Equipment(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+            equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
             do
             {
                 Thread.Sleep(delay);
@@ -35,7 +33,7 @@ namespace FlexRFCableTester
             }
             while (count != 0);
 
-            string zeroPowerMeter = mBs.ReadString();
+            string zeroPowerMeter = equipmentvisaPowerMeter.equipmentName.ReadString();
 
             if (zeroPowerMeter.Contains("+0"))
             {
@@ -60,7 +58,7 @@ namespace FlexRFCableTester
             buttonOkPm.BackColor = Color.Green;
             buttonOkPm.Enabled = false;
 
-            bool result = zeroCalPowerMeterMtd(visaPowerMeter);
+            bool result = zeroCalPowerMeterMtd();
 
             if (result)
             {

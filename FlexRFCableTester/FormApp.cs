@@ -10,8 +10,8 @@ namespace FlexRFCableTester
 {
     public partial class FormApp : Form
     {
-        public MessageBasedSession visaPowerMeter; //GPIB
-        public MessageBasedSession visaSignalGen; //GPIB
+        public MessageBasedSession visaPowerMeter;
+        public MessageBasedSession visaSignalGen;
         public Ivi.Visa.Interop.ResourceManager rMng; //LAN
         private FormattedIO488 ioTestSet;
         public static bool zeroCalstatus = false;
@@ -89,20 +89,6 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
             }
         }
-        public void writeCommand(string cmd, MessageBasedSession mBS)
-        {
-            mBS.Write(cmd); // write to instrument
-            logMessage("Write " + cmd);
-            Thread.Sleep(delay);
-            Application.DoEvents();
-        }
-        public string readCommand(MessageBasedSession mBS)
-        {
-            Thread.Sleep(delay);
-            string resp = mBS.ReadString(); //read from instrument
-            logMessage("Read " + resp);
-            return resp;
-        }
         public void getEquipmentIdnByLAN(string equipAlias)
         {
             try
@@ -119,21 +105,6 @@ namespace FlexRFCableTester
                 logMessage("Error: " + ex);
                 MessageBox.Show("Error: " + ex);
             }
-        }
-        public bool getEquipmentIdnbyGPIB(MessageBasedSession visaEquip, string gpibAddress)
-        {
-            try
-            {
-                string visaResourceName = gpibAddress; // GPIB adapter 0, Instrument address 20
-                visaEquip = new MessageBasedSession(visaResourceName);
-                writeCommand("*IDN?", visaEquip); // write to instrument
-                readCommand(visaEquip);
-            }
-            catch
-            {
-                return false;
-            }
-            return true;
         }
         public void logMessage(string message)
         {
@@ -180,126 +151,23 @@ namespace FlexRFCableTester
                 }
             }
         }
-
-        private void setZeroCalPMGPIB(MessageBasedSession mBS, string equipAddress)
-        {
-            bool statusGetIdn = false;
-            string response = string.Empty;
-            statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
-
-            if (statusGetIdn)
-            {
-                zeroCalPowerMeter equip = new zeroCalPowerMeter();
-                try
-                {
-                    visaPowerMeter = new MessageBasedSession(equipAddress);
-                    writeCommand("*CLS", visaPowerMeter);
-                    writeCommand("SYST:ERR?", visaPowerMeter);
-                    response = readCommand(visaPowerMeter);
-                    Application.DoEvents();
-
-                    equip.Show();
-                    Application.DoEvents();
-
-                    while (zeroCalPowerMeter.resultZeroCalPowerMeter != "Finished" && zeroCalPowerMeter.resultZeroCalPowerMeter == string.Empty)
-                    {
-                        Thread.Sleep(1000);
-                        Application.DoEvents();
-                    }
-                    if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
-                    {
-                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!");
-                        zeroCalstatus = true;
-                        equip.Close();
-                    }
-                    else
-                    {
-                        logMessage("Equipamento: " + equipAddress + "Zero Cal FAILED!");
-                        equip.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex;
-                    logMessage(message);
-                    MessageBox.Show(message);
-                    equip.Close();
-                }
-            }
-            else
-            {
-                message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!!";
-                logMessage(message);
-                MessageBox.Show(message);
-
-            }
-        }
-        private void setZeroCalSGGPIB(MessageBasedSession mBS, string equipAddress)
-        {
-            bool statusGetIdn = false;
-            string response = string.Empty;
-            statusGetIdn = getEquipmentIdnbyGPIB(mBS, equipAddress);
-
-            if (statusGetIdn)
-            {
-                zeroCalSignalGenerator equip = new zeroCalSignalGenerator();
-                try
-                {
-                    visaSignalGen = new MessageBasedSession(equipAddress);
-                    writeCommand("*CLS", visaSignalGen);
-                    writeCommand("SYST:ERR?", visaSignalGen);
-                    response = readCommand(visaSignalGen);
-                    Application.DoEvents();
-
-                    equip.Show();
-                    Application.DoEvents();
-
-                    while (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished" && zeroCalSignalGenerator.resultZeroCalSigGen == string.Empty)
-                    {
-                        Thread.Sleep(1000);
-                        Application.DoEvents();
-                    }
-                    if (zeroCalSignalGenerator.resultZeroCalSigGen == "Finished")
-                    {
-                        logMessage("Equipamento: " + equipAddress + "Zero Cal OK!");
-                        zeroCalstatus = true;
-                        equip.Close();
-                    }
-                    else
-                    {
-                        logMessage("Equipamento: " + equipAddress + "Zero Cal FAILED!");
-                        equip.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!! reason: " + ex;
-                    logMessage(message);
-                    MessageBox.Show(message);
-                    equip.Close();
-                }
-            }
-            else
-            {
-                message = "Erro ao conectar com o Equipamento: " + equipAddress + "!!!";
-                logMessage(message);
-                MessageBox.Show(message);
-            }
-        }
+     
         private void zeroCalProcess()
         {
+            Equipment equipmentvisaPowerMeter = new Equipment(visaPowerMeter, textBoxAddressPowerM.Text);
+            Equipment equipmentvisavisaSignalGen = new Equipment(visaSignalGen, textBoxAddressSignalGen.Text);
             try
             {
                 logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
-                    setZeroCalPMGPIB(visaPowerMeter, textBoxAddressPowerM.Text);
+                    equipmentvisaPowerMeter.setZeroCalGPIB();
 
                 if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                 {
                     labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
                     if (checkBoxSignalGen.Checked)
-                        setZeroCalSGGPIB(visaSignalGen, textBoxAddressSignalGen.Text);
+                        equipmentvisavisaSignalGen.setZeroCalGPIB();
                 }
                 else
                     MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");

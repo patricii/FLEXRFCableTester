@@ -13,6 +13,8 @@ namespace FlexRFCableTester
         public MessageBasedSession visaSignalGen;
         public MessageBasedSession visaPowerMeter;
         FormApp frmMain = new FormApp();
+        Equipment equipmentSignalGen = new Equipment();
+        Equipment equipmentPowerMeter = new Equipment();
         string startFreq = string.Empty;
         string stopFreq = string.Empty;
         string interval = string.Empty;
@@ -30,15 +32,16 @@ namespace FlexRFCableTester
         {
             InitializeComponent();
         }
-        private bool writeFreqCMDSignalGen(MessageBasedSession mBs, string freq)
+        private bool writeFreqCMDSignalGen(string freq)
         {
-            frmMain.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", mBs);//colocar a opção da freq
-            response = frmMain.readCommand(mBs);
+            equipmentSignalGen = new Equipment(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
+            equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);//colocar a opção da freq
+            response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (Convert.ToInt32(response) != 1)
                 return false;
 
-            frmMain.writeCommand("*ESR?", mBs);
-            response = frmMain.readCommand(mBs);
+            equipmentSignalGen.writeCommand("*ESR?", equipmentSignalGen.equipmentName);
+            response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (!response.Contains("+0"))
                 return false;
 
@@ -55,19 +58,16 @@ namespace FlexRFCableTester
 
             try
             {
-                string visaResourceName = frmMain.textBoxAddressSignalGen.Text;
-                visaSigGen = new MessageBasedSession(visaResourceName);
+                equipmentSignalGen = new Equipment(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
+                equipmentPowerMeter = new Equipment(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
 
-                string visaResourceNamePm = frmMain.textBoxAddressPowerM.Text;
-                visaPowerMeter = new MessageBasedSession(visaResourceNamePm);
-
-                frmMain.writeCommand("*RST;*OPC?", visaSigGen);
-                response = frmMain.readCommand(visaSigGen);
+                equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
+                response = equipmentSignalGen.readCommand(visaSigGen);
 
                 if (Convert.ToInt32(response) == 1)
                 {
-                    frmMain.writeCommand(":FREQ:CW?", visaSigGen);
-                    maxFrequency = frmMain.readCommand(visaSigGen);
+                    equipmentSignalGen.writeCommand(":FREQ:CW?", visaSigGen);
+                    maxFrequency = equipmentSignalGen.readCommand(visaSigGen);
                     frmMain.logMessage("Máxima Frequência permitida " + maxFrequency);
                     double maxFreqSg = Convert.ToDouble(maxFrequency);
                     maxFreqSg = maxFreqSg / 1000;
@@ -89,52 +89,52 @@ namespace FlexRFCableTester
                             frmMain.textBoxStopFrequency.Text = "3000";
                         }
 
-                        frmMain.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
-                        frmMain.writeCommand("*RST;*OPC?", visaPowerMeter);
+                        equipmentSignalGen.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
+                        equipmentPowerMeter.writeCommand("*RST;*OPC?", visaPowerMeter);
 
-                        response = frmMain.readCommand(visaPowerMeter);
+                        response = equipmentPowerMeter.readCommand(visaPowerMeter);
                         if (!response.Contains("+1"))
                             return false;
 
-                        frmMain.writeCommand("DET:FUNC AVER;*OPC?", visaPowerMeter);
-                        response = frmMain.readCommand(visaPowerMeter);
+                        equipmentPowerMeter.writeCommand("DET:FUNC AVER;*OPC?", visaPowerMeter);
+                        response = equipmentPowerMeter.readCommand(visaPowerMeter);
                         if (!response.Contains("+1"))
                             return false;
 
-                        frmMain.writeCommand("AVER OFF", visaPowerMeter);
-                        frmMain.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
-                        response = frmMain.readCommand(visaSigGen);
+                        equipmentSignalGen.writeCommand("AVER OFF", visaPowerMeter);
+                        equipmentSignalGen.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
+                        response = equipmentSignalGen.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
                             return false;
 
-                        bool status = writeFreqCMDSignalGen(visaSigGen, frmMain.textBoxStartFrequency.Text);
+                        bool status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
                         if (!status)
                             return false;
 
-                        frmMain.writeCommand("OUTP ON;*OPC?", visaSigGen);
-                        response = frmMain.readCommand(visaSigGen);
+                        equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
+                        response = equipmentSignalGen.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
                             return false;
 
-                        frmMain.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
-                        response = frmMain.readCommand(visaSigGen);
+                        equipmentSignalGen.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
+                        response = equipmentSignalGen.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
                             return false;
 
-                        frmMain.writeCommand("*ESR?", visaSigGen);
-                        response = frmMain.readCommand(visaSigGen);
+                        equipmentSignalGen.writeCommand("*ESR?", visaSigGen);
+                        response = equipmentSignalGen.readCommand(visaSigGen);
                         if (!response.Contains("+0"))
                             return false;
 
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
                             logTimer.Start();
-                            frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
+                            equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                             do
                             {
-                                frmMain.writeCommand("INIT1", visaPowerMeter);
-                                frmMain.writeCommand("FETC1?", visaPowerMeter);
-                                measure = Convert.ToDouble(frmMain.readCommand(visaPowerMeter));
+                                equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
+                                equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
+                                measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
@@ -146,7 +146,7 @@ namespace FlexRFCableTester
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             if(result < Convert.ToDouble(stopFreq))
-                            status = writeFreqCMDSignalGen(visaSigGen, result.ToString());
+                            status = writeFreqCMDSignalGen(result.ToString());
 
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
