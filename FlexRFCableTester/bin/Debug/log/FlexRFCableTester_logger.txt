@@ -22,3 +22,31 @@
 
 4/28/2023 4:30:26 PM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
 
+5/2/2023 11:47:27 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 11:47:28 AM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+
+5/2/2023 11:53:08 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 11:53:09 AM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+
+5/2/2023 11:53:18 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 11:53:26 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 11:53:26 AM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+
+5/2/2023 11:53:46 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 11:53:47 AM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+
+5/2/2023 11:53:59 AM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 12:05:10 PM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 12:05:10 PM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+
+5/2/2023 12:07:00 PM - [-> Starting ZeroCal process - Waiting response....]
+
+5/2/2023 12:07:00 PM - [-> Erro ao conectar com o Equipamento: GPIB0::30::INSTR!!!]
+

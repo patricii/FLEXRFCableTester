@@ -16,6 +16,7 @@ namespace FlexRFCableTester
         private FormattedIO488 ioTestSet;
         public static bool zeroCalstatus = false;
         string message = string.Empty;
+        string measuresResultLog = string.Empty;
         int delay = 200;
         string filepath = string.Empty;
         string logString = string.Empty;
@@ -88,7 +89,6 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
             }
         }
-
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
@@ -158,6 +158,29 @@ namespace FlexRFCableTester
                 }
             }
         }
+
+        public void logDataGridView(string measuresResultLog)
+        {
+            logString = measuresResultLog + Environment.NewLine;
+            Application.DoEvents();
+            filepath = @"log\MeasuresResultLog.txt";
+
+            if (!File.Exists(filepath))
+            {
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                {
+                    writer.WriteLine(logString);
+                }
+            }
+            else
+            {
+                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
+                {
+                    writer.WriteLine(logString);
+                }
+            }
+        }
+
         private void setZeroCalPMGPIB(MessageBasedSession mBS, string equipAddress)
         {
             bool statusGetIdn = false;
@@ -294,9 +317,10 @@ namespace FlexRFCableTester
             }
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
-        {        
+        {
             writeValuesToIniFile();
             zeroCalProcess();
+            
         }
         private void writeValuesToIniFile()
         {
@@ -330,8 +354,9 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
             }
         }
-        public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string callFactor, string passFail, string testTime)
+        public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
+            logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CalFactory:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
             try
             {
                 dataGridViewMeasureTable.Rows.Add();
@@ -340,7 +365,7 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[2].Value = reading;
                 dataGridViewMeasureTable.Rows[count].Cells[3].Value = loLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
-                dataGridViewMeasureTable.Rows[count].Cells[5].Value = callFactor;
+                dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
