@@ -294,7 +294,7 @@ namespace FlexRFCableTester
             }
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
-        {         
+        {        
             writeValuesToIniFile();
             zeroCalProcess();
         }
@@ -345,7 +345,7 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 logMessage("Error to add values to DataGridView - reason: " + ex);
             }

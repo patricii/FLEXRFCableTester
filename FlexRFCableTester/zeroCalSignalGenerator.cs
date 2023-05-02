@@ -1,5 +1,6 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -22,6 +23,7 @@ namespace FlexRFCableTester
         string maxFrequency = string.Empty;
         double result = 0.0;
         double measure = 0.0;
+        double calFactory = 0.0;
         int count = 0;
         int countResults = 0;
         public zeroCalSignalGenerator()
@@ -70,7 +72,7 @@ namespace FlexRFCableTester
                     double maxFreqSg = Convert.ToDouble(maxFrequency);
                     maxFreqSg = maxFreqSg / 1000;
                     maxFreqSg = maxFreqSg / 1000;
-
+                    Stopwatch logTimer = new Stopwatch();
                     if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
                         message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
@@ -126,6 +128,7 @@ namespace FlexRFCableTester
 
                         while (result < Convert.ToDouble(stopFreq) && status == true)
                         {
+                            logTimer.Start();
                             frmMain.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                             do
                             {
@@ -133,8 +136,9 @@ namespace FlexRFCableTester
                                 frmMain.writeCommand("FETC1?", visaPowerMeter);
                                 measure = Convert.ToDouble(frmMain.readCommand(visaPowerMeter));
                                 count++;
-
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", "0.1", "pass", "0.12"); // to do !!!
+                                logTimer.Stop();
+                                calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", calFactory.ToString(), "pass", logTimer.ElapsedMilliseconds.ToString()); // to do !!!
                                 countResults++;
 
                             }
