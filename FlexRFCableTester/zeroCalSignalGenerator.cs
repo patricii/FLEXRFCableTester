@@ -153,6 +153,7 @@ namespace FlexRFCableTester
 
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
+                            count = 0;
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             if(result < Convert.ToDouble(stopFreq))
