@@ -28,8 +28,12 @@ namespace FlexRFCableTester
         double result = 0.0;
         double measure = 0.0;
         double calFactory = 0.0;
+        double firstMeasure = 0.0;
+        double xMeasure = 0.0;
         int count = 0;
         int countResults = 0;
+        string passFail = "Pass";
+        string stabilityCriteria = string.Empty;
 
         public zeroCalSignalGenerator()
         {
@@ -66,6 +70,12 @@ namespace FlexRFCableTester
                 visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
                 equipmentSignalGen = new Equipments(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
                 equipmentPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+
+                var MyIni = new IniFile("Settings.ini");
+                if (MyIni.KeyExists("StabilityCriteria", "ZeroCalFrequency"))
+                    stabilityCriteria = MyIni.Read("StabilityCriteria", "ZeroCalFrequency");
+
+
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
                 response = equipmentSignalGen.readCommand(visaSigGen);
@@ -144,12 +154,27 @@ namespace FlexRFCableTester
                                 equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
                                 equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
                                 measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
+
+                                if (count == 0)
+                                    firstMeasure = measure;
+
+                                else
+                                {
+                                    xMeasure = firstMeasure - measure;
+                                    if (xMeasure > Convert.ToDouble(stabilityCriteria))
+                                        passFail = "Fail";
+                                    else
+                                        passFail = "Pass";
+                                }
+
+                                
+
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), "-9999", "9999", calFactory.ToString("F4"), "pass", logTimer.ElapsedMilliseconds.ToString() + "ms");
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), "-9999", "9999", calFactory.ToString("F4"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
-                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, measure);
+                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, calFactory);
 
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
