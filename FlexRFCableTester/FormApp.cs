@@ -13,8 +13,7 @@ namespace FlexRFCableTester
         public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
-        string filepath = string.Empty;
-        string logString = string.Empty;
+        Logger logger = new Logger();
         public FormApp()
         {
             InitializeComponent();
@@ -78,63 +77,17 @@ namespace FlexRFCableTester
             catch
             {
                 message = "Frequências não encontradas no arquivo settings.ini";
-                logMessage(message);
+                logger.logMessage(message);
                 MessageBox.Show(message);
             }
-        }
-        public void logMessage(string message)
-        {
-            DateTime now = DateTime.Now;
-            logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
-            textBoxResponse.Text += logString;
-            Application.DoEvents();
-            filepath = @"log\FlexRFCableTester_logger.txt";
-
-            if (!File.Exists(filepath))
-            {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
-            }
-            else
-            {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
-            }
-        }
-
-        public void logDataGridView(string measuresResultLog)
-        {
-            logString = measuresResultLog + Environment.NewLine;
-            Application.DoEvents();
-            filepath = @"log\MeasuresResultLog.txt";
-
-            if (!File.Exists(filepath))
-            {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
-            }
-            else
-            {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
-            }
-        }
-     
+        }       
         private void zeroCalProcess()
         {
             Equipment equipmentvisaPowerMeter = new Equipment(visaPowerMeter, textBoxAddressPowerM.Text);
             Equipment equipmentvisavisaSignalGen = new Equipment(visaSignalGen, textBoxAddressSignalGen.Text);
             try
             {
-                logMessage("Starting ZeroCal process - Waiting response....");
+                logger.logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
                     equipmentvisaPowerMeter.setZeroCalGPIB();
@@ -156,7 +109,7 @@ namespace FlexRFCableTester
             catch (Exception ex)
             {
                 message = "Erro ao comunicar com o Equipamento!!!" + ex;
-                logMessage(message);
+                logger.logMessage(message);
                 MessageBox.Show(message);
             }
         }
@@ -194,13 +147,13 @@ namespace FlexRFCableTester
             else
             {
                 message = "Error: Realize o Zero Cal antes de começar!!!";
-                logMessage(message);
+                logger.logMessage(message);
                 MessageBox.Show(message);
             }
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
-            logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CalFactory:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
+            logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CalFactory:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
             try
             {
                 dataGridViewMeasureTable.Rows.Add();
@@ -216,7 +169,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
-                logMessage("Error to add values to DataGridView - reason: " + ex);
+                logger.logMessage("Error to add values to DataGridView - reason: " + ex);
             }
         }
     }

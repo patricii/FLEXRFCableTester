@@ -15,6 +15,8 @@ namespace FlexRFCableTester
         FormApp frmMain = new FormApp();
         Equipment equipmentSignalGen = new Equipment();
         Equipment equipmentPowerMeter = new Equipment();
+        Logger logger = new Logger();
+
         string startFreq = string.Empty;
         string stopFreq = string.Empty;
         string interval = string.Empty;
@@ -28,6 +30,7 @@ namespace FlexRFCableTester
         double calFactory = 0.0;
         int count = 0;
         int countResults = 0;
+
         public zeroCalSignalGenerator()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace FlexRFCableTester
         private bool writeFreqCMDSignalGen(string freq)
         {
             equipmentSignalGen = new Equipment(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
-            equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);//colocar a opção da freq
+            equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);
             response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (Convert.ToInt32(response) != 1)
                 return false;
@@ -68,7 +71,7 @@ namespace FlexRFCableTester
                 {
                     equipmentSignalGen.writeCommand(":FREQ:CW?", visaSigGen);
                     maxFrequency = equipmentSignalGen.readCommand(visaSigGen);
-                    frmMain.logMessage("Máxima Frequência permitida " + maxFrequency);
+                    logger.logMessage("Máxima Frequência permitida " + maxFrequency);
                     double maxFreqSg = Convert.ToDouble(maxFrequency);
                     maxFreqSg = maxFreqSg / 1000;
                     maxFreqSg = maxFreqSg / 1000;
@@ -77,7 +80,7 @@ namespace FlexRFCableTester
                     {
                         message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
                         MessageBox.Show(message);
-                        frmMain.logMessage(message);
+                        logger.logMessage(message);
                     }
                     else
                     {
@@ -85,7 +88,7 @@ namespace FlexRFCableTester
                         {
                             message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
                             frmMain.labelWarning.Text = message;
-                            frmMain.logMessage(message);
+                            logger.logMessage(message);
                             frmMain.textBoxStopFrequency.Text = "3000";
                         }
 
@@ -166,7 +169,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
-                frmMain.logMessage("Exception: " + ex);
+                logger.logMessage("Exception: " + ex);
             }
             return true;
         }
@@ -179,12 +182,12 @@ namespace FlexRFCableTester
             if (result)
             {
                 resultZeroCalSigGen = "Finished";
-                frmMain.logMessage("Zero Cal Signal Generator Finished Successfully");
+                logger.logMessage("Zero Cal Signal Generator Finished Successfully");
             }
             else
             {
                 resultZeroCalSigGen = "Failed";
-                frmMain.logMessage("Zero Cal Signal Generator Failed!!!");
+                logger.logMessage("Zero Cal Signal Generator Failed!!!");
             }
         }
     }

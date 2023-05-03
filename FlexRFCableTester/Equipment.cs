@@ -17,6 +17,8 @@ namespace FlexRFCableTester
 
         public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
 
+        Logger logger = new Logger();
+
 
         public Equipment() { }
 
@@ -46,14 +48,14 @@ namespace FlexRFCableTester
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
-            logMessage("Write " + cmd);
+            logger.logMessage("Write " + cmd);
             Thread.Sleep(200);
         }
         public string readCommand(MessageBasedSession mBS)
         {
             Thread.Sleep(200);
             string resp = mBS.ReadString(); //read from instrument
-            logMessage("Read " + resp);
+            logger.logMessage("Read " + resp);
             return resp;
         }
         public void setZeroCalGPIB()
@@ -79,20 +81,20 @@ namespace FlexRFCableTester
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
                     {
-                        logMessage("Equipamento: " + address + "Zero Cal OK!");
+                        logger.logMessage("Equipamento: " + address + "Zero Cal OK!");
                         zeroCalstatus = true;
                         equip.Close();
                     }
                     else
                     {
-                        logMessage("Equipamento: " + address + "Zero Cal FAILED!");
+                        logger.logMessage("Equipamento: " + address + "Zero Cal FAILED!");
                         equip.Close();
                     }
                 }
                 catch (Exception ex)
                 {
                     message = "Erro ao conectar com o Equipamento: " + address + "!!! reason: " + ex;
-                    logMessage(message);
+                    logger.logMessage(message);
                     MessageBox.Show(message);
                     equip.Close();
                 }
@@ -100,7 +102,7 @@ namespace FlexRFCableTester
             else
             {
                 message = "Erro ao conectar com o Equipamento: " + address + "!!!";
-                logMessage(message);
+                logger.logMessage(message);
                 MessageBox.Show(message);
 
             }
@@ -129,11 +131,11 @@ namespace FlexRFCableTester
                 ioTestSet.IO = (IMessage)resourceMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
                 ioTestSet.WriteString("*IDN?", true);
                 string response = ioTestSet.ReadString();
-                logMessage("Read " + response);
+                logger.logMessage("Read " + response);
             }
             catch (Exception ex)
             {
-                logMessage("Error: " + ex);
+                logger.logMessage("Error: " + ex);
                 MessageBox.Show("Error: " + ex);
             }
         }

@@ -14,6 +14,7 @@ namespace FlexRFCableTester
         int count = 45;
         int delay = 1000;
         string message = string.Empty;
+        Logger logger = new Logger();
         public zeroCalPowerMeter()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace FlexRFCableTester
                 count--;
                 message = "Aguarde o Zero Cal do Power Meter... " + count + "s";
                 labelCalStatusPm.Text = message;
-                frmMain.logMessage(message);
+                logger.logMessage(message);
                 Application.DoEvents();
             }
             while (count != 0);
@@ -48,7 +49,7 @@ namespace FlexRFCableTester
                 Thread.Sleep(3000);
                 message = "Power Meter Zero Cal Failed!!!";
                 labelCalStatusPm.Text = message;
-                frmMain.logMessage(message);
+                logger.logMessage(message);
             }
             return false;
         }
@@ -63,12 +64,12 @@ namespace FlexRFCableTester
             if (result)
             {
                 resultZeroCalPowerMeter = "Finished";
-                frmMain.logMessage("Zero Cal Power Meter Finished Successfully");
+                logger.logMessage("Zero Cal Power Meter Finished Successfully");
             }
             else
             {
                 resultZeroCalPowerMeter = "Failed";
-                frmMain.logMessage("Zero Cal Power Meter Failed!!!");
+                logger.logMessage("Zero Cal Power Meter Failed!!!");
             }
         }
     }
