@@ -1,4 +1,5 @@
-﻿using NationalInstruments.VisaNS;
+﻿using Ivi.Visa.Interop;
+using NationalInstruments.VisaNS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,11 @@ namespace FlexRFCableTester
     class Equipment : FormApp
     {
         public MessageBasedSession equipmentName { get; set; }
+        public FormattedIO488 ioTestSet { get; set; }
         public string address { get; set; }
         string message = string.Empty;
+        public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
+
 
         public Equipment() { }
 
@@ -100,6 +104,23 @@ namespace FlexRFCableTester
                 return false;
             }
             return true;
+        }
+        public void getEquipmentIdnByLAN(string equipAlias)
+        {
+            try
+            {
+                ioTestSet = new FormattedIO488();
+                resourceMng = new Ivi.Visa.Interop.ResourceManager();
+                ioTestSet.IO = (IMessage)resourceMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
+                ioTestSet.WriteString("*IDN?", true);
+                string response = ioTestSet.ReadString();
+                logMessage("Read " + response);
+            }
+            catch (Exception ex)
+            {
+                logMessage("Error: " + ex);
+                MessageBox.Show("Error: " + ex);
+            }
         }
     }
 }

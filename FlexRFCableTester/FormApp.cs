@@ -12,8 +12,6 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter;
         public MessageBasedSession visaSignalGen;
-        public Ivi.Visa.Interop.ResourceManager rMng; //LAN
-        private FormattedIO488 ioTestSet;
         public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
@@ -43,7 +41,6 @@ namespace FlexRFCableTester
                 }
             }
         }
-
         private void comboBoxCableSettings_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -61,7 +58,6 @@ namespace FlexRFCableTester
                 MessageBox.Show("Imagem não disponível!!!");
             }
         }
-
         private void getFrequencyFromFile()
         {
             try
@@ -87,23 +83,6 @@ namespace FlexRFCableTester
                 message = "Frequências não encontradas no arquivo settings.ini";
                 logMessage(message);
                 MessageBox.Show(message);
-            }
-        }
-        public void getEquipmentIdnByLAN(string equipAlias)
-        {
-            try
-            {
-                ioTestSet = new FormattedIO488();
-                rMng = new Ivi.Visa.Interop.ResourceManager();
-                ioTestSet.IO = (IMessage)rMng.Open(equipAlias, AccessMode.NO_LOCK, 5000, "");
-                ioTestSet.WriteString("*IDN?", true);
-                string response = ioTestSet.ReadString();
-                logMessage("Read " + response);
-            }
-            catch (Exception ex)
-            {
-                logMessage("Error: " + ex);
-                MessageBox.Show("Error: " + ex);
             }
         }
         public void logMessage(string message)
