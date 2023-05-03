@@ -180,8 +180,9 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
-                dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
+                dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;                
                 Application.DoEvents();
+                Update();
             }
             catch (Exception ex)
             {
