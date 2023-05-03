@@ -12,15 +12,24 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter;
         public MessageBasedSession visaSignalGen;
-        public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
+        string dateCompare = string.Empty;
         Logger logger;
+        private static FormApp INSTANCE = null; 
         public FormApp()
         {
             InitializeComponent();
             readSettingsAndFillComboBox();
             getFrequencyFromFile();
+            INSTANCE = this;
+        }
+        public static FormApp getInstance()
+        {
+            if (INSTANCE == null)
+                INSTANCE = new FormApp();
+
+            return INSTANCE;
         }
         public void readSettingsAndFillComboBox()
         {
@@ -60,7 +69,7 @@ namespace FlexRFCableTester
         {
 
             var MyIni = new IniFile("calFactoryValues.ini");
-            MyIni.Write(freq, value.ToString("F4"), "dbLossZeroCalFrequency");
+            MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
 
         }
         private void getFrequencyFromFile()
@@ -155,7 +164,19 @@ namespace FlexRFCableTester
         private void buttonStart_Click(object sender, EventArgs e)
         {
             logger = new Logger();
-            if (zeroCalstatus)
+            DateTime enteredDate;
+            DateTime today;
+
+            var MyIni = new IniFile("calFactoryValues.ini");
+
+            if (MyIni.KeyExists("Date", "zeroCalDate"))
+                dateCompare = MyIni.Read("Date", "zeroCalDate");
+
+            today = DateTime.Now;
+            enteredDate = DateTime.Parse(dateCompare);
+            var diffOfDates = today - enteredDate;
+
+            if (diffOfDates.TotalHours < 24)
             {
                 //to do!!!!
             }
@@ -182,7 +203,6 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;                
                 Application.DoEvents();
-                Update();
             }
             catch (Exception ex)
             {

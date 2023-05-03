@@ -9,7 +9,7 @@ namespace FlexRFCableTester
     public partial class zeroCalPowerMeter : Form
     {
         public static string resultZeroCalPowerMeter = string.Empty;
-        FormApp frmMain = new FormApp();
+        FormApp frmMain = FormApp.getInstance();
         public MessageBasedSession visaPowerMeter;
         int count = 45;
         int delay = 1000;

@@ -12,7 +12,7 @@ namespace FlexRFCableTester
         public static string resultZeroCalSigGen = string.Empty;
         public MessageBasedSession visaSignalGen;
         public MessageBasedSession visaPowerMeter;
-        FormApp frmMain = new FormApp();
+        FormApp frmMain = FormApp.getInstance();
         Equipments equipmentSignalGen = new Equipments();
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
@@ -166,13 +166,10 @@ namespace FlexRFCableTester
                                     else
                                         passFail = "Pass";
                                 }
-
-                                
-
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), "-9999", "9999", calFactory.ToString("F4"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
                                 frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, calFactory);
 
@@ -187,7 +184,6 @@ namespace FlexRFCableTester
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
                             Application.DoEvents();
-                            countResults++;
                         }
                         if (status)
                         {
