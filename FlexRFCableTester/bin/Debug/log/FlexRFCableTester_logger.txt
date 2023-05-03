@@ -3922,3 +3922,5 @@ Parameter name: index
 
 5/3/2023 3:03:30 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
 
+5/3/2023 3:34:45 PM - [-> Error: Realize o Zero Cal antes de começar!!!]
+

@@ -166,9 +166,6 @@ namespace FlexRFCableTester
                                     else
                                         passFail = "Pass";
                                 }
-
-                                
-
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;

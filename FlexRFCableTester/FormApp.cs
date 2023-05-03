@@ -12,9 +12,9 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter;
         public MessageBasedSession visaSignalGen;
-        public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
+        string dateCompare = string.Empty;
         Logger logger;
         public FormApp()
         {
@@ -155,7 +155,19 @@ namespace FlexRFCableTester
         private void buttonStart_Click(object sender, EventArgs e)
         {
             logger = new Logger();
-            if (zeroCalstatus)
+            DateTime enteredDate;
+            DateTime today;
+
+            var MyIni = new IniFile("calFactoryValues.ini");
+
+            if (MyIni.KeyExists("Date", "zeroCalDate"))
+                dateCompare = MyIni.Read("Date", "zeroCalDate");
+
+            today = DateTime.Now;
+            enteredDate = DateTime.Parse(dateCompare);
+            var diffOfDates = today - enteredDate;
+
+            if (diffOfDates.TotalHours < 24)
             {
                 //to do!!!!
             }
