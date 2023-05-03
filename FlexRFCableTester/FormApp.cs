@@ -16,7 +16,7 @@ namespace FlexRFCableTester
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
         Logger logger;
-        private static FormApp INSTANCE = null; 
+        private static FormApp INSTANCE = null;
         public FormApp()
         {
             InitializeComponent();
@@ -114,20 +114,28 @@ namespace FlexRFCableTester
                 if (checkBoxPowerM.Checked)
                     equipmentvisaPowerMeter.setZeroCalGPIB();
 
-                 if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
-                 {
-                     labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
+                if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
+                {
+                    labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
                     Application.DoEvents();
-                     if (checkBoxSignalGen.Checked)
-                         equipmentvisavisaSignalGen.setZeroCalSGGPIB();
-                 }
-                 else
-                     MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+                    if (checkBoxSignalGen.Checked)
+                        equipmentvisavisaSignalGen.setZeroCalSGGPIB();
+                }
+                else
+                    MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
 
                 if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
                     MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
                 else
-                    labelStatusRFTester.Text = "!!!Zero Cal do SignalGen realizado com sucesso!!!";
+                {
+                    labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
+
+                    DateTime dateNow = DateTime.Now;
+                    var MyIni = new IniFile("calFactoryValues.ini");
+
+                    if (MyIni.KeyExists("Date", "zeroCalDate"))
+                        MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
+                }
             }
             catch (Exception ex)
             {
@@ -201,7 +209,7 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
-                dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;                
+                dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }
             catch (Exception ex)
