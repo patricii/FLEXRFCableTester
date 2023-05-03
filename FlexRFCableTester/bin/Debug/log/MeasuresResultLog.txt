@@ -1,0 +1,64 @@
+0-> Freq:100MHz  dBm:10  Reading:9.8513dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1487  Result:pass  TestTime:992ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.8518dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1482  Result:pass  TestTime:992ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.8548dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1452  Result:pass  TestTime:992ms
+
+4-> Freq:300MHz  dBm:10  Reading:9.7309dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2691  Result:pass  TestTime:1984ms
+
+6-> Freq:500MHz  dBm:10  Reading:9.7117dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2883  Result:pass  TestTime:2977ms
+
+8-> Freq:700MHz  dBm:10  Reading:9.6889dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3111  Result:pass  TestTime:3970ms
+
+10-> Freq:900MHz  dBm:10  Reading:9.6314dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3686  Result:pass  TestTime:4961ms
+
+12-> Freq:1100MHz  dBm:10  Reading:9.6194dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3806  Result:pass  TestTime:5955ms
+
+14-> Freq:1300MHz  dBm:10  Reading:9.5726dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4274  Result:pass  TestTime:6949ms
+
+16-> Freq:1500MHz  dBm:10  Reading:9.5821dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4179  Result:pass  TestTime:7942ms
+
+18-> Freq:1700MHz  dBm:10  Reading:9.5534dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4466  Result:pass  TestTime:8936ms
+
+20-> Freq:1900MHz  dBm:10  Reading:9.4622dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5378  Result:pass  TestTime:9929ms
+
+22-> Freq:2100MHz  dBm:10  Reading:9.5101dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4899  Result:pass  TestTime:10921ms
+
+24-> Freq:2300MHz  dBm:10  Reading:9.4203dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5797  Result:pass  TestTime:11914ms
+
+26-> Freq:2500MHz  dBm:10  Reading:9.4148dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5852  Result:pass  TestTime:12907ms
+
+28-> Freq:2700MHz  dBm:10  Reading:9.2812dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7188  Result:pass  TestTime:13900ms
+
+30-> Freq:2900MHz  dBm:10  Reading:9.3968dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6032  Result:pass  TestTime:14893ms
+
+32-> Freq:3100MHz  dBm:10  Reading:9.3170dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6830  Result:pass  TestTime:15887ms
+
+34-> Freq:3300MHz  dBm:10  Reading:9.2521dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7479  Result:pass  TestTime:16879ms
+
+36-> Freq:3500MHz  dBm:10  Reading:9.3447dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6553  Result:pass  TestTime:17870ms
+
+38-> Freq:3700MHz  dBm:10  Reading:8.9298dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0702  Result:pass  TestTime:18863ms
+
+40-> Freq:3900MHz  dBm:10  Reading:9.3649dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6351  Result:pass  TestTime:19855ms
+
+42-> Freq:4100MHz  dBm:10  Reading:9.3159dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6841  Result:pass  TestTime:20848ms
+
+44-> Freq:4300MHz  dBm:10  Reading:9.2788dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7212  Result:pass  TestTime:21843ms
+
+46-> Freq:4500MHz  dBm:10  Reading:9.2759dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7241  Result:pass  TestTime:22836ms
+
+48-> Freq:4700MHz  dBm:10  Reading:9.2988dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7012  Result:pass  TestTime:23829ms
+
+50-> Freq:4900MHz  dBm:10  Reading:9.1788dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.8212  Result:pass  TestTime:24823ms
+
+52-> Freq:5100MHz  dBm:10  Reading:9.2165dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7835  Result:pass  TestTime:25816ms
+
+54-> Freq:5300MHz  dBm:10  Reading:9.2100dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7900  Result:pass  TestTime:26808ms
+
+56-> Freq:5500MHz  dBm:10  Reading:9.2310dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7690  Result:pass  TestTime:27802ms
+
+58-> Freq:5700MHz  dBm:10  Reading:9.1299dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.8701  Result:pass  TestTime:28796ms
+
+60-> Freq:5900MHz  dBm:10  Reading:8.8129dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1871  Result:pass  TestTime:29789ms
+

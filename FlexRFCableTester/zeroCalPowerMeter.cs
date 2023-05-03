@@ -14,28 +14,28 @@ namespace FlexRFCableTester
         int count = 45;
         int delay = 1000;
         string message = string.Empty;
+        Logger logger = new Logger();
         public zeroCalPowerMeter()
         {
             InitializeComponent();
         }
-        public bool zeroCalPowerMeterMtd(MessageBasedSession mBs)
+        public bool zeroCalPowerMeterMtd()
         {
-            string visaResourceName = frmMain.textBoxAddressPowerM.Text;
-            mBs = new MessageBasedSession(visaResourceName);
-
-            frmMain.writeCommand("CAL?", mBs);
+            visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
+            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+            equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
             do
             {
                 Thread.Sleep(delay);
                 count--;
                 message = "Aguarde o Zero Cal do Power Meter... " + count + "s";
                 labelCalStatusPm.Text = message;
-                frmMain.logMessage(message);
+                logger.logMessage(message);
                 Application.DoEvents();
             }
             while (count != 0);
 
-            string zeroPowerMeter = mBs.ReadString();
+            string zeroPowerMeter = equipmentvisaPowerMeter.equipmentName.ReadString();
 
             if (zeroPowerMeter.Contains("+0"))
             {
@@ -50,7 +50,7 @@ namespace FlexRFCableTester
                 Thread.Sleep(3000);
                 message = "Power Meter Zero Cal Failed!!!";
                 labelCalStatusPm.Text = message;
-                frmMain.logMessage(message);
+                logger.logMessage(message);
             }
             return false;
         }
@@ -59,18 +59,19 @@ namespace FlexRFCableTester
         {
             buttonOkPm.BackColor = Color.Green;
             buttonOkPm.Enabled = false;
+            Application.DoEvents();
 
-            bool result = zeroCalPowerMeterMtd(visaPowerMeter);
+            bool result = zeroCalPowerMeterMtd();
 
             if (result)
             {
                 resultZeroCalPowerMeter = "Finished";
-                frmMain.logMessage("Zero Cal Power Meter Finished Successfully");
+                logger.logMessage("Zero Cal Power Meter Finished Successfully");
             }
             else
             {
                 resultZeroCalPowerMeter = "Failed";
-                frmMain.logMessage("Zero Cal Power Meter Failed!!!");
+                logger.logMessage("Zero Cal Power Meter Failed!!!");
             }
         }
     }
