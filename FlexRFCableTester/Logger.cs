@@ -8,17 +8,17 @@ using System.Windows.Forms;
 
 namespace FlexRFCableTester
 {
-    class Logger : FormApp
+    class Logger
     {
         string logString = string.Empty;
         string filepath = string.Empty;
 
         public Logger() { }
+
         public void logMessage(string message)
         {
             DateTime now = DateTime.Now;
             logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
-            textBoxResponse.Text += logString;
             Application.DoEvents();
             filepath = @"log\FlexRFCableTester_logger.txt";
 

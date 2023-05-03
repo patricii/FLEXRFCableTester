@@ -13,8 +13,8 @@ namespace FlexRFCableTester
         public MessageBasedSession visaSignalGen;
         public MessageBasedSession visaPowerMeter;
         FormApp frmMain = new FormApp();
-        Equipment equipmentSignalGen = new Equipment();
-        Equipment equipmentPowerMeter = new Equipment();
+        Equipments equipmentSignalGen = new Equipments();
+        Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
 
         string startFreq = string.Empty;
@@ -35,9 +35,10 @@ namespace FlexRFCableTester
         {
             InitializeComponent();
         }
-        private bool writeFreqCMDSignalGen(string freq)
+        public bool writeFreqCMDSignalGen(string freq)
         {
-            equipmentSignalGen = new Equipment(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
+            visaSignalGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
+            equipmentSignalGen = new Equipments(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
             equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);
             response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (Convert.ToInt32(response) != 1)
@@ -61,8 +62,10 @@ namespace FlexRFCableTester
 
             try
             {
-                equipmentSignalGen = new Equipment(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
-                equipmentPowerMeter = new Equipment(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+                visaSigGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
+                visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
+                equipmentSignalGen = new Equipments(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
+                equipmentPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
                 response = equipmentSignalGen.readCommand(visaSigGen);
@@ -114,6 +117,9 @@ namespace FlexRFCableTester
                         if (!status)
                             return false;
 
+                        labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + frmMain.textBoxStartFrequency.Text + " MHz";
+                        Application.DoEvents();
+
                         equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
                         response = equipmentSignalGen.readCommand(visaSigGen);
                         if (Convert.ToInt32(response) != 1)
@@ -141,7 +147,7 @@ namespace FlexRFCableTester
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString(), "-9999", "9999", calFactory.ToString(), "pass", logTimer.ElapsedMilliseconds.ToString()); // to do !!!
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), "-9999", "9999", calFactory.ToString("F4"), "pass", logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
 
                             }
@@ -177,6 +183,7 @@ namespace FlexRFCableTester
         {
             buttonOkSg.BackColor = Color.Green;
             buttonOkSg.Enabled = false;
+            Application.DoEvents();
             bool result = zeroCalSignalGenMtd(visaSignalGen);
 
             if (result)

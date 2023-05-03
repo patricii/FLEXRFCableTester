@@ -21,7 +21,8 @@ namespace FlexRFCableTester
         }
         public bool zeroCalPowerMeterMtd()
         {
-            Equipment equipmentvisaPowerMeter = new Equipment(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+            visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
+            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
             equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
             do
             {
@@ -58,6 +59,7 @@ namespace FlexRFCableTester
         {
             buttonOkPm.BackColor = Color.Green;
             buttonOkPm.Enabled = false;
+            Application.DoEvents();
 
             bool result = zeroCalPowerMeterMtd();
 

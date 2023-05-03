@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
 
@@ -13,7 +15,7 @@ namespace FlexRFCableTester
         public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
-        Logger logger = new Logger();
+        Logger logger;
         public FormApp()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace FlexRFCableTester
         }
         private void getFrequencyFromFile()
         {
+            logger = new Logger();
             try
             {
                 var MyIni = new IniFile("Settings.ini");
@@ -80,11 +83,14 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }
-        }       
+        }
         private void zeroCalProcess()
         {
-            Equipment equipmentvisaPowerMeter = new Equipment(visaPowerMeter, textBoxAddressPowerM.Text);
-            Equipment equipmentvisavisaSignalGen = new Equipment(visaSignalGen, textBoxAddressSignalGen.Text);
+            logger = new Logger();
+            visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+            visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+            Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
             try
             {
                 logger.logMessage("Starting ZeroCal process - Waiting response....");
@@ -92,14 +98,15 @@ namespace FlexRFCableTester
                 if (checkBoxPowerM.Checked)
                     equipmentvisaPowerMeter.setZeroCalGPIB();
 
-                if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
-                {
-                    labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
-                    if (checkBoxSignalGen.Checked)
-                        equipmentvisavisaSignalGen.setZeroCalGPIB();
-                }
-                else
-                    MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+                 if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
+                 {
+                     labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
+                    Application.DoEvents();
+                     if (checkBoxSignalGen.Checked)
+                         equipmentvisavisaSignalGen.setZeroCalSGGPIB();
+                 }
+                 else
+                     MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
 
                 if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
                     MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
@@ -117,7 +124,7 @@ namespace FlexRFCableTester
         {
             writeValuesToIniFile();
             zeroCalProcess();
-            
+
         }
         private void writeValuesToIniFile()
         {
@@ -140,6 +147,7 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            logger = new Logger();
             if (zeroCalstatus)
             {
                 //to do!!!!
@@ -153,6 +161,7 @@ namespace FlexRFCableTester
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
+            logger = new Logger();
             logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CalFactory:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
             try
             {
