@@ -16,11 +16,20 @@ namespace FlexRFCableTester
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
         Logger logger;
+        private static FormApp INSTANCE = null; 
         public FormApp()
         {
             InitializeComponent();
             readSettingsAndFillComboBox();
             getFrequencyFromFile();
+            INSTANCE = this;
+        }
+        public static FormApp getInstance()
+        {
+            if (INSTANCE == null)
+                INSTANCE = new FormApp();
+
+            return INSTANCE;
         }
         public void readSettingsAndFillComboBox()
         {
@@ -60,7 +69,7 @@ namespace FlexRFCableTester
         {
 
             var MyIni = new IniFile("calFactoryValues.ini");
-            MyIni.Write(freq, value.ToString("F4"), "dbLossZeroCalFrequency");
+            MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
 
         }
         private void getFrequencyFromFile()

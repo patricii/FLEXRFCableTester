@@ -3924,3 +3924,7 @@ Parameter name: index
 
 5/3/2023 3:34:45 PM - [-> Error: Realize o Zero Cal antes de começar!!!]
 
+5/3/2023 3:45:59 PM - [-> Error: Realize o Zero Cal antes de começar!!!]
+
+5/3/2023 4:07:25 PM - [-> Error: Realize o Zero Cal antes de começar!!!]
+
