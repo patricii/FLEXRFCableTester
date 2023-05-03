@@ -135,7 +135,7 @@ namespace FlexRFCableTester
                         if (!response.Contains("+0"))
                             return false;
 
-                        while (result < Convert.ToDouble(stopFreq) && status == true)
+                        while (result <= Convert.ToDouble(stopFreq) && status == true)
                         {
                             logTimer.Start();
                             equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
@@ -149,6 +149,7 @@ namespace FlexRFCableTester
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
                                 frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), "-9999", "9999", calFactory.ToString("F4"), "pass", logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
+                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, measure);
 
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
@@ -195,6 +196,7 @@ namespace FlexRFCableTester
             {
                 resultZeroCalSigGen = "Failed";
                 logger.logMessage("Zero Cal Signal Generator Failed!!!");
+                MessageBox.Show("Zero Cal Signal Generator Failed!!!");
             }
         }
     }

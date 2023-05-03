@@ -56,6 +56,13 @@ namespace FlexRFCableTester
                 MessageBox.Show("Imagem não disponível!!!");
             }
         }
+        public void readMeasureAndFillCalFactoryValues(string freq, double value)
+        {
+
+            var MyIni = new IniFile("calFactoryValues.ini");
+            MyIni.Write(freq, value.ToString("F4"), "dbLossZeroCalFrequency");
+
+        }
         private void getFrequencyFromFile()
         {
             logger = new Logger();

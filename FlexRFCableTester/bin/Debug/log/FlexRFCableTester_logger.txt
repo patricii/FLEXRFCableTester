@@ -1,1798 +1,1615 @@
-5/3/2023 12:06:24 PM - [-> Starting ZeroCal process - Waiting response....]
+5/3/2023 12:37:58 PM - [-> Starting ZeroCal process - Waiting response....]
 
-5/3/2023 12:06:24 PM - [-> Write *IDN?]
+5/3/2023 12:38:02 PM - [-> Write *IDN?]
 
-5/3/2023 12:06:24 PM - [-> Read Agilent Technologies,E4416A,MY52180001,A1.05.02
+5/3/2023 12:38:02 PM - [-> Read Agilent Technologies, E4438C, MY50142633, A. 01. 51
 ]
 
-5/3/2023 12:06:24 PM - [-> Write *CLS]
+5/3/2023 12:38:03 PM - [-> Write *CLS]
 
-5/3/2023 12:06:24 PM - [-> Write SYST:ERR?]
+5/3/2023 12:38:03 PM - [-> Write SYST:ERR?]
 
-5/3/2023 12:06:25 PM - [-> Read +0,"No error"
+5/3/2023 12:38:03 PM - [-> Read +0,"No error"
 ]
 
-5/3/2023 12:06:53 PM - [-> Write CAL?]
+5/3/2023 12:38:06 PM - [-> Write *RST;*OPC?]
 
-5/3/2023 12:06:54 PM - [-> Aguarde o Zero Cal do Power Meter... 44s]
-
-5/3/2023 12:06:55 PM - [-> Aguarde o Zero Cal do Power Meter... 43s]
-
-5/3/2023 12:06:56 PM - [-> Aguarde o Zero Cal do Power Meter... 42s]
-
-5/3/2023 12:06:57 PM - [-> Aguarde o Zero Cal do Power Meter... 41s]
-
-5/3/2023 12:06:58 PM - [-> Aguarde o Zero Cal do Power Meter... 40s]
-
-5/3/2023 12:06:59 PM - [-> Aguarde o Zero Cal do Power Meter... 39s]
-
-5/3/2023 12:07:00 PM - [-> Aguarde o Zero Cal do Power Meter... 38s]
-
-5/3/2023 12:07:01 PM - [-> Aguarde o Zero Cal do Power Meter... 37s]
-
-5/3/2023 12:07:02 PM - [-> Aguarde o Zero Cal do Power Meter... 36s]
-
-5/3/2023 12:07:03 PM - [-> Aguarde o Zero Cal do Power Meter... 35s]
-
-5/3/2023 12:07:04 PM - [-> Aguarde o Zero Cal do Power Meter... 34s]
-
-5/3/2023 12:07:05 PM - [-> Aguarde o Zero Cal do Power Meter... 33s]
-
-5/3/2023 12:07:06 PM - [-> Aguarde o Zero Cal do Power Meter... 32s]
-
-5/3/2023 12:07:07 PM - [-> Aguarde o Zero Cal do Power Meter... 31s]
-
-5/3/2023 12:07:08 PM - [-> Aguarde o Zero Cal do Power Meter... 30s]
-
-5/3/2023 12:07:09 PM - [-> Aguarde o Zero Cal do Power Meter... 29s]
-
-5/3/2023 12:07:10 PM - [-> Aguarde o Zero Cal do Power Meter... 28s]
-
-5/3/2023 12:07:11 PM - [-> Aguarde o Zero Cal do Power Meter... 27s]
-
-5/3/2023 12:07:12 PM - [-> Aguarde o Zero Cal do Power Meter... 26s]
-
-5/3/2023 12:07:14 PM - [-> Aguarde o Zero Cal do Power Meter... 25s]
-
-5/3/2023 12:07:15 PM - [-> Aguarde o Zero Cal do Power Meter... 24s]
-
-5/3/2023 12:07:16 PM - [-> Aguarde o Zero Cal do Power Meter... 23s]
-
-5/3/2023 12:07:17 PM - [-> Aguarde o Zero Cal do Power Meter... 22s]
-
-5/3/2023 12:07:18 PM - [-> Aguarde o Zero Cal do Power Meter... 21s]
-
-5/3/2023 12:07:19 PM - [-> Aguarde o Zero Cal do Power Meter... 20s]
-
-5/3/2023 12:07:20 PM - [-> Aguarde o Zero Cal do Power Meter... 19s]
-
-5/3/2023 12:07:21 PM - [-> Aguarde o Zero Cal do Power Meter... 18s]
-
-5/3/2023 12:07:22 PM - [-> Aguarde o Zero Cal do Power Meter... 17s]
-
-5/3/2023 12:07:23 PM - [-> Aguarde o Zero Cal do Power Meter... 16s]
-
-5/3/2023 12:07:24 PM - [-> Aguarde o Zero Cal do Power Meter... 15s]
-
-5/3/2023 12:07:25 PM - [-> Aguarde o Zero Cal do Power Meter... 14s]
-
-5/3/2023 12:07:26 PM - [-> Aguarde o Zero Cal do Power Meter... 13s]
-
-5/3/2023 12:07:27 PM - [-> Aguarde o Zero Cal do Power Meter... 12s]
-
-5/3/2023 12:07:28 PM - [-> Aguarde o Zero Cal do Power Meter... 11s]
-
-5/3/2023 12:07:29 PM - [-> Aguarde o Zero Cal do Power Meter... 10s]
-
-5/3/2023 12:07:30 PM - [-> Aguarde o Zero Cal do Power Meter... 9s]
-
-5/3/2023 12:07:31 PM - [-> Aguarde o Zero Cal do Power Meter... 8s]
-
-5/3/2023 12:07:32 PM - [-> Aguarde o Zero Cal do Power Meter... 7s]
-
-5/3/2023 12:07:33 PM - [-> Aguarde o Zero Cal do Power Meter... 6s]
-
-5/3/2023 12:07:34 PM - [-> Aguarde o Zero Cal do Power Meter... 5s]
-
-5/3/2023 12:07:35 PM - [-> Aguarde o Zero Cal do Power Meter... 4s]
-
-5/3/2023 12:07:36 PM - [-> Aguarde o Zero Cal do Power Meter... 3s]
-
-5/3/2023 12:07:37 PM - [-> Aguarde o Zero Cal do Power Meter... 2s]
-
-5/3/2023 12:07:38 PM - [-> Aguarde o Zero Cal do Power Meter... 1s]
-
-5/3/2023 12:07:39 PM - [-> Aguarde o Zero Cal do Power Meter... 0s]
-
-5/3/2023 12:07:42 PM - [-> Zero Cal Power Meter Finished Successfully]
-
-5/3/2023 12:07:42 PM - [-> Equipamento: GPIB0::30::INSTRZero Cal OK!]
-
-5/3/2023 12:07:42 PM - [-> Write *IDN?]
-
-5/3/2023 12:07:42 PM - [-> Read Agilent Technologies, E4438C, MY50142633, A. 01. 51
+5/3/2023 12:38:07 PM - [-> Read 1
 ]
 
-5/3/2023 12:07:42 PM - [-> Write *CLS]
+5/3/2023 12:38:07 PM - [-> Write :FREQ:CW?]
 
-5/3/2023 12:07:43 PM - [-> Write SYST:ERR?]
-
-5/3/2023 12:07:43 PM - [-> Read +0,"No error"
+5/3/2023 12:38:07 PM - [-> Read +6.0000000000000E+09
 ]
 
-5/3/2023 12:08:08 PM - [-> Write *RST;*OPC?]
-
-5/3/2023 12:08:09 PM - [-> Read 1
+5/3/2023 12:38:07 PM - [-> Máxima Frequência permitida +6.0000000000000E+09
 ]
 
-5/3/2023 12:08:09 PM - [-> Write :FREQ:CW?]
+5/3/2023 12:38:07 PM - [-> Write OUTP:MOD:STAT OFF]
 
-5/3/2023 12:08:09 PM - [-> Read +6.0000000000000E+09
+5/3/2023 12:38:07 PM - [-> Write *RST;*OPC?]
+
+5/3/2023 12:38:09 PM - [-> Read +1
 ]
 
-5/3/2023 12:08:09 PM - [-> Máxima Frequência permitida +6.0000000000000E+09
+5/3/2023 12:38:09 PM - [-> Write DET:FUNC AVER;*OPC?]
+
+5/3/2023 12:38:10 PM - [-> Read +1
 ]
 
-5/3/2023 12:08:09 PM - [-> Write OUTP:MOD:STAT OFF]
+5/3/2023 12:38:10 PM - [-> Write AVER OFF]
 
-5/3/2023 12:08:09 PM - [-> Write *RST;*OPC?]
+5/3/2023 12:38:10 PM - [-> Write :FREQuency:MODE CW;*OPC?]
 
-5/3/2023 12:08:11 PM - [-> Read +1
+5/3/2023 12:38:11 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:11 PM - [-> Write DET:FUNC AVER;*OPC?]
+5/3/2023 12:38:11 PM - [-> Write :FREQ:CW 100MHz;*OPC?]
 
-5/3/2023 12:08:12 PM - [-> Read +1
+5/3/2023 12:38:11 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:12 PM - [-> Write AVER OFF]
+5/3/2023 12:38:11 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:12 PM - [-> Write :FREQuency:MODE CW;*OPC?]
-
-5/3/2023 12:08:13 PM - [-> Read 1
+5/3/2023 12:38:11 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:13 PM - [-> Write :FREQ:CW 100MHz;*OPC?]
+5/3/2023 12:38:11 PM - [-> Write OUTP ON;*OPC?]
 
-5/3/2023 12:08:13 PM - [-> Read 1
+5/3/2023 12:38:12 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:13 PM - [-> Write *ESR?]
+5/3/2023 12:38:12 PM - [-> Write SOUR:POW 10 dBm;*OPC?]
 
-5/3/2023 12:08:14 PM - [-> Read +0
+5/3/2023 12:38:12 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:14 PM - [-> Write OUTP ON;*OPC?]
+5/3/2023 12:38:12 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:14 PM - [-> Read 1
+5/3/2023 12:38:13 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:14 PM - [-> Write SOUR:POW 10 dBm;*OPC?]
+5/3/2023 12:38:13 PM - [-> Write FREQ 100MHz]
 
-5/3/2023 12:08:14 PM - [-> Read 1
+5/3/2023 12:38:13 PM - [-> Write INIT1]
+
+5/3/2023 12:38:13 PM - [-> Write FETC1?]
+
+5/3/2023 12:38:14 PM - [-> Read +9.83193809E+000
 ]
 
-5/3/2023 12:08:14 PM - [-> Write *ESR?]
+5/3/2023 12:38:14 PM - [-> Write INIT1]
 
-5/3/2023 12:08:15 PM - [-> Read +0
+5/3/2023 12:38:14 PM - [-> Write FETC1?]
+
+5/3/2023 12:38:14 PM - [-> Read +9.83216511E+000
 ]
 
-5/3/2023 12:08:15 PM - [-> Write FREQ 100MHz]
+5/3/2023 12:38:14 PM - [-> Write INIT1]
 
-5/3/2023 12:08:15 PM - [-> Write INIT1]
+5/3/2023 12:38:15 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:15 PM - [-> Write FETC1?]
-
-5/3/2023 12:08:16 PM - [-> Read +9.83389263E+000
+5/3/2023 12:38:15 PM - [-> Read +9.83539767E+000
 ]
 
-5/3/2023 12:08:16 PM - [-> Write INIT1]
+5/3/2023 12:38:15 PM - [-> Write :FREQ:CW 200MHz;*OPC?]
 
-5/3/2023 12:08:16 PM - [-> Write FETC1?]
-
-5/3/2023 12:08:16 PM - [-> Read +9.83465740E+000
+5/3/2023 12:38:15 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:16 PM - [-> Write INIT1]
+5/3/2023 12:38:15 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:17 PM - [-> Write FETC1?]
-
-5/3/2023 12:08:17 PM - [-> Read +9.83811985E+000
+5/3/2023 12:38:16 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:17 PM - [-> Write :FREQ:CW 300MHz;*OPC?]
+5/3/2023 12:38:16 PM - [-> Write FREQ 200MHz]
 
-5/3/2023 12:08:18 PM - [-> Read 1
+5/3/2023 12:38:16 PM - [-> Write INIT1]
+
+5/3/2023 12:38:16 PM - [-> Write FETC1?]
+
+5/3/2023 12:38:17 PM - [-> Read +9.74889258E+000
 ]
 
-5/3/2023 12:08:18 PM - [-> Write *ESR?]
+5/3/2023 12:38:17 PM - [-> Write :FREQ:CW 300MHz;*OPC?]
 
-5/3/2023 12:08:18 PM - [-> Read +0
+5/3/2023 12:38:17 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:18 PM - [-> Write FREQ 300MHz]
+5/3/2023 12:38:17 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:18 PM - [-> Write INIT1]
-
-5/3/2023 12:08:18 PM - [-> Write FETC1?]
-
-5/3/2023 12:08:19 PM - [-> Read +9.70880601E+000
+5/3/2023 12:38:18 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:19 PM - [-> Write :FREQ:CW 500MHz;*OPC?]
+5/3/2023 12:38:18 PM - [-> Write FREQ 300MHz]
 
-5/3/2023 12:08:19 PM - [-> Read 1
+5/3/2023 12:38:18 PM - [-> Write INIT1]
+
+5/3/2023 12:38:18 PM - [-> Write FETC1?]
+
+5/3/2023 12:38:19 PM - [-> Read +9.70539123E+000
 ]
 
-5/3/2023 12:08:19 PM - [-> Write *ESR?]
-
-5/3/2023 12:08:20 PM - [-> Read +0
-]
-
-5/3/2023 12:08:20 PM - [-> Write FREQ 500MHz]
-
-5/3/2023 12:08:20 PM - [-> Write INIT1]
-
-5/3/2023 12:08:20 PM - [-> Write FETC1?]
-
-5/3/2023 12:08:21 PM - [-> Read +9.68734430E+000
-]
-
-5/3/2023 12:08:21 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:19 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:21 PM - [-> Write :FREQ:CW 700MHz;*OPC?]
+5/3/2023 12:38:19 PM - [-> Write :FREQ:CW 400MHz;*OPC?]
 
-5/3/2023 12:08:21 PM - [-> Read 1
+5/3/2023 12:38:19 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:21 PM - [-> Write *ESR?]
+5/3/2023 12:38:19 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:22 PM - [-> Read +0
+5/3/2023 12:38:20 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:22 PM - [-> Write FREQ 700MHz]
+5/3/2023 12:38:20 PM - [-> Write FREQ 400MHz]
 
-5/3/2023 12:08:22 PM - [-> Write INIT1]
+5/3/2023 12:38:20 PM - [-> Write INIT1]
 
-5/3/2023 12:08:22 PM - [-> Write FETC1?]
+5/3/2023 12:38:20 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:23 PM - [-> Read +9.66435436E+000
+5/3/2023 12:38:21 PM - [-> Read +9.68293679E+000
 ]
 
-5/3/2023 12:08:23 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:21 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:23 PM - [-> Write :FREQ:CW 900MHz;*OPC?]
+5/3/2023 12:38:21 PM - [-> Write :FREQ:CW 500MHz;*OPC?]
 
-5/3/2023 12:08:23 PM - [-> Read 1
+5/3/2023 12:38:21 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:23 PM - [-> Write *ESR?]
+5/3/2023 12:38:21 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:24 PM - [-> Read +0
+5/3/2023 12:38:22 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:24 PM - [-> Write FREQ 900MHz]
+5/3/2023 12:38:22 PM - [-> Write FREQ 500MHz]
 
-5/3/2023 12:08:24 PM - [-> Write INIT1]
+5/3/2023 12:38:22 PM - [-> Write INIT1]
 
-5/3/2023 12:08:24 PM - [-> Write FETC1?]
+5/3/2023 12:38:22 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:25 PM - [-> Read +9.60685812E+000
+5/3/2023 12:38:23 PM - [-> Read +9.68381691E+000
 ]
 
-5/3/2023 12:08:25 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:23 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:25 PM - [-> Write :FREQ:CW 1100MHz;*OPC?]
+5/3/2023 12:38:23 PM - [-> Write :FREQ:CW 600MHz;*OPC?]
 
-5/3/2023 12:08:25 PM - [-> Read 1
+5/3/2023 12:38:23 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:25 PM - [-> Write *ESR?]
+5/3/2023 12:38:23 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:26 PM - [-> Read +0
+5/3/2023 12:38:23 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:26 PM - [-> Write FREQ 1100MHz]
+5/3/2023 12:38:23 PM - [-> Write FREQ 600MHz]
 
-5/3/2023 12:08:26 PM - [-> Write INIT1]
+5/3/2023 12:38:24 PM - [-> Write INIT1]
 
-5/3/2023 12:08:26 PM - [-> Write FETC1?]
+5/3/2023 12:38:24 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:27 PM - [-> Read +9.59436143E+000
+5/3/2023 12:38:24 PM - [-> Read +9.64877610E+000
 ]
 
-5/3/2023 12:08:27 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:25 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:27 PM - [-> Write :FREQ:CW 1300MHz;*OPC?]
+5/3/2023 12:38:25 PM - [-> Write :FREQ:CW 700MHz;*OPC?]
 
-5/3/2023 12:08:27 PM - [-> Read 1
+5/3/2023 12:38:25 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:27 PM - [-> Write *ESR?]
+5/3/2023 12:38:25 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:28 PM - [-> Read +0
+5/3/2023 12:38:25 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:28 PM - [-> Write FREQ 1300MHz]
+5/3/2023 12:38:25 PM - [-> Write FREQ 700MHz]
 
-5/3/2023 12:08:28 PM - [-> Write INIT1]
+5/3/2023 12:38:26 PM - [-> Write INIT1]
 
-5/3/2023 12:08:28 PM - [-> Write FETC1?]
+5/3/2023 12:38:26 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:29 PM - [-> Read +9.54789616E+000
+5/3/2023 12:38:26 PM - [-> Read +9.66179472E+000
 ]
 
-5/3/2023 12:08:29 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:27 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:29 PM - [-> Write :FREQ:CW 1500MHz;*OPC?]
+5/3/2023 12:38:27 PM - [-> Write :FREQ:CW 800MHz;*OPC?]
 
-5/3/2023 12:08:29 PM - [-> Read 1
+5/3/2023 12:38:27 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:29 PM - [-> Write *ESR?]
+5/3/2023 12:38:27 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:30 PM - [-> Read +0
+5/3/2023 12:38:27 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:30 PM - [-> Write FREQ 1500MHz]
+5/3/2023 12:38:27 PM - [-> Write FREQ 800MHz]
 
-5/3/2023 12:08:30 PM - [-> Write INIT1]
+5/3/2023 12:38:28 PM - [-> Write INIT1]
 
-5/3/2023 12:08:30 PM - [-> Write FETC1?]
+5/3/2023 12:38:28 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:31 PM - [-> Read +9.55747692E+000
+5/3/2023 12:38:28 PM - [-> Read +9.63762029E+000
 ]
 
-5/3/2023 12:08:31 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:29 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:31 PM - [-> Write :FREQ:CW 1700MHz;*OPC?]
+5/3/2023 12:38:29 PM - [-> Write :FREQ:CW 900MHz;*OPC?]
 
-5/3/2023 12:08:31 PM - [-> Read 1
+5/3/2023 12:38:29 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:31 PM - [-> Write *ESR?]
+5/3/2023 12:38:29 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:31 PM - [-> Read +0
+5/3/2023 12:38:29 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:31 PM - [-> Write FREQ 1700MHz]
+5/3/2023 12:38:29 PM - [-> Write FREQ 900MHz]
 
-5/3/2023 12:08:32 PM - [-> Write INIT1]
+5/3/2023 12:38:30 PM - [-> Write INIT1]
 
-5/3/2023 12:08:32 PM - [-> Write FETC1?]
+5/3/2023 12:38:30 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:32 PM - [-> Read +9.52863494E+000
+5/3/2023 12:38:30 PM - [-> Read +9.60570937E+000
 ]
 
-5/3/2023 12:08:33 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:30 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:33 PM - [-> Write :FREQ:CW 1900MHz;*OPC?]
+5/3/2023 12:38:30 PM - [-> Write :FREQ:CW 1000MHz;*OPC?]
 
-5/3/2023 12:08:33 PM - [-> Read 1
+5/3/2023 12:38:31 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:33 PM - [-> Write *ESR?]
+5/3/2023 12:38:31 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:33 PM - [-> Read +0
+5/3/2023 12:38:31 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:33 PM - [-> Write FREQ 1900MHz]
+5/3/2023 12:38:31 PM - [-> Write FREQ 1000MHz]
 
-5/3/2023 12:08:34 PM - [-> Write INIT1]
+5/3/2023 12:38:31 PM - [-> Write INIT1]
 
-5/3/2023 12:08:34 PM - [-> Write FETC1?]
+5/3/2023 12:38:32 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:34 PM - [-> Read +9.43832368E+000
+5/3/2023 12:38:32 PM - [-> Read +9.61407227E+000
 ]
 
-5/3/2023 12:08:34 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:32 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:34 PM - [-> Write :FREQ:CW 2100MHz;*OPC?]
+5/3/2023 12:38:32 PM - [-> Write :FREQ:CW 1100MHz;*OPC?]
 
-5/3/2023 12:08:35 PM - [-> Read 1
+5/3/2023 12:38:33 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:35 PM - [-> Write *ESR?]
+5/3/2023 12:38:33 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:35 PM - [-> Read +0
+5/3/2023 12:38:33 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:35 PM - [-> Write FREQ 2100MHz]
+5/3/2023 12:38:33 PM - [-> Write FREQ 1100MHz]
 
-5/3/2023 12:08:35 PM - [-> Write INIT1]
+5/3/2023 12:38:33 PM - [-> Write INIT1]
 
-5/3/2023 12:08:36 PM - [-> Write FETC1?]
+5/3/2023 12:38:34 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:36 PM - [-> Read +9.48560044E+000
+5/3/2023 12:38:34 PM - [-> Read +9.59474420E+000
 ]
 
-5/3/2023 12:08:36 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:34 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:36 PM - [-> Write :FREQ:CW 2300MHz;*OPC?]
+5/3/2023 12:38:34 PM - [-> Write :FREQ:CW 1200MHz;*OPC?]
 
-5/3/2023 12:08:37 PM - [-> Read 1
+5/3/2023 12:38:35 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:37 PM - [-> Write *ESR?]
+5/3/2023 12:38:35 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:37 PM - [-> Read +0
+5/3/2023 12:38:35 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:37 PM - [-> Write FREQ 2300MHz]
+5/3/2023 12:38:35 PM - [-> Write FREQ 1200MHz]
 
-5/3/2023 12:08:37 PM - [-> Write INIT1]
+5/3/2023 12:38:35 PM - [-> Write INIT1]
 
-5/3/2023 12:08:38 PM - [-> Write FETC1?]
+5/3/2023 12:38:35 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:38 PM - [-> Read +9.39754019E+000
+5/3/2023 12:38:36 PM - [-> Read +9.60389395E+000
 ]
 
-5/3/2023 12:08:38 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:36 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:38 PM - [-> Write :FREQ:CW 2500MHz;*OPC?]
+5/3/2023 12:38:36 PM - [-> Write :FREQ:CW 1300MHz;*OPC?]
 
-5/3/2023 12:08:39 PM - [-> Read 1
+5/3/2023 12:38:37 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:39 PM - [-> Write *ESR?]
+5/3/2023 12:38:37 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:39 PM - [-> Read +0
+5/3/2023 12:38:37 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:39 PM - [-> Write FREQ 2500MHz]
+5/3/2023 12:38:37 PM - [-> Write FREQ 1300MHz]
 
-5/3/2023 12:08:39 PM - [-> Write INIT1]
+5/3/2023 12:38:37 PM - [-> Write INIT1]
 
-5/3/2023 12:08:39 PM - [-> Write FETC1?]
+5/3/2023 12:38:37 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:40 PM - [-> Read +9.39182862E+000
+5/3/2023 12:38:38 PM - [-> Read +9.54803126E+000
 ]
 
-5/3/2023 12:08:40 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:38 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:40 PM - [-> Write :FREQ:CW 2700MHz;*OPC?]
+5/3/2023 12:38:38 PM - [-> Write :FREQ:CW 1400MHz;*OPC?]
 
-5/3/2023 12:08:41 PM - [-> Read 1
+5/3/2023 12:38:39 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:41 PM - [-> Write *ESR?]
+5/3/2023 12:38:39 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:41 PM - [-> Read +0
+5/3/2023 12:38:39 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:41 PM - [-> Write FREQ 2700MHz]
+5/3/2023 12:38:39 PM - [-> Write FREQ 1400MHz]
 
-5/3/2023 12:08:41 PM - [-> Write INIT1]
+5/3/2023 12:38:39 PM - [-> Write INIT1]
 
-5/3/2023 12:08:41 PM - [-> Write FETC1?]
+5/3/2023 12:38:39 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:42 PM - [-> Read +9.25832105E+000
+5/3/2023 12:38:40 PM - [-> Read +9.55742273E+000
 ]
 
-5/3/2023 12:08:42 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:40 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:42 PM - [-> Write :FREQ:CW 2900MHz;*OPC?]
+5/3/2023 12:38:40 PM - [-> Write :FREQ:CW 1500MHz;*OPC?]
 
-5/3/2023 12:08:42 PM - [-> Read 1
+5/3/2023 12:38:40 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:42 PM - [-> Write *ESR?]
+5/3/2023 12:38:40 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:43 PM - [-> Read +0
+5/3/2023 12:38:41 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:43 PM - [-> Write FREQ 2900MHz]
+5/3/2023 12:38:41 PM - [-> Write FREQ 1500MHz]
 
-5/3/2023 12:08:43 PM - [-> Write INIT1]
+5/3/2023 12:38:41 PM - [-> Write INIT1]
 
-5/3/2023 12:08:43 PM - [-> Write FETC1?]
+5/3/2023 12:38:41 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:44 PM - [-> Read +9.37392975E+000
+5/3/2023 12:38:42 PM - [-> Read +9.55804969E+000
 ]
 
-5/3/2023 12:08:44 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:42 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:44 PM - [-> Write :FREQ:CW 3100MHz;*OPC?]
+5/3/2023 12:38:42 PM - [-> Write :FREQ:CW 1600MHz;*OPC?]
 
-5/3/2023 12:08:44 PM - [-> Read 1
+5/3/2023 12:38:42 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:44 PM - [-> Write *ESR?]
+5/3/2023 12:38:42 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:45 PM - [-> Read +0
+5/3/2023 12:38:43 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:45 PM - [-> Write FREQ 3100MHz]
+5/3/2023 12:38:43 PM - [-> Write FREQ 1600MHz]
 
-5/3/2023 12:08:45 PM - [-> Write INIT1]
+5/3/2023 12:38:43 PM - [-> Write INIT1]
 
-5/3/2023 12:08:45 PM - [-> Write FETC1?]
+5/3/2023 12:38:43 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:46 PM - [-> Read +9.29379786E+000
+5/3/2023 12:38:44 PM - [-> Read +9.54035983E+000
 ]
 
-5/3/2023 12:08:46 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:44 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:46 PM - [-> Write :FREQ:CW 3300MHz;*OPC?]
+5/3/2023 12:38:44 PM - [-> Write :FREQ:CW 1700MHz;*OPC?]
 
-5/3/2023 12:08:46 PM - [-> Read 1
+5/3/2023 12:38:44 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:46 PM - [-> Write *ESR?]
+5/3/2023 12:38:44 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:47 PM - [-> Read +0
+5/3/2023 12:38:45 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:47 PM - [-> Write FREQ 3300MHz]
+5/3/2023 12:38:45 PM - [-> Write FREQ 1700MHz]
 
-5/3/2023 12:08:47 PM - [-> Write INIT1]
+5/3/2023 12:38:45 PM - [-> Write INIT1]
 
-5/3/2023 12:08:47 PM - [-> Write FETC1?]
+5/3/2023 12:38:45 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:48 PM - [-> Read +9.23021094E+000
+5/3/2023 12:38:46 PM - [-> Read +9.53040682E+000
 ]
 
-5/3/2023 12:08:48 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:46 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:48 PM - [-> Write :FREQ:CW 3500MHz;*OPC?]
+5/3/2023 12:38:46 PM - [-> Write :FREQ:CW 1800MHz;*OPC?]
 
-5/3/2023 12:08:48 PM - [-> Read 1
+5/3/2023 12:38:46 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:48 PM - [-> Write *ESR?]
+5/3/2023 12:38:46 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:49 PM - [-> Read +0
+5/3/2023 12:38:47 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:49 PM - [-> Write FREQ 3500MHz]
+5/3/2023 12:38:47 PM - [-> Write FREQ 1800MHz]
 
-5/3/2023 12:08:49 PM - [-> Write INIT1]
+5/3/2023 12:38:47 PM - [-> Write INIT1]
 
-5/3/2023 12:08:49 PM - [-> Write FETC1?]
+5/3/2023 12:38:47 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:49 PM - [-> Read +9.32299987E+000
+5/3/2023 12:38:48 PM - [-> Read +9.50605878E+000
 ]
 
-5/3/2023 12:08:50 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:48 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:50 PM - [-> Write :FREQ:CW 3700MHz;*OPC?]
+5/3/2023 12:38:48 PM - [-> Write :FREQ:CW 1900MHz;*OPC?]
 
-5/3/2023 12:08:50 PM - [-> Read 1
+5/3/2023 12:38:48 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:50 PM - [-> Write *ESR?]
+5/3/2023 12:38:48 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:50 PM - [-> Read +0
+5/3/2023 12:38:49 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:50 PM - [-> Write FREQ 3700MHz]
+5/3/2023 12:38:49 PM - [-> Write FREQ 1900MHz]
 
-5/3/2023 12:08:51 PM - [-> Write INIT1]
+5/3/2023 12:38:49 PM - [-> Write INIT1]
 
-5/3/2023 12:08:51 PM - [-> Write FETC1?]
+5/3/2023 12:38:49 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:51 PM - [-> Read +8.90809204E+000
+5/3/2023 12:38:50 PM - [-> Read +9.44304667E+000
 ]
 
-5/3/2023 12:08:51 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:50 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:51 PM - [-> Write :FREQ:CW 3900MHz;*OPC?]
+5/3/2023 12:38:50 PM - [-> Write :FREQ:CW 2000MHz;*OPC?]
 
-5/3/2023 12:08:52 PM - [-> Read 1
+5/3/2023 12:38:50 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:52 PM - [-> Write *ESR?]
+5/3/2023 12:38:50 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:52 PM - [-> Read +0
+5/3/2023 12:38:51 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:52 PM - [-> Write FREQ 3900MHz]
+5/3/2023 12:38:51 PM - [-> Write FREQ 2000MHz]
 
-5/3/2023 12:08:53 PM - [-> Write INIT1]
+5/3/2023 12:38:51 PM - [-> Write INIT1]
 
-5/3/2023 12:08:53 PM - [-> Write FETC1?]
+5/3/2023 12:38:51 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:53 PM - [-> Read +9.34219670E+000
+5/3/2023 12:38:52 PM - [-> Read +9.49750096E+000
 ]
 
-5/3/2023 12:08:53 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:52 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:53 PM - [-> Write :FREQ:CW 4100MHz;*OPC?]
+5/3/2023 12:38:52 PM - [-> Write :FREQ:CW 2100MHz;*OPC?]
 
-5/3/2023 12:08:54 PM - [-> Read 1
+5/3/2023 12:38:52 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:54 PM - [-> Write *ESR?]
+5/3/2023 12:38:52 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:54 PM - [-> Read +0
+5/3/2023 12:38:53 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:54 PM - [-> Write FREQ 4100MHz]
+5/3/2023 12:38:53 PM - [-> Write FREQ 2100MHz]
 
-5/3/2023 12:08:54 PM - [-> Write INIT1]
+5/3/2023 12:38:53 PM - [-> Write INIT1]
 
-5/3/2023 12:08:55 PM - [-> Write FETC1?]
+5/3/2023 12:38:53 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:55 PM - [-> Read +9.29291214E+000
+5/3/2023 12:38:54 PM - [-> Read +9.49191443E+000
 ]
 
-5/3/2023 12:08:55 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:54 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:55 PM - [-> Write :FREQ:CW 4300MHz;*OPC?]
+5/3/2023 12:38:54 PM - [-> Write :FREQ:CW 2200MHz;*OPC?]
 
-5/3/2023 12:08:56 PM - [-> Read 1
+5/3/2023 12:38:54 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:56 PM - [-> Write *ESR?]
+5/3/2023 12:38:54 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:56 PM - [-> Read +0
+5/3/2023 12:38:54 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:56 PM - [-> Write FREQ 4300MHz]
+5/3/2023 12:38:54 PM - [-> Write FREQ 2200MHz]
 
-5/3/2023 12:08:56 PM - [-> Write INIT1]
+5/3/2023 12:38:55 PM - [-> Write INIT1]
 
-5/3/2023 12:08:57 PM - [-> Write FETC1?]
+5/3/2023 12:38:55 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:57 PM - [-> Read +9.25586862E+000
+5/3/2023 12:38:55 PM - [-> Read +9.40706585E+000
 ]
 
-5/3/2023 12:08:57 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:56 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:57 PM - [-> Write :FREQ:CW 4500MHz;*OPC?]
+5/3/2023 12:38:56 PM - [-> Write :FREQ:CW 2300MHz;*OPC?]
 
-5/3/2023 12:08:58 PM - [-> Read 1
+5/3/2023 12:38:56 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:58 PM - [-> Write *ESR?]
+5/3/2023 12:38:56 PM - [-> Write *ESR?]
 
-5/3/2023 12:08:58 PM - [-> Read +0
+5/3/2023 12:38:56 PM - [-> Read +0
 ]
 
-5/3/2023 12:08:58 PM - [-> Write FREQ 4500MHz]
+5/3/2023 12:38:56 PM - [-> Write FREQ 2300MHz]
 
-5/3/2023 12:08:58 PM - [-> Write INIT1]
+5/3/2023 12:38:57 PM - [-> Write INIT1]
 
-5/3/2023 12:08:58 PM - [-> Write FETC1?]
+5/3/2023 12:38:57 PM - [-> Write FETC1?]
 
-5/3/2023 12:08:59 PM - [-> Read +9.25301324E+000
+5/3/2023 12:38:57 PM - [-> Read +9.40413189E+000
 ]
 
-5/3/2023 12:08:59 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:58 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:08:59 PM - [-> Write :FREQ:CW 4700MHz;*OPC?]
+5/3/2023 12:38:58 PM - [-> Write :FREQ:CW 2400MHz;*OPC?]
 
-5/3/2023 12:08:59 PM - [-> Read 1
+5/3/2023 12:38:58 PM - [-> Read 1
 ]
 
-5/3/2023 12:08:59 PM - [-> Write *ESR?]
+5/3/2023 12:38:58 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:00 PM - [-> Read +0
+5/3/2023 12:38:58 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:00 PM - [-> Write FREQ 4700MHz]
+5/3/2023 12:38:58 PM - [-> Write FREQ 2400MHz]
 
-5/3/2023 12:09:00 PM - [-> Write INIT1]
+5/3/2023 12:38:59 PM - [-> Write INIT1]
 
-5/3/2023 12:09:00 PM - [-> Write FETC1?]
+5/3/2023 12:38:59 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:01 PM - [-> Read +9.27612793E+000
+5/3/2023 12:38:59 PM - [-> Read +9.40098146E+000
 ]
 
-5/3/2023 12:09:01 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:38:59 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:01 PM - [-> Write :FREQ:CW 4900MHz;*OPC?]
+5/3/2023 12:38:59 PM - [-> Write :FREQ:CW 2500MHz;*OPC?]
 
-5/3/2023 12:09:01 PM - [-> Read 1
+5/3/2023 12:39:00 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:01 PM - [-> Write *ESR?]
+5/3/2023 12:39:00 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:02 PM - [-> Read +0
+5/3/2023 12:39:00 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:02 PM - [-> Write FREQ 4900MHz]
+5/3/2023 12:39:00 PM - [-> Write FREQ 2500MHz]
 
-5/3/2023 12:09:02 PM - [-> Write INIT1]
+5/3/2023 12:39:01 PM - [-> Write INIT1]
 
-5/3/2023 12:09:02 PM - [-> Write FETC1?]
+5/3/2023 12:39:01 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:03 PM - [-> Read +9.15620629E+000
+5/3/2023 12:39:01 PM - [-> Read +9.40064066E+000
 ]
 
-5/3/2023 12:09:03 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:01 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:03 PM - [-> Write :FREQ:CW 5100MHz;*OPC?]
+5/3/2023 12:39:01 PM - [-> Write :FREQ:CW 2600MHz;*OPC?]
 
-5/3/2023 12:09:03 PM - [-> Read 1
+5/3/2023 12:39:02 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:03 PM - [-> Write *ESR?]
+5/3/2023 12:39:02 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:04 PM - [-> Read +0
+5/3/2023 12:39:02 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:04 PM - [-> Write FREQ 5100MHz]
+5/3/2023 12:39:02 PM - [-> Write FREQ 2600MHz]
 
-5/3/2023 12:09:04 PM - [-> Write INIT1]
+5/3/2023 12:39:02 PM - [-> Write INIT1]
 
-5/3/2023 12:09:04 PM - [-> Write FETC1?]
+5/3/2023 12:39:03 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:05 PM - [-> Read +9.19334774E+000
+5/3/2023 12:39:03 PM - [-> Read +9.35129636E+000
 ]
 
-5/3/2023 12:09:05 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:03 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:05 PM - [-> Write :FREQ:CW 5300MHz;*OPC?]
+5/3/2023 12:39:03 PM - [-> Write :FREQ:CW 2700MHz;*OPC?]
 
-5/3/2023 12:09:05 PM - [-> Read 1
+5/3/2023 12:39:04 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:05 PM - [-> Write *ESR?]
+5/3/2023 12:39:04 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:06 PM - [-> Read +0
+5/3/2023 12:39:04 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:06 PM - [-> Write FREQ 5300MHz]
+5/3/2023 12:39:04 PM - [-> Write FREQ 2700MHz]
 
-5/3/2023 12:09:06 PM - [-> Write INIT1]
+5/3/2023 12:39:04 PM - [-> Write INIT1]
 
-5/3/2023 12:09:06 PM - [-> Write FETC1?]
+5/3/2023 12:39:05 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:07 PM - [-> Read +9.18728006E+000
+5/3/2023 12:39:05 PM - [-> Read +9.26735763E+000
 ]
 
-5/3/2023 12:09:07 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:05 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:07 PM - [-> Write :FREQ:CW 5500MHz;*OPC?]
+5/3/2023 12:39:05 PM - [-> Write :FREQ:CW 2800MHz;*OPC?]
 
-5/3/2023 12:09:07 PM - [-> Read 1
+5/3/2023 12:39:06 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:07 PM - [-> Write *ESR?]
+5/3/2023 12:39:06 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:07 PM - [-> Read +0
+5/3/2023 12:39:06 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:07 PM - [-> Write FREQ 5500MHz]
+5/3/2023 12:39:06 PM - [-> Write FREQ 2800MHz]
 
-5/3/2023 12:09:08 PM - [-> Write INIT1]
+5/3/2023 12:39:06 PM - [-> Write INIT1]
 
-5/3/2023 12:09:08 PM - [-> Write FETC1?]
+5/3/2023 12:39:07 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:08 PM - [-> Read +9.20774315E+000
+5/3/2023 12:39:07 PM - [-> Read +9.32102875E+000
 ]
 
-5/3/2023 12:09:09 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:07 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:09 PM - [-> Write :FREQ:CW 5700MHz;*OPC?]
+5/3/2023 12:39:07 PM - [-> Write :FREQ:CW 2900MHz;*OPC?]
 
-5/3/2023 12:09:09 PM - [-> Read 1
+5/3/2023 12:39:08 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:09 PM - [-> Write *ESR?]
+5/3/2023 12:39:08 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:09 PM - [-> Read +0
+5/3/2023 12:39:08 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:09 PM - [-> Write FREQ 5700MHz]
+5/3/2023 12:39:08 PM - [-> Write FREQ 2900MHz]
 
-5/3/2023 12:09:10 PM - [-> Write INIT1]
+5/3/2023 12:39:08 PM - [-> Write INIT1]
 
-5/3/2023 12:09:10 PM - [-> Write FETC1?]
+5/3/2023 12:39:09 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:10 PM - [-> Read +9.10848025E+000
+5/3/2023 12:39:09 PM - [-> Read +9.38215660E+000
 ]
 
-5/3/2023 12:09:10 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:09 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:10 PM - [-> Write :FREQ:CW 5900MHz;*OPC?]
+5/3/2023 12:39:09 PM - [-> Write :FREQ:CW 3000MHz;*OPC?]
 
-5/3/2023 12:09:11 PM - [-> Read 1
+5/3/2023 12:39:10 PM - [-> Read 1
 ]
 
-5/3/2023 12:09:11 PM - [-> Write *ESR?]
+5/3/2023 12:39:10 PM - [-> Write *ESR?]
 
-5/3/2023 12:09:11 PM - [-> Read +0
+5/3/2023 12:39:10 PM - [-> Read +0
 ]
 
-5/3/2023 12:09:11 PM - [-> Write FREQ 5900MHz]
+5/3/2023 12:39:10 PM - [-> Write FREQ 3000MHz]
 
-5/3/2023 12:09:11 PM - [-> Write INIT1]
+5/3/2023 12:39:10 PM - [-> Write INIT1]
 
-5/3/2023 12:09:12 PM - [-> Write FETC1?]
+5/3/2023 12:39:10 PM - [-> Write FETC1?]
 
-5/3/2023 12:09:12 PM - [-> Read +8.79181675E+000
+5/3/2023 12:39:11 PM - [-> Read +9.35556788E+000
 ]
 
-5/3/2023 12:09:12 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:11 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:09:15 PM - [-> Zero Cal Signal Generator Finished Successfully]
+5/3/2023 12:39:11 PM - [-> Write :FREQ:CW 3100MHz;*OPC?]
 
-5/3/2023 12:09:15 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
-
-5/3/2023 12:11:56 PM - [-> Starting ZeroCal process - Waiting response....]
-
-5/3/2023 12:12:02 PM - [-> Write *IDN?]
-
-5/3/2023 12:12:02 PM - [-> Read Agilent Technologies, E4438C, MY50142633, A. 01. 51
+5/3/2023 12:39:12 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:02 PM - [-> Write *CLS]
+5/3/2023 12:39:12 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:03 PM - [-> Write SYST:ERR?]
-
-5/3/2023 12:12:03 PM - [-> Read +0,"No error"
+5/3/2023 12:39:12 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:06 PM - [-> Write *RST;*OPC?]
+5/3/2023 12:39:12 PM - [-> Write FREQ 3100MHz]
 
-5/3/2023 12:12:07 PM - [-> Read 1
+5/3/2023 12:39:12 PM - [-> Write INIT1]
+
+5/3/2023 12:39:12 PM - [-> Write FETC1?]
+
+5/3/2023 12:39:13 PM - [-> Read +9.30391913E+000
 ]
 
-5/3/2023 12:12:07 PM - [-> Write :FREQ:CW?]
-
-5/3/2023 12:12:07 PM - [-> Read +6.0000000000000E+09
-]
-
-5/3/2023 12:12:07 PM - [-> Máxima Frequência permitida +6.0000000000000E+09
-]
-
-5/3/2023 12:12:07 PM - [-> Write OUTP:MOD:STAT OFF]
-
-5/3/2023 12:12:07 PM - [-> Write *RST;*OPC?]
-
-5/3/2023 12:12:09 PM - [-> Read +1
-]
-
-5/3/2023 12:12:09 PM - [-> Write DET:FUNC AVER;*OPC?]
-
-5/3/2023 12:12:10 PM - [-> Read +1
-]
-
-5/3/2023 12:12:10 PM - [-> Write AVER OFF]
-
-5/3/2023 12:12:10 PM - [-> Write :FREQuency:MODE CW;*OPC?]
-
-5/3/2023 12:12:11 PM - [-> Read 1
-]
-
-5/3/2023 12:12:11 PM - [-> Write :FREQ:CW 100MHz;*OPC?]
-
-5/3/2023 12:12:11 PM - [-> Read 1
-]
-
-5/3/2023 12:12:11 PM - [-> Write *ESR?]
-
-5/3/2023 12:12:11 PM - [-> Read +0
-]
-
-5/3/2023 12:12:11 PM - [-> Write OUTP ON;*OPC?]
-
-5/3/2023 12:12:12 PM - [-> Read 1
-]
-
-5/3/2023 12:12:12 PM - [-> Write SOUR:POW 10 dBm;*OPC?]
-
-5/3/2023 12:12:12 PM - [-> Read 1
-]
-
-5/3/2023 12:12:12 PM - [-> Write *ESR?]
-
-5/3/2023 12:12:13 PM - [-> Read +0
-]
-
-5/3/2023 12:12:13 PM - [-> Write FREQ 100MHz]
-
-5/3/2023 12:12:13 PM - [-> Write INIT1]
-
-5/3/2023 12:12:13 PM - [-> Write FETC1?]
-
-5/3/2023 12:12:14 PM - [-> Read +9.85133902E+000
-]
-
-5/3/2023 12:12:14 PM - [-> Write INIT1]
-
-5/3/2023 12:12:14 PM - [-> Write FETC1?]
-
-5/3/2023 12:12:14 PM - [-> Read +9.85181447E+000
-]
-
-5/3/2023 12:12:14 PM - [-> Write INIT1]
-
-5/3/2023 12:12:15 PM - [-> Write FETC1?]
-
-5/3/2023 12:12:15 PM - [-> Read +9.85482417E+000
-]
-
-5/3/2023 12:12:15 PM - [-> Write :FREQ:CW 300MHz;*OPC?]
-
-5/3/2023 12:12:15 PM - [-> Read 1
-]
-
-5/3/2023 12:12:15 PM - [-> Write *ESR?]
-
-5/3/2023 12:12:16 PM - [-> Read +0
-]
-
-5/3/2023 12:12:16 PM - [-> Write FREQ 300MHz]
-
-5/3/2023 12:12:16 PM - [-> Write INIT1]
-
-5/3/2023 12:12:16 PM - [-> Write FETC1?]
-
-5/3/2023 12:12:17 PM - [-> Read +9.73087657E+000
-]
-
-5/3/2023 12:12:17 PM - [-> Write :FREQ:CW 500MHz;*OPC?]
-
-5/3/2023 12:12:17 PM - [-> Read 1
-]
-
-5/3/2023 12:12:17 PM - [-> Write *ESR?]
-
-5/3/2023 12:12:18 PM - [-> Read +0
-]
-
-5/3/2023 12:12:18 PM - [-> Write FREQ 500MHz]
-
-5/3/2023 12:12:18 PM - [-> Write INIT1]
-
-5/3/2023 12:12:18 PM - [-> Write FETC1?]
-
-5/3/2023 12:12:19 PM - [-> Read +9.71166357E+000
-]
-
-5/3/2023 12:12:19 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:13 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:19 PM - [-> Write :FREQ:CW 700MHz;*OPC?]
+5/3/2023 12:39:13 PM - [-> Write :FREQ:CW 3200MHz;*OPC?]
 
-5/3/2023 12:12:19 PM - [-> Read 1
+5/3/2023 12:39:14 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:19 PM - [-> Write *ESR?]
+5/3/2023 12:39:14 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:20 PM - [-> Read +0
+5/3/2023 12:39:14 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:20 PM - [-> Write FREQ 700MHz]
+5/3/2023 12:39:14 PM - [-> Write FREQ 3200MHz]
 
-5/3/2023 12:12:20 PM - [-> Write INIT1]
+5/3/2023 12:39:14 PM - [-> Write INIT1]
 
-5/3/2023 12:12:20 PM - [-> Write FETC1?]
+5/3/2023 12:39:14 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:21 PM - [-> Read +9.68886535E+000
+5/3/2023 12:39:15 PM - [-> Read +9.31188812E+000
 ]
 
-5/3/2023 12:12:21 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:15 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:21 PM - [-> Write :FREQ:CW 900MHz;*OPC?]
+5/3/2023 12:39:15 PM - [-> Write :FREQ:CW 3300MHz;*OPC?]
 
-5/3/2023 12:12:21 PM - [-> Read 1
+5/3/2023 12:39:15 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:21 PM - [-> Write *ESR?]
+5/3/2023 12:39:15 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:22 PM - [-> Read +0
+5/3/2023 12:39:16 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:22 PM - [-> Write FREQ 900MHz]
+5/3/2023 12:39:16 PM - [-> Write FREQ 3300MHz]
 
-5/3/2023 12:12:22 PM - [-> Write INIT1]
+5/3/2023 12:39:16 PM - [-> Write INIT1]
 
-5/3/2023 12:12:22 PM - [-> Write FETC1?]
+5/3/2023 12:39:16 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:23 PM - [-> Read +9.63143772E+000
+5/3/2023 12:39:17 PM - [-> Read +9.23745430E+000
 ]
 
-5/3/2023 12:12:23 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:17 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:23 PM - [-> Write :FREQ:CW 1100MHz;*OPC?]
+5/3/2023 12:39:17 PM - [-> Write :FREQ:CW 3400MHz;*OPC?]
 
-5/3/2023 12:12:23 PM - [-> Read 1
+5/3/2023 12:39:17 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:23 PM - [-> Write *ESR?]
+5/3/2023 12:39:17 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:24 PM - [-> Read +0
+5/3/2023 12:39:18 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:24 PM - [-> Write FREQ 1100MHz]
+5/3/2023 12:39:18 PM - [-> Write FREQ 3400MHz]
 
-5/3/2023 12:12:24 PM - [-> Write INIT1]
+5/3/2023 12:39:18 PM - [-> Write INIT1]
 
-5/3/2023 12:12:24 PM - [-> Write FETC1?]
+5/3/2023 12:39:18 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:25 PM - [-> Read +9.61942713E+000
+5/3/2023 12:39:19 PM - [-> Read +9.33820641E+000
 ]
 
-5/3/2023 12:12:25 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:19 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:25 PM - [-> Write :FREQ:CW 1300MHz;*OPC?]
+5/3/2023 12:39:19 PM - [-> Write :FREQ:CW 3500MHz;*OPC?]
 
-5/3/2023 12:12:25 PM - [-> Read 1
+5/3/2023 12:39:19 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:25 PM - [-> Write *ESR?]
+5/3/2023 12:39:19 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:26 PM - [-> Read +0
+5/3/2023 12:39:20 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:26 PM - [-> Write FREQ 1300MHz]
+5/3/2023 12:39:20 PM - [-> Write FREQ 3500MHz]
 
-5/3/2023 12:12:26 PM - [-> Write INIT1]
+5/3/2023 12:39:20 PM - [-> Write INIT1]
 
-5/3/2023 12:12:26 PM - [-> Write FETC1?]
+5/3/2023 12:39:20 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:27 PM - [-> Read +9.57263137E+000
+5/3/2023 12:39:21 PM - [-> Read +9.33235537E+000
 ]
 
-5/3/2023 12:12:27 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:21 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:27 PM - [-> Write :FREQ:CW 1500MHz;*OPC?]
+5/3/2023 12:39:21 PM - [-> Write :FREQ:CW 3600MHz;*OPC?]
 
-5/3/2023 12:12:27 PM - [-> Read 1
+5/3/2023 12:39:21 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:27 PM - [-> Write *ESR?]
+5/3/2023 12:39:21 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:27 PM - [-> Read +0
+5/3/2023 12:39:22 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:27 PM - [-> Write FREQ 1500MHz]
+5/3/2023 12:39:22 PM - [-> Write FREQ 3600MHz]
 
-5/3/2023 12:12:28 PM - [-> Write INIT1]
+5/3/2023 12:39:22 PM - [-> Write INIT1]
 
-5/3/2023 12:12:28 PM - [-> Write FETC1?]
+5/3/2023 12:39:22 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:28 PM - [-> Read +9.58211769E+000
+5/3/2023 12:39:23 PM - [-> Read +9.03474739E+000
 ]
 
-5/3/2023 12:12:29 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:23 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:29 PM - [-> Write :FREQ:CW 1700MHz;*OPC?]
+5/3/2023 12:39:23 PM - [-> Write :FREQ:CW 3700MHz;*OPC?]
 
-5/3/2023 12:12:29 PM - [-> Read 1
+5/3/2023 12:39:23 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:29 PM - [-> Write *ESR?]
+5/3/2023 12:39:23 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:29 PM - [-> Read +0
+5/3/2023 12:39:24 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:29 PM - [-> Write FREQ 1700MHz]
+5/3/2023 12:39:24 PM - [-> Write FREQ 3700MHz]
 
-5/3/2023 12:12:30 PM - [-> Write INIT1]
+5/3/2023 12:39:24 PM - [-> Write INIT1]
 
-5/3/2023 12:12:30 PM - [-> Write FETC1?]
+5/3/2023 12:39:24 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:30 PM - [-> Read +9.55342015E+000
+5/3/2023 12:39:25 PM - [-> Read +8.92243415E+000
 ]
 
-5/3/2023 12:12:30 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:25 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:30 PM - [-> Write :FREQ:CW 1900MHz;*OPC?]
+5/3/2023 12:39:25 PM - [-> Write :FREQ:CW 3800MHz;*OPC?]
 
-5/3/2023 12:12:31 PM - [-> Read 1
+5/3/2023 12:39:25 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:31 PM - [-> Write *ESR?]
+5/3/2023 12:39:25 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:31 PM - [-> Read +0
+5/3/2023 12:39:26 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:31 PM - [-> Write FREQ 1900MHz]
+5/3/2023 12:39:26 PM - [-> Write FREQ 3800MHz]
 
-5/3/2023 12:12:32 PM - [-> Write INIT1]
+5/3/2023 12:39:26 PM - [-> Write INIT1]
 
-5/3/2023 12:12:32 PM - [-> Write FETC1?]
+5/3/2023 12:39:26 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:32 PM - [-> Read +9.46223171E+000
+5/3/2023 12:39:27 PM - [-> Read +9.24669503E+000
 ]
 
-5/3/2023 12:12:32 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:27 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:32 PM - [-> Write :FREQ:CW 2100MHz;*OPC?]
+5/3/2023 12:39:27 PM - [-> Write :FREQ:CW 3900MHz;*OPC?]
 
-5/3/2023 12:12:33 PM - [-> Read 1
+5/3/2023 12:39:27 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:33 PM - [-> Write *ESR?]
+5/3/2023 12:39:27 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:33 PM - [-> Read +0
+5/3/2023 12:39:28 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:33 PM - [-> Write FREQ 2100MHz]
+5/3/2023 12:39:28 PM - [-> Write FREQ 3900MHz]
 
-5/3/2023 12:12:33 PM - [-> Write INIT1]
+5/3/2023 12:39:28 PM - [-> Write INIT1]
 
-5/3/2023 12:12:34 PM - [-> Write FETC1?]
+5/3/2023 12:39:28 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:34 PM - [-> Read +9.51013647E+000
+5/3/2023 12:39:29 PM - [-> Read +9.34923467E+000
 ]
 
-5/3/2023 12:12:34 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:29 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:34 PM - [-> Write :FREQ:CW 2300MHz;*OPC?]
+5/3/2023 12:39:29 PM - [-> Write :FREQ:CW 4000MHz;*OPC?]
 
-5/3/2023 12:12:35 PM - [-> Read 1
+5/3/2023 12:39:29 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:35 PM - [-> Write *ESR?]
+5/3/2023 12:39:29 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:35 PM - [-> Read +0
+5/3/2023 12:39:30 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:35 PM - [-> Write FREQ 2300MHz]
+5/3/2023 12:39:30 PM - [-> Write FREQ 4000MHz]
 
-5/3/2023 12:12:35 PM - [-> Write INIT1]
+5/3/2023 12:39:30 PM - [-> Write INIT1]
 
-5/3/2023 12:12:36 PM - [-> Write FETC1?]
+5/3/2023 12:39:30 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:36 PM - [-> Read +9.42029965E+000
+5/3/2023 12:39:31 PM - [-> Read +9.35370630E+000
 ]
 
-5/3/2023 12:12:36 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:31 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:36 PM - [-> Write :FREQ:CW 2500MHz;*OPC?]
+5/3/2023 12:39:31 PM - [-> Write :FREQ:CW 4100MHz;*OPC?]
 
-5/3/2023 12:12:37 PM - [-> Read 1
+5/3/2023 12:39:31 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:37 PM - [-> Write *ESR?]
+5/3/2023 12:39:31 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:37 PM - [-> Read +0
+5/3/2023 12:39:31 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:37 PM - [-> Write FREQ 2500MHz]
+5/3/2023 12:39:31 PM - [-> Write FREQ 4100MHz]
 
-5/3/2023 12:12:37 PM - [-> Write INIT1]
+5/3/2023 12:39:32 PM - [-> Write INIT1]
 
-5/3/2023 12:12:38 PM - [-> Write FETC1?]
+5/3/2023 12:39:32 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:38 PM - [-> Read +9.41480771E+000
+5/3/2023 12:39:32 PM - [-> Read +9.30025133E+000
 ]
 
-5/3/2023 12:12:38 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:32 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:38 PM - [-> Write :FREQ:CW 2700MHz;*OPC?]
+5/3/2023 12:39:32 PM - [-> Write :FREQ:CW 4200MHz;*OPC?]
 
-5/3/2023 12:12:39 PM - [-> Read 1
+5/3/2023 12:39:33 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:39 PM - [-> Write *ESR?]
+5/3/2023 12:39:33 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:39 PM - [-> Read +0
+5/3/2023 12:39:33 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:39 PM - [-> Write FREQ 2700MHz]
+5/3/2023 12:39:33 PM - [-> Write FREQ 4200MHz]
 
-5/3/2023 12:12:39 PM - [-> Write INIT1]
+5/3/2023 12:39:34 PM - [-> Write INIT1]
 
-5/3/2023 12:12:39 PM - [-> Write FETC1?]
+5/3/2023 12:39:34 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:40 PM - [-> Read +9.28119998E+000
+5/3/2023 12:39:34 PM - [-> Read +9.28844081E+000
 ]
 
-5/3/2023 12:12:40 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:34 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:40 PM - [-> Write :FREQ:CW 2900MHz;*OPC?]
+5/3/2023 12:39:34 PM - [-> Write :FREQ:CW 4300MHz;*OPC?]
 
-5/3/2023 12:12:41 PM - [-> Read 1
+5/3/2023 12:39:35 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:41 PM - [-> Write *ESR?]
+5/3/2023 12:39:35 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:41 PM - [-> Read +0
+5/3/2023 12:39:35 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:41 PM - [-> Write FREQ 2900MHz]
+5/3/2023 12:39:35 PM - [-> Write FREQ 4300MHz]
 
-5/3/2023 12:12:41 PM - [-> Write INIT1]
+5/3/2023 12:39:35 PM - [-> Write INIT1]
 
-5/3/2023 12:12:41 PM - [-> Write FETC1?]
+5/3/2023 12:39:36 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:42 PM - [-> Read +9.39681109E+000
+5/3/2023 12:39:36 PM - [-> Read +9.26669732E+000
 ]
 
-5/3/2023 12:12:42 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:36 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:42 PM - [-> Write :FREQ:CW 3100MHz;*OPC?]
+5/3/2023 12:39:36 PM - [-> Write :FREQ:CW 4400MHz;*OPC?]
 
-5/3/2023 12:12:42 PM - [-> Read 1
+5/3/2023 12:39:37 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:42 PM - [-> Write *ESR?]
+5/3/2023 12:39:37 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:43 PM - [-> Read +0
+5/3/2023 12:39:37 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:43 PM - [-> Write FREQ 3100MHz]
+5/3/2023 12:39:37 PM - [-> Write FREQ 4400MHz]
 
-5/3/2023 12:12:43 PM - [-> Write INIT1]
+5/3/2023 12:39:37 PM - [-> Write INIT1]
 
-5/3/2023 12:12:43 PM - [-> Write FETC1?]
+5/3/2023 12:39:38 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:44 PM - [-> Read +9.31695363E+000
+5/3/2023 12:39:38 PM - [-> Read +9.29481709E+000
 ]
 
-5/3/2023 12:12:44 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:38 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:44 PM - [-> Write :FREQ:CW 3300MHz;*OPC?]
+5/3/2023 12:39:38 PM - [-> Write :FREQ:CW 4500MHz;*OPC?]
 
-5/3/2023 12:12:44 PM - [-> Read 1
+5/3/2023 12:39:39 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:44 PM - [-> Write *ESR?]
+5/3/2023 12:39:39 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:45 PM - [-> Read +0
+5/3/2023 12:39:39 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:45 PM - [-> Write FREQ 3300MHz]
+5/3/2023 12:39:39 PM - [-> Write FREQ 4500MHz]
 
-5/3/2023 12:12:45 PM - [-> Write INIT1]
+5/3/2023 12:39:39 PM - [-> Write INIT1]
 
-5/3/2023 12:12:45 PM - [-> Write FETC1?]
+5/3/2023 12:39:40 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:46 PM - [-> Read +9.25210090E+000
+5/3/2023 12:39:40 PM - [-> Read +9.25975395E+000
 ]
 
-5/3/2023 12:12:46 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:40 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:46 PM - [-> Write :FREQ:CW 3500MHz;*OPC?]
+5/3/2023 12:39:40 PM - [-> Write :FREQ:CW 4600MHz;*OPC?]
 
-5/3/2023 12:12:46 PM - [-> Read 1
+5/3/2023 12:39:41 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:46 PM - [-> Write *ESR?]
+5/3/2023 12:39:41 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:47 PM - [-> Read +0
+5/3/2023 12:39:41 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:47 PM - [-> Write FREQ 3500MHz]
+5/3/2023 12:39:41 PM - [-> Write FREQ 4600MHz]
 
-5/3/2023 12:12:47 PM - [-> Write INIT1]
+5/3/2023 12:39:41 PM - [-> Write INIT1]
 
-5/3/2023 12:12:47 PM - [-> Write FETC1?]
+5/3/2023 12:39:41 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:48 PM - [-> Read +9.34472974E+000
+5/3/2023 12:39:42 PM - [-> Read +9.28087733E+000
 ]
 
-5/3/2023 12:12:48 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:42 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:48 PM - [-> Write :FREQ:CW 3700MHz;*OPC?]
+5/3/2023 12:39:42 PM - [-> Write :FREQ:CW 4700MHz;*OPC?]
 
-5/3/2023 12:12:48 PM - [-> Read 1
+5/3/2023 12:39:42 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:48 PM - [-> Write *ESR?]
+5/3/2023 12:39:42 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:49 PM - [-> Read +0
+5/3/2023 12:39:43 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:49 PM - [-> Write FREQ 3700MHz]
+5/3/2023 12:39:43 PM - [-> Write FREQ 4700MHz]
 
-5/3/2023 12:12:49 PM - [-> Write INIT1]
+5/3/2023 12:39:43 PM - [-> Write INIT1]
 
-5/3/2023 12:12:49 PM - [-> Write FETC1?]
+5/3/2023 12:39:43 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:50 PM - [-> Read +8.92982062E+000
+5/3/2023 12:39:44 PM - [-> Read +9.28429016E+000
 ]
 
-5/3/2023 12:12:50 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:44 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:50 PM - [-> Write :FREQ:CW 3900MHz;*OPC?]
+5/3/2023 12:39:44 PM - [-> Write :FREQ:CW 4800MHz;*OPC?]
 
-5/3/2023 12:12:50 PM - [-> Read 1
+5/3/2023 12:39:44 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:50 PM - [-> Write *ESR?]
+5/3/2023 12:39:44 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:50 PM - [-> Read +0
+5/3/2023 12:39:45 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:50 PM - [-> Write FREQ 3900MHz]
+5/3/2023 12:39:45 PM - [-> Write FREQ 4800MHz]
 
-5/3/2023 12:12:51 PM - [-> Write INIT1]
+5/3/2023 12:39:45 PM - [-> Write INIT1]
 
-5/3/2023 12:12:51 PM - [-> Write FETC1?]
+5/3/2023 12:39:45 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:51 PM - [-> Read +9.36494625E+000
+5/3/2023 12:39:46 PM - [-> Read +9.24269977E+000
 ]
 
-5/3/2023 12:12:52 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:46 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:52 PM - [-> Write :FREQ:CW 4100MHz;*OPC?]
+5/3/2023 12:39:46 PM - [-> Write :FREQ:CW 4900MHz;*OPC?]
 
-5/3/2023 12:12:52 PM - [-> Read 1
+5/3/2023 12:39:46 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:52 PM - [-> Write *ESR?]
+5/3/2023 12:39:46 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:52 PM - [-> Read +0
+5/3/2023 12:39:47 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:52 PM - [-> Write FREQ 4100MHz]
+5/3/2023 12:39:47 PM - [-> Write FREQ 4900MHz]
 
-5/3/2023 12:12:53 PM - [-> Write INIT1]
+5/3/2023 12:39:47 PM - [-> Write INIT1]
 
-5/3/2023 12:12:53 PM - [-> Write FETC1?]
+5/3/2023 12:39:47 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:53 PM - [-> Read +9.31587708E+000
+5/3/2023 12:39:48 PM - [-> Read +9.16321555E+000
 ]
 
-5/3/2023 12:12:53 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:48 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:53 PM - [-> Write :FREQ:CW 4300MHz;*OPC?]
+5/3/2023 12:39:48 PM - [-> Write :FREQ:CW 5000MHz;*OPC?]
 
-5/3/2023 12:12:54 PM - [-> Read 1
+5/3/2023 12:39:48 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:54 PM - [-> Write *ESR?]
+5/3/2023 12:39:48 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:54 PM - [-> Read +0
+5/3/2023 12:39:49 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:54 PM - [-> Write FREQ 4300MHz]
+5/3/2023 12:39:49 PM - [-> Write FREQ 5000MHz]
 
-5/3/2023 12:12:54 PM - [-> Write INIT1]
+5/3/2023 12:39:49 PM - [-> Write INIT1]
 
-5/3/2023 12:12:55 PM - [-> Write FETC1?]
+5/3/2023 12:39:49 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:55 PM - [-> Read +9.27877716E+000
+5/3/2023 12:39:50 PM - [-> Read +9.15805725E+000
 ]
 
-5/3/2023 12:12:55 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:50 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:55 PM - [-> Write :FREQ:CW 4500MHz;*OPC?]
+5/3/2023 12:39:50 PM - [-> Write :FREQ:CW 5100MHz;*OPC?]
 
-5/3/2023 12:12:56 PM - [-> Read 1
+5/3/2023 12:39:50 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:56 PM - [-> Write *ESR?]
+5/3/2023 12:39:50 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:56 PM - [-> Read +0
+5/3/2023 12:39:51 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:56 PM - [-> Write FREQ 4500MHz]
+5/3/2023 12:39:51 PM - [-> Write FREQ 5100MHz]
 
-5/3/2023 12:12:56 PM - [-> Write INIT1]
+5/3/2023 12:39:51 PM - [-> Write INIT1]
 
-5/3/2023 12:12:57 PM - [-> Write FETC1?]
+5/3/2023 12:39:51 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:57 PM - [-> Read +9.27585174E+000
+5/3/2023 12:39:52 PM - [-> Read +9.20127605E+000
 ]
 
-5/3/2023 12:12:57 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:52 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:57 PM - [-> Write :FREQ:CW 4700MHz;*OPC?]
+5/3/2023 12:39:52 PM - [-> Write :FREQ:CW 5200MHz;*OPC?]
 
-5/3/2023 12:12:58 PM - [-> Read 1
+5/3/2023 12:39:52 PM - [-> Read 1
 ]
 
-5/3/2023 12:12:58 PM - [-> Write *ESR?]
+5/3/2023 12:39:52 PM - [-> Write *ESR?]
 
-5/3/2023 12:12:58 PM - [-> Read +0
+5/3/2023 12:39:53 PM - [-> Read +0
 ]
 
-5/3/2023 12:12:58 PM - [-> Write FREQ 4700MHz]
+5/3/2023 12:39:53 PM - [-> Write FREQ 5200MHz]
 
-5/3/2023 12:12:58 PM - [-> Write INIT1]
+5/3/2023 12:39:53 PM - [-> Write INIT1]
 
-5/3/2023 12:12:59 PM - [-> Write FETC1?]
+5/3/2023 12:39:53 PM - [-> Write FETC1?]
 
-5/3/2023 12:12:59 PM - [-> Read +9.29879703E+000
+5/3/2023 12:39:54 PM - [-> Read +9.20901183E+000
 ]
 
-5/3/2023 12:12:59 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:54 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:12:59 PM - [-> Write :FREQ:CW 4900MHz;*OPC?]
+5/3/2023 12:39:54 PM - [-> Write :FREQ:CW 5300MHz;*OPC?]
 
-5/3/2023 12:13:00 PM - [-> Read 1
+5/3/2023 12:39:54 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:00 PM - [-> Write *ESR?]
+5/3/2023 12:39:54 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:00 PM - [-> Read +0
+5/3/2023 12:39:55 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:00 PM - [-> Write FREQ 4900MHz]
+5/3/2023 12:39:55 PM - [-> Write FREQ 5300MHz]
 
-5/3/2023 12:13:00 PM - [-> Write INIT1]
+5/3/2023 12:39:55 PM - [-> Write INIT1]
 
-5/3/2023 12:13:00 PM - [-> Write FETC1?]
+5/3/2023 12:39:55 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:01 PM - [-> Read +9.17875102E+000
+5/3/2023 12:39:56 PM - [-> Read +9.19558260E+000
 ]
 
-5/3/2023 12:13:01 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:56 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:01 PM - [-> Write :FREQ:CW 5100MHz;*OPC?]
+5/3/2023 12:39:56 PM - [-> Write :FREQ:CW 5400MHz;*OPC?]
 
-5/3/2023 12:13:02 PM - [-> Read 1
+5/3/2023 12:39:56 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:02 PM - [-> Write *ESR?]
+5/3/2023 12:39:56 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:02 PM - [-> Read +0
+5/3/2023 12:39:56 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:02 PM - [-> Write FREQ 5100MHz]
+5/3/2023 12:39:56 PM - [-> Write FREQ 5400MHz]
 
-5/3/2023 12:13:02 PM - [-> Write INIT1]
+5/3/2023 12:39:57 PM - [-> Write INIT1]
 
-5/3/2023 12:13:02 PM - [-> Write FETC1?]
+5/3/2023 12:39:57 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:03 PM - [-> Read +9.21650763E+000
+5/3/2023 12:39:57 PM - [-> Read +9.20348060E+000
 ]
 
-5/3/2023 12:13:03 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:39:58 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:03 PM - [-> Write :FREQ:CW 5300MHz;*OPC?]
+5/3/2023 12:39:58 PM - [-> Write :FREQ:CW 5500MHz;*OPC?]
 
-5/3/2023 12:13:03 PM - [-> Read 1
+5/3/2023 12:39:58 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:03 PM - [-> Write *ESR?]
+5/3/2023 12:39:58 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:04 PM - [-> Read +0
+5/3/2023 12:39:58 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:04 PM - [-> Write FREQ 5300MHz]
+5/3/2023 12:39:58 PM - [-> Write FREQ 5500MHz]
 
-5/3/2023 12:13:04 PM - [-> Write INIT1]
+5/3/2023 12:39:59 PM - [-> Write INIT1]
 
-5/3/2023 12:13:04 PM - [-> Write FETC1?]
+5/3/2023 12:39:59 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:05 PM - [-> Read +9.20995558E+000
+5/3/2023 12:39:59 PM - [-> Read +9.21704968E+000
 ]
 
-5/3/2023 12:13:05 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:40:00 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:05 PM - [-> Write :FREQ:CW 5500MHz;*OPC?]
+5/3/2023 12:40:00 PM - [-> Write :FREQ:CW 5600MHz;*OPC?]
 
-5/3/2023 12:13:05 PM - [-> Read 1
+5/3/2023 12:40:00 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:05 PM - [-> Write *ESR?]
+5/3/2023 12:40:00 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:06 PM - [-> Read +0
+5/3/2023 12:40:00 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:06 PM - [-> Write FREQ 5500MHz]
+5/3/2023 12:40:00 PM - [-> Write FREQ 5600MHz]
 
-5/3/2023 12:13:06 PM - [-> Write INIT1]
+5/3/2023 12:40:01 PM - [-> Write INIT1]
 
-5/3/2023 12:13:06 PM - [-> Write FETC1?]
+5/3/2023 12:40:01 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:07 PM - [-> Read +9.23099801E+000
+5/3/2023 12:40:01 PM - [-> Read +9.26685008E+000
 ]
 
-5/3/2023 12:13:07 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:40:02 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:07 PM - [-> Write :FREQ:CW 5700MHz;*OPC?]
+5/3/2023 12:40:02 PM - [-> Write :FREQ:CW 5700MHz;*OPC?]
 
-5/3/2023 12:13:07 PM - [-> Read 1
+5/3/2023 12:40:02 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:07 PM - [-> Write *ESR?]
+5/3/2023 12:40:02 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:08 PM - [-> Read +0
+5/3/2023 12:40:02 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:08 PM - [-> Write FREQ 5700MHz]
+5/3/2023 12:40:02 PM - [-> Write FREQ 5700MHz]
 
-5/3/2023 12:13:08 PM - [-> Write INIT1]
+5/3/2023 12:40:03 PM - [-> Write INIT1]
 
-5/3/2023 12:13:08 PM - [-> Write FETC1?]
+5/3/2023 12:40:03 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:09 PM - [-> Read +9.12989981E+000
+5/3/2023 12:40:03 PM - [-> Read +9.11474325E+000
 ]
 
-5/3/2023 12:13:09 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:40:03 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:09 PM - [-> Write :FREQ:CW 5900MHz;*OPC?]
+5/3/2023 12:40:03 PM - [-> Write :FREQ:CW 5800MHz;*OPC?]
 
-5/3/2023 12:13:09 PM - [-> Read 1
+5/3/2023 12:40:04 PM - [-> Read 1
 ]
 
-5/3/2023 12:13:09 PM - [-> Write *ESR?]
+5/3/2023 12:40:04 PM - [-> Write *ESR?]
 
-5/3/2023 12:13:10 PM - [-> Read +0
+5/3/2023 12:40:04 PM - [-> Read +0
 ]
 
-5/3/2023 12:13:10 PM - [-> Write FREQ 5900MHz]
+5/3/2023 12:40:04 PM - [-> Write FREQ 5800MHz]
 
-5/3/2023 12:13:10 PM - [-> Write INIT1]
+5/3/2023 12:40:05 PM - [-> Write INIT1]
 
-5/3/2023 12:13:10 PM - [-> Write FETC1?]
+5/3/2023 12:40:05 PM - [-> Write FETC1?]
 
-5/3/2023 12:13:11 PM - [-> Read +8.81286782E+000
+5/3/2023 12:40:05 PM - [-> Read +8.87761807E+000
 ]
 
-5/3/2023 12:13:11 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+5/3/2023 12:40:05 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
 Parameter name: index
    at System.Collections.ArrayList.get_Item(Int32 index)
    at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
    at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
-   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 169]
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
 
-5/3/2023 12:13:14 PM - [-> Zero Cal Signal Generator Finished Successfully]
+5/3/2023 12:40:05 PM - [-> Write :FREQ:CW 5900MHz;*OPC?]
 
-5/3/2023 12:13:14 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
+5/3/2023 12:40:06 PM - [-> Read 1
+]
+
+5/3/2023 12:40:06 PM - [-> Write *ESR?]
+
+5/3/2023 12:40:06 PM - [-> Read +0
+]
+
+5/3/2023 12:40:06 PM - [-> Write FREQ 5900MHz]
+
+5/3/2023 12:40:06 PM - [-> Write INIT1]
+
+5/3/2023 12:40:07 PM - [-> Write FETC1?]
+
+5/3/2023 12:40:07 PM - [-> Read +8.79238510E+000
+]
+
+5/3/2023 12:40:07 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
+
+5/3/2023 12:40:07 PM - [-> Write FREQ 6000MHz]
+
+5/3/2023 12:40:08 PM - [-> Write INIT1]
+
+5/3/2023 12:40:08 PM - [-> Write FETC1?]
+
+5/3/2023 12:40:08 PM - [-> Read +8.79052139E+000
+]
+
+5/3/2023 12:40:08 PM - [-> Error to add values to DataGridView - reason: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   at System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   at FlexRFCableTester.FormApp.fillDataGridView(Int32 count, String freq, String level, String reading, String loLimit, String hiLimit, String calFactor, String passFail, String testTime) in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 176]
+
+5/3/2023 12:40:11 PM - [-> Zero Cal Signal Generator Finished Successfully]
+
+5/3/2023 12:40:11 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
 
