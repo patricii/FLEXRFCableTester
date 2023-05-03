@@ -15,11 +15,28 @@ namespace FlexRFCableTester
         public MessageBasedSession equipmentName { get; set; }
         public FormattedIO488 ioTestSet { get; set; }
         public string address { get; set; }
+        public string equipAlias { get; set; }
         string message = string.Empty;
         public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
 
 
         public Equipment() { }
+
+        public Equipment(MessageBasedSession equipmentName, FormattedIO488 ioTestSet, string address, string equipAlias, Ivi.Visa.Interop.ResourceManager resourceMng)
+        {
+            this.equipmentName = equipmentName;
+            this.ioTestSet = ioTestSet;
+            this.address = address;
+            this.equipAlias = equipAlias;
+            this.resourceMng = resourceMng;
+        }
+
+        public Equipment(FormattedIO488 ioTestSet, string equipAlias, Ivi.Visa.Interop.ResourceManager resourceMng)
+        {
+            this.ioTestSet = ioTestSet;
+            this.equipAlias = equipAlias;
+            this.resourceMng = resourceMng;
+        }
 
         public Equipment(MessageBasedSession equipmentName, string address)
         {
@@ -90,13 +107,13 @@ namespace FlexRFCableTester
 
             }
         }
-       
+
         public bool getEquipmentIdnbyGPIB()
         {
             try
             {
                 equipmentName = new MessageBasedSession(address);
-                writeCommand("*IDN?", equipmentName); 
+                writeCommand("*IDN?", equipmentName);
                 readCommand(equipmentName);
             }
             catch
@@ -105,7 +122,7 @@ namespace FlexRFCableTester
             }
             return true;
         }
-        public void getEquipmentIdnByLAN(string equipAlias)
+        public void getEquipmentIdnByLAN()
         {
             try
             {
