@@ -1,22 +1,20 @@
 ﻿using Ivi.Visa.Interop;
 using NationalInstruments.VisaNS;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
 {
     class Equipment : FormApp
     {
-        public MessageBasedSession equipmentName { get; set; }
-        public FormattedIO488 ioTestSet { get; set; }
-        public string address { get; set; }
-        public string equipAlias { get; set; }
+        public MessageBasedSession equipmentName { get; set; } //GPIB
+        public FormattedIO488 ioTestSet { get; set; } //LAN
+        public string address { get; set; } //GPIB
+        public string equipAlias { get; set; } //LAN
+
         string message = string.Empty;
+
         public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
 
 

@@ -3,8 +3,6 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
-using Ivi.Visa.Interop;
-using System.Threading;
 
 namespace FlexRFCableTester
 {
@@ -15,7 +13,6 @@ namespace FlexRFCableTester
         public static bool zeroCalstatus = false;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
-        int delay = 200;
         string filepath = string.Empty;
         string logString = string.Empty;
         public FormApp()
