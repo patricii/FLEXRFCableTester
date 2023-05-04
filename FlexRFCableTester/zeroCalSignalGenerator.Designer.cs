@@ -61,7 +61,7 @@
             // 
             this.labelZeroCalSignalGen.AutoSize = true;
             this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelZeroCalSignalGen.ForeColor = System.Drawing.Color.Blue;
+            this.labelZeroCalSignalGen.ForeColor = System.Drawing.Color.DodgerBlue;
             this.labelZeroCalSignalGen.Location = new System.Drawing.Point(108, 19);
             this.labelZeroCalSignalGen.Name = "labelZeroCalSignalGen";
             this.labelZeroCalSignalGen.Size = new System.Drawing.Size(663, 32);

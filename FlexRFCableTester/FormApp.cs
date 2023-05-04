@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
 
@@ -64,7 +65,7 @@ namespace FlexRFCableTester
             }
         }
         public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
-        {          
+        {
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
         }
@@ -168,8 +169,10 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            labelStatusRFTester.Text = "Iniciando a medição do cabo!!!";
-            Application.DoEvents();
+            startProcess();
+        }
+        private void startProcess()
+        {
             logger = new Logger();
             DateTime enteredDate;
             DateTime today;
@@ -183,10 +186,28 @@ namespace FlexRFCableTester
             enteredDate = DateTime.Parse(dateCompare);
             var diffOfDates = today - enteredDate;
 
-            if (diffOfDates.TotalHours < 24)
+            if (diffOfDates.TotalHours < 100)
             {
+                labelStatusRFTester.Text = "         Iniciando a medição do cabo!!!";
                 StartProcess startP = new StartProcess();
                 startP.Show();
+                Application.DoEvents();
+                while (StartProcess.cableResults != "Finished" && StartProcess.cableResults == string.Empty)
+                {
+                    Thread.Sleep(1000);
+                    Application.DoEvents();
+                }
+                if (StartProcess.cableResults == "Finished")
+                {
+                    logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                    startP.Close();
+                }
+                else
+                {
+                    logger.logMessage("Aferição do cabo Falhou!!!");
+                    MessageBox.Show("Aferição do cabo Falhou!!!");
+                    startP.Close();
+                }
             }
             else
             {
@@ -194,6 +215,7 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }
+
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
@@ -211,7 +233,7 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
 
                 if (passFail == "Fail")
-                dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
+                    dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
 
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();

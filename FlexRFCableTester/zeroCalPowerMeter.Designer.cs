@@ -39,7 +39,7 @@
             // 
             this.labelZeroCalPm.AutoSize = true;
             this.labelZeroCalPm.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
-            this.labelZeroCalPm.ForeColor = System.Drawing.Color.Blue;
+            this.labelZeroCalPm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.labelZeroCalPm.Location = new System.Drawing.Point(170, 9);
             this.labelZeroCalPm.Name = "labelZeroCalPm";
             this.labelZeroCalPm.Size = new System.Drawing.Size(530, 35);
