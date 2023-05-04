@@ -214,7 +214,6 @@ namespace FlexRFCableTester
                                     passFail = "Fail";
 
                                 frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
-
                             }
 
                             count = 0;

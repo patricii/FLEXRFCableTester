@@ -170,6 +170,8 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            labelStatusRFTester.Text = "Iniciando a medição do cabo!!!";
+            Application.DoEvents();
             logger = new Logger();
             DateTime enteredDate;
             DateTime today;
