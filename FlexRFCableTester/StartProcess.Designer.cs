@@ -50,11 +50,11 @@
             // labelStartProcess
             // 
             this.labelStartProcess.AutoSize = true;
-            this.labelStartProcess.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
-            this.labelStartProcess.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelStartProcess.Location = new System.Drawing.Point(64, 9);
+            this.labelStartProcess.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartProcess.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelStartProcess.Location = new System.Drawing.Point(23, 18);
             this.labelStartProcess.Name = "labelStartProcess";
-            this.labelStartProcess.Size = new System.Drawing.Size(726, 35);
+            this.labelStartProcess.Size = new System.Drawing.Size(774, 40);
             this.labelStartProcess.TabIndex = 1;
             this.labelStartProcess.Text = "-> Conecte o Cabo entre o PowerMeter e o Signal Generator";
             // 

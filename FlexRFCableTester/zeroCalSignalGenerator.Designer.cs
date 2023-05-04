@@ -60,11 +60,11 @@
             // labelZeroCalSignalGen
             // 
             this.labelZeroCalSignalGen.AutoSize = true;
-            this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelZeroCalSignalGen.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(108, 19);
+            this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic);
+            this.labelZeroCalSignalGen.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(78, 9);
             this.labelZeroCalSignalGen.Name = "labelZeroCalSignalGen";
-            this.labelZeroCalSignalGen.Size = new System.Drawing.Size(663, 32);
+            this.labelZeroCalSignalGen.Size = new System.Drawing.Size(731, 40);
             this.labelZeroCalSignalGen.TabIndex = 3;
             this.labelZeroCalSignalGen.Text = "-> Conecte o Power Sensor no Cabo do Signal Generator";
             // 
