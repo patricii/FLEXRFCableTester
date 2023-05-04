@@ -65,12 +65,10 @@ namespace FlexRFCableTester
                 MessageBox.Show("Imagem não disponível!!!");
             }
         }
-        public void readMeasureAndFillCalFactoryValues(string freq, double value)
-        {
-
+        public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
+        {          
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
-
         }
         private void getFrequencyFromFile()
         {
@@ -103,12 +101,14 @@ namespace FlexRFCableTester
         private void zeroCalProcess()
         {
             logger = new Logger();
-            visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
-            visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
-            Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
             try
             {
+                visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+                Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
                 logger.logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
@@ -139,7 +139,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
-                message = "Erro ao comunicar com o Equipamento!!!" + ex;
+                message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }
@@ -148,7 +148,6 @@ namespace FlexRFCableTester
         {
             writeValuesToIniFile();
             zeroCalProcess();
-
         }
         private void writeValuesToIniFile()
         {
@@ -209,6 +208,10 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+
+                if (passFail == "Fail")
+                dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
+
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }

@@ -3928,3 +3928,16 @@ Parameter name: index
 
 5/3/2023 4:07:25 PM - [-> Error: Realize o Zero Cal antes de começar!!!]
 
+5/4/2023 11:44:46 AM - [-> Erro ao comunicar com o Equipamento!!!NationalInstruments.VisaNS.VisaException: VI_ERROR_ALLOC: Insufficient system resources/memory  VISA error code -1073807300 (0xBFFF003C), ErrorAllocation
+   at NationalInstruments.VisaNS.Internal.ErrorChecker.CheckStatusAndThrow(Int32 status, VisaHandle visaObject)
+   at NationalInstruments.VisaNS.Session..ctor(String resourceName, AccessModes accessMode, Int32 openTimeout, String expectedResourceName)
+   at NationalInstruments.VisaNS.MessageBasedSession..ctor(String resourceName, AccessModes accessMode, Int32 openTimeout, String expectedResourceName)
+   at NationalInstruments.VisaNS.MessageBasedSession..ctor(String resourceName)
+   at FlexRFCableTester.FormApp.zeroCalProcess() in C:\Projetos\FLEXRFCableTester\FlexRFCableTester\FormApp.cs:line 107]
+
+5/4/2023 11:45:13 AM - [-> Erro ao comunicar com o Equipamento!!!]
+
+5/4/2023 11:46:08 AM - [-> Erro ao comunicar com os Equipamentos!!!]
+
+5/4/2023 11:46:44 AM - [-> Erro ao comunicar com os Equipamentos selecionados!!!]
+

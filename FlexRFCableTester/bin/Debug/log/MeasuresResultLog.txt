@@ -430,3 +430,79 @@
 
 238-> Freq:6000MHz  dBm:10  Reading:8.8301dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1699  Result:Pass  TestTime:59559ms
 
+0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+6-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+7-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+8-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+9-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+10-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+11-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+12-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+13-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+14-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+15-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+6-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+7-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+8-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+9-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+10-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+11-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+12-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+13-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+14-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+15-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+
+0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
+1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
+2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
+3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
+4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
+5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+
