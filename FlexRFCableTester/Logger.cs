@@ -17,46 +17,60 @@ namespace FlexRFCableTester
 
         public void logMessage(string message)
         {
-            DateTime now = DateTime.Now;
-            logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
-            Application.DoEvents();
-            filepath = @"log\FlexRFCableTester_logger.txt";
-
-            if (!File.Exists(filepath))
+            try
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                DateTime now = DateTime.Now;
+                logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
+                Application.DoEvents();
+                filepath = @"log\FlexRFCableTester_logger.txt";
+
+                if (!File.Exists(filepath))
                 {
-                    writer.WriteLine(logString);
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
+                MessageBox.Show("diretório e/ou arquivo não encontrado!!! - log\\FlexRFCableTester_logger.txt");
             }
         }
 
         public void logDataGridView(string measuresResultLog)
         {
-            logString = measuresResultLog + Environment.NewLine;
-            Application.DoEvents();
-            filepath = @"log\MeasuresResultLog.txt";
-
-            if (!File.Exists(filepath))
+            try
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                logString = measuresResultLog + Environment.NewLine;
+                Application.DoEvents();
+                filepath = @"log\MeasuresResultLog.txt";
+
+                if (!File.Exists(filepath))
                 {
-                    writer.WriteLine(logString);
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
-                {
-                    writer.WriteLine(logString);
-                }
+                MessageBox.Show("diretório e/ou arquivo não encontrado!!! - log\\MeasuresResultLog.txt");
             }
         }
     }

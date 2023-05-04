@@ -21,36 +21,45 @@ namespace FlexRFCableTester
         }
         public bool zeroCalPowerMeterMtd()
         {
-            visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
-            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
-            equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
-            do
+            try
             {
-                Thread.Sleep(delay);
-                count--;
-                message = "Aguarde o Zero Cal do Power Meter... " + count + "s";
-                labelCalStatusPm.Text = message;
-                logger.logMessage(message);
-                Application.DoEvents();
-            }
-            while (count != 0);
+                visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
+                Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+                equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
+                do
+                {
+                    Thread.Sleep(delay);
+                    count--;
+                    message = "Aguarde o Zero Cal do Power Meter... " + count + "s";
+                    labelCalStatusPm.Text = message;
+                    logger.logMessage(message);
+                    Application.DoEvents();
+                }
+                while (count != 0);
 
-            string zeroPowerMeter = equipmentvisaPowerMeter.equipmentName.ReadString();
+                string zeroPowerMeter = equipmentvisaPowerMeter.equipmentName.ReadString();
 
-            if (zeroPowerMeter.Contains("+0"))
-            {
-                labelCalStatusPm.Text = "Power Meter Zero Cal realizado com sucesso!!!";
-                Application.DoEvents();
-                Thread.Sleep(3000);
-                return true;
+                if (zeroPowerMeter.Contains("+0"))
+                {
+                    labelCalStatusPm.Text = "Power Meter Zero Cal realizado com sucesso!!!";
+                    Application.DoEvents();
+                    Thread.Sleep(3000);
+                    return true;
+                }
+                else
+                {
+                    labelCalStatusPm.Text = "Power Meter falhou no Zero Cal!!!";
+                    Thread.Sleep(3000);
+                    message = "Power Meter Zero Cal Failed!!!";
+                    labelCalStatusPm.Text = message;
+                    logger.logMessage(message);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                labelCalStatusPm.Text = "Power Meter falhou no Zero Cal!!!";
-                Thread.Sleep(3000);
-                message = "Power Meter Zero Cal Failed!!!";
-                labelCalStatusPm.Text = message;
+                string message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);
+                MessageBox.Show(message);
             }
             return false;
         }
