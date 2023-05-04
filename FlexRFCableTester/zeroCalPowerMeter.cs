@@ -55,7 +55,7 @@ namespace FlexRFCableTester
                     logger.logMessage(message);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 string message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);

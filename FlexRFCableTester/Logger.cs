@@ -14,7 +14,6 @@ namespace FlexRFCableTester
         string filepath = string.Empty;
 
         public Logger() { }
-
         public void logMessage(string message)
         {
             try
@@ -39,9 +38,9 @@ namespace FlexRFCableTester
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("diretório e/ou arquivo não encontrado!!! - log\\FlexRFCableTester_logger.txt");
+                MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\FlexRFCableTester_logger.txt");
             }
         }
 
@@ -68,9 +67,9 @@ namespace FlexRFCableTester
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("diretório e/ou arquivo não encontrado!!! - log\\MeasuresResultLog.txt");
+                MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\MeasuresResultLog.txt");
             }
         }
     }
