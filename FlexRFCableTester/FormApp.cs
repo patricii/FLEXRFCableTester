@@ -186,9 +186,9 @@ namespace FlexRFCableTester
             enteredDate = DateTime.Parse(dateCompare);
             var diffOfDates = today - enteredDate;
 
-            if (diffOfDates.TotalHours < 100)
+            if (diffOfDates.TotalHours < 24)
             {
-                labelStatusRFTester.Text = "         Iniciando a medição do cabo!!!";
+                labelStatusRFTester.Text = "                            Iniciando a medição do cabo!!!";
                 StartProcess startP = new StartProcess();
                 startP.Show();
                 Application.DoEvents();
