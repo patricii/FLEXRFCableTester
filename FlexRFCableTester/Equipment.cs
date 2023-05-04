@@ -173,7 +173,7 @@ namespace FlexRFCableTester
             }
             return true;
         }
-        public void getEquipmentIdnByLAN()
+        public bool getEquipmentIdnByLAN()
         {
             try
             {
@@ -184,11 +184,11 @@ namespace FlexRFCableTester
                 string response = ioTestSet.ReadString();
                 logger.logMessage("Read " + response);
             }
-            catch (Exception ex)
+            catch
             {
-                logger.logMessage("Error: " + ex);
-                MessageBox.Show("Error: " + ex);
+                return false;
             }
+            return true;
         }
     }
 }
