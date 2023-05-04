@@ -101,12 +101,14 @@ namespace FlexRFCableTester
         private void zeroCalProcess()
         {
             logger = new Logger();
-            visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
-            visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
-            Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
             try
             {
+                visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+                Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
                 logger.logMessage("Starting ZeroCal process - Waiting response....");
 
                 if (checkBoxPowerM.Checked)
@@ -137,7 +139,7 @@ namespace FlexRFCableTester
             }
             catch (Exception ex)
             {
-                message = "Erro ao comunicar com o Equipamento!!!" + ex;
+                message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }

@@ -22,7 +22,6 @@ C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.pd
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.dll
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.Native.dll
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.VisaNS.dll
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csprojAssemblyReference.cache
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe.config
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.ResolveComReference.cache
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormApp.resources
