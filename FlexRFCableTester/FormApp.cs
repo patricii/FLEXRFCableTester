@@ -64,7 +64,7 @@ namespace FlexRFCableTester
             }
         }
         public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
-        {
+        {          
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
         }
@@ -168,6 +168,8 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            labelStatusRFTester.Text = "Iniciando a medição do cabo!!!";
+            Application.DoEvents();
             logger = new Logger();
             DateTime enteredDate;
             DateTime today;
@@ -182,8 +184,11 @@ namespace FlexRFCableTester
             var diffOfDates = today - enteredDate;
 
             if (diffOfDates.TotalHours < 24)
-            {
-                //to do!!!!
+            {//to do!!!
+                zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen,"startMeasure");
+                
             }
             else
             {
@@ -206,8 +211,10 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+
                 if (passFail == "Fail")
-                    dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
+                dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
+
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }

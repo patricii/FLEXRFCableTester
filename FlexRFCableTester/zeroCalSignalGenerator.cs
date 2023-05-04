@@ -17,6 +17,7 @@ namespace FlexRFCableTester
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
 
+        double finalMeasure = 0.0;
         string startFreq = string.Empty;
         string stopFreq = string.Empty;
         string interval = string.Empty;
@@ -56,14 +57,16 @@ namespace FlexRFCableTester
 
             return true;
         }
-        public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen)
+        public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen, string mode)
         {
+            double zeroCalLoss = 0.0;
+            double cableLoss = 0.0;
+            double lossFromIniFile = 0.0;
             startFreq = frmMain.textBoxStartFrequency.Text;
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
             average = frmMain.textBoxAverage.Text;
-
             double[] values = new double[Convert.ToInt32(average)];
             double sum = 0.0;
             double dbAverage = 0.0;
@@ -79,6 +82,7 @@ namespace FlexRFCableTester
                 var MyIni = new IniFile("Settings.ini");
                 if (MyIni.KeyExists("StabilityCriteria", "ZeroCalFrequency"))
                     stabilityCriteria = MyIni.Read("StabilityCriteria", "ZeroCalFrequency");
+
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
                 response = equipmentSignalGen.readCommand(visaSigGen);
@@ -184,13 +188,34 @@ namespace FlexRFCableTester
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                                if (mode == "zeroCal")
+                                    frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) || countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
                             dbAverage = sum / values.Length;
-                            frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
+                            this.finalMeasure = dbAverage;
+                            if (mode == "zeroCal")
+                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
+
+                            if (mode == "startMeasure")
+                            {
+                                if (MyIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
+                                    zeroCalLoss = Convert.ToDouble(MyIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
+
+                                cableLoss = finalMeasure - zeroCalLoss;
+
+
+                                if (MyIni.KeyExists("CableLoss", frmMain.comboBoxCableSettings.Text))
+                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss", frmMain.comboBoxCableSettings.Text));
+
+                                if (lossFromIniFile > cableLoss)
+                                    passFail = "Fail";
+
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                            }
+
                             count = 0;
                             countRecovery = 0;
                             sum = 0;
@@ -226,7 +251,8 @@ namespace FlexRFCableTester
             buttonOkSg.BackColor = Color.Green;
             buttonOkSg.Enabled = false;
             Application.DoEvents();
-            bool result = zeroCalSignalGenMtd(visaSignalGen);
+            bool result = zeroCalSignalGenMtd(visaSignalGen, "zeroCal");
+
             if (result)
             {
                 resultZeroCalSigGen = "Finished";
