@@ -184,8 +184,11 @@ namespace FlexRFCableTester
             var diffOfDates = today - enteredDate;
 
             if (diffOfDates.TotalHours < 24)
-            {
-                //to do!!!!
+            {//to do!!!
+                zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen,"startMeasure");
+                
             }
             else
             {

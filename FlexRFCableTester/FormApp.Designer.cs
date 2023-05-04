@@ -670,7 +670,6 @@
         public System.Windows.Forms.TextBox textBoxDbm;
         public System.Windows.Forms.TextBox textBoxStopFrequency;
         public System.Windows.Forms.TextBox textBoxStartFrequency;
-        private System.Windows.Forms.ComboBox comboBoxCableSettings;
         private System.Windows.Forms.Label labelAverage;
         private System.Windows.Forms.Label labelIntervalFrequency;
         private System.Windows.Forms.Label labelDbm;
@@ -697,6 +696,7 @@
         private System.Windows.Forms.Label labelSF;
         public System.Windows.Forms.Label labelWarning;
         private System.Windows.Forms.Label labelStatusRFTester;
+        public System.Windows.Forms.ComboBox comboBoxCableSettings;
     }
 }
 
