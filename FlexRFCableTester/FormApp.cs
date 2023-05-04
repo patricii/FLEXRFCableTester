@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
 
@@ -66,7 +64,7 @@ namespace FlexRFCableTester
             }
         }
         public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
-        {          
+        {
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
         }
@@ -137,7 +135,7 @@ namespace FlexRFCableTester
                         MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);
@@ -208,10 +206,8 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
-
                 if (passFail == "Fail")
-                dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
-
+                    dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }
