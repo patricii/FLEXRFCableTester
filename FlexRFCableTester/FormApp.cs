@@ -65,12 +65,10 @@ namespace FlexRFCableTester
                 MessageBox.Show("Imagem não disponível!!!");
             }
         }
-        public void readMeasureAndFillCalFactoryValues(string freq, double value)
-        {
-
+        public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
+        {          
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
-
         }
         private void getFrequencyFromFile()
         {
@@ -148,7 +146,6 @@ namespace FlexRFCableTester
         {
             writeValuesToIniFile();
             zeroCalProcess();
-
         }
         private void writeValuesToIniFile()
         {
@@ -209,6 +206,10 @@ namespace FlexRFCableTester
                 dataGridViewMeasureTable.Rows[count].Cells[4].Value = hiLimit;
                 dataGridViewMeasureTable.Rows[count].Cells[5].Value = calFactor;
                 dataGridViewMeasureTable.Rows[count].Cells[6].Value = passFail;
+
+                if (passFail == "Fail")
+                dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
+
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
                 Application.DoEvents();
             }

@@ -29,8 +29,9 @@ namespace FlexRFCableTester
         double measure = 0.0;
         double calFactory = 0.0;
         double firstMeasure = 0.0;
-        double xMeasure = 0.0;
+        double lossMeasure = 0.0;
         int count = 0;
+        int countRecovery = 0;
         int countResults = 0;
         string passFail = "Pass";
         string stabilityCriteria = string.Empty;
@@ -57,6 +58,9 @@ namespace FlexRFCableTester
         }
         public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen)
         {
+            double[] values = new double[Convert.ToInt32(frmMain.textBoxAverage.Text)];
+            double sum = 0.0;
+            double dbAverage = 0.0;
             startFreq = frmMain.textBoxStartFrequency.Text;
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
@@ -74,7 +78,6 @@ namespace FlexRFCableTester
                 var MyIni = new IniFile("Settings.ini");
                 if (MyIni.KeyExists("StabilityCriteria", "ZeroCalFrequency"))
                     stabilityCriteria = MyIni.Read("StabilityCriteria", "ZeroCalFrequency");
-
 
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
@@ -160,26 +163,42 @@ namespace FlexRFCableTester
 
                                 else
                                 {
-                                    xMeasure = firstMeasure - measure;
-                                    if (xMeasure > Convert.ToDouble(stabilityCriteria))
+                                    lossMeasure = firstMeasure - measure;
+                                    if (lossMeasure > Convert.ToDouble(stabilityCriteria))
+                                    {
                                         passFail = "Fail";
+                                        count = 0;
+                                        countRecovery++;
+                                    }
                                     else
+                                    {
                                         passFail = "Pass";
+                                        values[count] = measure;
+                                        foreach (double x in values)
+                                        {
+                                            sum += x;
+                                        }
+                                    }
                                 }
+
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
                                 frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
-                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, calFactory);
-
                             }
-                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text));
+                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) || countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
+
+                            dbAverage = sum / values.Length;
+                            frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
                             count = 0;
+                            countRecovery = 0;
+                            sum = 0;
+                            dbAverage = 0;
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
-                            if(result < Convert.ToDouble(stopFreq))
-                            status = writeFreqCMDSignalGen(result.ToString());
+                            if (result < Convert.ToDouble(stopFreq))
+                                status = writeFreqCMDSignalGen(result.ToString());
 
                             frmMain.textBoxStartFrequency.Text = result.ToString();
                             labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
