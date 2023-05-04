@@ -58,14 +58,15 @@ namespace FlexRFCableTester
         }
         public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen)
         {
-            double[] values = new double[Convert.ToInt32(frmMain.textBoxAverage.Text)];
-            double sum = 0.0;
-            double dbAverage = 0.0;
             startFreq = frmMain.textBoxStartFrequency.Text;
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
             average = frmMain.textBoxAverage.Text;
+
+            double[] values = new double[Convert.ToInt32(average)];
+            double sum = 0.0;
+            double dbAverage = 0.0;
             labelCalStatusSg.Text = "           Aguarde o processo de Zero Cal do Signal Generator!!!";
 
             try
@@ -78,7 +79,6 @@ namespace FlexRFCableTester
                 var MyIni = new IniFile("Settings.ini");
                 if (MyIni.KeyExists("StabilityCriteria", "ZeroCalFrequency"))
                     stabilityCriteria = MyIni.Read("StabilityCriteria", "ZeroCalFrequency");
-
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
                 response = equipmentSignalGen.readCommand(visaSigGen);
@@ -227,7 +227,6 @@ namespace FlexRFCableTester
             buttonOkSg.Enabled = false;
             Application.DoEvents();
             bool result = zeroCalSignalGenMtd(visaSignalGen);
-
             if (result)
             {
                 resultZeroCalSigGen = "Finished";

@@ -30,21 +30,18 @@ namespace FlexRFCableTester
             this.equipAlias = equipAlias;
             this.resourceMng = resourceMng;
         }
-
         public Equipments(FormattedIO488 ioTestSet, string equipAlias, Ivi.Visa.Interop.ResourceManager resourceMng)
         {
             this.ioTestSet = ioTestSet;
             this.equipAlias = equipAlias;
             this.resourceMng = resourceMng;
         }
-
         public Equipments(MessageBasedSession equipmentName, string address)
         {
             this.equipmentName = equipmentName;
             this.address = address;
             
         }
-
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
@@ -105,7 +102,6 @@ namespace FlexRFCableTester
                 message = "Erro ao conectar com o Equipamento: " + address + "!!!";
                 logger.logMessage(message);
                 MessageBox.Show(message);
-
             }
         }
         public void setZeroCalSGGPIB()
@@ -155,7 +151,6 @@ namespace FlexRFCableTester
                 message = "Erro ao conectar com o Equipamento: " + address + "!!!";
                 logger.logMessage(message);
                 MessageBox.Show(message);
-
             }
         }
 
