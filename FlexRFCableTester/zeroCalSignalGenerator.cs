@@ -184,7 +184,6 @@ namespace FlexRFCableTester
                                         }
                                     }
                                 }
-
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
@@ -192,10 +191,11 @@ namespace FlexRFCableTester
                                     frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
                             }
-                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) || countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
+                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
                             dbAverage = sum / values.Length;
-                            this.finalMeasure = dbAverage;
+                            finalMeasure = dbAverage;
+
                             if (mode == "zeroCal")
                                 frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
 
