@@ -118,11 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="zeroCalSinalG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\zeroCalSinalG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EF400_1600mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\EF400_1600mm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EF400_600mm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\EF400_600mm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zeroCal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\zeroCal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LA500" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\LA500.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,13 +148,7 @@
   <data name="MXHS83SK2800" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\MXHS83SK2800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flex" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zeroCal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\zeroCal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zeroCalSinalG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\zeroCalSinalG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StartProcess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\StartProcess.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
