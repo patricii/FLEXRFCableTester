@@ -166,6 +166,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\img\StartProcess.jpg" />
     <Content Include="FLEX_logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

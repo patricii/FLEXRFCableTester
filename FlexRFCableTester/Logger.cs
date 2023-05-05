@@ -8,16 +8,20 @@ namespace FlexRFCableTester
     {
         string logString = string.Empty;
         string filepath = string.Empty;
+        DateTime logNameTime = DateTime.Now;
+        string StrLogNameTime = string.Empty;
+
 
         public Logger() { }
         public void logMessage(string message)
         {
             try
             {
+                StrLogNameTime = logNameTime.ToString("yyyy-MM-dd");
                 DateTime now = DateTime.Now;
                 logString = now.ToString() + " - [-> " + message + "]" + Environment.NewLine;
                 Application.DoEvents();
-                filepath = @"log\FlexRFCableTester_logger.txt";
+                filepath = @"log\FlexRFCableTester_logger_" + StrLogNameTime + ".txt";
 
                 if (!File.Exists(filepath))
                 {

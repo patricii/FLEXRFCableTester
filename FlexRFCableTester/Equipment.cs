@@ -45,14 +45,14 @@ namespace FlexRFCableTester
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
-            logger.logMessage("Write " + cmd);
+            logger.logMessage(mBS.ResourceName + " -> Write: " + cmd);
             Thread.Sleep(200);
         }
         public string readCommand(MessageBasedSession mBS)
         {
             Thread.Sleep(200);
             string resp = mBS.ReadString(); //read from instrument
-            logger.logMessage("Read " + resp);
+            logger.logMessage(mBS.ResourceName + " -> Read: " + resp);
             return resp;
         }
         public void setZeroCalGPIB()

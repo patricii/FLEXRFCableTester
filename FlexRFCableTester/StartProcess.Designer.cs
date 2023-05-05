@@ -70,7 +70,8 @@
             // 
             // pictureBoxStartProcess
             // 
-            this.pictureBoxStartProcess.Location = new System.Drawing.Point(8, 80);
+            this.pictureBoxStartProcess.Image = global::FlexRFCableTester.Properties.Resources.StartProcess;
+            this.pictureBoxStartProcess.Location = new System.Drawing.Point(12, 84);
             this.pictureBoxStartProcess.Name = "pictureBoxStartProcess";
             this.pictureBoxStartProcess.Size = new System.Drawing.Size(848, 410);
             this.pictureBoxStartProcess.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
