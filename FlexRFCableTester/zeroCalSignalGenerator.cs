@@ -214,6 +214,42 @@ namespace FlexRFCableTester
 
                                 cableLoss = dbAverage - zeroCalLoss;
 
+                                if(Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss1GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss2GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss3GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss4GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss5GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss6GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmMain.comboBoxCableSettings.Text));
+                                }
+
 
                                 if (MyIni.KeyExists("CableLoss", frmMain.comboBoxCableSettings.Text))
                                     lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss", frmMain.comboBoxCableSettings.Text));
@@ -221,7 +257,7 @@ namespace FlexRFCableTester
                                 if (lossFromIniFile < cableLoss)
                                     passFail = "Fail";
                                 startProcessWatch.Stop();
-                                frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
+                                frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "0", lossFromIniFile.ToString(), cableLoss.ToString("F2"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
                                 countStart++;
                                 startProcessWatch.Reset();
                             }
