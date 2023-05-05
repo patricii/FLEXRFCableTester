@@ -17,7 +17,6 @@ namespace FlexRFCableTester
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
 
-        double finalMeasure = 0.0;
         string startFreq = string.Empty;
         string stopFreq = string.Empty;
         string interval = string.Empty;
@@ -196,7 +195,6 @@ namespace FlexRFCableTester
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
 
                             dbAverage = sum / values.Length;
-                            finalMeasure = dbAverage;
 
                             if (mode == "zeroCal")
                                 frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
@@ -206,7 +204,7 @@ namespace FlexRFCableTester
                                 if (MyIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
                                     zeroCalLoss = Convert.ToDouble(MyIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
 
-                                cableLoss = finalMeasure - zeroCalLoss;
+                                cableLoss = dbAverage - zeroCalLoss;
 
 
                                 if (MyIni.KeyExists("CableLoss", frmMain.comboBoxCableSettings.Text))
