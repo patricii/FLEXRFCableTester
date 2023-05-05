@@ -23,7 +23,7 @@ namespace FlexRFCableTester
             Application.DoEvents();
 
             Logger logger = new Logger();
-            labelCalStatusStartProcess.Text = "Medição do cabo iniciada!!!";
+            labelCalStatusStartProcess.Text = "             Aferição do cabo iniciada!!!";
             zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
             try
             {
@@ -33,13 +33,13 @@ namespace FlexRFCableTester
                 if (status)
                 {
                     cableResults = "Finished";
-                    logger.logMessage("Zero Cal Signal Generator Finished Successfully");
+                    logger.logMessage("Cable DBLoss measure Finished Successfully");
                 }
                 else
                 {
                     cableResults = "Failed";
-                    logger.logMessage("Zero Cal Signal Generator Failed!!!");
-                    MessageBox.Show("Zero Cal Signal Generator Failed!!!");
+                    logger.logMessage("Cable DBLoss  measure Failed!!!");
+                    MessageBox.Show("Cable DBLoss  measure Failed!!!");
                 }
             }
             catch

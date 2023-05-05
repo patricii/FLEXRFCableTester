@@ -70,8 +70,10 @@ namespace FlexRFCableTester
             double[] values = new double[Convert.ToInt32(average)];
             double sum = 0.0;
             double dbAverage = 0.0;
-            labelCalStatusSg.Text = "           Aguarde o processo de Zero Cal do Signal Generator!!!";
-
+            if (mode == "zeroCal")
+                labelCalStatusSg.Text = "           Aguarde o processo de Zero Cal do Signal Generator!!!";
+            else
+                labelCalStatusSg.Text = "           Aguarde o processo de Aferição do Cabo!!!";
             try
             {
                 visaSigGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
