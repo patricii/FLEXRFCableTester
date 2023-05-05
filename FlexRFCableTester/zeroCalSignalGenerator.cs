@@ -30,6 +30,7 @@ namespace FlexRFCableTester
         double calFactory = 0.0;
         double firstMeasure = 0.0;
         double lossMeasure = 0.0;
+        double parcialResult = 0.0;
         int count = 0;
         int countRecovery = 0;
         int countResults = 0;
@@ -166,25 +167,20 @@ namespace FlexRFCableTester
                                 if (count == 0)
                                     firstMeasure = measure;
 
+                                lossMeasure = firstMeasure - measure;
+                                if (lossMeasure > Convert.ToDouble(stabilityCriteria))
+                                {
+                                    passFail = "Fail";
+                                    count = 0;
+                                    countRecovery++;
+                                }
                                 else
                                 {
-                                    lossMeasure = firstMeasure - measure;
-                                    if (lossMeasure > Convert.ToDouble(stabilityCriteria))
-                                    {
-                                        passFail = "Fail";
-                                        count = 0;
-                                        countRecovery++;
-                                    }
-                                    else
-                                    {
-                                        passFail = "Pass";
-                                        values[count] = measure;
-                                        foreach (double x in values)
-                                        {
-                                            sum += x;
-                                        }
-                                    }
+                                    passFail = "Pass";
+                                    parcialResult = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
+                                    values[count] = parcialResult;
                                 }
+
                                 count++;
                                 logTimer.Stop();
                                 calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
@@ -193,11 +189,19 @@ namespace FlexRFCableTester
                                 countResults++;
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
-
+                            foreach (double x in values)
+                            {
+                                sum += x;
+                            }
                             dbAverage = sum / values.Length;
 
                             if (mode == "zeroCal")
                                 frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
+
+                            sum = 0;
+                            dbAverage = 0;
+                            count = 0;
+                            countRecovery = 0;
 
                             if (mode == "startMeasure")
                             {
@@ -215,11 +219,6 @@ namespace FlexRFCableTester
 
                                 frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                             }
-
-                            count = 0;
-                            countRecovery = 0;
-                            sum = 0;
-                            dbAverage = 0;
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             if (result < Convert.ToDouble(stopFreq))

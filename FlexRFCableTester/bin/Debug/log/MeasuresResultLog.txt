@@ -1,508 +1,1136 @@
-0-> Freq:100MHz  dBm:10  Reading:9.8457dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1543  Result:Pass  TestTime:991ms
+0-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:991ms
 
-1-> Freq:100MHz  dBm:10  Reading:9.8460dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1540  Result:Pass  TestTime:991ms
+1-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:991ms
 
-2-> Freq:100MHz  dBm:10  Reading:9.8493dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1507  Result:Pass  TestTime:991ms
+2-> Freq:100MHz  dBm:10  Reading:9.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.26  Result:Pass  TestTime:991ms
 
-4-> Freq:600MHz  dBm:10  Reading:9.6657dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3343  Result:Pass  TestTime:1982ms
+3-> Freq:200MHz  dBm:10  Reading:9.55dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.45  Result:Pass  TestTime:1981ms
 
-5-> Freq:600MHz  dBm:10  Reading:9.6660dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3340  Result:Pass  TestTime:1982ms
+4-> Freq:200MHz  dBm:10  Reading:9.55dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.45  Result:Pass  TestTime:1981ms
 
-6-> Freq:600MHz  dBm:10  Reading:9.6669dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3331  Result:Pass  TestTime:1982ms
+5-> Freq:200MHz  dBm:10  Reading:9.55dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.45  Result:Pass  TestTime:1981ms
 
-8-> Freq:1100MHz  dBm:10  Reading:9.6150dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3850  Result:Pass  TestTime:2976ms
+6-> Freq:300MHz  dBm:10  Reading:9.42dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.58  Result:Pass  TestTime:2972ms
 
-9-> Freq:1100MHz  dBm:10  Reading:9.6152dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3848  Result:Pass  TestTime:2976ms
+7-> Freq:300MHz  dBm:10  Reading:9.42dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.58  Result:Pass  TestTime:2972ms
 
-10-> Freq:1100MHz  dBm:10  Reading:9.6157dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3843  Result:Pass  TestTime:2976ms
+8-> Freq:300MHz  dBm:10  Reading:9.42dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.58  Result:Pass  TestTime:2972ms
 
-12-> Freq:1600MHz  dBm:10  Reading:9.5621dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4379  Result:Pass  TestTime:3969ms
+9-> Freq:400MHz  dBm:10  Reading:9.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.62  Result:Pass  TestTime:3964ms
 
-13-> Freq:1600MHz  dBm:10  Reading:9.5625dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4375  Result:Pass  TestTime:3969ms
+10-> Freq:400MHz  dBm:10  Reading:9.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.62  Result:Pass  TestTime:3964ms
 
-14-> Freq:1600MHz  dBm:10  Reading:9.5629dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4371  Result:Pass  TestTime:3969ms
+11-> Freq:400MHz  dBm:10  Reading:9.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.62  Result:Pass  TestTime:3964ms
 
-16-> Freq:2100MHz  dBm:10  Reading:9.5160dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4840  Result:Pass  TestTime:4962ms
+12-> Freq:500MHz  dBm:10  Reading:9.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.70  Result:Pass  TestTime:4955ms
 
-17-> Freq:2100MHz  dBm:10  Reading:9.5158dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4842  Result:Pass  TestTime:4962ms
+13-> Freq:500MHz  dBm:10  Reading:9.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.70  Result:Pass  TestTime:4955ms
 
-18-> Freq:2100MHz  dBm:10  Reading:9.5162dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4838  Result:Pass  TestTime:4962ms
+14-> Freq:500MHz  dBm:10  Reading:9.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.70  Result:Pass  TestTime:4955ms
 
-20-> Freq:2600MHz  dBm:10  Reading:9.3739dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6261  Result:Pass  TestTime:5955ms
+15-> Freq:600MHz  dBm:10  Reading:9.21dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.79  Result:Pass  TestTime:5946ms
 
-21-> Freq:2600MHz  dBm:10  Reading:9.3741dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6259  Result:Pass  TestTime:5955ms
+16-> Freq:600MHz  dBm:10  Reading:9.21dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.79  Result:Pass  TestTime:5946ms
 
-22-> Freq:2600MHz  dBm:10  Reading:9.3742dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6258  Result:Pass  TestTime:5955ms
+17-> Freq:600MHz  dBm:10  Reading:9.21dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.79  Result:Pass  TestTime:5946ms
 
-24-> Freq:3100MHz  dBm:10  Reading:9.3322dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6678  Result:Pass  TestTime:6947ms
+18-> Freq:700MHz  dBm:10  Reading:9.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.86  Result:Pass  TestTime:6938ms
 
-25-> Freq:3100MHz  dBm:10  Reading:9.3324dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6676  Result:Pass  TestTime:6947ms
+19-> Freq:700MHz  dBm:10  Reading:9.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.86  Result:Pass  TestTime:6938ms
 
-26-> Freq:3100MHz  dBm:10  Reading:9.3323dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6677  Result:Pass  TestTime:6947ms
+20-> Freq:700MHz  dBm:10  Reading:9.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.86  Result:Pass  TestTime:6938ms
 
-28-> Freq:3600MHz  dBm:10  Reading:9.0612dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9388  Result:Pass  TestTime:7939ms
+21-> Freq:800MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:7928ms
 
-29-> Freq:3600MHz  dBm:10  Reading:9.0610dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9390  Result:Pass  TestTime:7939ms
+22-> Freq:800MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:7928ms
 
-30-> Freq:3600MHz  dBm:10  Reading:9.0611dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9389  Result:Pass  TestTime:7939ms
+23-> Freq:800MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:7928ms
 
-32-> Freq:4100MHz  dBm:10  Reading:9.3283dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6717  Result:Pass  TestTime:8934ms
+24-> Freq:900MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:8918ms
 
-33-> Freq:4100MHz  dBm:10  Reading:9.3279dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6721  Result:Pass  TestTime:8934ms
+25-> Freq:900MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:8918ms
 
-34-> Freq:4100MHz  dBm:10  Reading:9.3284dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6716  Result:Pass  TestTime:8934ms
+26-> Freq:900MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:8918ms
 
-36-> Freq:4600MHz  dBm:10  Reading:9.3155dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6845  Result:Pass  TestTime:9928ms
+27-> Freq:1000MHz  dBm:10  Reading:9.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.97  Result:Pass  TestTime:9908ms
 
-37-> Freq:4600MHz  dBm:10  Reading:9.3160dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6840  Result:Pass  TestTime:9928ms
+28-> Freq:1000MHz  dBm:10  Reading:9.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.97  Result:Pass  TestTime:9908ms
 
-38-> Freq:4600MHz  dBm:10  Reading:9.3158dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6842  Result:Pass  TestTime:9928ms
+29-> Freq:1000MHz  dBm:10  Reading:9.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.97  Result:Pass  TestTime:9908ms
 
-40-> Freq:5100MHz  dBm:10  Reading:9.2386dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7614  Result:Pass  TestTime:10921ms
+30-> Freq:1100MHz  dBm:10  Reading:8.92dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.08  Result:Pass  TestTime:10899ms
 
-41-> Freq:5100MHz  dBm:10  Reading:9.2388dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7612  Result:Pass  TestTime:10921ms
+31-> Freq:1100MHz  dBm:10  Reading:8.92dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.08  Result:Pass  TestTime:10899ms
 
-42-> Freq:5100MHz  dBm:10  Reading:9.2388dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7612  Result:Pass  TestTime:10921ms
+32-> Freq:1100MHz  dBm:10  Reading:8.92dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.08  Result:Pass  TestTime:10899ms
 
-44-> Freq:5600MHz  dBm:10  Reading:9.3046dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6954  Result:Pass  TestTime:11914ms
+33-> Freq:1200MHz  dBm:10  Reading:8.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.02  Result:Pass  TestTime:11889ms
 
-45-> Freq:5600MHz  dBm:10  Reading:9.3048dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6952  Result:Pass  TestTime:11914ms
+34-> Freq:1200MHz  dBm:10  Reading:8.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.02  Result:Pass  TestTime:11889ms
 
-46-> Freq:5600MHz  dBm:10  Reading:9.3049dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6951  Result:Pass  TestTime:11914ms
+35-> Freq:1200MHz  dBm:10  Reading:8.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.02  Result:Pass  TestTime:11889ms
 
-0-> Freq:100MHz  dBm:10  Reading:9.8453dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1547  Result:Pass  TestTime:990ms
+36-> Freq:1300MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:12880ms
 
-1-> Freq:100MHz  dBm:10  Reading:9.8461dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1539  Result:Pass  TestTime:990ms
+37-> Freq:1300MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:12880ms
 
-2-> Freq:100MHz  dBm:10  Reading:9.8493dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.1507  Result:Pass  TestTime:990ms
+38-> Freq:1300MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:12880ms
 
-4-> Freq:200MHz  dBm:10  Reading:9.7662dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2338  Result:Pass  TestTime:1981ms
+39-> Freq:1400MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:13870ms
 
-5-> Freq:200MHz  dBm:10  Reading:9.7665dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2335  Result:Pass  TestTime:1981ms
+40-> Freq:1400MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:13870ms
 
-6-> Freq:200MHz  dBm:10  Reading:9.7676dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2324  Result:Pass  TestTime:1981ms
+41-> Freq:1400MHz  dBm:10  Reading:8.84dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.16  Result:Pass  TestTime:13870ms
 
-8-> Freq:300MHz  dBm:10  Reading:9.7250dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2750  Result:Pass  TestTime:2973ms
+42-> Freq:1500MHz  dBm:10  Reading:8.77dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.23  Result:Pass  TestTime:14862ms
 
-9-> Freq:300MHz  dBm:10  Reading:9.7250dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2750  Result:Pass  TestTime:2973ms
+43-> Freq:1500MHz  dBm:10  Reading:8.77dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.23  Result:Pass  TestTime:14862ms
 
-10-> Freq:300MHz  dBm:10  Reading:9.7254dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2746  Result:Pass  TestTime:2973ms
+44-> Freq:1500MHz  dBm:10  Reading:8.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.22  Result:Pass  TestTime:14862ms
 
-12-> Freq:400MHz  dBm:10  Reading:9.7055dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2945  Result:Pass  TestTime:3963ms
+45-> Freq:1600MHz  dBm:10  Reading:8.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.39  Result:Pass  TestTime:15854ms
 
-13-> Freq:400MHz  dBm:10  Reading:9.7055dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2945  Result:Pass  TestTime:3963ms
+46-> Freq:1600MHz  dBm:10  Reading:8.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.39  Result:Pass  TestTime:15854ms
 
-14-> Freq:400MHz  dBm:10  Reading:9.7058dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2942  Result:Pass  TestTime:3963ms
+47-> Freq:1600MHz  dBm:10  Reading:8.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.39  Result:Pass  TestTime:15854ms
 
-16-> Freq:500MHz  dBm:10  Reading:9.7068dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2932  Result:Pass  TestTime:4955ms
+48-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16846ms
 
-17-> Freq:500MHz  dBm:10  Reading:9.7068dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2932  Result:Pass  TestTime:4955ms
+49-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16846ms
 
-18-> Freq:500MHz  dBm:10  Reading:9.7065dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.2935  Result:Pass  TestTime:4955ms
+50-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16846ms
 
-20-> Freq:600MHz  dBm:10  Reading:9.6725dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3275  Result:Pass  TestTime:5947ms
+51-> Freq:1800MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:17837ms
 
-21-> Freq:600MHz  dBm:10  Reading:9.6724dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3276  Result:Pass  TestTime:5947ms
+52-> Freq:1800MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:17837ms
 
-22-> Freq:600MHz  dBm:10  Reading:9.6727dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3273  Result:Pass  TestTime:5947ms
+53-> Freq:1800MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:17837ms
 
-24-> Freq:700MHz  dBm:10  Reading:9.6854dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3146  Result:Pass  TestTime:6939ms
+54-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18828ms
 
-25-> Freq:700MHz  dBm:10  Reading:9.6858dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3142  Result:Pass  TestTime:6939ms
+55-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18828ms
 
-26-> Freq:700MHz  dBm:10  Reading:9.6857dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3143  Result:Pass  TestTime:6939ms
+56-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18828ms
 
-28-> Freq:800MHz  dBm:10  Reading:9.6620dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3380  Result:Pass  TestTime:7931ms
+57-> Freq:2000MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:19819ms
 
-29-> Freq:800MHz  dBm:10  Reading:9.6619dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3381  Result:Pass  TestTime:7931ms
+58-> Freq:2000MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:19819ms
 
-30-> Freq:800MHz  dBm:10  Reading:9.6621dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3379  Result:Pass  TestTime:7931ms
+59-> Freq:2000MHz  dBm:10  Reading:8.45dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.55  Result:Pass  TestTime:19819ms
 
-32-> Freq:900MHz  dBm:10  Reading:9.6307dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3693  Result:Pass  TestTime:8923ms
+60-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20809ms
 
-33-> Freq:900MHz  dBm:10  Reading:9.6305dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3695  Result:Pass  TestTime:8923ms
+61-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20809ms
 
-34-> Freq:900MHz  dBm:10  Reading:9.6308dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3692  Result:Pass  TestTime:8923ms
+62-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20809ms
 
-36-> Freq:1000MHz  dBm:10  Reading:9.6394dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3606  Result:Pass  TestTime:9916ms
+63-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21801ms
 
-37-> Freq:1000MHz  dBm:10  Reading:9.6397dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3603  Result:Pass  TestTime:9916ms
+64-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21801ms
 
-38-> Freq:1000MHz  dBm:10  Reading:9.6395dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3605  Result:Pass  TestTime:9916ms
+65-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21801ms
 
-40-> Freq:1100MHz  dBm:10  Reading:9.6207dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3793  Result:Pass  TestTime:10907ms
+66-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22793ms
 
-41-> Freq:1100MHz  dBm:10  Reading:9.6209dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3791  Result:Pass  TestTime:10907ms
+67-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22793ms
 
-42-> Freq:1100MHz  dBm:10  Reading:9.6209dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3791  Result:Pass  TestTime:10907ms
+68-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22793ms
 
-44-> Freq:1200MHz  dBm:10  Reading:9.6307dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3693  Result:Pass  TestTime:11900ms
+69-> Freq:2400MHz  dBm:10  Reading:8.27dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.73  Result:Pass  TestTime:23787ms
 
-45-> Freq:1200MHz  dBm:10  Reading:9.6310dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3690  Result:Pass  TestTime:11900ms
+70-> Freq:2400MHz  dBm:10  Reading:8.27dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.73  Result:Pass  TestTime:23787ms
 
-46-> Freq:1200MHz  dBm:10  Reading:9.6310dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.3690  Result:Pass  TestTime:11900ms
+71-> Freq:2400MHz  dBm:10  Reading:8.27dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.73  Result:Pass  TestTime:23787ms
 
-48-> Freq:1300MHz  dBm:10  Reading:9.5750dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4250  Result:Pass  TestTime:12891ms
+72-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24778ms
 
-49-> Freq:1300MHz  dBm:10  Reading:9.5751dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4249  Result:Pass  TestTime:12891ms
+73-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24778ms
 
-50-> Freq:1300MHz  dBm:10  Reading:9.5751dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4249  Result:Pass  TestTime:12891ms
+74-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24778ms
 
-52-> Freq:1400MHz  dBm:10  Reading:9.5856dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4144  Result:Pass  TestTime:13885ms
+75-> Freq:2600MHz  dBm:10  Reading:8.17dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.83  Result:Pass  TestTime:25770ms
 
-53-> Freq:1400MHz  dBm:10  Reading:9.5857dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4143  Result:Pass  TestTime:13885ms
+76-> Freq:2600MHz  dBm:10  Reading:8.17dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.83  Result:Pass  TestTime:25770ms
 
-54-> Freq:1400MHz  dBm:10  Reading:9.5857dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4143  Result:Pass  TestTime:13885ms
+77-> Freq:2600MHz  dBm:10  Reading:8.17dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.83  Result:Pass  TestTime:25770ms
 
-56-> Freq:1500MHz  dBm:10  Reading:9.5864dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4136  Result:Pass  TestTime:14878ms
+78-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26761ms
 
-57-> Freq:1500MHz  dBm:10  Reading:9.5867dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4133  Result:Pass  TestTime:14878ms
+79-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26761ms
 
-58-> Freq:1500MHz  dBm:10  Reading:9.5866dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4134  Result:Pass  TestTime:14878ms
+80-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26761ms
 
-60-> Freq:1600MHz  dBm:10  Reading:9.5690dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4310  Result:Pass  TestTime:15870ms
+81-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27752ms
 
-61-> Freq:1600MHz  dBm:10  Reading:9.5690dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4310  Result:Pass  TestTime:15870ms
+82-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27752ms
 
-62-> Freq:1600MHz  dBm:10  Reading:9.5691dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4309  Result:Pass  TestTime:15870ms
+83-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27752ms
 
-64-> Freq:1700MHz  dBm:10  Reading:9.5597dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4403  Result:Pass  TestTime:16862ms
+84-> Freq:2900MHz  dBm:10  Reading:7.94dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.06  Result:Pass  TestTime:28745ms
 
-65-> Freq:1700MHz  dBm:10  Reading:9.5598dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4402  Result:Pass  TestTime:16862ms
+85-> Freq:2900MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:28745ms
 
-66-> Freq:1700MHz  dBm:10  Reading:9.5601dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4399  Result:Pass  TestTime:16862ms
+86-> Freq:2900MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:28745ms
 
-68-> Freq:1800MHz  dBm:10  Reading:9.5371dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4629  Result:Pass  TestTime:17855ms
+87-> Freq:3000MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:29737ms
 
-69-> Freq:1800MHz  dBm:10  Reading:9.5371dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4629  Result:Pass  TestTime:17855ms
+88-> Freq:3000MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:29737ms
 
-70-> Freq:1800MHz  dBm:10  Reading:9.5370dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4630  Result:Pass  TestTime:17855ms
+89-> Freq:3000MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:29737ms
 
-72-> Freq:1900MHz  dBm:10  Reading:9.4739dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5261  Result:Pass  TestTime:18849ms
+90-> Freq:3100MHz  dBm:10  Reading:8.07dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.93  Result:Pass  TestTime:30730ms
 
-73-> Freq:1900MHz  dBm:10  Reading:9.4737dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5263  Result:Pass  TestTime:18849ms
+91-> Freq:3100MHz  dBm:10  Reading:8.07dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.93  Result:Pass  TestTime:30730ms
 
-74-> Freq:1900MHz  dBm:10  Reading:9.4739dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5261  Result:Pass  TestTime:18849ms
+92-> Freq:3100MHz  dBm:10  Reading:8.07dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.93  Result:Pass  TestTime:30730ms
 
-76-> Freq:2000MHz  dBm:10  Reading:9.5283dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4717  Result:Pass  TestTime:19842ms
+93-> Freq:3200MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:31721ms
 
-77-> Freq:2000MHz  dBm:10  Reading:9.5283dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4717  Result:Pass  TestTime:19842ms
+94-> Freq:3200MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:31721ms
 
-78-> Freq:2000MHz  dBm:10  Reading:9.5283dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4717  Result:Pass  TestTime:19842ms
+95-> Freq:3200MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:31721ms
 
-80-> Freq:2100MHz  dBm:10  Reading:9.5241dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4759  Result:Pass  TestTime:20836ms
+96-> Freq:3300MHz  dBm:10  Reading:8.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.95  Result:Pass  TestTime:32712ms
 
-81-> Freq:2100MHz  dBm:10  Reading:9.5239dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4761  Result:Pass  TestTime:20836ms
+97-> Freq:3300MHz  dBm:10  Reading:8.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.95  Result:Pass  TestTime:32712ms
 
-82-> Freq:2100MHz  dBm:10  Reading:9.5240dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.4760  Result:Pass  TestTime:20836ms
+98-> Freq:3300MHz  dBm:10  Reading:8.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.95  Result:Pass  TestTime:32712ms
 
-84-> Freq:2200MHz  dBm:10  Reading:9.4393dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5607  Result:Pass  TestTime:21827ms
+99-> Freq:3400MHz  dBm:10  Reading:7.81dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.19  Result:Pass  TestTime:33705ms
 
-85-> Freq:2200MHz  dBm:10  Reading:9.4391dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5609  Result:Pass  TestTime:21827ms
+100-> Freq:3400MHz  dBm:10  Reading:7.81dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.19  Result:Pass  TestTime:33705ms
 
-86-> Freq:2200MHz  dBm:10  Reading:9.4393dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5607  Result:Pass  TestTime:21827ms
+101-> Freq:3400MHz  dBm:10  Reading:7.81dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.19  Result:Pass  TestTime:33705ms
 
-88-> Freq:2300MHz  dBm:10  Reading:9.4362dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5638  Result:Pass  TestTime:22819ms
+102-> Freq:3500MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:34698ms
 
-89-> Freq:2300MHz  dBm:10  Reading:9.4361dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5639  Result:Pass  TestTime:22819ms
+103-> Freq:3500MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:34698ms
 
-90-> Freq:2300MHz  dBm:10  Reading:9.4365dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5635  Result:Pass  TestTime:22819ms
+104-> Freq:3500MHz  dBm:10  Reading:8.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.00  Result:Pass  TestTime:34698ms
 
-92-> Freq:2400MHz  dBm:10  Reading:9.4337dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5663  Result:Pass  TestTime:23811ms
+105-> Freq:3600MHz  dBm:10  Reading:7.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.18  Result:Pass  TestTime:35690ms
 
-93-> Freq:2400MHz  dBm:10  Reading:9.4338dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5662  Result:Pass  TestTime:23811ms
+106-> Freq:3600MHz  dBm:10  Reading:7.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.18  Result:Pass  TestTime:35690ms
 
-94-> Freq:2400MHz  dBm:10  Reading:9.4339dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5661  Result:Pass  TestTime:23811ms
+107-> Freq:3600MHz  dBm:10  Reading:7.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.18  Result:Pass  TestTime:35690ms
 
-96-> Freq:2500MHz  dBm:10  Reading:9.4330dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5670  Result:Pass  TestTime:24804ms
+108-> Freq:3700MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:36681ms
 
-97-> Freq:2500MHz  dBm:10  Reading:9.4334dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5666  Result:Pass  TestTime:24804ms
+109-> Freq:3700MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:36681ms
 
-98-> Freq:2500MHz  dBm:10  Reading:9.4335dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5665  Result:Pass  TestTime:24804ms
+110-> Freq:3700MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:36681ms
 
-100-> Freq:2600MHz  dBm:10  Reading:9.3831dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6169  Result:Pass  TestTime:25797ms
+111-> Freq:3800MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:37672ms
 
-101-> Freq:2600MHz  dBm:10  Reading:9.3831dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6169  Result:Pass  TestTime:25797ms
+112-> Freq:3800MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:37672ms
 
-102-> Freq:2600MHz  dBm:10  Reading:9.3835dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6165  Result:Pass  TestTime:25797ms
+113-> Freq:3800MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:37672ms
 
-104-> Freq:2700MHz  dBm:10  Reading:9.2996dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7004  Result:Pass  TestTime:26792ms
+114-> Freq:3900MHz  dBm:10  Reading:7.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.40  Result:Pass  TestTime:38664ms
 
-105-> Freq:2700MHz  dBm:10  Reading:9.2993dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7007  Result:Pass  TestTime:26792ms
+115-> Freq:3900MHz  dBm:10  Reading:7.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.40  Result:Pass  TestTime:38664ms
 
-106-> Freq:2700MHz  dBm:10  Reading:9.2993dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7007  Result:Pass  TestTime:26792ms
+116-> Freq:3900MHz  dBm:10  Reading:7.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.40  Result:Pass  TestTime:38664ms
 
-108-> Freq:2800MHz  dBm:10  Reading:9.3530dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6470  Result:Pass  TestTime:27784ms
+117-> Freq:4000MHz  dBm:10  Reading:7.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.17  Result:Pass  TestTime:39656ms
 
-109-> Freq:2800MHz  dBm:10  Reading:9.3528dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6472  Result:Pass  TestTime:27784ms
+118-> Freq:4000MHz  dBm:10  Reading:7.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.17  Result:Pass  TestTime:39656ms
 
-110-> Freq:2800MHz  dBm:10  Reading:9.3531dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6469  Result:Pass  TestTime:27784ms
+119-> Freq:4000MHz  dBm:10  Reading:7.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.18  Result:Pass  TestTime:39656ms
 
-112-> Freq:2900MHz  dBm:10  Reading:9.4138dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5862  Result:Pass  TestTime:28779ms
+120-> Freq:4100MHz  dBm:10  Reading:7.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.36  Result:Pass  TestTime:40647ms
 
-113-> Freq:2900MHz  dBm:10  Reading:9.4137dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5863  Result:Pass  TestTime:28779ms
+121-> Freq:4100MHz  dBm:10  Reading:7.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.36  Result:Pass  TestTime:40647ms
 
-114-> Freq:2900MHz  dBm:10  Reading:9.4138dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.5862  Result:Pass  TestTime:28779ms
+122-> Freq:4100MHz  dBm:10  Reading:7.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.36  Result:Pass  TestTime:40647ms
 
-116-> Freq:3000MHz  dBm:10  Reading:9.3869dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6131  Result:Pass  TestTime:29771ms
+123-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:41640ms
 
-117-> Freq:3000MHz  dBm:10  Reading:9.3869dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6131  Result:Pass  TestTime:29771ms
+124-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:41640ms
 
-118-> Freq:3000MHz  dBm:10  Reading:9.3869dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6131  Result:Pass  TestTime:29771ms
+125-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:41640ms
 
-120-> Freq:3100MHz  dBm:10  Reading:9.3410dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6590  Result:Pass  TestTime:30763ms
+126-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:42633ms
 
-121-> Freq:3100MHz  dBm:10  Reading:9.3408dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6592  Result:Pass  TestTime:30763ms
+127-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:42633ms
 
-122-> Freq:3100MHz  dBm:10  Reading:9.3416dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6584  Result:Pass  TestTime:30763ms
+128-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:42633ms
 
-124-> Freq:3200MHz  dBm:10  Reading:9.3492dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6508  Result:Pass  TestTime:31756ms
+129-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:43626ms
 
-125-> Freq:3200MHz  dBm:10  Reading:9.3490dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6510  Result:Pass  TestTime:31756ms
+130-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:43626ms
 
-126-> Freq:3200MHz  dBm:10  Reading:9.3493dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6507  Result:Pass  TestTime:31756ms
+131-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:43626ms
 
-128-> Freq:3300MHz  dBm:10  Reading:9.2746dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7254  Result:Pass  TestTime:32747ms
+132-> Freq:4500MHz  dBm:10  Reading:7.50dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.50  Result:Pass  TestTime:44618ms
 
-129-> Freq:3300MHz  dBm:10  Reading:9.2745dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7255  Result:Pass  TestTime:32747ms
+133-> Freq:4500MHz  dBm:10  Reading:7.50dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.50  Result:Pass  TestTime:44618ms
 
-130-> Freq:3300MHz  dBm:10  Reading:9.2745dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7255  Result:Pass  TestTime:32747ms
+134-> Freq:4500MHz  dBm:10  Reading:7.50dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.50  Result:Pass  TestTime:44618ms
 
-132-> Freq:3400MHz  dBm:10  Reading:9.3728dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6272  Result:Pass  TestTime:33740ms
+135-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:45610ms
 
-133-> Freq:3400MHz  dBm:10  Reading:9.3728dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6272  Result:Pass  TestTime:33740ms
+136-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:45610ms
 
-134-> Freq:3400MHz  dBm:10  Reading:9.3728dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6272  Result:Pass  TestTime:33740ms
+137-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:45610ms
 
-136-> Freq:3500MHz  dBm:10  Reading:9.3666dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6334  Result:Pass  TestTime:34733ms
+138-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:46603ms
 
-137-> Freq:3500MHz  dBm:10  Reading:9.3665dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6335  Result:Pass  TestTime:34733ms
+139-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:46603ms
 
-138-> Freq:3500MHz  dBm:10  Reading:9.3665dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6335  Result:Pass  TestTime:34733ms
+140-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:46603ms
 
-140-> Freq:3600MHz  dBm:10  Reading:9.0689dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9311  Result:Pass  TestTime:35725ms
+141-> Freq:4800MHz  dBm:10  Reading:7.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.62  Result:Pass  TestTime:47597ms
 
-141-> Freq:3600MHz  dBm:10  Reading:9.0690dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9310  Result:Pass  TestTime:35725ms
+142-> Freq:4800MHz  dBm:10  Reading:7.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.62  Result:Pass  TestTime:47597ms
 
-142-> Freq:3600MHz  dBm:10  Reading:9.0694dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.9306  Result:Pass  TestTime:35725ms
+143-> Freq:4800MHz  dBm:10  Reading:7.38dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.62  Result:Pass  TestTime:47597ms
 
-144-> Freq:3700MHz  dBm:10  Reading:8.9581dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0419  Result:Pass  TestTime:36718ms
+144-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:48589ms
 
-145-> Freq:3700MHz  dBm:10  Reading:8.9583dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0417  Result:Pass  TestTime:36718ms
+145-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:48589ms
 
-146-> Freq:3700MHz  dBm:10  Reading:8.9580dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0420  Result:Pass  TestTime:36718ms
+146-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:48589ms
 
-148-> Freq:3800MHz  dBm:10  Reading:9.2836dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7164  Result:Pass  TestTime:37710ms
+147-> Freq:5000MHz  dBm:10  Reading:7.21dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.79  Result:Pass  TestTime:49582ms
 
-149-> Freq:3800MHz  dBm:10  Reading:9.2835dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7165  Result:Pass  TestTime:37710ms
+148-> Freq:5000MHz  dBm:10  Reading:7.21dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.79  Result:Pass  TestTime:49582ms
 
-150-> Freq:3800MHz  dBm:10  Reading:9.2837dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7163  Result:Pass  TestTime:37710ms
+149-> Freq:5000MHz  dBm:10  Reading:7.22dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.78  Result:Pass  TestTime:49582ms
 
-152-> Freq:3900MHz  dBm:10  Reading:9.3847dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6153  Result:Pass  TestTime:38704ms
+150-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:50574ms
 
-153-> Freq:3900MHz  dBm:10  Reading:9.3850dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6150  Result:Pass  TestTime:38704ms
+151-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:50574ms
 
-154-> Freq:3900MHz  dBm:10  Reading:9.3844dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6156  Result:Pass  TestTime:38704ms
+152-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:50574ms
 
-156-> Freq:4000MHz  dBm:10  Reading:9.3904dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6096  Result:Pass  TestTime:39697ms
+153-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:51567ms
 
-157-> Freq:4000MHz  dBm:10  Reading:9.3902dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6098  Result:Pass  TestTime:39697ms
+154-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:51567ms
 
-158-> Freq:4000MHz  dBm:10  Reading:9.3903dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6097  Result:Pass  TestTime:39697ms
+155-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:51567ms
 
-160-> Freq:4100MHz  dBm:10  Reading:9.3361dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6639  Result:Pass  TestTime:40691ms
+156-> Freq:5300MHz  dBm:10  Reading:7.04dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.96  Result:Pass  TestTime:52559ms
 
-161-> Freq:4100MHz  dBm:10  Reading:9.3359dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6641  Result:Pass  TestTime:40691ms
+157-> Freq:5300MHz  dBm:10  Reading:7.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.95  Result:Pass  TestTime:52559ms
 
-162-> Freq:4100MHz  dBm:10  Reading:9.3359dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6641  Result:Pass  TestTime:40691ms
+158-> Freq:5300MHz  dBm:10  Reading:7.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.95  Result:Pass  TestTime:52559ms
 
-164-> Freq:4200MHz  dBm:10  Reading:9.3236dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6764  Result:Pass  TestTime:41683ms
+159-> Freq:5400MHz  dBm:10  Reading:7.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.85  Result:Pass  TestTime:53552ms
 
-165-> Freq:4200MHz  dBm:10  Reading:9.3238dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6762  Result:Pass  TestTime:41683ms
+160-> Freq:5400MHz  dBm:10  Reading:7.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.86  Result:Pass  TestTime:53552ms
 
-166-> Freq:4200MHz  dBm:10  Reading:9.3238dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6762  Result:Pass  TestTime:41683ms
+161-> Freq:5400MHz  dBm:10  Reading:7.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.85  Result:Pass  TestTime:53552ms
 
-168-> Freq:4300MHz  dBm:10  Reading:9.3026dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6974  Result:Pass  TestTime:42677ms
+162-> Freq:5500MHz  dBm:10  Reading:6.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.26  Result:Pass  TestTime:54544ms
 
-169-> Freq:4300MHz  dBm:10  Reading:9.3026dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6974  Result:Pass  TestTime:42677ms
+163-> Freq:5500MHz  dBm:10  Reading:6.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.26  Result:Pass  TestTime:54544ms
 
-170-> Freq:4300MHz  dBm:10  Reading:9.3029dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6971  Result:Pass  TestTime:42677ms
+164-> Freq:5500MHz  dBm:10  Reading:6.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.27  Result:Pass  TestTime:54544ms
 
-172-> Freq:4400MHz  dBm:10  Reading:9.3330dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6670  Result:Pass  TestTime:43670ms
+165-> Freq:5600MHz  dBm:10  Reading:7.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.87  Result:Pass  TestTime:55537ms
 
-173-> Freq:4400MHz  dBm:10  Reading:9.3329dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6671  Result:Pass  TestTime:43670ms
+166-> Freq:5600MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:55537ms
 
-174-> Freq:4400MHz  dBm:10  Reading:9.3325dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6675  Result:Pass  TestTime:43670ms
+167-> Freq:5600MHz  dBm:10  Reading:7.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.87  Result:Pass  TestTime:55537ms
 
-176-> Freq:4500MHz  dBm:10  Reading:9.2989dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7011  Result:Pass  TestTime:44664ms
+168-> Freq:5700MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:56530ms
 
-177-> Freq:4500MHz  dBm:10  Reading:9.2985dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7015  Result:Pass  TestTime:44664ms
+169-> Freq:5700MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:56530ms
 
-178-> Freq:4500MHz  dBm:10  Reading:9.2983dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7017  Result:Pass  TestTime:44664ms
+170-> Freq:5700MHz  dBm:10  Reading:7.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.89  Result:Pass  TestTime:56530ms
 
-180-> Freq:4600MHz  dBm:10  Reading:9.3227dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6773  Result:Pass  TestTime:45657ms
+171-> Freq:5800MHz  dBm:10  Reading:7.01dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.99  Result:Pass  TestTime:57523ms
 
-181-> Freq:4600MHz  dBm:10  Reading:9.3226dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6774  Result:Pass  TestTime:45657ms
+172-> Freq:5800MHz  dBm:10  Reading:7.01dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.99  Result:Pass  TestTime:57523ms
 
-182-> Freq:4600MHz  dBm:10  Reading:9.3229dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6771  Result:Pass  TestTime:45657ms
+173-> Freq:5800MHz  dBm:10  Reading:7.01dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.99  Result:Pass  TestTime:57523ms
 
-184-> Freq:4700MHz  dBm:10  Reading:9.3272dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6728  Result:Pass  TestTime:46652ms
+174-> Freq:5900MHz  dBm:10  Reading:6.89dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.11  Result:Pass  TestTime:58515ms
 
-185-> Freq:4700MHz  dBm:10  Reading:9.3271dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6729  Result:Pass  TestTime:46652ms
+175-> Freq:5900MHz  dBm:10  Reading:6.88dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.12  Result:Pass  TestTime:58515ms
 
-186-> Freq:4700MHz  dBm:10  Reading:9.3271dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6729  Result:Pass  TestTime:46652ms
+176-> Freq:5900MHz  dBm:10  Reading:6.89dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.11  Result:Pass  TestTime:58515ms
 
-188-> Freq:4800MHz  dBm:10  Reading:9.2852dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7148  Result:Pass  TestTime:47644ms
+177-> Freq:6000MHz  dBm:10  Reading:6.88dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.12  Result:Pass  TestTime:59498ms
 
-189-> Freq:4800MHz  dBm:10  Reading:9.2855dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7145  Result:Pass  TestTime:47644ms
+178-> Freq:6000MHz  dBm:10  Reading:6.88dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.12  Result:Pass  TestTime:59498ms
 
-190-> Freq:4800MHz  dBm:10  Reading:9.2855dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7145  Result:Pass  TestTime:47644ms
+179-> Freq:6000MHz  dBm:10  Reading:6.89dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.11  Result:Pass  TestTime:59498ms
 
-192-> Freq:4900MHz  dBm:10  Reading:9.2045dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7955  Result:Pass  TestTime:48639ms
+0-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:991ms
 
-193-> Freq:4900MHz  dBm:10  Reading:9.2044dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7956  Result:Pass  TestTime:48639ms
+1-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:991ms
 
-194-> Freq:4900MHz  dBm:10  Reading:9.2048dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7952  Result:Pass  TestTime:48639ms
+2-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:991ms
 
-196-> Freq:5000MHz  dBm:10  Reading:9.2009dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7991  Result:Pass  TestTime:49631ms
+3-> Freq:200MHz  dBm:10  Reading:9.53dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.47  Result:Pass  TestTime:1982ms
 
-197-> Freq:5000MHz  dBm:10  Reading:9.2008dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7992  Result:Pass  TestTime:49631ms
+4-> Freq:200MHz  dBm:10  Reading:9.53dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.47  Result:Pass  TestTime:1982ms
 
-198-> Freq:5000MHz  dBm:10  Reading:9.2008dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7992  Result:Pass  TestTime:49631ms
+5-> Freq:200MHz  dBm:10  Reading:9.53dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.47  Result:Pass  TestTime:1982ms
 
-200-> Freq:5100MHz  dBm:10  Reading:9.2465dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7535  Result:Pass  TestTime:50625ms
+6-> Freq:300MHz  dBm:10  Reading:9.40dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.60  Result:Pass  TestTime:2972ms
 
-201-> Freq:5100MHz  dBm:10  Reading:9.2467dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7533  Result:Pass  TestTime:50625ms
+7-> Freq:300MHz  dBm:10  Reading:9.40dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.60  Result:Pass  TestTime:2972ms
 
-202-> Freq:5100MHz  dBm:10  Reading:9.2464dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7536  Result:Pass  TestTime:50625ms
+8-> Freq:300MHz  dBm:10  Reading:9.40dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.60  Result:Pass  TestTime:2972ms
 
-204-> Freq:5200MHz  dBm:10  Reading:9.2536dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7464  Result:Pass  TestTime:51618ms
+9-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3962ms
 
-205-> Freq:5200MHz  dBm:10  Reading:9.2539dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7461  Result:Pass  TestTime:51618ms
+10-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3962ms
 
-206-> Freq:5200MHz  dBm:10  Reading:9.2540dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7460  Result:Pass  TestTime:51618ms
+11-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3962ms
 
-208-> Freq:5300MHz  dBm:10  Reading:9.2409dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7591  Result:Pass  TestTime:52611ms
+12-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4953ms
 
-209-> Freq:5300MHz  dBm:10  Reading:9.2408dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7592  Result:Pass  TestTime:52611ms
+13-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4953ms
 
-210-> Freq:5300MHz  dBm:10  Reading:9.2408dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7592  Result:Pass  TestTime:52611ms
+14-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4953ms
 
-212-> Freq:5400MHz  dBm:10  Reading:9.2485dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7515  Result:Pass  TestTime:53605ms
+15-> Freq:600MHz  dBm:10  Reading:9.19dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.81  Result:Pass  TestTime:5944ms
 
-213-> Freq:5400MHz  dBm:10  Reading:9.2486dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7514  Result:Pass  TestTime:53605ms
+16-> Freq:600MHz  dBm:10  Reading:9.19dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.81  Result:Pass  TestTime:5944ms
 
-214-> Freq:5400MHz  dBm:10  Reading:9.2488dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7512  Result:Pass  TestTime:53605ms
+17-> Freq:600MHz  dBm:10  Reading:9.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.80  Result:Pass  TestTime:5944ms
 
-216-> Freq:5500MHz  dBm:10  Reading:9.2625dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7375  Result:Pass  TestTime:54597ms
+18-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6936ms
 
-217-> Freq:5500MHz  dBm:10  Reading:9.2626dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7374  Result:Pass  TestTime:54597ms
+19-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6936ms
 
-218-> Freq:5500MHz  dBm:10  Reading:9.2621dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.7379  Result:Pass  TestTime:54597ms
+20-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6936ms
 
-220-> Freq:5600MHz  dBm:10  Reading:9.3127dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6873  Result:Pass  TestTime:55591ms
+21-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7927ms
 
-221-> Freq:5600MHz  dBm:10  Reading:9.3126dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6874  Result:Pass  TestTime:55591ms
+22-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7927ms
 
-222-> Freq:5600MHz  dBm:10  Reading:9.3124dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.6876  Result:Pass  TestTime:55591ms
+23-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7927ms
 
-224-> Freq:5700MHz  dBm:10  Reading:9.1575dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.8425  Result:Pass  TestTime:56586ms
+24-> Freq:900MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:8917ms
 
-225-> Freq:5700MHz  dBm:10  Reading:9.1574dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.8426  Result:Pass  TestTime:56586ms
+25-> Freq:900MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:8917ms
 
-226-> Freq:5700MHz  dBm:10  Reading:9.1576dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.8424  Result:Pass  TestTime:56586ms
+26-> Freq:900MHz  dBm:10  Reading:9.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.88  Result:Pass  TestTime:8917ms
 
-228-> Freq:5800MHz  dBm:10  Reading:8.9179dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0821  Result:Pass  TestTime:57578ms
+27-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:9910ms
 
-229-> Freq:5800MHz  dBm:10  Reading:8.9180dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0820  Result:Pass  TestTime:57578ms
+28-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:9910ms
 
-230-> Freq:5800MHz  dBm:10  Reading:8.9179dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.0821  Result:Pass  TestTime:57578ms
+29-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:9910ms
 
-232-> Freq:5900MHz  dBm:10  Reading:8.8316dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1684  Result:Pass  TestTime:58574ms
+30-> Freq:1100MHz  dBm:10  Reading:8.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.09  Result:Pass  TestTime:10902ms
 
-233-> Freq:5900MHz  dBm:10  Reading:8.8315dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1685  Result:Pass  TestTime:58574ms
+31-> Freq:1100MHz  dBm:10  Reading:8.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.09  Result:Pass  TestTime:10902ms
 
-234-> Freq:5900MHz  dBm:10  Reading:8.8317dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1683  Result:Pass  TestTime:58574ms
+32-> Freq:1100MHz  dBm:10  Reading:8.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.09  Result:Pass  TestTime:10902ms
 
-236-> Freq:6000MHz  dBm:10  Reading:8.8299dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1701  Result:Pass  TestTime:59559ms
+33-> Freq:1200MHz  dBm:10  Reading:8.97dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.03  Result:Pass  TestTime:11899ms
 
-237-> Freq:6000MHz  dBm:10  Reading:8.8303dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1697  Result:Pass  TestTime:59559ms
+34-> Freq:1200MHz  dBm:10  Reading:8.97dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.03  Result:Pass  TestTime:11899ms
 
-238-> Freq:6000MHz  dBm:10  Reading:8.8301dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.1699  Result:Pass  TestTime:59559ms
+35-> Freq:1200MHz  dBm:10  Reading:8.97dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.03  Result:Pass  TestTime:11899ms
 
-0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+36-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:12891ms
 
-1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+37-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:12891ms
 
-2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+38-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:12891ms
 
-3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+39-> Freq:1400MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13883ms
 
-4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+40-> Freq:1400MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13883ms
 
-5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+41-> Freq:1400MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13883ms
 
-6-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+42-> Freq:1500MHz  dBm:10  Reading:8.77dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.23  Result:Pass  TestTime:14876ms
 
-7-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+43-> Freq:1500MHz  dBm:10  Reading:8.77dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.23  Result:Pass  TestTime:14876ms
 
-8-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+44-> Freq:1500MHz  dBm:10  Reading:8.77dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.23  Result:Pass  TestTime:14876ms
 
-9-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+45-> Freq:1600MHz  dBm:10  Reading:8.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.40  Result:Pass  TestTime:15868ms
 
-10-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+46-> Freq:1600MHz  dBm:10  Reading:8.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.40  Result:Pass  TestTime:15868ms
 
-11-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+47-> Freq:1600MHz  dBm:10  Reading:8.60dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.40  Result:Pass  TestTime:15868ms
 
-12-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+48-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16860ms
 
-13-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+49-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16860ms
 
-14-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+50-> Freq:1700MHz  dBm:10  Reading:8.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.34  Result:Pass  TestTime:16860ms
 
-15-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+51-> Freq:1800MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:17852ms
 
-0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+52-> Freq:1800MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:17852ms
 
-1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+53-> Freq:1800MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:17852ms
 
-2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+54-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18845ms
 
-3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+55-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18845ms
 
-4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+56-> Freq:1900MHz  dBm:10  Reading:8.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.42  Result:Pass  TestTime:18845ms
 
-5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+57-> Freq:2000MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:19837ms
 
-6-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+58-> Freq:2000MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:19837ms
 
-7-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+59-> Freq:2000MHz  dBm:10  Reading:8.44dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.56  Result:Pass  TestTime:19837ms
 
-8-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+60-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20828ms
 
-9-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+61-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20828ms
 
-10-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+62-> Freq:2100MHz  dBm:10  Reading:8.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.61  Result:Pass  TestTime:20828ms
 
-11-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+63-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21821ms
 
-12-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+64-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21821ms
 
-13-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+65-> Freq:2200MHz  dBm:10  Reading:8.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.68  Result:Pass  TestTime:21821ms
 
-14-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+66-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22812ms
 
-15-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Pass  TestTime:0.235
+67-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22812ms
 
-0-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+68-> Freq:2300MHz  dBm:10  Reading:8.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.64  Result:Pass  TestTime:22812ms
 
-1-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+69-> Freq:2400MHz  dBm:10  Reading:8.26dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.74  Result:Pass  TestTime:23803ms
 
-2-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+70-> Freq:2400MHz  dBm:10  Reading:8.26dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.74  Result:Pass  TestTime:23803ms
 
-3-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+71-> Freq:2400MHz  dBm:10  Reading:8.26dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.74  Result:Pass  TestTime:23803ms
 
-4-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+72-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24794ms
 
-5-> Freq:100MHz  dBm:10  Reading:9.87dB  LowLimit:-999  HighLimit:999  CalFactory:0.12  Result:Fail  TestTime:0.235
+73-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24794ms
+
+74-> Freq:2500MHz  dBm:10  Reading:8.25dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.75  Result:Pass  TestTime:24794ms
+
+75-> Freq:2600MHz  dBm:10  Reading:8.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.84  Result:Pass  TestTime:25787ms
+
+76-> Freq:2600MHz  dBm:10  Reading:8.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.84  Result:Pass  TestTime:25787ms
+
+77-> Freq:2600MHz  dBm:10  Reading:8.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.84  Result:Pass  TestTime:25787ms
+
+78-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26777ms
+
+79-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26777ms
+
+80-> Freq:2700MHz  dBm:10  Reading:8.14dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.86  Result:Pass  TestTime:26777ms
+
+81-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27768ms
+
+82-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27768ms
+
+83-> Freq:2800MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27768ms
+
+84-> Freq:2900MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:28759ms
+
+85-> Freq:2900MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:28759ms
+
+86-> Freq:2900MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:28759ms
+
+87-> Freq:3000MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:29754ms
+
+88-> Freq:3000MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:29754ms
+
+89-> Freq:3000MHz  dBm:10  Reading:8.09dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.91  Result:Pass  TestTime:29754ms
+
+90-> Freq:3100MHz  dBm:10  Reading:8.04dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.96  Result:Pass  TestTime:30748ms
+
+91-> Freq:3100MHz  dBm:10  Reading:8.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.95  Result:Pass  TestTime:30748ms
+
+92-> Freq:3100MHz  dBm:10  Reading:8.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.95  Result:Pass  TestTime:30748ms
+
+93-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:31741ms
+
+94-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:31741ms
+
+95-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:31741ms
+
+96-> Freq:3300MHz  dBm:10  Reading:8.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.98  Result:Pass  TestTime:32733ms
+
+97-> Freq:3300MHz  dBm:10  Reading:8.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.98  Result:Pass  TestTime:32733ms
+
+98-> Freq:3300MHz  dBm:10  Reading:8.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.98  Result:Pass  TestTime:32733ms
+
+99-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:33725ms
+
+100-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:33725ms
+
+101-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:33725ms
+
+102-> Freq:3500MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:34716ms
+
+103-> Freq:3500MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:34716ms
+
+104-> Freq:3500MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:34716ms
+
+105-> Freq:3600MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:35707ms
+
+106-> Freq:3600MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:35707ms
+
+107-> Freq:3600MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:35707ms
+
+108-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:36699ms
+
+109-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:36699ms
+
+110-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:36699ms
+
+111-> Freq:3800MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:37691ms
+
+112-> Freq:3800MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:37691ms
+
+113-> Freq:3800MHz  dBm:10  Reading:7.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.05  Result:Pass  TestTime:37691ms
+
+114-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:38684ms
+
+115-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:38684ms
+
+116-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:38684ms
+
+117-> Freq:4000MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:39677ms
+
+118-> Freq:4000MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:39677ms
+
+119-> Freq:4000MHz  dBm:10  Reading:7.79dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.21  Result:Pass  TestTime:39677ms
+
+120-> Freq:4100MHz  dBm:10  Reading:7.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.39  Result:Pass  TestTime:40669ms
+
+121-> Freq:4100MHz  dBm:10  Reading:7.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.39  Result:Pass  TestTime:40669ms
+
+122-> Freq:4100MHz  dBm:10  Reading:7.61dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.39  Result:Pass  TestTime:40669ms
+
+123-> Freq:4200MHz  dBm:10  Reading:7.63dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.37  Result:Pass  TestTime:41662ms
+
+124-> Freq:4200MHz  dBm:10  Reading:7.63dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.37  Result:Pass  TestTime:41662ms
+
+125-> Freq:4200MHz  dBm:10  Reading:7.63dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.37  Result:Pass  TestTime:41662ms
+
+126-> Freq:4300MHz  dBm:10  Reading:7.69dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.31  Result:Pass  TestTime:42655ms
+
+127-> Freq:4300MHz  dBm:10  Reading:7.69dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.31  Result:Pass  TestTime:42655ms
+
+128-> Freq:4300MHz  dBm:10  Reading:7.69dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.31  Result:Pass  TestTime:42655ms
+
+129-> Freq:4400MHz  dBm:10  Reading:7.48dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.52  Result:Pass  TestTime:43648ms
+
+130-> Freq:4400MHz  dBm:10  Reading:7.48dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.52  Result:Pass  TestTime:43648ms
+
+131-> Freq:4400MHz  dBm:10  Reading:7.48dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.52  Result:Pass  TestTime:43648ms
+
+132-> Freq:4500MHz  dBm:10  Reading:7.47dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.53  Result:Pass  TestTime:44640ms
+
+133-> Freq:4500MHz  dBm:10  Reading:7.48dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.52  Result:Pass  TestTime:44640ms
+
+134-> Freq:4500MHz  dBm:10  Reading:7.48dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.52  Result:Pass  TestTime:44640ms
+
+135-> Freq:4600MHz  dBm:10  Reading:7.56dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.44  Result:Pass  TestTime:45633ms
+
+136-> Freq:4600MHz  dBm:10  Reading:7.56dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.44  Result:Pass  TestTime:45633ms
+
+137-> Freq:4600MHz  dBm:10  Reading:7.56dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.44  Result:Pass  TestTime:45633ms
+
+138-> Freq:4700MHz  dBm:10  Reading:7.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.46  Result:Pass  TestTime:46628ms
+
+139-> Freq:4700MHz  dBm:10  Reading:7.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.46  Result:Pass  TestTime:46628ms
+
+140-> Freq:4700MHz  dBm:10  Reading:7.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.46  Result:Pass  TestTime:46628ms
+
+141-> Freq:4800MHz  dBm:10  Reading:7.35dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.65  Result:Pass  TestTime:47622ms
+
+142-> Freq:4800MHz  dBm:10  Reading:7.35dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.65  Result:Pass  TestTime:47622ms
+
+143-> Freq:4800MHz  dBm:10  Reading:7.35dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.65  Result:Pass  TestTime:47622ms
+
+144-> Freq:4900MHz  dBm:10  Reading:7.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.68  Result:Pass  TestTime:48616ms
+
+145-> Freq:4900MHz  dBm:10  Reading:7.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.68  Result:Pass  TestTime:48616ms
+
+146-> Freq:4900MHz  dBm:10  Reading:7.32dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.68  Result:Pass  TestTime:48616ms
+
+147-> Freq:5000MHz  dBm:10  Reading:7.18dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.82  Result:Pass  TestTime:49608ms
+
+148-> Freq:5000MHz  dBm:10  Reading:7.18dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.82  Result:Pass  TestTime:49608ms
+
+149-> Freq:5000MHz  dBm:10  Reading:7.18dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.82  Result:Pass  TestTime:49608ms
+
+150-> Freq:5100MHz  dBm:10  Reading:7.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.84  Result:Pass  TestTime:50602ms
+
+151-> Freq:5100MHz  dBm:10  Reading:7.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.84  Result:Pass  TestTime:50602ms
+
+152-> Freq:5100MHz  dBm:10  Reading:7.16dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.84  Result:Pass  TestTime:50602ms
+
+153-> Freq:5200MHz  dBm:10  Reading:7.28dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.72  Result:Pass  TestTime:51596ms
+
+154-> Freq:5200MHz  dBm:10  Reading:7.28dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.72  Result:Pass  TestTime:51596ms
+
+155-> Freq:5200MHz  dBm:10  Reading:7.28dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.72  Result:Pass  TestTime:51596ms
+
+156-> Freq:5300MHz  dBm:10  Reading:7.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.00  Result:Pass  TestTime:52589ms
+
+157-> Freq:5300MHz  dBm:10  Reading:7.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.00  Result:Pass  TestTime:52589ms
+
+158-> Freq:5300MHz  dBm:10  Reading:7.00dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.00  Result:Pass  TestTime:52589ms
+
+159-> Freq:5400MHz  dBm:10  Reading:7.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.90  Result:Pass  TestTime:53581ms
+
+160-> Freq:5400MHz  dBm:10  Reading:7.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.90  Result:Pass  TestTime:53581ms
+
+161-> Freq:5400MHz  dBm:10  Reading:7.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.90  Result:Pass  TestTime:53581ms
+
+162-> Freq:5500MHz  dBm:10  Reading:6.71dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.29  Result:Pass  TestTime:54573ms
+
+163-> Freq:5500MHz  dBm:10  Reading:6.71dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.29  Result:Pass  TestTime:54573ms
+
+164-> Freq:5500MHz  dBm:10  Reading:6.71dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.29  Result:Pass  TestTime:54573ms
+
+165-> Freq:5600MHz  dBm:10  Reading:7.09dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.91  Result:Pass  TestTime:55566ms
+
+166-> Freq:5600MHz  dBm:10  Reading:7.09dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.91  Result:Pass  TestTime:55566ms
+
+167-> Freq:5600MHz  dBm:10  Reading:7.09dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.91  Result:Pass  TestTime:55566ms
+
+168-> Freq:5700MHz  dBm:10  Reading:7.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.94  Result:Pass  TestTime:56562ms
+
+169-> Freq:5700MHz  dBm:10  Reading:7.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.94  Result:Pass  TestTime:56562ms
+
+170-> Freq:5700MHz  dBm:10  Reading:7.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.94  Result:Pass  TestTime:56562ms
+
+171-> Freq:5800MHz  dBm:10  Reading:6.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.05  Result:Pass  TestTime:57554ms
+
+172-> Freq:5800MHz  dBm:10  Reading:6.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.05  Result:Pass  TestTime:57554ms
+
+173-> Freq:5800MHz  dBm:10  Reading:6.95dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.05  Result:Pass  TestTime:57554ms
+
+174-> Freq:5900MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:58546ms
+
+175-> Freq:5900MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:58546ms
+
+176-> Freq:5900MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:58546ms
+
+177-> Freq:6000MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:59532ms
+
+178-> Freq:6000MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:59532ms
+
+179-> Freq:6000MHz  dBm:10  Reading:6.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.17  Result:Pass  TestTime:59532ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:990ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:990ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:990ms
+
+3-> Freq:200MHz  dBm:10  Reading:9.53dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.47  Result:Pass  TestTime:1980ms
+
+4-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1980ms
+
+5-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1980ms
+
+6-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2969ms
+
+7-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2969ms
+
+8-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2969ms
+
+9-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3959ms
+
+10-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3959ms
+
+11-> Freq:400MHz  dBm:10  Reading:9.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.64  Result:Pass  TestTime:3959ms
+
+12-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4949ms
+
+13-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4949ms
+
+14-> Freq:500MHz  dBm:10  Reading:9.29dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.71  Result:Pass  TestTime:4949ms
+
+15-> Freq:600MHz  dBm:10  Reading:9.19dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.81  Result:Pass  TestTime:5940ms
+
+16-> Freq:600MHz  dBm:10  Reading:9.19dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.81  Result:Pass  TestTime:5940ms
+
+17-> Freq:600MHz  dBm:10  Reading:9.19dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.81  Result:Pass  TestTime:5940ms
+
+18-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6931ms
+
+19-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6931ms
+
+20-> Freq:700MHz  dBm:10  Reading:9.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.87  Result:Pass  TestTime:6931ms
+
+21-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7921ms
+
+22-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7921ms
+
+23-> Freq:800MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:7921ms
+
+24-> Freq:900MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:8911ms
+
+25-> Freq:900MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:8911ms
+
+26-> Freq:900MHz  dBm:10  Reading:9.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.89  Result:Pass  TestTime:8911ms
+
+27-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:10379ms
+
+28-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:10379ms
+
+29-> Freq:1000MHz  dBm:10  Reading:9.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.98  Result:Pass  TestTime:10379ms
+
+30-> Freq:1100MHz  dBm:10  Reading:8.90dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.10  Result:Pass  TestTime:11377ms
+
+31-> Freq:1100MHz  dBm:10  Reading:8.90dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.10  Result:Pass  TestTime:11377ms
+
+32-> Freq:1100MHz  dBm:10  Reading:8.90dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.10  Result:Pass  TestTime:11377ms
+
+33-> Freq:1200MHz  dBm:10  Reading:8.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.04  Result:Pass  TestTime:12644ms
+
+34-> Freq:1200MHz  dBm:10  Reading:8.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.04  Result:Pass  TestTime:12644ms
+
+35-> Freq:1200MHz  dBm:10  Reading:8.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.04  Result:Pass  TestTime:12644ms
+
+36-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13635ms
+
+37-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13635ms
+
+38-> Freq:1300MHz  dBm:10  Reading:8.83dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.17  Result:Pass  TestTime:13635ms
+
+39-> Freq:1400MHz  dBm:10  Reading:8.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.18  Result:Pass  TestTime:14626ms
+
+40-> Freq:1400MHz  dBm:10  Reading:8.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.18  Result:Pass  TestTime:14626ms
+
+41-> Freq:1400MHz  dBm:10  Reading:8.82dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.18  Result:Pass  TestTime:14626ms
+
+42-> Freq:1500MHz  dBm:10  Reading:8.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.25  Result:Pass  TestTime:15617ms
+
+43-> Freq:1500MHz  dBm:10  Reading:8.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.25  Result:Pass  TestTime:15617ms
+
+44-> Freq:1500MHz  dBm:10  Reading:8.76dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.24  Result:Pass  TestTime:15617ms
+
+45-> Freq:1600MHz  dBm:10  Reading:8.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.41  Result:Pass  TestTime:16609ms
+
+46-> Freq:1600MHz  dBm:10  Reading:8.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.41  Result:Pass  TestTime:16609ms
+
+47-> Freq:1600MHz  dBm:10  Reading:8.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.41  Result:Pass  TestTime:16609ms
+
+48-> Freq:1700MHz  dBm:10  Reading:8.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.36  Result:Pass  TestTime:17599ms
+
+49-> Freq:1700MHz  dBm:10  Reading:8.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.36  Result:Pass  TestTime:17599ms
+
+50-> Freq:1700MHz  dBm:10  Reading:8.64dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.36  Result:Pass  TestTime:17599ms
+
+51-> Freq:1800MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:18592ms
+
+52-> Freq:1800MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:18592ms
+
+53-> Freq:1800MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:18592ms
+
+54-> Freq:1900MHz  dBm:10  Reading:8.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.43  Result:Pass  TestTime:19584ms
+
+55-> Freq:1900MHz  dBm:10  Reading:8.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.43  Result:Pass  TestTime:19584ms
+
+56-> Freq:1900MHz  dBm:10  Reading:8.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.43  Result:Pass  TestTime:19584ms
+
+57-> Freq:2000MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:20576ms
+
+58-> Freq:2000MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:20576ms
+
+59-> Freq:2000MHz  dBm:10  Reading:8.43dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.57  Result:Pass  TestTime:20576ms
+
+60-> Freq:2100MHz  dBm:10  Reading:8.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.63  Result:Pass  TestTime:21568ms
+
+61-> Freq:2100MHz  dBm:10  Reading:8.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.63  Result:Pass  TestTime:21568ms
+
+62-> Freq:2100MHz  dBm:10  Reading:8.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.63  Result:Pass  TestTime:21568ms
+
+63-> Freq:2200MHz  dBm:10  Reading:8.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.70  Result:Pass  TestTime:22560ms
+
+64-> Freq:2200MHz  dBm:10  Reading:8.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.70  Result:Pass  TestTime:22560ms
+
+65-> Freq:2200MHz  dBm:10  Reading:8.30dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.70  Result:Pass  TestTime:22560ms
+
+66-> Freq:2300MHz  dBm:10  Reading:8.34dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.66  Result:Pass  TestTime:23551ms
+
+67-> Freq:2300MHz  dBm:10  Reading:8.34dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.66  Result:Pass  TestTime:23551ms
+
+68-> Freq:2300MHz  dBm:10  Reading:8.34dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.66  Result:Pass  TestTime:23551ms
+
+69-> Freq:2400MHz  dBm:10  Reading:8.23dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.77  Result:Pass  TestTime:24543ms
+
+70-> Freq:2400MHz  dBm:10  Reading:8.23dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.77  Result:Pass  TestTime:24543ms
+
+71-> Freq:2400MHz  dBm:10  Reading:8.24dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.76  Result:Pass  TestTime:24543ms
+
+72-> Freq:2500MHz  dBm:10  Reading:8.24dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.76  Result:Pass  TestTime:25535ms
+
+73-> Freq:2500MHz  dBm:10  Reading:8.24dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.76  Result:Pass  TestTime:25535ms
+
+74-> Freq:2500MHz  dBm:10  Reading:8.24dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.76  Result:Pass  TestTime:25535ms
+
+75-> Freq:2600MHz  dBm:10  Reading:8.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.85  Result:Pass  TestTime:26526ms
+
+76-> Freq:2600MHz  dBm:10  Reading:8.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.85  Result:Pass  TestTime:26526ms
+
+77-> Freq:2600MHz  dBm:10  Reading:8.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.85  Result:Pass  TestTime:26526ms
+
+78-> Freq:2700MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27524ms
+
+79-> Freq:2700MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27524ms
+
+80-> Freq:2700MHz  dBm:10  Reading:8.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.88  Result:Pass  TestTime:27524ms
+
+81-> Freq:2800MHz  dBm:10  Reading:8.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.90  Result:Pass  TestTime:28514ms
+
+82-> Freq:2800MHz  dBm:10  Reading:8.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.90  Result:Pass  TestTime:28514ms
+
+83-> Freq:2800MHz  dBm:10  Reading:8.10dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.90  Result:Pass  TestTime:28514ms
+
+84-> Freq:2900MHz  dBm:10  Reading:7.93dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.07  Result:Pass  TestTime:29507ms
+
+85-> Freq:2900MHz  dBm:10  Reading:7.93dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.07  Result:Pass  TestTime:29507ms
+
+86-> Freq:2900MHz  dBm:10  Reading:7.93dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.07  Result:Pass  TestTime:29507ms
+
+87-> Freq:3000MHz  dBm:10  Reading:8.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.89  Result:Pass  TestTime:30788ms
+
+88-> Freq:3000MHz  dBm:10  Reading:8.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.89  Result:Pass  TestTime:30788ms
+
+89-> Freq:3000MHz  dBm:10  Reading:8.11dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.89  Result:Pass  TestTime:30788ms
+
+90-> Freq:3100MHz  dBm:10  Reading:8.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.94  Result:Pass  TestTime:31783ms
+
+91-> Freq:3100MHz  dBm:10  Reading:8.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.94  Result:Pass  TestTime:31783ms
+
+92-> Freq:3100MHz  dBm:10  Reading:8.06dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.94  Result:Pass  TestTime:31783ms
+
+93-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:32774ms
+
+94-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:32774ms
+
+95-> Freq:3200MHz  dBm:10  Reading:7.98dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.02  Result:Pass  TestTime:32774ms
+
+96-> Freq:3300MHz  dBm:10  Reading:8.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.97  Result:Pass  TestTime:33765ms
+
+97-> Freq:3300MHz  dBm:10  Reading:8.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.97  Result:Pass  TestTime:33765ms
+
+98-> Freq:3300MHz  dBm:10  Reading:8.03dB  LowLimit:-9999  HighLimit:9999  CalFactory:1.97  Result:Pass  TestTime:33765ms
+
+99-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:34756ms
+
+100-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:34756ms
+
+101-> Freq:3400MHz  dBm:10  Reading:7.78dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.22  Result:Pass  TestTime:34756ms
+
+102-> Freq:3500MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:35748ms
+
+103-> Freq:3500MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:35748ms
+
+104-> Freq:3500MHz  dBm:10  Reading:7.99dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.01  Result:Pass  TestTime:35748ms
+
+105-> Freq:3600MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:36740ms
+
+106-> Freq:3600MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:36740ms
+
+107-> Freq:3600MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:36740ms
+
+108-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:37734ms
+
+109-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:37734ms
+
+110-> Freq:3700MHz  dBm:10  Reading:7.75dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.25  Result:Pass  TestTime:37734ms
+
+111-> Freq:3800MHz  dBm:10  Reading:7.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.04  Result:Pass  TestTime:38725ms
+
+112-> Freq:3800MHz  dBm:10  Reading:7.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.04  Result:Pass  TestTime:38725ms
+
+113-> Freq:3800MHz  dBm:10  Reading:7.96dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.04  Result:Pass  TestTime:38725ms
+
+114-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:39717ms
+
+115-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:39717ms
+
+116-> Freq:3900MHz  dBm:10  Reading:7.57dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.43  Result:Pass  TestTime:39717ms
+
+117-> Freq:4000MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:40710ms
+
+118-> Freq:4000MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:40710ms
+
+119-> Freq:4000MHz  dBm:10  Reading:7.80dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.20  Result:Pass  TestTime:40710ms
+
+120-> Freq:4100MHz  dBm:10  Reading:7.62dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.38  Result:Pass  TestTime:41703ms
+
+121-> Freq:4100MHz  dBm:10  Reading:7.62dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.38  Result:Pass  TestTime:41703ms
+
+122-> Freq:4100MHz  dBm:10  Reading:7.63dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.37  Result:Pass  TestTime:41703ms
+
+123-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:42695ms
+
+124-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:42695ms
+
+125-> Freq:4200MHz  dBm:10  Reading:7.66dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.34  Result:Pass  TestTime:42695ms
+
+126-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:43686ms
+
+127-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:43686ms
+
+128-> Freq:4300MHz  dBm:10  Reading:7.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.28  Result:Pass  TestTime:43686ms
+
+129-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:44678ms
+
+130-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:44678ms
+
+131-> Freq:4400MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:44678ms
+
+132-> Freq:4500MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:45672ms
+
+133-> Freq:4500MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:45672ms
+
+134-> Freq:4500MHz  dBm:10  Reading:7.51dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.49  Result:Pass  TestTime:45672ms
+
+135-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:46664ms
+
+136-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:46664ms
+
+137-> Freq:4600MHz  dBm:10  Reading:7.59dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.41  Result:Pass  TestTime:46664ms
+
+138-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:47747ms
+
+139-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:47747ms
+
+140-> Freq:4700MHz  dBm:10  Reading:7.58dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.42  Result:Pass  TestTime:47747ms
+
+141-> Freq:4800MHz  dBm:10  Reading:7.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.61  Result:Pass  TestTime:48739ms
+
+142-> Freq:4800MHz  dBm:10  Reading:7.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.61  Result:Pass  TestTime:48739ms
+
+143-> Freq:4800MHz  dBm:10  Reading:7.39dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.61  Result:Pass  TestTime:48739ms
+
+144-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:49731ms
+
+145-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:49731ms
+
+146-> Freq:4900MHz  dBm:10  Reading:7.36dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.64  Result:Pass  TestTime:49731ms
+
+147-> Freq:5000MHz  dBm:10  Reading:7.22dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.78  Result:Pass  TestTime:50723ms
+
+148-> Freq:5000MHz  dBm:10  Reading:7.22dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.78  Result:Pass  TestTime:50723ms
+
+149-> Freq:5000MHz  dBm:10  Reading:7.22dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.78  Result:Pass  TestTime:50723ms
+
+150-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:51718ms
+
+151-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:51718ms
+
+152-> Freq:5100MHz  dBm:10  Reading:7.20dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.80  Result:Pass  TestTime:51718ms
+
+153-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:52713ms
+
+154-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:52713ms
+
+155-> Freq:5200MHz  dBm:10  Reading:7.33dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.67  Result:Pass  TestTime:52713ms
+
+156-> Freq:5300MHz  dBm:10  Reading:7.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.95  Result:Pass  TestTime:53706ms
+
+157-> Freq:5300MHz  dBm:10  Reading:7.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.95  Result:Pass  TestTime:53706ms
+
+158-> Freq:5300MHz  dBm:10  Reading:7.05dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.95  Result:Pass  TestTime:53706ms
+
+159-> Freq:5400MHz  dBm:10  Reading:7.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.85  Result:Pass  TestTime:54700ms
+
+160-> Freq:5400MHz  dBm:10  Reading:7.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.85  Result:Pass  TestTime:54700ms
+
+161-> Freq:5400MHz  dBm:10  Reading:7.15dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.85  Result:Pass  TestTime:54700ms
+
+162-> Freq:5500MHz  dBm:10  Reading:6.76dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.24  Result:Pass  TestTime:55693ms
+
+163-> Freq:5500MHz  dBm:10  Reading:6.76dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.24  Result:Pass  TestTime:55693ms
+
+164-> Freq:5500MHz  dBm:10  Reading:6.76dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.24  Result:Pass  TestTime:55693ms
+
+165-> Freq:5600MHz  dBm:10  Reading:7.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.87  Result:Pass  TestTime:56708ms
+
+166-> Freq:5600MHz  dBm:10  Reading:7.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.87  Result:Pass  TestTime:56708ms
+
+167-> Freq:5600MHz  dBm:10  Reading:7.13dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.87  Result:Pass  TestTime:56708ms
+
+168-> Freq:5700MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:57700ms
+
+169-> Freq:5700MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:57700ms
+
+170-> Freq:5700MHz  dBm:10  Reading:7.12dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.88  Result:Pass  TestTime:57700ms
+
+171-> Freq:5800MHz  dBm:10  Reading:7.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.98  Result:Pass  TestTime:58693ms
+
+172-> Freq:5800MHz  dBm:10  Reading:7.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.98  Result:Pass  TestTime:58693ms
+
+173-> Freq:5800MHz  dBm:10  Reading:7.02dB  LowLimit:-9999  HighLimit:9999  CalFactory:2.98  Result:Pass  TestTime:58693ms
+
+174-> Freq:5900MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:59688ms
+
+175-> Freq:5900MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:59688ms
+
+176-> Freq:5900MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:59688ms
+
+177-> Freq:6000MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:60934ms
+
+178-> Freq:6000MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:60934ms
+
+179-> Freq:6000MHz  dBm:10  Reading:6.91dB  LowLimit:-9999  HighLimit:9999  CalFactory:3.09  Result:Pass  TestTime:60934ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:993ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.26  Result:Pass  TestTime:990ms
+
+3-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1981ms
+
+4-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1981ms
+
+5-> Freq:200MHz  dBm:10  Reading:9.55dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.45  Result:Pass  TestTime:1981ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.26  Result:Pass  TestTime:990ms
+
+3-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1983ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:989ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:9775ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.26  Result:Pass  TestTime:9775ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.74dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.26  Result:Pass  TestTime:9775ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:24700ms
+
+0-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+1-> Freq:100MHz  dBm:10  Reading:9.72dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.28  Result:Pass  TestTime:990ms
+
+2-> Freq:100MHz  dBm:10  Reading:9.73dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.27  Result:Pass  TestTime:990ms
+
+3-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1980ms
+
+4-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1980ms
+
+5-> Freq:200MHz  dBm:10  Reading:9.54dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.46  Result:Pass  TestTime:1980ms
+
+6-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2970ms
+
+7-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2970ms
+
+8-> Freq:300MHz  dBm:10  Reading:9.41dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.59  Result:Pass  TestTime:2970ms
+
+9-> Freq:400MHz  dBm:10  Reading:9.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.63  Result:Pass  TestTime:3960ms
+
+10-> Freq:400MHz  dBm:10  Reading:9.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.63  Result:Pass  TestTime:3960ms
+
+11-> Freq:400MHz  dBm:10  Reading:9.37dB  LowLimit:-9999  HighLimit:9999  CalFactory:0.63  Result:Pass  TestTime:3960ms
 
