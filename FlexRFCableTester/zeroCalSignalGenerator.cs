@@ -34,6 +34,7 @@ namespace FlexRFCableTester
         int count = 0;
         int countRecovery = 0;
         int countResults = 0;
+        int countStart = 0;
         string passFail = "Pass";
         string stabilityCriteria = string.Empty;
 
@@ -70,6 +71,8 @@ namespace FlexRFCableTester
             double[] values = new double[Convert.ToInt32(average)];
             double sum = 0.0;
             double dbAverage = 0.0;
+            Stopwatch logTimer = new Stopwatch();
+            Stopwatch startProcessWatch = new Stopwatch();
             if (mode == "zeroCal")
                 labelCalStatusSg.Text = "           Aguarde o processo de Zero Cal do Signal Generator!!!";
             else
@@ -82,6 +85,8 @@ namespace FlexRFCableTester
                 equipmentPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
 
                 var MyIni = new IniFile("Settings.ini");
+                var calFactoryValuesIni = new IniFile("calFactoryValues.ini");
+
                 if (MyIni.KeyExists("StabilityCriteria", "ZeroCalFrequency"))
                     stabilityCriteria = MyIni.Read("StabilityCriteria", "ZeroCalFrequency");
 
@@ -97,7 +102,7 @@ namespace FlexRFCableTester
                     double maxFreqSg = Convert.ToDouble(maxFrequency);
                     maxFreqSg = maxFreqSg / 1000;
                     maxFreqSg = maxFreqSg / 1000;
-                    Stopwatch logTimer = new Stopwatch();
+
                     if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
                         message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
@@ -156,10 +161,13 @@ namespace FlexRFCableTester
 
                         while (result <= Convert.ToDouble(stopFreq) && status == true)
                         {
-                            logTimer.Start();
                             equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                             do
                             {
+
+                                logTimer.Start();
+                                startProcessWatch.Start();
+
                                 equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
                                 equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
                                 measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
@@ -187,6 +195,7 @@ namespace FlexRFCableTester
                                 if (mode == "zeroCal")
                                     frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
                                 countResults++;
+                                logTimer.Reset();
                             }
                             while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
                             foreach (double x in values)
@@ -198,15 +207,10 @@ namespace FlexRFCableTester
                             if (mode == "zeroCal")
                                 frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
 
-                            sum = 0;
-                            dbAverage = 0;
-                            count = 0;
-                            countRecovery = 0;
-
                             if (mode == "startMeasure")
                             {
-                                if (MyIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
-                                    zeroCalLoss = Convert.ToDouble(MyIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
+                                if (calFactoryValuesIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
+                                    zeroCalLoss = Convert.ToDouble(calFactoryValuesIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
 
                                 cableLoss = dbAverage - zeroCalLoss;
 
@@ -214,11 +218,18 @@ namespace FlexRFCableTester
                                 if (MyIni.KeyExists("CableLoss", frmMain.comboBoxCableSettings.Text))
                                     lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss", frmMain.comboBoxCableSettings.Text));
 
-                                if (lossFromIniFile > cableLoss)
+                                if (lossFromIniFile < cableLoss)
                                     passFail = "Fail";
-
-                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                                startProcessWatch.Stop();
+                                frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", cableLoss.ToString("F2"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
+                                countStart++;
+                                startProcessWatch.Reset();
                             }
+
+                            sum = 0;
+                            dbAverage = 0;
+                            count = 0;
+                            countRecovery = 0;
 
                             result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
                             if (result < Convert.ToDouble(stopFreq))
