@@ -695,8 +695,8 @@
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
         public System.Windows.Forms.Label labelWarning;
-        private System.Windows.Forms.Label labelStatusRFTester;
         public System.Windows.Forms.ComboBox comboBoxCableSettings;
+        public System.Windows.Forms.Label labelStatusRFTester;
     }
 }
 

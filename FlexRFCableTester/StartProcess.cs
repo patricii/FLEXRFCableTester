@@ -19,11 +19,13 @@ namespace FlexRFCableTester
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
             buttonStartProcess.BackColor = Color.Green;
-            buttonStartProcess.Enabled = false;
+            buttonStartProcess.Enabled = false;          
+            frmMain.dataGridViewMeasureTable.Rows.Clear();
+            frmMain.dataGridViewMeasureTable.Refresh();
             Application.DoEvents();
 
             Logger logger = new Logger();
-            labelCalStatusStartProcess.Text = "             Iniciando a aferição do cabo!!!";
+            labelCalStatusStartProcess.Text = "          Aguarde a aferição do cabo finalizar!!!";
             zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
             try
             {
@@ -34,14 +36,16 @@ namespace FlexRFCableTester
                 {
                     cableResults = "Finished";
                     logger.logMessage("Cable DBLoss measure Finished Successfully");
-                    labelCalStatusStartProcess.Text = "             Aferição do cabo realizada com sucesso!!!";
+                    frmMain.labelStatusRFTester.Text = "             Aferição do cabo realizada com sucesso!!!";
+                    Application.DoEvents();
                 }
                 else
                 {
                     cableResults = "Failed";
                     logger.logMessage("Cable DBLoss  measure Failed!!!");
                     MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                    labelCalStatusStartProcess.Text = "             Aferição do cabo não foi realizada!!!";
+                    frmMain.labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                    Application.DoEvents();
                 }
             }
             catch

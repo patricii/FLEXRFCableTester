@@ -242,6 +242,8 @@ namespace FlexRFCableTester
                         if (status)
                         {
                             labelCalStatusSg.Text = "Processo de Zero Cal do Signal Generator realizado com sucesso!!!";
+                            if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                                frmMain.textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
                             Application.DoEvents();
                             Thread.Sleep(3000);
                         }

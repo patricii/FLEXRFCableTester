@@ -236,6 +236,7 @@ namespace FlexRFCableTester
                     dataGridViewMeasureTable.Rows[count].DefaultCellStyle.BackColor = Color.Red;
 
                 dataGridViewMeasureTable.Rows[count].Cells[7].Value = testTime;
+                dataGridViewMeasureTable.FirstDisplayedScrollingRowIndex = count;
                 Application.DoEvents();
             }
             catch (Exception ex)
