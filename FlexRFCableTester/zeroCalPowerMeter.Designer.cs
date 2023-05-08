@@ -40,7 +40,7 @@
             this.labelZeroCalPm.AutoSize = true;
             this.labelZeroCalPm.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic);
             this.labelZeroCalPm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelZeroCalPm.Location = new System.Drawing.Point(142, 9);
+            this.labelZeroCalPm.Location = new System.Drawing.Point(159, 9);
             this.labelZeroCalPm.Name = "labelZeroCalPm";
             this.labelZeroCalPm.Size = new System.Drawing.Size(562, 40);
             this.labelZeroCalPm.TabIndex = 0;
@@ -82,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
             this.Controls.Add(this.labelCalStatusPm);
             this.Controls.Add(this.buttonOkPm);

@@ -52,7 +52,7 @@
             this.labelStartProcess.AutoSize = true;
             this.labelStartProcess.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartProcess.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelStartProcess.Location = new System.Drawing.Point(23, 18);
+            this.labelStartProcess.Location = new System.Drawing.Point(46, 23);
             this.labelStartProcess.Name = "labelStartProcess";
             this.labelStartProcess.Size = new System.Drawing.Size(774, 40);
             this.labelStartProcess.TabIndex = 1;
@@ -82,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
             this.Controls.Add(this.pictureBoxStartProcess);
             this.Controls.Add(this.labelCalStatusStartProcess);
