@@ -51,6 +51,7 @@
             this.labelWarning = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
+            this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
             this.pictureBoxImg = new System.Windows.Forms.PictureBox();
@@ -68,6 +69,12 @@
             this.labelCableModel = new System.Windows.Forms.Label();
             this.buttonZeroCal = new System.Windows.Forms.Button();
             this.dataGridViewMeasureTable = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,13 +83,6 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelPowerLevel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -116,7 +116,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 109);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1269, 599);
+            this.tabControl1.Size = new System.Drawing.Size(1269, 597);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageMain
@@ -127,7 +127,7 @@
             this.tabPageMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPageMain.Size = new System.Drawing.Size(1261, 565);
+            this.tabPageMain.Size = new System.Drawing.Size(1261, 563);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "Equipment Setup";
             this.tabPageMain.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1261, 565);
+            this.tabPage2.Size = new System.Drawing.Size(1261, 563);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "RF Cable Tester";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -349,6 +349,16 @@
             this.groupBoxCableSettings.TabIndex = 0;
             this.groupBoxCableSettings.TabStop = false;
             this.groupBoxCableSettings.Text = "Cable Settings";
+            // 
+            // labelPowerLevel
+            // 
+            this.labelPowerLevel.AutoSize = true;
+            this.labelPowerLevel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelPowerLevel.Location = new System.Drawing.Point(132, 245);
+            this.labelPowerLevel.Name = "labelPowerLevel";
+            this.labelPowerLevel.Size = new System.Drawing.Size(58, 30);
+            this.labelPowerLevel.TabIndex = 16;
+            this.labelPowerLevel.Text = "dBm";
             // 
             // labelFF
             // 
@@ -513,6 +523,62 @@
             this.dataGridViewMeasureTable.Size = new System.Drawing.Size(854, 494);
             this.dataGridViewMeasureTable.TabIndex = 16;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Call Cart Check";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Info Graphic";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.textBoxResponse);
+            this.tabPage5.Location = new System.Drawing.Point(4, 30);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "LOG";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // textBoxResponse
+            // 
+            this.textBoxResponse.Location = new System.Drawing.Point(7, 10);
+            this.textBoxResponse.Multiline = true;
+            this.textBoxResponse.Name = "textBoxResponse";
+            this.textBoxResponse.Size = new System.Drawing.Size(1135, 540);
+            this.textBoxResponse.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(12, 706);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Developed by Arquimedes / A. Patrício";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1064, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frequency
             // 
             this.frequency.HeaderText = "Frequency";
@@ -540,7 +606,7 @@
             // 
             // calFactor
             // 
-            this.calFactor.HeaderText = "Cal Factor";
+            this.calFactor.HeaderText = "Cable Loss";
             this.calFactor.Name = "calFactor";
             // 
             // passOrFail
@@ -552,72 +618,6 @@
             // 
             this.testTime.HeaderText = "Test Time";
             this.testTime.Name = "testTime";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Call Cart Check";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Info Graphic";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.textBoxResponse);
-            this.tabPage5.Location = new System.Drawing.Point(4, 30);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "LOG";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // textBoxResponse
-            // 
-            this.textBoxResponse.Location = new System.Drawing.Point(7, 10);
-            this.textBoxResponse.Multiline = true;
-            this.textBoxResponse.Name = "textBoxResponse";
-            this.textBoxResponse.Size = new System.Drawing.Size(1135, 540);
-            this.textBoxResponse.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(13, 706);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Developed by Arquimedes / A. Patrício";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1064, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelPowerLevel
-            // 
-            this.labelPowerLevel.AutoSize = true;
-            this.labelPowerLevel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelPowerLevel.Location = new System.Drawing.Point(132, 245);
-            this.labelPowerLevel.Name = "labelPowerLevel";
-            this.labelPowerLevel.Size = new System.Drawing.Size(58, 30);
-            this.labelPowerLevel.TabIndex = 16;
-            this.labelPowerLevel.Text = "dBm";
             // 
             // FormApp
             // 
@@ -697,20 +697,20 @@
         private System.Windows.Forms.TabPage tabPage5;
         public System.Windows.Forms.TextBox textBoxResponse;
         public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
-        public System.Windows.Forms.DataGridViewTextBoxColumn frequency;
-        public System.Windows.Forms.DataGridViewTextBoxColumn level;
-        public System.Windows.Forms.DataGridViewTextBoxColumn reading;
-        public System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
-        public System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
-        public System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
-        public System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
-        public System.Windows.Forms.DataGridViewTextBoxColumn testTime;
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
         public System.Windows.Forms.Label labelWarning;
         public System.Windows.Forms.ComboBox comboBoxCableSettings;
         public System.Windows.Forms.Label labelStatusRFTester;
         private System.Windows.Forms.Label labelPowerLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn level;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reading;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
     }
 }
 
