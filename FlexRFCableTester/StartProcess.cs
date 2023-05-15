@@ -38,6 +38,7 @@ namespace FlexRFCableTester
                     logger.logMessage("Cable DBLoss measure Finished Successfully");
                     frmMain.labelStatusRFTester.Text = "             Aferição do cabo realizada com sucesso!!!";
                     Application.DoEvents();
+                    zcsg.Close();
                 }
                 else
                 {
@@ -46,6 +47,7 @@ namespace FlexRFCableTester
                     MessageBox.Show("Cable DBLoss  measure Failed!!!");
                     frmMain.labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
                     Application.DoEvents();
+                    zcsg.Close();
                 }
             }
             catch

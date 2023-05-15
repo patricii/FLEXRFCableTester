@@ -201,6 +201,7 @@ namespace FlexRFCableTester
                 {
                     logger.logMessage("Aferição do cabo realizada com sucesso!!!");
                     startP.Close();
+
                 }
                 else
                 {
