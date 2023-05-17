@@ -103,10 +103,9 @@ namespace FlexRFCableTester
                     equipmentSignalGen.writeCommand(":FREQ:CW?", visaSigGen);
                     maxFrequency = equipmentSignalGen.readCommand(visaSigGen);
                     logger.logMessage("Máxima Frequência permitida " + maxFrequency);
-                    //double maxFreqSg = Convert.ToDouble(maxFrequency);
-                    //maxFreqSg = maxFreqSg / 1000;
-                    //maxFreqSg = maxFreqSg / 1000;
-                    double maxFreqSg = 4000;
+                    double maxFreqSg = Convert.ToDouble(maxFrequency);
+                    maxFreqSg = maxFreqSg / 1000;
+                    maxFreqSg = maxFreqSg / 1000;
 
                     if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
