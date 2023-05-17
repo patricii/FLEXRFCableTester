@@ -169,6 +169,7 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            writeValuesToIniFile();
             startProcess();
         }
         private void startProcess()
