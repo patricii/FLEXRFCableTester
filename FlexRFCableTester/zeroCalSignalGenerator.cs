@@ -110,18 +110,19 @@ namespace FlexRFCableTester
 
                     if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
-                        message = "Frequência Máxima permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz" + " - Insira o valor de Final Frequency correto!!!";
-                        MessageBox.Show(message, "Final Frequency", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        message = "FREQUÊNCIA MÁXIMA permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz";
+                        MessageBox.Show(message, "Final Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         frmMain.textBoxStopFrequency.Text = Convert.ToString(maxFreqSg);
                         logger.logMessage(message);
                     }
                     if (maxFreqSg < 6000)
                     {
-                        message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO: " + maxFreqSg / 1000 + "GHz !!!";
+                        message = "FREQUÊNCIA MÁXIMA permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz !!!";
                         frmMain.labelWarning.Text = message;
                         logger.logMessage(message);
                         frmMain.textBoxStopFrequency.Text = Convert.ToString(maxFreqSg);
                     }
+                    stopFreq = frmMain.textBoxStopFrequency.Text;
 
                     equipmentSignalGen.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
                     equipmentPowerMeter.writeCommand("*RST;*OPC?", visaPowerMeter);
@@ -168,7 +169,6 @@ namespace FlexRFCableTester
                         equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                         do
                         {
-
                             logTimer.Start();
                             startProcessWatch.Start();
 
@@ -232,54 +232,60 @@ namespace FlexRFCableTester
                                     else
                                         frequencyOfCableLossFromSettings = "CableLoss0.5GHz";
                                 }
-                            }
-                            else if ((Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 500) && (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000))
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss1GHz";
-                                if (MyIni.KeyExists("CableLoss1GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss2GHz";
-                                if (MyIni.KeyExists("CableLoss2GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss3GHz";
-                                if (MyIni.KeyExists("CableLoss3GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss4GHz";
-                                if (MyIni.KeyExists("CableLoss4GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss5GHz";
-                                if (MyIni.KeyExists("CableLoss5GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
-                            {
-                                frequencyOfCableLossFromSettings = "CableLoss6GHz";
-                                if (MyIni.KeyExists("CableLoss6GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmMain.comboBoxCableSettings.Text));
-                            }
-                            if (frequencyOfCableLossFromSettings != string.Empty)
-                            {
-                                MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                frmMain.labelWarning.Text = "Erro no arquivo settings.ini!!!" ;
-                                return false;
-                            }
+                                else if ((Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 500) && (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000))
+                                {                                   
+                                    if (MyIni.KeyExists("CableLoss1GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss1GHz";
+                                }
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss2GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss2GHz";
+                                }
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss3GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss3GHz";
+                                }
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss4GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss4GHz";
+                                }
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss5GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss5GHz";
+                                }
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
+                                {
+                                    if (MyIni.KeyExists("CableLoss6GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss6GHz";
+                                }
+                                if (frequencyOfCableLossFromSettings != string.Empty)
+                                {
+                                    MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    frmMain.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
+                                    return false;
+                                }
 
-                            cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
-                            cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
-                            if (cableLossLowSpec < 0)
-                                cableLossLowSpec = 0.0;
+                                cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
+                                cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
+                                if (cableLossLowSpec < 0)
+                                    cableLossLowSpec = 0.0;
+                            }
 
 
                             if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))
