@@ -15,7 +15,9 @@ namespace FlexRFCableTester
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
         Logger logger;
+        public static string cableResults = string.Empty;
         private static FormApp INSTANCE = null;
+        public bool stopAction { get; set;}
         public FormApp()
         {
             InitializeComponent();
@@ -169,8 +171,22 @@ namespace FlexRFCableTester
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            startProcess();
-            writeValuesToIniFile();
+            if(buttonStart.Text.Contains("Start"))
+            {
+                buttonStart.Text = "Stop";
+                buttonStart.BackColor = Color.Yellow;
+                startProcess();
+                writeValuesToIniFile();
+                stopAction = false;
+            }
+            else
+            {
+                buttonStart.Text = "Start";
+                buttonStart.BackColor = Color.Green;
+                stopAction = true;
+            }
+
+
         }
         private void startProcess()
         {
@@ -191,14 +207,46 @@ namespace FlexRFCableTester
             {
                 labelStatusRFTester.Text = "                            Iniciando a medição do cabo!!!";
                 StartProcess startP = new StartProcess();
-                startP.Show();
+                startP.Show();           
                 Application.DoEvents();
-                while (StartProcess.cableResults != "Finished" && StartProcess.cableResults == string.Empty)
+
+                zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                try
+                {
+                    visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                    bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+
+                    if (status)
+                    {
+                        cableResults = "Finished";
+                        logger.logMessage("Cable DBLoss measure Finished Successfully");
+                        labelStatusRFTester.Text = "             Medição em Andamento!!!";
+                        buttonStart.Text = "Start";
+                        buttonStart.BackColor = Color.Green;
+                        Application.DoEvents();
+                    }
+                    else
+                    {
+                        cableResults = "Failed";
+                        logger.logMessage("Cable DBLoss  measure Failed!!!");
+                        MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                        labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                        buttonStart.Text = "Start";
+                        buttonStart.BackColor = Color.Green;
+                        Application.DoEvents();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
+                }
+
+                while (cableResults != "Finished" && cableResults == string.Empty)
                 {
                     Thread.Sleep(1000);
                     Application.DoEvents();
                 }
-                if (StartProcess.cableResults == "Finished")
+                if (cableResults == "Finished")
                 {
                     logger.logMessage("Aferição do cabo realizada com sucesso!!!");
                     startP.Close();
@@ -209,7 +257,7 @@ namespace FlexRFCableTester
                     MessageBox.Show("Aferição do cabo Falhou!!!");
                     startP.Close();
                 }
-                StartProcess.cableResults = string.Empty;
+                cableResults = string.Empty;
             }
             else
             {

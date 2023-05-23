@@ -163,7 +163,7 @@ namespace FlexRFCableTester
                     if (!response.Contains("+0"))
                         return false;
 
-                    while (result <= Convert.ToDouble(stopFreq) && status == true)
+                    while (result <= Convert.ToDouble(stopFreq) && status == true && frmMain.stopAction == false)
                     {
                         equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
                         do
