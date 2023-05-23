@@ -84,11 +84,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
+            this.ControlBox = false;
             this.Controls.Add(this.labelZeroCalSignalGen);
             this.Controls.Add(this.pictureBoxZeroCalSg);
             this.Controls.Add(this.labelCalStatusSg);
             this.Controls.Add(this.buttonOkSg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "zeroCalSignalGenerator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zero Cal Signal Generator";

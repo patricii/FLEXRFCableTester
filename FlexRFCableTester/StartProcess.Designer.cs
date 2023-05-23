@@ -84,11 +84,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBoxStartProcess);
             this.Controls.Add(this.labelCalStatusStartProcess);
             this.Controls.Add(this.labelStartProcess);
             this.Controls.Add(this.buttonStartProcess);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StartProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start Process";
