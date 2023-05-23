@@ -222,8 +222,7 @@ namespace FlexRFCableTester
 
                             cableLoss = (dbAverage - zeroCalLoss);
 
-                            if (frmMain.comboBoxCableSettings.Text != "Generico")
-                            {
+
                                 if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 500)
                                 {
                                     if (MyIni.KeyExists("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text))
@@ -284,7 +283,7 @@ namespace FlexRFCableTester
                                 cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
                                 if (cableLossLowSpec < 0)
                                     cableLossLowSpec = 0.0;
-                            }
+                            
 
 
                             if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))

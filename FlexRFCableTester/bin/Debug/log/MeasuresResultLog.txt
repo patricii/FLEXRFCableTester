@@ -3588,3 +3588,229 @@
 
 1-> Freq:200MHz  dBm:0  Reading:-3.8976dB  LowLimit:0  HighLimit:0.8789  CableLoss:3.4780  Result:Fail  TestTime:3314ms
 
+0-> Freq:100MHz  dBm:0  Reading:-8.3436dB  LowLimit:5.97  HighLimit:6.97  CableLoss:8.0373  Result:Fail  TestTime:3304ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5442dB  LowLimit:5.97  HighLimit:6.97  CableLoss:7.1237  Result:Fail  TestTime:3324ms
+
+2-> Freq:300MHz  dBm:0  Reading:-7.2348dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.6955  Result:Pass  TestTime:3334ms
+
+3-> Freq:400MHz  dBm:0  Reading:-6.8941dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.3047  Result:Pass  TestTime:3310ms
+
+4-> Freq:500MHz  dBm:0  Reading:-7.1900dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.5219  Result:Pass  TestTime:3316ms
+
+5-> Freq:600MHz  dBm:0  Reading:-7.3152dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5751  Result:Pass  TestTime:3335ms
+
+6-> Freq:700MHz  dBm:0  Reading:-7.3668dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5558  Result:Pass  TestTime:3320ms
+
+7-> Freq:800MHz  dBm:0  Reading:-7.3173dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.4599  Result:Pass  TestTime:3350ms
+
+8-> Freq:900MHz  dBm:0  Reading:-7.5604dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.7118  Result:Pass  TestTime:3349ms
+
+9-> Freq:1000MHz  dBm:0  Reading:-7.6118dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.7503  Result:Pass  TestTime:3318ms
+
+10-> Freq:1100MHz  dBm:0  Reading:-7.5483dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.5482  Result:Pass  TestTime:3313ms
+
+11-> Freq:1200MHz  dBm:0  Reading:-7.6202dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6005  Result:Pass  TestTime:3323ms
+
+12-> Freq:1300MHz  dBm:0  Reading:-7.7416dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6421  Result:Pass  TestTime:3314ms
+
+13-> Freq:1400MHz  dBm:0  Reading:-7.8960dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7755  Result:Pass  TestTime:3325ms
+
+14-> Freq:1500MHz  dBm:0  Reading:-7.9225dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7219  Result:Pass  TestTime:3317ms
+
+15-> Freq:1600MHz  dBm:0  Reading:-7.9639dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7116  Result:Pass  TestTime:3291ms
+
+16-> Freq:1700MHz  dBm:0  Reading:-8.0504dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7918  Result:Pass  TestTime:3302ms
+
+17-> Freq:1800MHz  dBm:0  Reading:-8.4306dB  LowLimit:6.43  HighLimit:7.43  CableLoss:7.0430  Result:Pass  TestTime:3329ms
+
+18-> Freq:1900MHz  dBm:0  Reading:-8.1470dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8294  Result:Pass  TestTime:3326ms
+
+19-> Freq:2000MHz  dBm:0  Reading:-8.3635dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8736  Result:Pass  TestTime:3334ms
+
+20-> Freq:2100MHz  dBm:0  Reading:-8.4429dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9967  Result:Pass  TestTime:7221ms
+
+21-> Freq:2200MHz  dBm:0  Reading:-8.4214dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9308  Result:Pass  TestTime:5645ms
+
+22-> Freq:2300MHz  dBm:0  Reading:-8.5110dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0028  Result:Pass  TestTime:10134ms
+
+23-> Freq:2400MHz  dBm:0  Reading:-8.6119dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0125  Result:Pass  TestTime:3310ms
+
+24-> Freq:2500MHz  dBm:0  Reading:-8.5847dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9852  Result:Pass  TestTime:3331ms
+
+25-> Freq:2600MHz  dBm:0  Reading:-8.6748dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0381  Result:Pass  TestTime:3310ms
+
+26-> Freq:2700MHz  dBm:0  Reading:-8.6763dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0065  Result:Pass  TestTime:3326ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.3416dB  LowLimit:5.97  HighLimit:6.97  CableLoss:8.0369  Result:Fail  TestTime:3295ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5426dB  LowLimit:5.97  HighLimit:6.97  CableLoss:7.1207  Result:Fail  TestTime:3327ms
+
+2-> Freq:300MHz  dBm:0  Reading:-7.2351dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.6942  Result:Pass  TestTime:3293ms
+
+3-> Freq:400MHz  dBm:0  Reading:-6.8965dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.3049  Result:Pass  TestTime:3317ms
+
+4-> Freq:500MHz  dBm:0  Reading:-7.1886dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.5183  Result:Pass  TestTime:3323ms
+
+5-> Freq:600MHz  dBm:0  Reading:-7.3107dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5703  Result:Pass  TestTime:3322ms
+
+6-> Freq:700MHz  dBm:0  Reading:-7.3648dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5526  Result:Pass  TestTime:3317ms
+
+7-> Freq:800MHz  dBm:0  Reading:-7.3158dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.4573  Result:Pass  TestTime:3334ms
+
+8-> Freq:900MHz  dBm:0  Reading:-7.5568dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.7083  Result:Pass  TestTime:3316ms
+
+9-> Freq:1000MHz  dBm:0  Reading:-7.6071dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.7467  Result:Pass  TestTime:3318ms
+
+10-> Freq:1100MHz  dBm:0  Reading:-7.5504dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.5535  Result:Pass  TestTime:3301ms
+
+11-> Freq:1200MHz  dBm:0  Reading:-7.6201dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.5988  Result:Pass  TestTime:3337ms
+
+12-> Freq:1300MHz  dBm:0  Reading:-7.7414dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6426  Result:Pass  TestTime:3319ms
+
+13-> Freq:1400MHz  dBm:0  Reading:-7.8903dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7736  Result:Pass  TestTime:3322ms
+
+14-> Freq:1500MHz  dBm:0  Reading:-7.9155dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7177  Result:Pass  TestTime:3316ms
+
+15-> Freq:1600MHz  dBm:0  Reading:-7.9558dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7068  Result:Pass  TestTime:3311ms
+
+16-> Freq:1700MHz  dBm:0  Reading:-8.0514dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7880  Result:Pass  TestTime:3315ms
+
+17-> Freq:1800MHz  dBm:0  Reading:-8.4342dB  LowLimit:6.43  HighLimit:7.43  CableLoss:7.0426  Result:Pass  TestTime:3318ms
+
+18-> Freq:1900MHz  dBm:0  Reading:-8.1469dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8254  Result:Pass  TestTime:3343ms
+
+19-> Freq:2000MHz  dBm:0  Reading:-8.3567dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8685  Result:Pass  TestTime:3307ms
+
+20-> Freq:2100MHz  dBm:0  Reading:-8.4406dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9897  Result:Pass  TestTime:3336ms
+
+21-> Freq:2200MHz  dBm:0  Reading:-8.4145dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9260  Result:Pass  TestTime:3330ms
+
+22-> Freq:2300MHz  dBm:0  Reading:-8.4990dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9991  Result:Pass  TestTime:3322ms
+
+23-> Freq:2400MHz  dBm:0  Reading:-8.6127dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0108  Result:Pass  TestTime:3345ms
+
+24-> Freq:2500MHz  dBm:0  Reading:-8.5771dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9768  Result:Pass  TestTime:3289ms
+
+25-> Freq:2600MHz  dBm:0  Reading:-8.6731dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0314  Result:Pass  TestTime:3332ms
+
+26-> Freq:2700MHz  dBm:0  Reading:-8.7589dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0856  Result:Pass  TestTime:3326ms
+
+27-> Freq:2800MHz  dBm:0  Reading:-8.8594dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.1804  Result:Pass  TestTime:3297ms
+
+28-> Freq:2900MHz  dBm:0  Reading:-9.7624dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.9104  Result:Fail  TestTime:3315ms
+
+29-> Freq:3000MHz  dBm:0  Reading:-10.0670dB  LowLimit:6.71  HighLimit:7.71  CableLoss:8.2577  Result:Fail  TestTime:3316ms
+
+30-> Freq:3100MHz  dBm:0  Reading:-11.2340dB  LowLimit:6.71  HighLimit:7.71  CableLoss:9.3907  Result:Fail  TestTime:3317ms
+
+31-> Freq:3200MHz  dBm:0  Reading:-11.9562dB  LowLimit:6.71  HighLimit:7.71  CableLoss:10.1562  Result:Fail  TestTime:3389ms
+
+32-> Freq:3300MHz  dBm:0  Reading:-11.8296dB  LowLimit:6.71  HighLimit:7.71  CableLoss:10.0395  Result:Fail  TestTime:3304ms
+
+33-> Freq:3400MHz  dBm:0  Reading:-11.6332dB  LowLimit:6.71  HighLimit:7.71  CableLoss:9.8230  Result:Fail  TestTime:3301ms
+
+34-> Freq:3500MHz  dBm:0  Reading:-9.3307dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.3516  Result:Pass  TestTime:3461ms
+
+35-> Freq:3600MHz  dBm:0  Reading:-10.1265dB  LowLimit:6.71  HighLimit:7.71  CableLoss:8.1358  Result:Fail  TestTime:3313ms
+
+36-> Freq:3700MHz  dBm:0  Reading:-9.5284dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.5605  Result:Pass  TestTime:3321ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.3173dB  LowLimit:5.97  HighLimit:6.97  CableLoss:8.0120  Result:Fail  TestTime:3318ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5099dB  LowLimit:5.97  HighLimit:6.97  CableLoss:7.0906  Result:Fail  TestTime:3330ms
+
+2-> Freq:300MHz  dBm:0  Reading:-7.2041dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.6660  Result:Pass  TestTime:3295ms
+
+3-> Freq:400MHz  dBm:0  Reading:-6.8596dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.2680  Result:Pass  TestTime:3322ms
+
+4-> Freq:500MHz  dBm:0  Reading:-7.1516dB  LowLimit:5.97  HighLimit:6.97  CableLoss:6.4857  Result:Pass  TestTime:3296ms
+
+5-> Freq:600MHz  dBm:0  Reading:-7.2823dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5403  Result:Pass  TestTime:3349ms
+
+6-> Freq:700MHz  dBm:0  Reading:-7.3263dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.5171  Result:Pass  TestTime:3338ms
+
+7-> Freq:800MHz  dBm:0  Reading:-7.2874dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.4284  Result:Pass  TestTime:3315ms
+
+8-> Freq:900MHz  dBm:0  Reading:-7.5201dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.6709  Result:Pass  TestTime:3315ms
+
+9-> Freq:1000MHz  dBm:0  Reading:-7.5775dB  LowLimit:6.13  HighLimit:7.13  CableLoss:6.7162  Result:Pass  TestTime:3316ms
+
+10-> Freq:1100MHz  dBm:0  Reading:-7.5207dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.5211  Result:Pass  TestTime:3277ms
+
+11-> Freq:1200MHz  dBm:0  Reading:-7.5944dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.5744  Result:Pass  TestTime:3313ms
+
+12-> Freq:1300MHz  dBm:0  Reading:-7.7192dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6172  Result:Pass  TestTime:3308ms
+
+13-> Freq:1400MHz  dBm:0  Reading:-7.8788dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7577  Result:Pass  TestTime:3313ms
+
+14-> Freq:1500MHz  dBm:0  Reading:-7.8944dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6932  Result:Pass  TestTime:3291ms
+
+15-> Freq:1600MHz  dBm:0  Reading:-7.9442dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.6967  Result:Pass  TestTime:3323ms
+
+16-> Freq:1700MHz  dBm:0  Reading:-8.0412dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.7830  Result:Pass  TestTime:3343ms
+
+17-> Freq:1800MHz  dBm:0  Reading:-8.4110dB  LowLimit:6.43  HighLimit:7.43  CableLoss:7.0231  Result:Pass  TestTime:3292ms
+
+18-> Freq:1900MHz  dBm:0  Reading:-8.1551dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8342  Result:Pass  TestTime:3310ms
+
+19-> Freq:2000MHz  dBm:0  Reading:-8.3563dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.8616  Result:Pass  TestTime:3334ms
+
+20-> Freq:2100MHz  dBm:0  Reading:-8.4717dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0199  Result:Pass  TestTime:3338ms
+
+21-> Freq:2200MHz  dBm:0  Reading:-8.4220dB  LowLimit:6.71  HighLimit:7.71  CableLoss:6.9318  Result:Pass  TestTime:3305ms
+
+22-> Freq:2300MHz  dBm:0  Reading:-8.5041dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0062  Result:Pass  TestTime:3323ms
+
+23-> Freq:2400MHz  dBm:0  Reading:-8.6139dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0140  Result:Pass  TestTime:3322ms
+
+24-> Freq:2500MHz  dBm:0  Reading:-8.6111dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0101  Result:Pass  TestTime:3328ms
+
+25-> Freq:2600MHz  dBm:0  Reading:-8.7128dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.0744  Result:Pass  TestTime:3326ms
+
+26-> Freq:2700MHz  dBm:0  Reading:-8.7947dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.1253  Result:Pass  TestTime:3334ms
+
+27-> Freq:2800MHz  dBm:0  Reading:-8.9098dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.2309  Result:Pass  TestTime:3283ms
+
+28-> Freq:2900MHz  dBm:0  Reading:-9.7573dB  LowLimit:6.71  HighLimit:7.71  CableLoss:7.9071  Result:Fail  TestTime:3319ms
+
+29-> Freq:3000MHz  dBm:0  Reading:-10.1430dB  LowLimit:6.71  HighLimit:7.71  CableLoss:8.3313  Result:Fail  TestTime:3311ms
+
+30-> Freq:3100MHz  dBm:0  Reading:-11.4519dB  LowLimit:6.71  HighLimit:7.71  CableLoss:9.6138  Result:Fail  TestTime:3373ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.3191dB  LowLimit:3.1  HighLimit:4.1  CableLoss:8.0133  Result:Fail  TestTime:3287ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.3135dB  LowLimit:0  HighLimit:0  CableLoss:8.0147  Result:Fail  TestTime:3291ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5130dB  LowLimit:0  HighLimit:0  CableLoss:7.0927  Result:Fail  TestTime:3267ms
+
+2-> Freq:300MHz  dBm:0  Reading:-7.2091dB  LowLimit:0  HighLimit:0  CableLoss:6.6661  Result:Fail  TestTime:3286ms
+
+3-> Freq:400MHz  dBm:0  Reading:-6.8549dB  LowLimit:0  HighLimit:0  CableLoss:6.2680  Result:Fail  TestTime:3261ms
+
+4-> Freq:500MHz  dBm:0  Reading:-7.1542dB  LowLimit:0  HighLimit:0  CableLoss:6.4860  Result:Fail  TestTime:3310ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.3201dB  LowLimit:0  HighLimit:0.8789  CableLoss:8.0162  Result:Fail  TestTime:3273ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5143dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.0927  Result:Fail  TestTime:3319ms
+
+0-> Freq:100MHz  dBm:0  Reading:-8.2515dB  LowLimit:0  HighLimit:999  CableLoss:7.9498  Result:Pass  TestTime:3305ms
+
+1-> Freq:200MHz  dBm:0  Reading:-7.5126dB  LowLimit:0  HighLimit:999  CableLoss:7.0917  Result:Pass  TestTime:3287ms
+
+2-> Freq:300MHz  dBm:0  Reading:-7.2017dB  LowLimit:0  HighLimit:999  CableLoss:6.6644  Result:Pass  TestTime:3271ms
+
+3-> Freq:400MHz  dBm:0  Reading:-6.8560dB  LowLimit:0  HighLimit:999  CableLoss:6.2656  Result:Pass  TestTime:3275ms
+
+4-> Freq:500MHz  dBm:0  Reading:-7.1502dB  LowLimit:0  HighLimit:999  CableLoss:6.4847  Result:Pass  TestTime:3302ms
+
+5-> Freq:600MHz  dBm:0  Reading:-7.2792dB  LowLimit:0  HighLimit:999  CableLoss:6.5383  Result:Pass  TestTime:3296ms
+
+6-> Freq:700MHz  dBm:0  Reading:-7.3257dB  LowLimit:0  HighLimit:999  CableLoss:6.5142  Result:Pass  TestTime:3322ms
+
+7-> Freq:800MHz  dBm:0  Reading:-7.2888dB  LowLimit:0  HighLimit:999  CableLoss:6.4270  Result:Pass  TestTime:3346ms
+
+8-> Freq:900MHz  dBm:0  Reading:-7.5198dB  LowLimit:0  HighLimit:999  CableLoss:6.6673  Result:Pass  TestTime:3318ms
+
+9-> Freq:1000MHz  dBm:0  Reading:-7.5720dB  LowLimit:0  HighLimit:999  CableLoss:6.7139  Result:Pass  TestTime:3346ms
+

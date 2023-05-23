@@ -60,6 +60,8 @@ namespace FlexRFCableTester
                     pictureName = MyIni.Read("Picture", comboBoxCableSettings.Text);
 
                 pictureBoxImg.Image = Image.FromFile(@"img\" + pictureName + ".jpg");
+
+                getFrequencyFromFile();
             }
             catch
             {
@@ -77,10 +79,17 @@ namespace FlexRFCableTester
             try
             {
                 var MyIni = new IniFile("Settings.ini");
-                if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+
+                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                    textBoxStartFrequency.Text = (MyIni.Read("StartFrequency", comboBoxCableSettings.Text));
+
+                else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
 
-                if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                    textBoxStopFrequency.Text = (MyIni.Read("StopFrequency", comboBoxCableSettings.Text));
+
+                else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
@@ -224,56 +233,56 @@ namespace FlexRFCableTester
                 }
                 while (startP.startStatus == false);
 
+                labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                try
+                {
+                    visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
                     labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                    zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
-                    try
-                    {
-                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                        bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+                    bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
 
-                        if (status)
-                        {
-                            cableResults = "Finished";
-                            logger.logMessage("Cable DBLoss measure Finished Successfully");
-                            labelStatusRFTester.Text = "                          Medição Finalizada!!!";
-                            buttonStart.Text = "Start";
-                            buttonStart.BackColor = Color.Green;
-                            Application.DoEvents();
-                        }
-                        else
-                        {
-                            cableResults = "Failed";
-                            logger.logMessage("Cable DBLoss  measure Failed!!!");
-                            MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                            labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
-                            buttonStart.Text = "Start";
-                            buttonStart.BackColor = Color.Green;
-                            Application.DoEvents();
-                        }
-                    }
-                    catch
+                    if (status)
                     {
-                        MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
-                    }
-
-                    while (cableResults != "Finished" && cableResults == string.Empty)
-                    {
-                        Thread.Sleep(1000);
+                        cableResults = "Finished";
+                        logger.logMessage("Cable DBLoss measure Finished Successfully");
+                        labelStatusRFTester.Text = "                          Medição Finalizada!!!";
+                        buttonStart.Text = "Start";
+                        buttonStart.BackColor = Color.Green;
                         Application.DoEvents();
-                    }
-                    if (cableResults == "Finished")
-                    {
-                        logger.logMessage("Aferição do cabo realizada com sucesso!!!");
-                        startP.Close();
                     }
                     else
                     {
-                        logger.logMessage("Aferição do cabo Falhou!!!");
-                        MessageBox.Show("Aferição do cabo Falhou!!!");
-                        startP.Close();
+                        cableResults = "Failed";
+                        logger.logMessage("Cable DBLoss  measure Failed!!!");
+                        MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                        labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                        buttonStart.Text = "Start";
+                        buttonStart.BackColor = Color.Green;
+                        Application.DoEvents();
                     }
-                    cableResults = string.Empty;                
+                }
+                catch
+                {
+                    MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
+                }
+
+                while (cableResults != "Finished" && cableResults == string.Empty)
+                {
+                    Thread.Sleep(1000);
+                    Application.DoEvents();
+                }
+                if (cableResults == "Finished")
+                {
+                    logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                    startP.Close();
+                }
+                else
+                {
+                    logger.logMessage("Aferição do cabo Falhou!!!");
+                    MessageBox.Show("Aferição do cabo Falhou!!!");
+                    startP.Close();
+                }
+                cableResults = string.Empty;
             }
             else
             {
