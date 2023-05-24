@@ -1,6 +1,7 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -9,7 +10,7 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaSignalGen;
         FormApp frmMain = FormApp.getInstance();
-        public static string cableResults = string.Empty;
+        public int startStatus = -999;
 
         public StartProcess()
         {
@@ -18,40 +19,24 @@ namespace FlexRFCableTester
 
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
-            buttonStartProcess.BackColor = Color.Green;
-            buttonStartProcess.Enabled = false;          
+            buttonStartProcess.Enabled = false;
+            labelCalStatusStartProcess.Text = "          Iniciando a medição do cabo!!!";
+            startStatus = 0;
+            Application.DoEvents();
             frmMain.dataGridViewMeasureTable.Rows.Clear();
             frmMain.dataGridViewMeasureTable.Refresh();
             Application.DoEvents();
 
             Logger logger = new Logger();
-            labelCalStatusStartProcess.Text = "          Aguarde a aferição do cabo finalizar!!!";
-            zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
-            try
-            {
-                visaSignalGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
-                bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+            this.Close();         
+        }
 
-                if (status)
-                {
-                    cableResults = "Finished";
-                    logger.logMessage("Cable DBLoss measure Finished Successfully");
-                    frmMain.labelStatusRFTester.Text = "             Aferição do cabo realizada com sucesso!!!";
-                    Application.DoEvents();
-                }
-                else
-                {
-                    cableResults = "Failed";
-                    logger.logMessage("Cable DBLoss  measure Failed!!!");
-                    MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                    frmMain.labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
-                    Application.DoEvents();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
-            }
+        private void buttonAbort_Click(object sender, EventArgs e)
+        {
+            buttonStartProcess.Enabled = false;
+            startStatus = -2;
+            this.Close();
+            Application.DoEvents();
         }
     }
 }

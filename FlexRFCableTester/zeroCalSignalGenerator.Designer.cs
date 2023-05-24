@@ -40,7 +40,7 @@
             // 
             this.buttonOkSg.BackColor = System.Drawing.SystemColors.Window;
             this.buttonOkSg.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonOkSg.Location = new System.Drawing.Point(385, 528);
+            this.buttonOkSg.Location = new System.Drawing.Point(400, 530);
             this.buttonOkSg.Name = "buttonOkSg";
             this.buttonOkSg.Size = new System.Drawing.Size(80, 30);
             this.buttonOkSg.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.labelZeroCalSignalGen.AutoSize = true;
             this.labelZeroCalSignalGen.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic);
             this.labelZeroCalSignalGen.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(78, 9);
+            this.labelZeroCalSignalGen.Location = new System.Drawing.Point(75, 9);
             this.labelZeroCalSignalGen.Name = "labelZeroCalSignalGen";
             this.labelZeroCalSignalGen.Size = new System.Drawing.Size(731, 40);
             this.labelZeroCalSignalGen.TabIndex = 3;
@@ -82,12 +82,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
+            this.ControlBox = false;
             this.Controls.Add(this.labelZeroCalSignalGen);
             this.Controls.Add(this.pictureBoxZeroCalSg);
             this.Controls.Add(this.labelCalStatusSg);
             this.Controls.Add(this.buttonOkSg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "zeroCalSignalGenerator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zero Cal Signal Generator";

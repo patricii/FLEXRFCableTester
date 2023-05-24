@@ -1,20 +1,3 @@
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe.config
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.pdb
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.dll
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.Native.dll
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.VisaNS.dll
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe.config
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.ResolveComReference.cache
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormApp.resources
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.Properties.Resources.resources
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.zeroCalPowerMeter.resources
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.zeroCalSignalGenerator.resources
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.GenerateResource.cache
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CoreCompileInputs.cache
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CopyComplete
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.pdb
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe.config
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.pdb
@@ -34,4 +17,21 @@ C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCa
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CopyComplete
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe.config
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.Common.Native.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.VisaNS.dll
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe.config
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.ResolveComReference.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormApp.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.Properties.Resources.resources
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.StartProcess.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.zeroCalPowerMeter.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.zeroCalSignalGenerator.resources
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.GenerateResource.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CoreCompileInputs.cache
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CopyComplete
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.pdb

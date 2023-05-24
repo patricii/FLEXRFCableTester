@@ -48,9 +48,9 @@
             this.labelEquipmentNames = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.labelStatusRFTester = new System.Windows.Forms.Label();
-            this.labelWarning = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
+            this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
             this.pictureBoxImg = new System.Windows.Forms.PictureBox();
@@ -68,6 +68,13 @@
             this.labelCableModel = new System.Windows.Forms.Label();
             this.buttonZeroCal = new System.Windows.Forms.Button();
             this.dataGridViewMeasureTable = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            this.labelWarning = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,12 +83,6 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -99,7 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 33.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(431, 61);
             this.label1.TabIndex = 0;
@@ -115,7 +116,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 109);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1269, 599);
+            this.tabControl1.Size = new System.Drawing.Size(1269, 597);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPageMain
@@ -126,7 +127,7 @@
             this.tabPageMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageMain.Name = "tabPageMain";
             this.tabPageMain.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPageMain.Size = new System.Drawing.Size(1261, 565);
+            this.tabPageMain.Size = new System.Drawing.Size(1261, 563);
             this.tabPageMain.TabIndex = 0;
             this.tabPageMain.Text = "Equipment Setup";
             this.tabPageMain.UseVisualStyleBackColor = true;
@@ -148,7 +149,7 @@
             // 
             // textBoxeXMaLIAS
             // 
-            this.textBoxeXMaLIAS.Location = new System.Drawing.Point(166, 96);
+            this.textBoxeXMaLIAS.Location = new System.Drawing.Point(169, 102);
             this.textBoxeXMaLIAS.Name = "textBoxeXMaLIAS";
             this.textBoxeXMaLIAS.Size = new System.Drawing.Size(150, 29);
             this.textBoxeXMaLIAS.TabIndex = 5;
@@ -157,7 +158,7 @@
             // 
             // textBoxCMW100Alias
             // 
-            this.textBoxCMW100Alias.Location = new System.Drawing.Point(166, 56);
+            this.textBoxCMW100Alias.Location = new System.Drawing.Point(169, 55);
             this.textBoxCMW100Alias.Name = "textBoxCMW100Alias";
             this.textBoxCMW100Alias.Size = new System.Drawing.Size(150, 29);
             this.textBoxCMW100Alias.TabIndex = 4;
@@ -167,7 +168,7 @@
             // checkBoxExm
             // 
             this.checkBoxExm.AutoSize = true;
-            this.checkBoxExm.Location = new System.Drawing.Point(6, 98);
+            this.checkBoxExm.Location = new System.Drawing.Point(6, 104);
             this.checkBoxExm.Name = "checkBoxExm";
             this.checkBoxExm.Size = new System.Drawing.Size(60, 25);
             this.checkBoxExm.TabIndex = 3;
@@ -177,7 +178,7 @@
             // checkBoxCMW100
             // 
             this.checkBoxCMW100.AutoSize = true;
-            this.checkBoxCMW100.Location = new System.Drawing.Point(6, 58);
+            this.checkBoxCMW100.Location = new System.Drawing.Point(6, 57);
             this.checkBoxCMW100.Name = "checkBoxCMW100";
             this.checkBoxCMW100.Size = new System.Drawing.Size(95, 25);
             this.checkBoxCMW100.TabIndex = 2;
@@ -187,7 +188,7 @@
             // labelLanAlias
             // 
             this.labelLanAlias.AutoSize = true;
-            this.labelLanAlias.Location = new System.Drawing.Point(166, 25);
+            this.labelLanAlias.Location = new System.Drawing.Point(169, 25);
             this.labelLanAlias.Name = "labelLanAlias";
             this.labelLanAlias.Size = new System.Drawing.Size(80, 21);
             this.labelLanAlias.TabIndex = 1;
@@ -196,7 +197,7 @@
             // labelEquipmentsLAN
             // 
             this.labelEquipmentsLAN.AutoSize = true;
-            this.labelEquipmentsLAN.Location = new System.Drawing.Point(3, 25);
+            this.labelEquipmentsLAN.Location = new System.Drawing.Point(6, 25);
             this.labelEquipmentsLAN.Name = "labelEquipmentsLAN";
             this.labelEquipmentsLAN.Size = new System.Drawing.Size(95, 21);
             this.labelEquipmentsLAN.TabIndex = 0;
@@ -262,7 +263,7 @@
             // labelAddressGPIB
             // 
             this.labelAddressGPIB.AutoSize = true;
-            this.labelAddressGPIB.Location = new System.Drawing.Point(166, 25);
+            this.labelAddressGPIB.Location = new System.Drawing.Point(169, 25);
             this.labelAddressGPIB.Name = "labelAddressGPIB";
             this.labelAddressGPIB.Size = new System.Drawing.Size(106, 21);
             this.labelAddressGPIB.TabIndex = 1;
@@ -280,7 +281,6 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.labelStatusRFTester);
-            this.tabPage2.Controls.Add(this.labelWarning);
             this.tabPage2.Controls.Add(this.buttonStart);
             this.tabPage2.Controls.Add(this.groupBoxCableSettings);
             this.tabPage2.Controls.Add(this.buttonZeroCal);
@@ -289,7 +289,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1261, 565);
+            this.tabPage2.Size = new System.Drawing.Size(1261, 563);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "RF Cable Tester";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -302,16 +302,6 @@
             this.labelStatusRFTester.Name = "labelStatusRFTester";
             this.labelStatusRFTester.Size = new System.Drawing.Size(0, 30);
             this.labelStatusRFTester.TabIndex = 18;
-            // 
-            // labelWarning
-            // 
-            this.labelWarning.AutoSize = true;
-            this.labelWarning.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.labelWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelWarning.Location = new System.Drawing.Point(516, 526);
-            this.labelWarning.Name = "labelWarning";
-            this.labelWarning.Size = new System.Drawing.Size(0, 31);
-            this.labelWarning.TabIndex = 17;
             // 
             // buttonStart
             // 
@@ -326,6 +316,7 @@
             // 
             // groupBoxCableSettings
             // 
+            this.groupBoxCableSettings.Controls.Add(this.labelPowerLevel);
             this.groupBoxCableSettings.Controls.Add(this.labelFF);
             this.groupBoxCableSettings.Controls.Add(this.labelSF);
             this.groupBoxCableSettings.Controls.Add(this.pictureBoxImg);
@@ -348,11 +339,21 @@
             this.groupBoxCableSettings.TabStop = false;
             this.groupBoxCableSettings.Text = "Cable Settings";
             // 
+            // labelPowerLevel
+            // 
+            this.labelPowerLevel.AutoSize = true;
+            this.labelPowerLevel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.labelPowerLevel.Location = new System.Drawing.Point(132, 245);
+            this.labelPowerLevel.Name = "labelPowerLevel";
+            this.labelPowerLevel.Size = new System.Drawing.Size(58, 30);
+            this.labelPowerLevel.TabIndex = 16;
+            this.labelPowerLevel.Text = "dBm";
+            // 
             // labelFF
             // 
             this.labelFF.AutoSize = true;
             this.labelFF.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelFF.Location = new System.Drawing.Point(182, 188);
+            this.labelFF.Location = new System.Drawing.Point(132, 185);
             this.labelFF.Name = "labelFF";
             this.labelFF.Size = new System.Drawing.Size(59, 30);
             this.labelFF.TabIndex = 15;
@@ -362,7 +363,7 @@
             // 
             this.labelSF.AutoSize = true;
             this.labelSF.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelSF.Location = new System.Drawing.Point(182, 116);
+            this.labelSF.Location = new System.Drawing.Point(132, 116);
             this.labelSF.Name = "labelSF";
             this.labelSF.Size = new System.Drawing.Size(59, 30);
             this.labelSF.TabIndex = 14;
@@ -380,7 +381,7 @@
             // 
             // textBoxAverage
             // 
-            this.textBoxAverage.Location = new System.Drawing.Point(282, 188);
+            this.textBoxAverage.Location = new System.Drawing.Point(239, 185);
             this.textBoxAverage.Name = "textBoxAverage";
             this.textBoxAverage.Size = new System.Drawing.Size(100, 29);
             this.textBoxAverage.TabIndex = 12;
@@ -388,7 +389,7 @@
             // 
             // textBoxIntervalFrequency
             // 
-            this.textBoxIntervalFrequency.Location = new System.Drawing.Point(282, 116);
+            this.textBoxIntervalFrequency.Location = new System.Drawing.Point(239, 116);
             this.textBoxIntervalFrequency.Name = "textBoxIntervalFrequency";
             this.textBoxIntervalFrequency.Size = new System.Drawing.Size(100, 29);
             this.textBoxIntervalFrequency.TabIndex = 11;
@@ -398,15 +399,15 @@
             // 
             this.textBoxDbm.Location = new System.Drawing.Point(6, 246);
             this.textBoxDbm.Name = "textBoxDbm";
-            this.textBoxDbm.Size = new System.Drawing.Size(100, 29);
+            this.textBoxDbm.Size = new System.Drawing.Size(120, 29);
             this.textBoxDbm.TabIndex = 10;
             this.textBoxDbm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxStopFrequency
             // 
-            this.textBoxStopFrequency.Location = new System.Drawing.Point(6, 188);
+            this.textBoxStopFrequency.Location = new System.Drawing.Point(6, 185);
             this.textBoxStopFrequency.Name = "textBoxStopFrequency";
-            this.textBoxStopFrequency.Size = new System.Drawing.Size(170, 29);
+            this.textBoxStopFrequency.Size = new System.Drawing.Size(120, 29);
             this.textBoxStopFrequency.TabIndex = 9;
             this.textBoxStopFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -414,7 +415,7 @@
             // 
             this.textBoxStartFrequency.Location = new System.Drawing.Point(6, 116);
             this.textBoxStartFrequency.Name = "textBoxStartFrequency";
-            this.textBoxStartFrequency.Size = new System.Drawing.Size(170, 29);
+            this.textBoxStartFrequency.Size = new System.Drawing.Size(120, 29);
             this.textBoxStartFrequency.TabIndex = 8;
             this.textBoxStartFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -423,7 +424,7 @@
             this.comboBoxCableSettings.FormattingEnabled = true;
             this.comboBoxCableSettings.Location = new System.Drawing.Point(6, 49);
             this.comboBoxCableSettings.Name = "comboBoxCableSettings";
-            this.comboBoxCableSettings.Size = new System.Drawing.Size(215, 29);
+            this.comboBoxCableSettings.Size = new System.Drawing.Size(221, 29);
             this.comboBoxCableSettings.TabIndex = 7;
             this.comboBoxCableSettings.Text = "MXHS83SK2800";
             this.comboBoxCableSettings.SelectedIndexChanged += new System.EventHandler(this.comboBoxCableSettings_SelectedIndexChanged);
@@ -431,7 +432,7 @@
             // labelAverage
             // 
             this.labelAverage.AutoSize = true;
-            this.labelAverage.Location = new System.Drawing.Point(282, 164);
+            this.labelAverage.Location = new System.Drawing.Point(239, 161);
             this.labelAverage.Name = "labelAverage";
             this.labelAverage.Size = new System.Drawing.Size(70, 21);
             this.labelAverage.TabIndex = 6;
@@ -440,7 +441,7 @@
             // labelIntervalFrequency
             // 
             this.labelIntervalFrequency.AutoSize = true;
-            this.labelIntervalFrequency.Location = new System.Drawing.Point(282, 92);
+            this.labelIntervalFrequency.Location = new System.Drawing.Point(239, 92);
             this.labelIntervalFrequency.Name = "labelIntervalFrequency";
             this.labelIntervalFrequency.Size = new System.Drawing.Size(65, 21);
             this.labelIntervalFrequency.TabIndex = 5;
@@ -458,7 +459,7 @@
             // labelFinalFrequency
             // 
             this.labelFinalFrequency.AutoSize = true;
-            this.labelFinalFrequency.Location = new System.Drawing.Point(6, 164);
+            this.labelFinalFrequency.Location = new System.Drawing.Point(6, 161);
             this.labelFinalFrequency.Name = "labelFinalFrequency";
             this.labelFinalFrequency.Size = new System.Drawing.Size(122, 21);
             this.labelFinalFrequency.TabIndex = 2;
@@ -495,6 +496,7 @@
             // 
             // dataGridViewMeasureTable
             // 
+            this.dataGridViewMeasureTable.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewMeasureTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMeasureTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.frequency,
@@ -509,6 +511,72 @@
             this.dataGridViewMeasureTable.Name = "dataGridViewMeasureTable";
             this.dataGridViewMeasureTable.Size = new System.Drawing.Size(854, 494);
             this.dataGridViewMeasureTable.TabIndex = 16;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Call Cart Check";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Info Graphic";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.textBoxResponse);
+            this.tabPage5.Location = new System.Drawing.Point(4, 30);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1261, 563);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "LOG";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // textBoxResponse
+            // 
+            this.textBoxResponse.Location = new System.Drawing.Point(7, 10);
+            this.textBoxResponse.Multiline = true;
+            this.textBoxResponse.Name = "textBoxResponse";
+            this.textBoxResponse.Size = new System.Drawing.Size(1135, 540);
+            this.textBoxResponse.TabIndex = 4;
+            // 
+            // labelWarning
+            // 
+            this.labelWarning.AutoSize = true;
+            this.labelWarning.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
+            this.labelWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelWarning.Location = new System.Drawing.Point(309, 6);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(0, 31);
+            this.labelWarning.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(12, 706);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Developed by Arquimedes / A. Patrício";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1064, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frequency
             // 
@@ -537,7 +605,7 @@
             // 
             // calFactor
             // 
-            this.calFactor.HeaderText = "Cal Factor";
+            this.calFactor.HeaderText = "Path Loss";
             this.calFactor.Name = "calFactor";
             // 
             // passOrFail
@@ -550,62 +618,6 @@
             this.testTime.HeaderText = "Test Time";
             this.testTime.Name = "testTime";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Call Cart Check";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Info Graphic";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.textBoxResponse);
-            this.tabPage5.Location = new System.Drawing.Point(4, 30);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1261, 565);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "LOG";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // textBoxResponse
-            // 
-            this.textBoxResponse.Location = new System.Drawing.Point(7, 10);
-            this.textBoxResponse.Multiline = true;
-            this.textBoxResponse.Name = "textBoxResponse";
-            this.textBoxResponse.Size = new System.Drawing.Size(1135, 540);
-            this.textBoxResponse.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(13, 706);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Developed by Arquimedes / A. Patrício";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1064, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -613,6 +625,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1284, 720);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
@@ -684,19 +697,20 @@
         private System.Windows.Forms.TabPage tabPage5;
         public System.Windows.Forms.TextBox textBoxResponse;
         public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
-        public System.Windows.Forms.DataGridViewTextBoxColumn frequency;
-        public System.Windows.Forms.DataGridViewTextBoxColumn level;
-        public System.Windows.Forms.DataGridViewTextBoxColumn reading;
-        public System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
-        public System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
-        public System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
-        public System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
-        public System.Windows.Forms.DataGridViewTextBoxColumn testTime;
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;
         public System.Windows.Forms.Label labelWarning;
         public System.Windows.Forms.ComboBox comboBoxCableSettings;
         public System.Windows.Forms.Label labelStatusRFTester;
+        private System.Windows.Forms.Label labelPowerLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn level;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reading;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lowLimit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn highLimit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
     }
 }
 

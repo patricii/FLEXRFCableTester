@@ -15,7 +15,9 @@ namespace FlexRFCableTester
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
         Logger logger;
+        public static string cableResults = string.Empty;
         private static FormApp INSTANCE = null;
+        public bool stopAction { get; set; }
         public FormApp()
         {
             InitializeComponent();
@@ -58,6 +60,8 @@ namespace FlexRFCableTester
                     pictureName = MyIni.Read("Picture", comboBoxCableSettings.Text);
 
                 pictureBoxImg.Image = Image.FromFile(@"img\" + pictureName + ".jpg");
+
+                getFrequencyFromFile();
             }
             catch
             {
@@ -69,16 +73,23 @@ namespace FlexRFCableTester
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
         }
-        private void getFrequencyFromFile()
+        public void getFrequencyFromFile()
         {
             logger = new Logger();
             try
             {
                 var MyIni = new IniFile("Settings.ini");
-                if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+
+                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                    textBoxStartFrequency.Text = (MyIni.Read("StartFrequency", comboBoxCableSettings.Text));
+
+                else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
 
-                if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                    textBoxStopFrequency.Text = (MyIni.Read("StopFrequency", comboBoxCableSettings.Text));
+
+                else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
@@ -151,6 +162,9 @@ namespace FlexRFCableTester
         private void writeValuesToIniFile()
         {
             var MyIni = new IniFile("Settings.ini");
+
+            //if (textBoxStartFrequency != )
+
             if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                 MyIni.Write("StartFrequency", textBoxStartFrequency.Text, "ZeroCalFrequency");
 
@@ -167,9 +181,35 @@ namespace FlexRFCableTester
                 MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
         }
 
+        public void setButtonToStart()
+        {
+            buttonStart.Text = "Start";
+            buttonStart.BackColor = Color.Green;
+            labelStatusRFTester.Text = "";
+        }
+
+        public void setButtonToStop()
+        {
+            buttonStart.Text = "Stop";
+            buttonStart.BackColor = Color.Yellow;
+        }
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            startProcess();
+            if (buttonStart.Text.Contains("Start"))
+            {
+                setButtonToStop();
+                startProcess();
+                writeValuesToIniFile();
+                stopAction = false;
+            }
+            else
+            {
+                setButtonToStart();
+                stopAction = true;
+            }
+
+
         }
         private void startProcess()
         {
@@ -188,39 +228,98 @@ namespace FlexRFCableTester
 
             if (diffOfDates.TotalHours < 24)
             {
-                labelStatusRFTester.Text = "                            Iniciando a medição do cabo!!!";
                 StartProcess startP = new StartProcess();
                 startP.Show();
                 Application.DoEvents();
-                while (StartProcess.cableResults != "Finished" && StartProcess.cableResults == string.Empty)
+                int contador = 0;
+                labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
+                do
                 {
-                    Thread.Sleep(1000);
+                    startP.Focus();
                     Application.DoEvents();
+                    Thread.Sleep(500);
+                    if (contador++ > 10)
+                    {
+                        contador = 0;
+                        labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
+                    }
+                    labelStatusRFTester.Text += ".";
                 }
-                if (StartProcess.cableResults == "Finished")
+                while (startP.startStatus == -999);
+
+                if (startP.startStatus == -2)
                 {
-                    logger.logMessage("Aferição do cabo realizada com sucesso!!!");
-                    startP.Close();
+                    setButtonToStart();
+                    return;
+                }
+
+                if (startP.startStatus == 0)
+                {
+                    labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                    zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                    try
+                    {
+                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                        bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+
+                        if (status)
+                        {
+                            cableResults = "Finished";
+                            logger.logMessage("Cable DBLoss measure Finished Successfully");
+                            labelStatusRFTester.Text = "                          Medição Finalizada!!!";
+                            buttonStart.Text = "Start";
+                            buttonStart.BackColor = Color.Green;
+                            Application.DoEvents();
+                        }
+                        else
+                        {
+                            cableResults = "Failed";
+                            logger.logMessage("Cable DBLoss  measure Failed!!!");
+                            MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                            labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                            buttonStart.Text = "Start";
+                            buttonStart.BackColor = Color.Green;
+                            Application.DoEvents();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
+                    }
+
+                    while (cableResults != "Finished" && cableResults == string.Empty)
+                    {
+                        Thread.Sleep(1000);
+                        Application.DoEvents();
+                    }
+                    if (cableResults == "Finished")
+                    {
+                        logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                        startP.Close();
+                    }
+                    else
+                    {
+                        logger.logMessage("Aferição do cabo Falhou!!!");
+                        MessageBox.Show("Aferição do cabo Falhou!!!");
+                        startP.Close();
+                    }
+                    cableResults = string.Empty;
                 }
                 else
                 {
-                    logger.logMessage("Aferição do cabo Falhou!!!");
-                    MessageBox.Show("Aferição do cabo Falhou!!!");
-                    startP.Close();
+                    message = "Error: Realize o Zero Cal antes de começar!!!";
+                    logger.logMessage(message);
+                    MessageBox.Show(message);
+                    buttonStart.Text = "Start";
+                    buttonStart.BackColor = Color.Green;
                 }
             }
-            else
-            {
-                message = "Error: Realize o Zero Cal antes de começar!!!";
-                logger.logMessage(message);
-                MessageBox.Show(message);
-            }
-
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
             logger = new Logger();
-            logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CalFactory:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
+            logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CableLoss:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
             try
             {
                 dataGridViewMeasureTable.Rows.Add();

@@ -32,14 +32,15 @@
             this.labelStartProcess = new System.Windows.Forms.Label();
             this.labelCalStatusStartProcess = new System.Windows.Forms.Label();
             this.pictureBoxStartProcess = new System.Windows.Forms.PictureBox();
+            this.buttonAbort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStartProcess)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonStartProcess
             // 
-            this.buttonStartProcess.BackColor = System.Drawing.Color.White;
+            this.buttonStartProcess.BackColor = System.Drawing.Color.Green;
             this.buttonStartProcess.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonStartProcess.Location = new System.Drawing.Point(400, 530);
+            this.buttonStartProcess.Location = new System.Drawing.Point(471, 526);
             this.buttonStartProcess.Name = "buttonStartProcess";
             this.buttonStartProcess.Size = new System.Drawing.Size(80, 30);
             this.buttonStartProcess.TabIndex = 0;
@@ -52,7 +53,7 @@
             this.labelStartProcess.AutoSize = true;
             this.labelStartProcess.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartProcess.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelStartProcess.Location = new System.Drawing.Point(23, 18);
+            this.labelStartProcess.Location = new System.Drawing.Point(46, 23);
             this.labelStartProcess.Name = "labelStartProcess";
             this.labelStartProcess.Size = new System.Drawing.Size(774, 40);
             this.labelStartProcess.TabIndex = 1;
@@ -78,16 +79,33 @@
             this.pictureBoxStartProcess.TabIndex = 4;
             this.pictureBoxStartProcess.TabStop = false;
             // 
+            // buttonAbort
+            // 
+            this.buttonAbort.BackColor = System.Drawing.Color.Red;
+            this.buttonAbort.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonAbort.Location = new System.Drawing.Point(326, 526);
+            this.buttonAbort.Name = "buttonAbort";
+            this.buttonAbort.Size = new System.Drawing.Size(80, 30);
+            this.buttonAbort.TabIndex = 5;
+            this.buttonAbort.Text = "Abort";
+            this.buttonAbort.UseVisualStyleBackColor = false;
+            this.buttonAbort.Click += new System.EventHandler(this.buttonAbort_Click);
+            // 
             // StartProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 570);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.pictureBoxStartProcess);
             this.Controls.Add(this.labelCalStatusStartProcess);
             this.Controls.Add(this.labelStartProcess);
             this.Controls.Add(this.buttonStartProcess);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StartProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start Process";
@@ -103,5 +121,6 @@
         private System.Windows.Forms.Label labelStartProcess;
         private System.Windows.Forms.Label labelCalStatusStartProcess;
         private System.Windows.Forms.PictureBox pictureBoxStartProcess;
+        private System.Windows.Forms.Button buttonAbort;
     }
 }

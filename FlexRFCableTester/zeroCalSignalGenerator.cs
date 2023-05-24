@@ -25,12 +25,15 @@ namespace FlexRFCableTester
         string response = string.Empty;
         string message = string.Empty;
         string maxFrequency = string.Empty;
+        string frequencyOfCableLossFromSettings = string.Empty;
         double result = 0.0;
         double measure = 0.0;
         double calFactory = 0.0;
         double firstMeasure = 0.0;
         double lossMeasure = 0.0;
         double parcialResult = 0.0;
+        double cableLossHighSpec = 0.0;
+        double cableLossLowSpec = 0.0;
         int count = 0;
         int countRecovery = 0;
         int countResults = 0;
@@ -63,6 +66,7 @@ namespace FlexRFCableTester
             double zeroCalLoss = 0.0;
             double cableLoss = 0.0;
             double lossFromIniFile = 0.0;
+            double deltaSpecFromFile = 0.5;
             startFreq = frmMain.textBoxStartFrequency.Text;
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
@@ -105,187 +109,213 @@ namespace FlexRFCableTester
 
                     if (maxFreqSg < Convert.ToDouble(stopFreq))
                     {
-                        message = "Frequência Máxima permitida nesse equipamento: " + maxFrequency + " - Insira o valor de Final Frequency correto!!!";
-                        MessageBox.Show(message);
+                        message = "FREQUÊNCIA MÁXIMA permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz";
+                        MessageBox.Show(message, "Final Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        frmMain.textBoxStopFrequency.Text = Convert.ToString(maxFreqSg);
                         logger.logMessage(message);
                     }
-                    else
+                    if (maxFreqSg < 6000)
                     {
-                        if (maxFreqSg < 6000)
+                        message = "FREQUÊNCIA MÁXIMA permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz !!!";
+                        frmMain.labelWarning.Text = message;
+                        logger.logMessage(message);
+                        frmMain.textBoxStopFrequency.Text = Convert.ToString(maxFreqSg);
+                    }
+                    stopFreq = frmMain.textBoxStopFrequency.Text;
+
+                    equipmentSignalGen.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
+                    equipmentPowerMeter.writeCommand("*RST;*OPC?", visaPowerMeter);
+
+                    response = equipmentPowerMeter.readCommand(visaPowerMeter);
+                    if (!response.Contains("+1"))
+                        return false;
+
+                    equipmentPowerMeter.writeCommand("DET:FUNC AVER;*OPC?", visaPowerMeter);
+                    response = equipmentPowerMeter.readCommand(visaPowerMeter);
+                    if (!response.Contains("+1"))
+                        return false;
+
+                    equipmentSignalGen.writeCommand("AVER OFF", visaPowerMeter);
+                    equipmentSignalGen.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
+                    response = equipmentSignalGen.readCommand(visaSigGen);
+                    if (Convert.ToInt32(response) != 1)
+                        return false;
+
+                    bool status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
+                    if (!status)
+                        return false;
+
+                    labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + frmMain.textBoxStartFrequency.Text + " MHz";
+                    Application.DoEvents();
+
+                    equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
+                    response = equipmentSignalGen.readCommand(visaSigGen);
+                    if (Convert.ToInt32(response) != 1)
+                        return false;
+
+                    equipmentSignalGen.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
+                    response = equipmentSignalGen.readCommand(visaSigGen);
+                    if (Convert.ToInt32(response) != 1)
+                        return false;
+
+                    equipmentSignalGen.writeCommand("*ESR?", visaSigGen);
+                    response = equipmentSignalGen.readCommand(visaSigGen);
+                    if (!response.Contains("+0"))
+                        return false;
+
+                    while (result <= Convert.ToDouble(stopFreq) && status == true && frmMain.stopAction == false)
+                    {
+                        equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
+                        do
                         {
-                            message = "MÁXIMA FREQ PERMITIDA PELO EQUIPAMENTO 3GHz!!!";
-                            frmMain.labelWarning.Text = message;
-                            logger.logMessage(message);
-                            frmMain.textBoxStopFrequency.Text = "3000";
-                        }
+                            logTimer.Start();
+                            startProcessWatch.Start();
 
-                        equipmentSignalGen.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
-                        equipmentPowerMeter.writeCommand("*RST;*OPC?", visaPowerMeter);
+                            equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
+                            equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
+                            measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
 
-                        response = equipmentPowerMeter.readCommand(visaPowerMeter);
-                        if (!response.Contains("+1"))
-                            return false;
+                            if (count == 0)
+                                firstMeasure = measure;
 
-                        equipmentPowerMeter.writeCommand("DET:FUNC AVER;*OPC?", visaPowerMeter);
-                        response = equipmentPowerMeter.readCommand(visaPowerMeter);
-                        if (!response.Contains("+1"))
-                            return false;
-
-                        equipmentSignalGen.writeCommand("AVER OFF", visaPowerMeter);
-                        equipmentSignalGen.writeCommand(":FREQuency:MODE CW;*OPC?", visaSigGen);
-                        response = equipmentSignalGen.readCommand(visaSigGen);
-                        if (Convert.ToInt32(response) != 1)
-                            return false;
-
-                        bool status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
-                        if (!status)
-                            return false;
-
-                        labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + frmMain.textBoxStartFrequency.Text + " MHz";
-                        Application.DoEvents();
-
-                        equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
-                        response = equipmentSignalGen.readCommand(visaSigGen);
-                        if (Convert.ToInt32(response) != 1)
-                            return false;
-
-                        equipmentSignalGen.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
-                        response = equipmentSignalGen.readCommand(visaSigGen);
-                        if (Convert.ToInt32(response) != 1)
-                            return false;
-
-                        equipmentSignalGen.writeCommand("*ESR?", visaSigGen);
-                        response = equipmentSignalGen.readCommand(visaSigGen);
-                        if (!response.Contains("+0"))
-                            return false;
-
-                        while (result <= Convert.ToDouble(stopFreq) && status == true)
-                        {
-                            equipmentPowerMeter.writeCommand("FREQ " + frmMain.textBoxStartFrequency.Text + "MHz", visaPowerMeter);
-                            do
+                            lossMeasure = firstMeasure - measure;
+                            if (lossMeasure > Convert.ToDouble(stabilityCriteria))
                             {
-
-                                logTimer.Start();
-                                startProcessWatch.Start();
-
-                                equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
-                                equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
-                                measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
-
-                                if (count == 0)
-                                    firstMeasure = measure;
-
-                                lossMeasure = firstMeasure - measure;
-                                if (lossMeasure > Convert.ToDouble(stabilityCriteria))
-                                {
-                                    passFail = "Fail";
-                                    count = 0;
-                                    countRecovery++;
-                                }
-                                else
-                                {
-                                    passFail = "Pass";
-                                    parcialResult = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                    values[count] = parcialResult;
-                                }
-
-                                count++;
-                                logTimer.Stop();
-                                calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
-                                if (mode == "zeroCal")
-                                    frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
-                                countResults++;
-                                logTimer.Reset();
+                                passFail = "Fail";
+                                count = 0;
+                                countRecovery++;
                             }
-                            while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
-                            foreach (double x in values)
+                            else
                             {
-                                sum += x;
+                                passFail = "Pass";
+                                parcialResult = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
+                                values[count] = parcialResult;
                             }
-                            dbAverage = sum / values.Length;
 
+                            count++;
+                            logTimer.Stop();
+                            calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
                             if (mode == "zeroCal")
-                                frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
+                                frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                            countResults++;
+                            logTimer.Reset();
+                        }
+                        while (count < Convert.ToInt32(frmMain.textBoxAverage.Text) && countRecovery < Convert.ToInt32(frmMain.textBoxAverage.Text));
+                        foreach (double x in values)
+                        {
+                            sum += x;
+                        }
+                        dbAverage = sum / values.Length;
 
-                            if (mode == "startMeasure")
-                            {
-                                if (calFactoryValuesIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
-                                    zeroCalLoss = Convert.ToDouble(calFactoryValuesIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
+                        if (mode == "zeroCal")
+                            frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
 
-                                cableLoss = dbAverage - zeroCalLoss;
+                        if (mode == "startMeasure")
+                        {
+                            if (calFactoryValuesIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
+                                zeroCalLoss = Convert.ToDouble(calFactoryValuesIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
 
-                                if(Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000)
+
+                            if (MyIni.KeyExists("DeltaSpec", frmMain.comboBoxCableSettings.Text))
+                                deltaSpecFromFile = Convert.ToDouble(MyIni.Read("DeltaSpec", frmMain.comboBoxCableSettings.Text));
+
+
+                            cableLoss = (dbAverage - zeroCalLoss);
+
+
+                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 500)
                                 {
+                                    if (MyIni.KeyExists("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text))
+                                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss0.5GHz";
+                                }
+                                else if ((Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 500) && (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000))
+                                {                                   
                                     if (MyIni.KeyExists("CableLoss1GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss1GHz";
                                 }
-
-                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
                                 {
                                     if (MyIni.KeyExists("CableLoss2GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss2GHz";
                                 }
-
-                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
                                 {
                                     if (MyIni.KeyExists("CableLoss3GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss3GHz";
                                 }
-
-                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
                                 {
                                     if (MyIni.KeyExists("CableLoss4GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss4GHz";
                                 }
-
-                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
                                 {
                                     if (MyIni.KeyExists("CableLoss5GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss5GHz";
                                 }
-
-                                if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
+                                else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
                                 {
                                     if (MyIni.KeyExists("CableLoss6GHz", frmMain.comboBoxCableSettings.Text))
                                         lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmMain.comboBoxCableSettings.Text));
+                                    else
+                                        frequencyOfCableLossFromSettings = "CableLoss6GHz";
+                                }
+                                if (frequencyOfCableLossFromSettings != string.Empty)
+                                {
+                                    MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    frmMain.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
+                                    return false;
                                 }
 
+                                cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
+                                cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
+                                if (cableLossLowSpec < 0)
+                                    cableLossLowSpec = 0.0;
+                            
 
-                                if (MyIni.KeyExists("CableLoss", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss", frmMain.comboBoxCableSettings.Text));
 
-                                if (lossFromIniFile < cableLoss)
-                                    passFail = "Fail";
-                                startProcessWatch.Stop();
-                                frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "0", lossFromIniFile.ToString(), cableLoss.ToString("F2"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
-                                countStart++;
-                                startProcessWatch.Reset();
-                            }
-
-                            sum = 0;
-                            dbAverage = 0;
-                            count = 0;
-                            countRecovery = 0;
-
-                            result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
-                            if (result < Convert.ToDouble(stopFreq))
-                                status = writeFreqCMDSignalGen(result.ToString());
-
-                            frmMain.textBoxStartFrequency.Text = result.ToString();
-                            labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
-                            Application.DoEvents();
+                            if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))
+                                passFail = "Fail";
+                            startProcessWatch.Stop();
+                            frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), cableLossLowSpec.ToString(), cableLossHighSpec.ToString(), cableLoss.ToString("F4"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
+                            countStart++;
+                            startProcessWatch.Reset();
                         }
-                        if (status)
-                        {
-                            labelCalStatusSg.Text = "Processo de Zero Cal do Signal Generator realizado com sucesso!!!";
-                            if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                                frmMain.textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-                            Application.DoEvents();
-                            Thread.Sleep(3000);
-                        }
-                        if (!status)
-                            return false;
+
+                        sum = 0;
+                        dbAverage = 0;
+                        count = 0;
+                        countRecovery = 0;
+
+                        result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
+                        if (result < Convert.ToDouble(stopFreq))
+                            status = writeFreqCMDSignalGen(result.ToString());
+
+                        frmMain.textBoxStartFrequency.Text = result.ToString();
+                        labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + result.ToString() + " MHz";
+                        Application.DoEvents();
                     }
+                    if (status)
+                    {
+                        labelCalStatusSg.Text = "Processo de Zero Cal do Signal Generator realizado com sucesso!!!";
+                        frmMain.getFrequencyFromFile();
+                        Application.DoEvents();
+                        Thread.Sleep(3000);
+                    }
+                    if (!status)
+                        return false;
                 }
             }
             catch (Exception ex)
