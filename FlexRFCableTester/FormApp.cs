@@ -73,7 +73,7 @@ namespace FlexRFCableTester
             var MyIni = new IniFile("calFactoryValues.ini");
             MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
         }
-        private void getFrequencyFromFile()
+        public void getFrequencyFromFile()
         {
             logger = new Logger();
             try
@@ -162,6 +162,9 @@ namespace FlexRFCableTester
         private void writeValuesToIniFile()
         {
             var MyIni = new IniFile("Settings.ini");
+
+            //if (textBoxStartFrequency != )
+
             if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                 MyIni.Write("StartFrequency", textBoxStartFrequency.Text, "ZeroCalFrequency");
 
@@ -178,20 +181,31 @@ namespace FlexRFCableTester
                 MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
         }
 
+        public void setButtonToStart()
+        {
+            buttonStart.Text = "Start";
+            buttonStart.BackColor = Color.Green;
+            labelStatusRFTester.Text = "";
+        }
+
+        public void setButtonToStop()
+        {
+            buttonStart.Text = "Stop";
+            buttonStart.BackColor = Color.Yellow;
+        }
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (buttonStart.Text.Contains("Start"))
             {
-                buttonStart.Text = "Stop";
-                buttonStart.BackColor = Color.Yellow;
+                setButtonToStop();
                 startProcess();
                 writeValuesToIniFile();
                 stopAction = false;
             }
             else
             {
-                buttonStart.Text = "Start";
-                buttonStart.BackColor = Color.Green;
+                setButtonToStart();
                 stopAction = true;
             }
 
@@ -231,66 +245,75 @@ namespace FlexRFCableTester
                     }
                     labelStatusRFTester.Text += ".";
                 }
-                while (startP.startStatus == false);
+                while (startP.startStatus == -999);
 
-                labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
-                try
+                if (startP.startStatus == -2)
                 {
-                    visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                    labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                    bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+                    setButtonToStart();
+                    return;
+                }
 
-                    if (status)
+                if (startP.startStatus == 0)
+                {
+                    labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                    zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                    try
                     {
-                        cableResults = "Finished";
-                        logger.logMessage("Cable DBLoss measure Finished Successfully");
-                        labelStatusRFTester.Text = "                          Medição Finalizada!!!";
-                        buttonStart.Text = "Start";
-                        buttonStart.BackColor = Color.Green;
+                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                        bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+
+                        if (status)
+                        {
+                            cableResults = "Finished";
+                            logger.logMessage("Cable DBLoss measure Finished Successfully");
+                            labelStatusRFTester.Text = "                          Medição Finalizada!!!";
+                            buttonStart.Text = "Start";
+                            buttonStart.BackColor = Color.Green;
+                            Application.DoEvents();
+                        }
+                        else
+                        {
+                            cableResults = "Failed";
+                            logger.logMessage("Cable DBLoss  measure Failed!!!");
+                            MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                            labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                            buttonStart.Text = "Start";
+                            buttonStart.BackColor = Color.Green;
+                            Application.DoEvents();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
+                    }
+
+                    while (cableResults != "Finished" && cableResults == string.Empty)
+                    {
+                        Thread.Sleep(1000);
                         Application.DoEvents();
+                    }
+                    if (cableResults == "Finished")
+                    {
+                        logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                        startP.Close();
                     }
                     else
                     {
-                        cableResults = "Failed";
-                        logger.logMessage("Cable DBLoss  measure Failed!!!");
-                        MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                        labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
-                        buttonStart.Text = "Start";
-                        buttonStart.BackColor = Color.Green;
-                        Application.DoEvents();
+                        logger.logMessage("Aferição do cabo Falhou!!!");
+                        MessageBox.Show("Aferição do cabo Falhou!!!");
+                        startP.Close();
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
-                }
-
-                while (cableResults != "Finished" && cableResults == string.Empty)
-                {
-                    Thread.Sleep(1000);
-                    Application.DoEvents();
-                }
-                if (cableResults == "Finished")
-                {
-                    logger.logMessage("Aferição do cabo realizada com sucesso!!!");
-                    startP.Close();
+                    cableResults = string.Empty;
                 }
                 else
                 {
-                    logger.logMessage("Aferição do cabo Falhou!!!");
-                    MessageBox.Show("Aferição do cabo Falhou!!!");
-                    startP.Close();
+                    message = "Error: Realize o Zero Cal antes de começar!!!";
+                    logger.logMessage(message);
+                    MessageBox.Show(message);
+                    buttonStart.Text = "Start";
+                    buttonStart.BackColor = Color.Green;
                 }
-                cableResults = string.Empty;
-            }
-            else
-            {
-                message = "Error: Realize o Zero Cal antes de começar!!!";
-                logger.logMessage(message);
-                MessageBox.Show(message);
-                buttonStart.Text = "Start";
-                buttonStart.BackColor = Color.Green;
             }
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)

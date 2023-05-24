@@ -10,20 +10,18 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaSignalGen;
         FormApp frmMain = FormApp.getInstance();
-        public bool startStatus { get; set; }
+        public int startStatus = -999;
 
         public StartProcess()
         {
             InitializeComponent();
-            startStatus = false;
         }
 
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
-            buttonStartProcess.BackColor = Color.Green;
             buttonStartProcess.Enabled = false;
             labelCalStatusStartProcess.Text = "          Iniciando a medição do cabo!!!";
-            startStatus = true;
+            startStatus = 0;
             Application.DoEvents();
             frmMain.dataGridViewMeasureTable.Rows.Clear();
             frmMain.dataGridViewMeasureTable.Refresh();
@@ -33,5 +31,12 @@ namespace FlexRFCableTester
             this.Close();         
         }
 
+        private void buttonAbort_Click(object sender, EventArgs e)
+        {
+            buttonStartProcess.Enabled = false;
+            startStatus = -2;
+            this.Close();
+            Application.DoEvents();
+        }
     }
 }
