@@ -87,22 +87,11 @@ namespace FlexRFCableTester
                     {
                         textBoxStartFrequency.Text = startFrequency;
                     }
-                    else
-                    if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                    else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                         textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
                 }
-
-                //if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text ))                 
-                //    textBoxStartFrequency.Text = (MyIni.Read("StartFrequency", comboBoxCableSettings.Text));
-
-
-                else
-                    if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-
-                //if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
-                //    textBoxStopFrequency.Text = (MyIni.Read("StopFrequency", comboBoxCableSettings.Text));
-
 
                 if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
                 {
@@ -111,13 +100,10 @@ namespace FlexRFCableTester
                     {
                         textBoxStopFrequency.Text = stopFrequency;
                     }
-                    else
-                    if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                    else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                         textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
                 }
-
-                else
-                    if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
