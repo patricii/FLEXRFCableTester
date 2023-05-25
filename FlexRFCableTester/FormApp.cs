@@ -81,15 +81,43 @@ namespace FlexRFCableTester
                 var MyIni = new IniFile("Settings.ini");
 
                 if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                    textBoxStartFrequency.Text = (MyIni.Read("StartFrequency", comboBoxCableSettings.Text));
+                {
+                    string startFrequency = MyIni.Read("StartFrequency", comboBoxCableSettings.Text);
+                    if (!string.IsNullOrEmpty(startFrequency) && startFrequency != "0")
+                    {
+                        textBoxStartFrequency.Text = startFrequency;
+                    }
+                    else
+                    if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                        textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
+                }
 
-                else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                //if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text ))                 
+                //    textBoxStartFrequency.Text = (MyIni.Read("StartFrequency", comboBoxCableSettings.Text));
+
+
+                else
+                    if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
 
-                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
-                    textBoxStopFrequency.Text = (MyIni.Read("StopFrequency", comboBoxCableSettings.Text));
+                //if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                //    textBoxStopFrequency.Text = (MyIni.Read("StopFrequency", comboBoxCableSettings.Text));
 
-                else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+
+                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                {
+                    string stopFrequency = MyIni.Read("StopFrequency", comboBoxCableSettings.Text);
+                    if (!string.IsNullOrEmpty(stopFrequency) && stopFrequency != "0")
+                    {
+                        textBoxStopFrequency.Text = stopFrequency;
+                    }
+                    else
+                    if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                        textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
+                }
+
+                else
+                    if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
@@ -161,15 +189,27 @@ namespace FlexRFCableTester
         }
         private void writeValuesToIniFile()
         {
+            double startFreqDefault = 0.0;
+            double stopFreqDefault = 0.0;
             var MyIni = new IniFile("Settings.ini");
 
-            //if (textBoxStartFrequency != )
-
             if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                MyIni.Write("StartFrequency", textBoxStartFrequency.Text, "ZeroCalFrequency");
+                startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
+
+            if (Convert.ToDouble(textBoxStartFrequency.Text) != startFreqDefault)
+                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                    MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
+                else
+                    MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
 
             if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                MyIni.Write("StopFrequency", textBoxStopFrequency.Text, "ZeroCalFrequency");
+                stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
+
+            if (Convert.ToDouble(textBoxStopFrequency.Text) != stopFreqDefault)
+                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                    MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
+                else
+                    MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
 
             if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
                 MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
@@ -193,14 +233,15 @@ namespace FlexRFCableTester
             buttonStart.Text = "Stop";
             buttonStart.BackColor = Color.Yellow;
         }
+  
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (buttonStart.Text.Contains("Start"))
             {
                 setButtonToStop();
-                startProcess();
                 writeValuesToIniFile();
+                startProcess();
                 stopAction = false;
             }
             else
@@ -208,8 +249,6 @@ namespace FlexRFCableTester
                 setButtonToStart();
                 stopAction = true;
             }
-
-
         }
         private void startProcess()
         {

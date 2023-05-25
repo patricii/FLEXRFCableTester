@@ -3850,3 +3850,35 @@
 
 6-> Freq:1100MHz  dBm:10  Reading:2.5407dB  LowLimit:6.43  HighLimit:7.43  CableLoss:6.4595  Result:Pass  TestTime:3294ms
 
+0-> Freq:200MHz  dBm:10  Reading:2.3684dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2162  Result:Fail  TestTime:3261ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8100dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6511  Result:Fail  TestTime:3291ms
+
+2-> Freq:400MHz  dBm:10  Reading:3.1328dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.2774  Result:Fail  TestTime:3294ms
+
+3-> Freq:500MHz  dBm:10  Reading:2.8660dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.4648  Result:Fail  TestTime:9728ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3704dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2142  Result:Fail  TestTime:3340ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3714dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2132  Result:Fail  TestTime:3289ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8136dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6475  Result:Fail  TestTime:3325ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3722dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2125  Result:Fail  TestTime:3300ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8134dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6470  Result:Fail  TestTime:3323ms
+
+2-> Freq:400MHz  dBm:10  Reading:3.1370dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.2731  Result:Fail  TestTime:3332ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3723dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2121  Result:Fail  TestTime:3305ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8139dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6469  Result:Fail  TestTime:3289ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3726dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2119  Result:Fail  TestTime:3326ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8141dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6469  Result:Fail  TestTime:3300ms
+
+0-> Freq:200MHz  dBm:10  Reading:2.3726dB  LowLimit:0  HighLimit:0.8789  CableLoss:7.2119  Result:Fail  TestTime:3323ms
+
+1-> Freq:300MHz  dBm:10  Reading:2.8142dB  LowLimit:0  HighLimit:0.8789  CableLoss:6.6470  Result:Fail  TestTime:3319ms
+
