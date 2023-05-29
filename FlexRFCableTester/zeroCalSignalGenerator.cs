@@ -17,6 +17,10 @@ namespace FlexRFCableTester
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
 
+        int count = 0;
+        int countRecovery = 0;
+        int countResults = 0;
+        int countStart = 0;
         string startFreq = string.Empty;
         string stopFreq = string.Empty;
         string interval = string.Empty;
@@ -26,6 +30,8 @@ namespace FlexRFCableTester
         string message = string.Empty;
         string maxFrequency = string.Empty;
         string frequencyOfCableLossFromSettings = string.Empty;
+        string passFail = "Pass";
+        string stabilityCriteria = string.Empty;
         double result = 0.0;
         double measure = 0.0;
         double calFactory = 0.0;
@@ -34,12 +40,12 @@ namespace FlexRFCableTester
         double parcialResult = 0.0;
         double cableLossHighSpec = 0.0;
         double cableLossLowSpec = 0.0;
-        int count = 0;
-        int countRecovery = 0;
-        int countResults = 0;
-        int countStart = 0;
-        string passFail = "Pass";
-        string stabilityCriteria = string.Empty;
+        double zeroCalLoss = 0.0;
+        double cableLoss = 0.0;
+        double lossFromIniFile = 0.0;
+        double deltaSpecFromFile = 0.5;
+        double sum = 0.0;
+        double dbAverage = 0.0;
 
         public zeroCalSignalGenerator()
         {
@@ -63,18 +69,12 @@ namespace FlexRFCableTester
         }
         public bool zeroCalSignalGenMtd(MessageBasedSession visaSigGen, string mode)
         {
-            double zeroCalLoss = 0.0;
-            double cableLoss = 0.0;
-            double lossFromIniFile = 0.0;
-            double deltaSpecFromFile = 0.5;
             startFreq = frmMain.textBoxStartFrequency.Text;
             stopFreq = frmMain.textBoxStopFrequency.Text;
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
             average = frmMain.textBoxAverage.Text;
             double[] values = new double[Convert.ToInt32(average)];
-            double sum = 0.0;
-            double dbAverage = 0.0;
             Stopwatch logTimer = new Stopwatch();
             Stopwatch startProcessWatch = new Stopwatch();
             if (mode == "zeroCal")
@@ -214,7 +214,6 @@ namespace FlexRFCableTester
                         {
                             if (calFactoryValuesIni.KeyExists(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"))
                                 zeroCalLoss = Convert.ToDouble(calFactoryValuesIni.Read(frmMain.textBoxStartFrequency.Text, "dbLossZeroCalFrequency"));
-
 
                             if (MyIni.KeyExists("DeltaSpec", frmMain.comboBoxCableSettings.Text))
                                 deltaSpecFromFile = Convert.ToDouble(MyIni.Read("DeltaSpec", frmMain.comboBoxCableSettings.Text));

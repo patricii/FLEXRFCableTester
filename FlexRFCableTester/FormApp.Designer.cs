@@ -344,7 +344,7 @@
             // 
             this.labelPowerLevel.AutoSize = true;
             this.labelPowerLevel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.labelPowerLevel.Location = new System.Drawing.Point(132, 245);
+            this.labelPowerLevel.Location = new System.Drawing.Point(134, 245);
             this.labelPowerLevel.Name = "labelPowerLevel";
             this.labelPowerLevel.Size = new System.Drawing.Size(58, 30);
             this.labelPowerLevel.TabIndex = 16;
@@ -398,7 +398,7 @@
             // 
             // textBoxDbm
             // 
-            this.textBoxDbm.Location = new System.Drawing.Point(6, 246);
+            this.textBoxDbm.Location = new System.Drawing.Point(8, 246);
             this.textBoxDbm.Name = "textBoxDbm";
             this.textBoxDbm.Size = new System.Drawing.Size(120, 29);
             this.textBoxDbm.TabIndex = 10;
@@ -451,7 +451,7 @@
             // labelDbm
             // 
             this.labelDbm.AutoSize = true;
-            this.labelDbm.Location = new System.Drawing.Point(6, 222);
+            this.labelDbm.Location = new System.Drawing.Point(8, 222);
             this.labelDbm.Name = "labelDbm";
             this.labelDbm.Size = new System.Drawing.Size(96, 21);
             this.labelDbm.TabIndex = 3;
