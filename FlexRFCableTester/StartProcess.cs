@@ -1,7 +1,5 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
-using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -16,7 +14,6 @@ namespace FlexRFCableTester
         {
             InitializeComponent();
         }
-
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
             buttonStartProcess.Enabled = false;
@@ -28,14 +25,14 @@ namespace FlexRFCableTester
             Application.DoEvents();
 
             Logger logger = new Logger();
-            this.Close();         
+            Close();
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
             buttonStartProcess.Enabled = false;
             startStatus = -2;
-            this.Close();
+            Close();
             Application.DoEvents();
         }
     }
