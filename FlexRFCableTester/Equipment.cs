@@ -1,6 +1,7 @@
 ﻿using Ivi.Visa.Interop;
 using NationalInstruments.VisaNS;
 using System;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -13,14 +14,63 @@ namespace FlexRFCableTester
         public string address { get; set; } //GPIB
         public string equipAlias { get; set; } //LAN
 
+        public string snPowerMeter = string.Empty;
+        public int statusModelPm = -999;
+        public string snSignalGen = string.Empty;
+        public int statusModelSg = -999;
+        public int statusReturnModelPm = -999;
+        public int statusReturnModelSg = -999;
+
+
         string message = string.Empty;
 
         public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
 
         Logger logger = new Logger();
 
+        FormApp frmMain = new FormApp();
 
         public Equipments() { }
+
+        public void verifyModelPm()
+        {
+            try
+            {
+                writeCommand("*IDN?", equipmentName);
+                string[] idnPowerMeter = readCommand(equipmentName).Split(',');
+                snPowerMeter = idnPowerMeter[1];
+
+                if (snPowerMeter.Contains("E4416A"))
+                    statusReturnModelPm = 0;
+
+                else
+                    statusReturnModelPm = -1;
+            }
+            catch
+            {
+                statusReturnModelPm = -2;
+            }
+        }
+
+        public void verifyModelSg()
+        {
+            try
+            {
+                writeCommand("*IDN?", equipmentName);
+                string[] idnSignalGen = readCommand(equipmentName).Split(',');
+                snSignalGen = idnSignalGen[1];
+
+                if (snSignalGen.Contains("E4438C"))
+                    statusReturnModelSg = 0;
+
+                else
+                    statusReturnModelSg = -1;
+            }
+            catch
+            {
+                statusReturnModelSg = -1;
+            }
+        }
 
         public Equipments(MessageBasedSession equipmentName, FormattedIO488 ioTestSet, string address, string equipAlias, Ivi.Visa.Interop.ResourceManager resourceMng)
         {
@@ -40,19 +90,19 @@ namespace FlexRFCableTester
         {
             this.equipmentName = equipmentName;
             this.address = address;
-            
+
         }
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
-            logger.logMessage(mBS.ResourceName + " -> Write: " + cmd);
+            logger.logMessage(mBS.ResourceName + " " + frmMain.checkBoxSignalGen.Text + " - " + snSignalGen + " -> Write: " + cmd);
             Thread.Sleep(200);
         }
         public string readCommand(MessageBasedSession mBS)
         {
             Thread.Sleep(200);
             string resp = mBS.ReadString(); //read from instrument
-            logger.logMessage(mBS.ResourceName + " -> Read: " + resp);
+            logger.logMessage(mBS.ResourceName + " " + frmMain.checkBoxPowerM.Text + " - " + snPowerMeter + " -> Read: " + resp);
             return resp;
         }
         public void setZeroCalGPIB()
