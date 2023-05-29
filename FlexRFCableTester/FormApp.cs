@@ -18,6 +18,8 @@ namespace FlexRFCableTester
         public static string cableResults = string.Empty;
         private static FormApp INSTANCE = null;
         public bool stopAction { get; set; }
+
+
         public FormApp()
         {
             InitializeComponent();
@@ -122,54 +124,99 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
             }
         }
+
         private void zeroCalProcess()
         {
             logger = new Logger();
+            int zStatus = 0;
 
             try
             {
                 visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
-                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
-                Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
-
-                logger.logMessage("Starting ZeroCal process - Waiting response....");
-
-                if (checkBoxPowerM.Checked)
-                    equipmentvisaPowerMeter.setZeroCalGPIB();
-
-                if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
-                {
-                    labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
-                    Application.DoEvents();
-                    if (checkBoxSignalGen.Checked)
-                        equipmentvisavisaSignalGen.setZeroCalSGGPIB();
-                }
-                else
-                    MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
-
-                if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
-                    MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
-                else
-                {
-                    labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
-
-                    DateTime dateNow = DateTime.Now;
-                    var MyIni = new IniFile("calFactoryValues.ini");
-
-                    if (MyIni.KeyExists("Date", "zeroCalDate"))
-                        MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
-                }
             }
             catch
             {
-                message = "Erro ao comunicar com os Equipamentos selecionados!!!";
-                logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
+                zStatus = -1;
+            }
+            try
+            {
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
+                zStatus = -1;
+            }
+            if (zStatus == 0)
+            {
+                try
+                {
+                    Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+                    Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
+                    logger.logMessage("Starting ZeroCal process - Waiting response....");
+                    if (checkBoxPowerM.Checked)
+                    {
+                        equipmentvisaPowerMeter.verifyModelPm();
+                        if (equipmentvisaPowerMeter.statusReturnModelPm == 0)
+                        {
+                            textBoxAddressPowerM.BackColor = Color.Green;
+                            equipmentvisaPowerMeter.setZeroCalGPIB();
+                        }
+                        if (equipmentvisaPowerMeter.statusReturnModelPm == -1)
+                        {
+                            textBoxAddressPowerM.BackColor = Color.Red;
+                            MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
+                        }
+                    }
+                    if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
+                    {
+                        labelStatusRFTester.Text = "!!!Zero Cal do Power Meter realizado com sucesso!!!";
+                        Application.DoEvents();
+                        if (checkBoxSignalGen.Checked)
+                        {
+                            equipmentvisavisaSignalGen.verifyModelSg();
+                            if (equipmentvisavisaSignalGen.statusReturnModelSg == 0)
+                            {
+                                textBoxAddressSignalGen.BackColor = Color.Green;
+                                equipmentvisavisaSignalGen.setZeroCalSGGPIB();
+                            }
+                            if (equipmentvisavisaSignalGen.statusReturnModelSg == -1)
+                            {
+                                textBoxAddressSignalGen.BackColor = Color.Red;
+                                MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
+                            }
+                        }
+                    }
+                    else
+                        MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+
+                    if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
+                        MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
+                    else
+                    {
+                        labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
+
+                        DateTime dateNow = DateTime.Now;
+                        var MyIni = new IniFile("calFactoryValues.ini");
+
+                        if (MyIni.KeyExists("Date", "zeroCalDate"))
+                            MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
+                    }
+                }
+                catch
+                {
+                    message = "Comunicação perdida no meio do processo de Zero Cal!!!";
+                    logger.logMessage(message);
+                    MessageBox.Show(message);
+                }
             }
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
+            buttonZeroCal.BackColor = Color.Green;
+            buttonZeroCal.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
         }
@@ -219,7 +266,7 @@ namespace FlexRFCableTester
             buttonStart.Text = "Stop";
             buttonStart.BackColor = Color.Yellow;
         }
-  
+
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
@@ -280,56 +327,106 @@ namespace FlexRFCableTester
 
                 if (startP.startStatus == 0)
                 {
-                    labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                    int NStatus = 0;
                     zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
                     try
                     {
-                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                        bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
-
-                        if (status)
-                        {
-                            cableResults = "Finished";
-                            logger.logMessage("Cable DBLoss measure Finished Successfully");
-                            labelStatusRFTester.Text = "                          Medição Finalizada!!!";
-                            buttonStart.Text = "Start";
-                            buttonStart.BackColor = Color.Green;
-                            Application.DoEvents();
-                        }
-                        else
-                        {
-                            cableResults = "Failed";
-                            logger.logMessage("Cable DBLoss  measure Failed!!!");
-                            MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                            labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
-                            buttonStart.Text = "Start";
-                            buttonStart.BackColor = Color.Green;
-                            Application.DoEvents();
-                        }
+                        visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
                     }
                     catch
                     {
-                        MessageBox.Show("Não possivel conectar com os Equipamentos selecionados!");
+                        MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
+                        NStatus = -1;
                     }
+                    try
+                    {
+                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
+                        NStatus = -1;
+                    }
+                    if (NStatus == 0)
+                    {
+                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                        try
+                        {
+                            Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+                            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
 
-                    while (cableResults != "Finished" && cableResults == string.Empty)
-                    {
-                        Thread.Sleep(1000);
-                        Application.DoEvents();
-                    }
-                    if (cableResults == "Finished")
-                    {
-                        logger.logMessage("Aferição do cabo realizada com sucesso!!!");
-                        startP.Close();
+                            if (checkBoxPowerM.Checked)
+                            {
+                                equipmentvisaPowerMeter.verifyModelPm();
+                                if (equipmentvisaPowerMeter.statusReturnModelPm == 0)
+                                    textBoxAddressPowerM.BackColor = Color.Green;
+                                if (equipmentvisaPowerMeter.statusReturnModelPm == -1)
+                                {
+                                    textBoxAddressPowerM.BackColor = Color.Red;
+                                    MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
+                                }
+                            }
+                            if (checkBoxSignalGen.Checked)
+                            {
+                                equipmentvisavisaSignalGen.verifyModelSg();
+                                if (equipmentvisavisaSignalGen.statusReturnModelSg == 0)
+                                    textBoxAddressSignalGen.BackColor = Color.Green;
+                                if (equipmentvisavisaSignalGen.statusReturnModelSg == -1)
+                                {
+                                    textBoxAddressSignalGen.BackColor = Color.Red;
+                                    MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
+                                }
+                            }
+                            labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                            bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+
+                            if (status)
+                            {
+                                cableResults = "Finished";
+                                logger.logMessage("Cable DBLoss measure Finished Successfully");
+                                labelStatusRFTester.Text = "                          Medição Finalizada!!!";
+                                buttonStart.Text = "Start";
+                                buttonStart.BackColor = Color.Green;
+                                Application.DoEvents();
+                            }
+                            else
+                            {
+                                cableResults = "Failed";
+                                logger.logMessage("Cable DBLoss  measure Failed!!!");
+                                MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                                labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                                buttonStart.Text = "Start";
+                                buttonStart.BackColor = Color.Green;
+                                Application.DoEvents();
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
+                        }
+                        while (cableResults != "Finished" && cableResults == string.Empty)
+                        {
+                            Thread.Sleep(1000);
+                            Application.DoEvents();
+                        }
+                        if (cableResults == "Finished")
+                        {
+                            logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                            startP.Close();
+                        }
+                        else
+                        {
+                            logger.logMessage("Aferição do cabo Falhou!!!");
+                            MessageBox.Show("Aferição do cabo Falhou!!!");
+                            startP.Close();
+                        }
+                        cableResults = string.Empty;
                     }
                     else
                     {
-                        logger.logMessage("Aferição do cabo Falhou!!!");
-                        MessageBox.Show("Aferição do cabo Falhou!!!");
-                        startP.Close();
+                        setButtonToStart();
                     }
-                    cableResults = string.Empty;
+
                 }
                 else
                 {

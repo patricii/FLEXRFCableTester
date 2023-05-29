@@ -68,13 +68,6 @@
             this.labelCableModel = new System.Windows.Forms.Label();
             this.buttonZeroCal = new System.Windows.Forms.Button();
             this.dataGridViewMeasureTable = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
-            this.labelWarning = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +76,13 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBoxResponse = new System.Windows.Forms.TextBox();
+            this.labelWarning = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -229,6 +229,7 @@
             // 
             // textBoxAddressPowerM
             // 
+            this.textBoxAddressPowerM.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxAddressPowerM.Location = new System.Drawing.Point(169, 55);
             this.textBoxAddressPowerM.Name = "textBoxAddressPowerM";
             this.textBoxAddressPowerM.Size = new System.Drawing.Size(150, 29);
@@ -512,6 +513,46 @@
             this.dataGridViewMeasureTable.Size = new System.Drawing.Size(854, 494);
             this.dataGridViewMeasureTable.TabIndex = 16;
             // 
+            // frequency
+            // 
+            this.frequency.HeaderText = "Frequency";
+            this.frequency.Name = "frequency";
+            // 
+            // level
+            // 
+            this.level.HeaderText = "Level";
+            this.level.Name = "level";
+            // 
+            // reading
+            // 
+            this.reading.HeaderText = "Reading";
+            this.reading.Name = "reading";
+            // 
+            // lowLimit
+            // 
+            this.lowLimit.HeaderText = "Low Limit";
+            this.lowLimit.Name = "lowLimit";
+            // 
+            // highLimit
+            // 
+            this.highLimit.HeaderText = "High Limit";
+            this.highLimit.Name = "highLimit";
+            // 
+            // calFactor
+            // 
+            this.calFactor.HeaderText = "Path Loss";
+            this.calFactor.Name = "calFactor";
+            // 
+            // passOrFail
+            // 
+            this.passOrFail.HeaderText = "P/F";
+            this.passOrFail.Name = "passOrFail";
+            // 
+            // testTime
+            // 
+            this.testTime.HeaderText = "Test Time";
+            this.testTime.Name = "testTime";
+            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -578,46 +619,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // frequency
-            // 
-            this.frequency.HeaderText = "Frequency";
-            this.frequency.Name = "frequency";
-            // 
-            // level
-            // 
-            this.level.HeaderText = "Level";
-            this.level.Name = "level";
-            // 
-            // reading
-            // 
-            this.reading.HeaderText = "Reading";
-            this.reading.Name = "reading";
-            // 
-            // lowLimit
-            // 
-            this.lowLimit.HeaderText = "Low Limit";
-            this.lowLimit.Name = "lowLimit";
-            // 
-            // highLimit
-            // 
-            this.highLimit.HeaderText = "High Limit";
-            this.highLimit.Name = "highLimit";
-            // 
-            // calFactor
-            // 
-            this.calFactor.HeaderText = "Path Loss";
-            this.calFactor.Name = "calFactor";
-            // 
-            // passOrFail
-            // 
-            this.passOrFail.HeaderText = "P/F";
-            this.passOrFail.Name = "passOrFail";
-            // 
-            // testTime
-            // 
-            this.testTime.HeaderText = "Test Time";
-            this.testTime.Name = "testTime";
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -672,8 +673,6 @@
         private System.Windows.Forms.GroupBox groupBoxGPIB;
         public System.Windows.Forms.TextBox textBoxAddressSignalGen;
         public System.Windows.Forms.TextBox textBoxAddressPowerM;
-        private System.Windows.Forms.CheckBox checkBoxSignalGen;
-        private System.Windows.Forms.CheckBox checkBoxPowerM;
         private System.Windows.Forms.Label labelAddressGPIB;
         private System.Windows.Forms.Label labelEquipmentNames;
         private System.Windows.Forms.GroupBox groupBoxCableSettings;
@@ -711,6 +710,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
         private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
         private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
+        public System.Windows.Forms.CheckBox checkBoxSignalGen;
+        public System.Windows.Forms.CheckBox checkBoxPowerM;
     }
 }
 
