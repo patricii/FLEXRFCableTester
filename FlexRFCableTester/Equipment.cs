@@ -21,7 +21,7 @@ namespace FlexRFCableTester
 
         Logger logger = new Logger();
 
-        FormApp frmMain = new FormApp();
+        FormApp frmMain = FormApp.getInstance();
 
         public Equipments() { }
     
