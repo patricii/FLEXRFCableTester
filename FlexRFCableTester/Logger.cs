@@ -10,8 +10,6 @@ namespace FlexRFCableTester
         string filepath = string.Empty;
         DateTime logNameTime = DateTime.Now;
         string StrLogNameTime = string.Empty;
-
-
         public Logger() { }
         public void logMessage(string message)
         {
@@ -43,7 +41,6 @@ namespace FlexRFCableTester
                 MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\FlexRFCableTester_logger.txt");
             }
         }
-
         public void logDataGridView(string measuresResultLog)
         {
             try

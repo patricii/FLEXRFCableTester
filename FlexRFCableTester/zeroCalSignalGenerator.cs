@@ -197,6 +197,7 @@ namespace FlexRFCableTester
                             calFactory = Convert.ToDouble(frmMain.textBoxDbm.Text) - measure;
                             if (mode == "zeroCal")
                                 frmMain.fillDataGridView(countResults, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F2"), "-9999", "9999", calFactory.ToString("F2"), passFail, logTimer.ElapsedMilliseconds.ToString() + "ms");
+                            Application.DoEvents();
                             countResults++;
                             logTimer.Reset();
                         }

@@ -17,8 +17,9 @@ namespace FlexRFCableTester
         Logger logger;
         public static string cableResults = string.Empty;
         private static FormApp INSTANCE = null;
+        int PowerMeterModelCheck = -999;
+        int SignalGenModelCheck = -999;
         public bool stopAction { get; set; }
-
 
         public FormApp()
         {
@@ -119,7 +120,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                message = "Frequências não encontradas no arquivo settings.ini";
+                message = "Frequências não encontradas no arquivo Settings.ini";
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }
@@ -158,13 +159,13 @@ namespace FlexRFCableTester
                     logger.logMessage("Starting ZeroCal process - Waiting response....");
                     if (checkBoxPowerM.Checked)
                     {
-                        equipmentvisaPowerMeter.verifyModelPm();
-                        if (equipmentvisaPowerMeter.statusReturnModelPm == 0)
+                        PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
+                        if (PowerMeterModelCheck == 0)
                         {
                             textBoxAddressPowerM.BackColor = Color.Green;
                             equipmentvisaPowerMeter.setZeroCalGPIB();
                         }
-                        if (equipmentvisaPowerMeter.statusReturnModelPm == -1)
+                        if (PowerMeterModelCheck == -1)
                         {
                             textBoxAddressPowerM.BackColor = Color.Red;
                             MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
@@ -176,13 +177,13 @@ namespace FlexRFCableTester
                         Application.DoEvents();
                         if (checkBoxSignalGen.Checked)
                         {
-                            equipmentvisavisaSignalGen.verifyModelSg();
-                            if (equipmentvisavisaSignalGen.statusReturnModelSg == 0)
+                            SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
+                            if (SignalGenModelCheck == 0)
                             {
                                 textBoxAddressSignalGen.BackColor = Color.Green;
                                 equipmentvisavisaSignalGen.setZeroCalSGGPIB();
                             }
-                            if (equipmentvisavisaSignalGen.statusReturnModelSg == -1)
+                            if (SignalGenModelCheck == -1)
                             {
                                 textBoxAddressSignalGen.BackColor = Color.Red;
                                 MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
@@ -224,34 +225,44 @@ namespace FlexRFCableTester
         {
             double startFreqDefault = 0.0;
             double stopFreqDefault = 0.0;
-            var MyIni = new IniFile("Settings.ini");
+            try
+            {
+                var MyIni = new IniFile("Settings.ini");
 
-            if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
+                if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
+                    startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
 
-            if (Convert.ToDouble(textBoxStartFrequency.Text) != startFreqDefault)
-                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                    MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
-                else
-                    MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
+                if (Convert.ToDouble(textBoxStartFrequency.Text) != startFreqDefault)
+                    if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                        MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
+                    else
+                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
 
-            if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
+                if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
+                    stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
 
-            if (Convert.ToDouble(textBoxStopFrequency.Text) != stopFreqDefault)
-                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
-                    MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
-                else
-                    MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
+                if (Convert.ToDouble(textBoxStopFrequency.Text) != stopFreqDefault)
+                    if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
+                        MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
+                    else
+                        MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
 
-            if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
-                MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
+                if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
+                    MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
 
-            if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
-                MyIni.Write("MeasureAverage", textBoxAverage.Text, "ZeroCalFrequency");
+                if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
+                    MyIni.Write("MeasureAverage", textBoxAverage.Text, "ZeroCalFrequency");
 
-            if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
-                MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
+                if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
+                    MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
+            }
+            catch
+            {
+                message = "Erro ao gravar valores no arquivo Settings.ini";
+                logger.logMessage(message);
+                MessageBox.Show(message);
+            }
+
         }
 
         public void setButtonToStart()
@@ -357,10 +368,10 @@ namespace FlexRFCableTester
 
                             if (checkBoxPowerM.Checked)
                             {
-                                equipmentvisaPowerMeter.verifyModelPm();
-                                if (equipmentvisaPowerMeter.statusReturnModelPm == 0)
+                                PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
+                                if (PowerMeterModelCheck == 0)
                                     textBoxAddressPowerM.BackColor = Color.Green;
-                                if (equipmentvisaPowerMeter.statusReturnModelPm == -1)
+                                if (PowerMeterModelCheck == -1)
                                 {
                                     textBoxAddressPowerM.BackColor = Color.Red;
                                     MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
@@ -368,10 +379,10 @@ namespace FlexRFCableTester
                             }
                             if (checkBoxSignalGen.Checked)
                             {
-                                equipmentvisavisaSignalGen.verifyModelSg();
-                                if (equipmentvisavisaSignalGen.statusReturnModelSg == 0)
+                                SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
+                                if (SignalGenModelCheck == 0)
                                     textBoxAddressSignalGen.BackColor = Color.Green;
-                                if (equipmentvisavisaSignalGen.statusReturnModelSg == -1)
+                                if (SignalGenModelCheck == -1)
                                 {
                                     textBoxAddressSignalGen.BackColor = Color.Red;
                                     MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
@@ -403,6 +414,7 @@ namespace FlexRFCableTester
                         catch
                         {
                             MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
+                            cableResults = "Failed";
                         }
                         while (cableResults != "Finished" && cableResults == string.Empty)
                         {
