@@ -21,8 +21,6 @@ namespace FlexRFCableTester
 
         Logger logger = new Logger();
 
-        FormApp frmMain = FormApp.getInstance();
-
         public Equipments() { }
     
         public Equipments(MessageBasedSession equipmentName, FormattedIO488 ioTestSet, string address, string equipAlias, Ivi.Visa.Interop.ResourceManager resourceMng)
@@ -48,14 +46,14 @@ namespace FlexRFCableTester
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
             mBS.Write(cmd); // write to instrument
-            logger.logMessage(mBS.ResourceName + " " + frmMain.checkBoxSignalGen.Text + " -> Write: " + cmd);
+            logger.logMessage(mBS.ResourceName + " -> Write: " + cmd);
             Thread.Sleep(200);
         }
         public string readCommand(MessageBasedSession mBS)
         {
             Thread.Sleep(200);
             string resp = mBS.ReadString(); //read from instrument
-            logger.logMessage(mBS.ResourceName + " " + frmMain.checkBoxPowerM.Text + " -> Read: " + resp);
+            logger.logMessage(mBS.ResourceName + " -> Read: " + resp);
             return resp;
         }
         public void setZeroCalGPIB()
