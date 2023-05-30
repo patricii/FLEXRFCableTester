@@ -13,8 +13,6 @@ namespace FlexRFCableTester
         public FormattedIO488 ioTestSet { get; set; } //LAN
         public string address { get; set; } //GPIB
         public string equipAlias { get; set; } //LAN
-
-        public string snEquipment = string.Empty;
         string message = string.Empty;
 
         public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
@@ -191,10 +189,9 @@ namespace FlexRFCableTester
             try
             {
                 writeCommand("*IDN?", equipmentName);
-                string[] idnEquip = readCommand(equipmentName).Split(',');
-                snEquipment = idnEquip[1];
+                string idnEquip = readCommand(equipmentName);
 
-                if (snEquipment.Contains(model))
+                if (idnEquip.Contains(model))
                     return 0;
 
                 else
