@@ -220,6 +220,8 @@ namespace FlexRFCableTester
             buttonZeroCal.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
+            buttonZeroCal.BackColor = Color.White;
+            buttonZeroCal.Enabled = true;
         }
         private void writeValuesToIniFile()
         {
