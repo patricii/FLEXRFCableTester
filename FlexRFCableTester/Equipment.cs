@@ -39,7 +39,6 @@ namespace FlexRFCableTester
         {
             this.equipmentName = equipmentName;
             this.address = address;
-
         }
         public void writeCommand(string cmd, MessageBasedSession mBS)
         {
