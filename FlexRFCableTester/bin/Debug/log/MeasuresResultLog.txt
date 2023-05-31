@@ -8808,3 +8808,35 @@
 
 2-> Freq:6000MHz  dBm:10  Reading:9.1576dB  LowLimit:0.973  HighLimit:1.973  CableLoss:-0.1373  Result:Fail  TestTime:3318ms
 
+0-> Freq:5000MHz  dBm:10  Reading:8.0668dB  LowLimit:0.7741  HighLimit:1.7741  CableLoss:1.2882  Result:Pass  TestTime:3337ms
+
+1-> Freq:5100MHz  dBm:10  Reading:8.1078dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.2236  Result:Pass  TestTime:3335ms
+
+2-> Freq:5200MHz  dBm:10  Reading:8.1220dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1488  Result:Pass  TestTime:3332ms
+
+3-> Freq:5300MHz  dBm:10  Reading:8.1496dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.0907  Result:Pass  TestTime:3328ms
+
+4-> Freq:5400MHz  dBm:10  Reading:8.0875dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1935  Result:Pass  TestTime:3328ms
+
+5-> Freq:5500MHz  dBm:10  Reading:8.0216dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.3489  Result:Pass  TestTime:3345ms
+
+6-> Freq:5600MHz  dBm:10  Reading:8.1100dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.3504  Result:Pass  TestTime:3338ms
+
+7-> Freq:5700MHz  dBm:10  Reading:8.0376dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.2727  Result:Pass  TestTime:3336ms
+
+8-> Freq:5800MHz  dBm:10  Reading:7.9337dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1665  Result:Pass  TestTime:3332ms
+
+9-> Freq:5900MHz  dBm:10  Reading:7.9514dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.0687  Result:Pass  TestTime:3313ms
+
+10-> Freq:6000MHz  dBm:10  Reading:7.9899dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.0302  Result:Pass  TestTime:3310ms
+
+0-> Freq:5000MHz  dBm:10  Reading:8.1041dB  LowLimit:0.7741  HighLimit:1.7741  CableLoss:1.2506  Result:Pass  TestTime:3343ms
+
+1-> Freq:5100MHz  dBm:10  Reading:8.1428dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1884  Result:Pass  TestTime:3338ms
+
+2-> Freq:5200MHz  dBm:10  Reading:8.1562dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1143  Result:Pass  TestTime:3331ms
+
+3-> Freq:5300MHz  dBm:10  Reading:8.1826dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.0573  Result:Pass  TestTime:3371ms
+
+4-> Freq:5400MHz  dBm:10  Reading:8.1187dB  LowLimit:0.973  HighLimit:1.973  CableLoss:1.1618  Result:Pass  TestTime:3327ms
+

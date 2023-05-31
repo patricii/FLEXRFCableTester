@@ -286,6 +286,9 @@ namespace FlexRFCableTester
             if (buttonStart.Text.Contains("Start"))
             {
                 setButtonToStop();
+                if (File.Exists(@"log\LogGraphData.txt"))
+                    File.Delete(@"log\LogGraphData.txt");
+
                 writeValuesToIniFile();
                 startProcess();
                 stopAction = false;
@@ -456,6 +459,8 @@ namespace FlexRFCableTester
         {
             logger = new Logger();
             logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CableLoss:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
+            logger.logGraphData(freq + "," + loLimit + "," + hiLimit + "," + calFactor);
+
             try
             {
                 dataGridViewMeasureTable.Rows.Add();
