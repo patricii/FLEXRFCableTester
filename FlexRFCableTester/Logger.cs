@@ -73,7 +73,7 @@ namespace FlexRFCableTester
         {
             try
             {
-                logString = measuresResultLog + Environment.NewLine;
+                logString = measuresResultLog;
                 Application.DoEvents();
                 filepath = @"log\LogGraphData.txt";
 
