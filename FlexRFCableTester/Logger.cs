@@ -69,5 +69,33 @@ namespace FlexRFCableTester
                 MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\MeasuresResultLog.txt");
             }
         }
+        public void logGraphData(string measuresResultLog)
+        {
+            try
+            {
+                logString = measuresResultLog + Environment.NewLine;
+                Application.DoEvents();
+                filepath = @"log\LogGraphData.txt";
+
+                if (!File.Exists(filepath))
+                {
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Create, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter writer = new StreamWriter(new FileStream(filepath, FileMode.Append, FileAccess.Write)))
+                    {
+                        writer.WriteLine(logString);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\LogGraphData.txt");
+            }
+        }
     }
 }

@@ -294,7 +294,7 @@ namespace FlexRFCableTester
                         countRecovery = 0;
 
                         result = Convert.ToDouble(frmMain.textBoxStartFrequency.Text) + Convert.ToDouble(frmMain.textBoxIntervalFrequency.Text);
-                        if (result < Convert.ToDouble(stopFreq))
+                        if (result <= Convert.ToDouble(stopFreq))
                             status = writeFreqCMDSignalGen(result.ToString());
 
                         frmMain.textBoxStartFrequency.Text = result.ToString();
