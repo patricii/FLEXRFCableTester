@@ -19,6 +19,7 @@ namespace FlexRFCableTester
         private static FormApp INSTANCE = null;
         int PowerMeterModelCheck = -999;
         int SignalGenModelCheck = -999;
+        IniFile MyIni = new IniFile("Settings.ini");
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -81,8 +82,6 @@ namespace FlexRFCableTester
             logger = new Logger();
             try
             {
-                var MyIni = new IniFile("Settings.ini");
-
                 if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
                 {
                     string startFrequency = MyIni.Read("StartFrequency", comboBoxCableSettings.Text);
@@ -229,8 +228,6 @@ namespace FlexRFCableTester
             double stopFreqDefault = 0.0;
             try
             {
-                var MyIni = new IniFile("Settings.ini");
-
                 if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
 
@@ -291,6 +288,8 @@ namespace FlexRFCableTester
 
                 writeValuesToIniFile();
                 startProcess();
+                graphGenerateMethod();
+                tabControlMain.SelectedIndex = 3;
                 stopAction = false;
             }
             else
@@ -443,7 +442,6 @@ namespace FlexRFCableTester
                     {
                         setButtonToStart();
                     }
-
                 }
                 else
                 {
@@ -459,7 +457,7 @@ namespace FlexRFCableTester
         {
             logger = new Logger();
             logger.logDataGridView(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CableLoss:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime);
-            logger.logGraphData(freq + "," + loLimit + "," + hiLimit + "," + calFactor);
+            logger.logGraphData(freq + "," + loLimit + "," + hiLimit + "," + calFactor + "," + passFail);
 
             try
             {
@@ -482,6 +480,46 @@ namespace FlexRFCableTester
             catch (Exception ex)
             {
                 logger.logMessage("Error to add values to DataGridView - reason: " + ex);
+            }
+        }
+        public void graphGenerateMethod()
+        {
+            string fileName = @"log\LogGraphData.txt";
+            string[] data;
+            double lossFromIniFile = 0.0;
+
+
+            if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
+                lossFromIniFile = (Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text)) - 0.5);
+
+            chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
+            chartResults.ChartAreas[0].AxisY.Interval = 0.1;
+            chartResults.ChartAreas[0].AxisX.Minimum = Convert.ToDouble(textBoxStartFrequency.Text);
+            chartResults.ChartAreas[0].AxisX.Maximum = Convert.ToDouble(textBoxStopFrequency.Text);
+            chartResults.ChartAreas[0].AxisX.Interval = 500;
+            chartResults.Series[0].BorderWidth = 4;
+            chartResults.Series[1].BorderWidth = 4;
+            chartResults.Series[2].BorderWidth = 4;
+
+            //getting the values from Graph Data Log
+
+            if (File.Exists(fileName))
+            {
+                using (StreamReader reader = new StreamReader(fileName))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        data = line.Split(',');
+
+                        if (data[4] == "Fail")
+                            chartResults.Series[2].Color = Color.Red;
+
+                        chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
+                        chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
+                        chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+                    }
+                }
             }
         }
     }

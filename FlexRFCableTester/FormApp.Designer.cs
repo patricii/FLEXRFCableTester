@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.groupBoxLan = new System.Windows.Forms.GroupBox();
             this.textBoxeXMaLIAS = new System.Windows.Forms.TextBox();
@@ -83,13 +83,13 @@
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabControl1.SuspendLayout();
+            this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
             this.groupBoxGPIB.SuspendLayout();
@@ -98,9 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,18 +114,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "FLEX RF Cable Tester";
             // 
-            // tabControl1
+            // tabControlMain
             // 
-            this.tabControl1.Controls.Add(this.tabPageMain);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 109);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1269, 597);
-            this.tabControl1.TabIndex = 2;
+            this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPage3);
+            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPage5);
+            this.tabControlMain.Location = new System.Drawing.Point(12, 109);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(1269, 597);
+            this.tabControlMain.TabIndex = 2;
             // 
             // tabPageMain
             // 
@@ -580,6 +580,37 @@
             this.tabPage4.Text = "Info Graphic";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // chartResults
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartResults.Legends.Add(legend1);
+            this.chartResults.Location = new System.Drawing.Point(0, 3);
+            this.chartResults.Name = "chartResults";
+            this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Gray;
+            series1.Legend = "Legend1";
+            series1.Name = "Low Limit";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Gray;
+            series2.Legend = "Legend1";
+            series2.Name = "High Limit";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Green;
+            series3.Legend = "Legend1";
+            series3.Name = "Loss(dB)";
+            this.chartResults.Series.Add(series1);
+            this.chartResults.Series.Add(series2);
+            this.chartResults.Series.Add(series3);
+            this.chartResults.Size = new System.Drawing.Size(1265, 561);
+            this.chartResults.TabIndex = 0;
+            this.chartResults.Text = "Measures Results";
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.textBoxResponse);
@@ -628,33 +659,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // chartResults
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartResults.Legends.Add(legend1);
-            this.chartResults.Location = new System.Drawing.Point(0, 3);
-            this.chartResults.Name = "chartResults";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Result";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "High Limit";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Low Limit";
-            this.chartResults.Series.Add(series1);
-            this.chartResults.Series.Add(series2);
-            this.chartResults.Series.Add(series3);
-            this.chartResults.Size = new System.Drawing.Size(1265, 561);
-            this.chartResults.TabIndex = 0;
-            this.chartResults.Text = "Measures Results";
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -664,7 +668,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -672,7 +676,7 @@
             this.Name = "FormApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flex RF Cable Tester";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlMain.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             this.groupBoxLan.ResumeLayout(false);
             this.groupBoxLan.PerformLayout();
@@ -685,10 +689,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,7 +702,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageMain;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBoxLan;
