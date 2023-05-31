@@ -488,38 +488,44 @@ namespace FlexRFCableTester
             string[] data;
             double lossFromIniFile = 0.0;
 
-
-            if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
-                lossFromIniFile = (Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text)) - 0.5);
-
-            chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
-            chartResults.ChartAreas[0].AxisY.Interval = 0.1;
-            chartResults.ChartAreas[0].AxisX.Minimum = Convert.ToDouble(textBoxStartFrequency.Text);
-            chartResults.ChartAreas[0].AxisX.Maximum = Convert.ToDouble(textBoxStopFrequency.Text);
-            chartResults.ChartAreas[0].AxisX.Interval = 500;
-            chartResults.Series[0].BorderWidth = 4;
-            chartResults.Series[1].BorderWidth = 4;
-            chartResults.Series[2].BorderWidth = 4;
-
-            //getting the values from Graph Data Log
-
-            if (File.Exists(fileName))
+            try
             {
-                using (StreamReader reader = new StreamReader(fileName))
+                if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
+                    lossFromIniFile = (Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text)) - 0.5);
+
+                chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
+                chartResults.ChartAreas[0].AxisY.Interval = 0.1;
+                chartResults.ChartAreas[0].AxisX.Minimum = Convert.ToDouble(textBoxStartFrequency.Text);
+                chartResults.ChartAreas[0].AxisX.Maximum = Convert.ToDouble(textBoxStopFrequency.Text);
+                chartResults.ChartAreas[0].AxisX.Interval = 500;
+                chartResults.Series[0].BorderWidth = 4;
+                chartResults.Series[1].BorderWidth = 4;
+                chartResults.Series[2].BorderWidth = 4;
+
+                //getting the values from Graph Data Log
+
+                if (File.Exists(fileName))
                 {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    using (StreamReader reader = new StreamReader(fileName))
                     {
-                        data = line.Split(',');
+                        string line;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            data = line.Split(',');
 
-                        if (data[4] == "Fail")
-                            chartResults.Series[2].Color = Color.Red;
+                            if (data[4] == "Fail")
+                                chartResults.Series[2].Color = Color.Red;
 
-                        chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
-                        chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
-                        chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+                            chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
+                            chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
+                            chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Error to generate the Graph results!!!");
             }
         }
     }
