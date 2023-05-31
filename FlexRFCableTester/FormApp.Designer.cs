@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.label1 = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
@@ -58,7 +58,6 @@
             this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
             this.textBoxDbm = new System.Windows.Forms.TextBox();
@@ -89,18 +88,19 @@
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
             this.groupBoxGPIB.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -378,16 +378,6 @@
             this.labelSF.TabIndex = 14;
             this.labelSF.Text = "MHz";
             // 
-            // pictureBoxImg
-            // 
-            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.Splitter_ZN4PD_272_S_;
-            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 13;
-            this.pictureBoxImg.TabStop = false;
-            // 
             // textBoxAverage
             // 
             this.textBoxAverage.Location = new System.Drawing.Point(239, 185);
@@ -435,7 +425,7 @@
             this.comboBoxCableSettings.Name = "comboBoxCableSettings";
             this.comboBoxCableSettings.Size = new System.Drawing.Size(221, 29);
             this.comboBoxCableSettings.TabIndex = 7;
-            this.comboBoxCableSettings.Text = "Splitter_ZN4PD-272-S+";
+            this.comboBoxCableSettings.Text = "MiniBend9";
             this.comboBoxCableSettings.SelectedIndexChanged += new System.EventHandler(this.comboBoxCableSettings_SelectedIndexChanged);
             // 
             // labelAverage
@@ -582,31 +572,31 @@
             // 
             // chartResults
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartResults.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartResults.Legends.Add(legend1);
             this.chartResults.Location = new System.Drawing.Point(0, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Gray;
-            series4.Legend = "Legend1";
-            series4.Name = "Low Limit";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Gray;
-            series5.Legend = "Legend1";
-            series5.Name = "High Limit";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.Green;
-            series6.Legend = "Legend1";
-            series6.Name = "Loss(dB)";
-            this.chartResults.Series.Add(series4);
-            this.chartResults.Series.Add(series5);
-            this.chartResults.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Gray;
+            series1.Legend = "Legend1";
+            series1.Name = "Low Limit";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Gray;
+            series2.Legend = "Legend1";
+            series2.Name = "High Limit";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Green;
+            series3.Legend = "Legend1";
+            series3.Name = "Loss(dB)";
+            this.chartResults.Series.Add(series1);
+            this.chartResults.Series.Add(series2);
+            this.chartResults.Series.Add(series3);
             this.chartResults.Size = new System.Drawing.Size(1265, 561);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";
@@ -659,6 +649,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBoxImg
+            // 
+            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MiniBend9;
+            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 13;
+            this.pictureBoxImg.TabStop = false;
+            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -686,13 +686,13 @@
             this.tabPage2.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
