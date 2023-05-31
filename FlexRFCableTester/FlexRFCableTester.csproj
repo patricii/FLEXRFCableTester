@@ -167,6 +167,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\Splitter_ZN4PD-272-S+.jpg" />
     <None Include="bin\Debug\img\StartProcess.jpg" />
     <Content Include="FLEX_logo.ico" />
   </ItemGroup>

@@ -143,6 +143,16 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Splitter_ZN4PD_272_S_ {
+            get {
+                object obj = ResourceManager.GetObject("Splitter_ZN4PD-272-S+", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StartProcess {
             get {
                 object obj = ResourceManager.GetObject("StartProcess", resourceCulture);
