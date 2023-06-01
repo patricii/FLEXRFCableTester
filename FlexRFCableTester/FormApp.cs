@@ -283,7 +283,7 @@ namespace FlexRFCableTester
 
                 if (File.Exists(@"log\MeasuresResultLog.txt"))
                     File.Delete(@"log\MeasuresResultLog.txt");
-
+                labelWarning.Text = "";
                 writeValuesToIniFile();
                 int status = startProcess();
                 if (status == 0)
