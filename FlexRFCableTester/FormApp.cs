@@ -29,6 +29,7 @@ namespace FlexRFCableTester
             readSettingsAndFillComboBox();
             getFrequencyFromFile();
             INSTANCE = this;
+            initializerEquipmentCheck();
         }
         public static FormApp getInstance()
         {
@@ -158,13 +159,11 @@ namespace FlexRFCableTester
                         PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
                         if (PowerMeterModelCheck == 0)
                         {
-                            textBoxAddressPowerM.BackColor = Color.Green;
                             equipmentvisaPowerMeter.setZeroCalGPIB();
                         }
                         if (PowerMeterModelCheck == -1)
                         {
-                            textBoxAddressPowerM.BackColor = Color.Red;
-                            MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
+                            MessageBox.Show("O modelo do Power Meter não compativel!!!");
                         }
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
@@ -176,7 +175,6 @@ namespace FlexRFCableTester
                             SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
                             if (SignalGenModelCheck == 0)
                             {
-                                textBoxAddressSignalGen.BackColor = Color.Green;
                                 equipmentvisavisaSignalGen.setZeroCalSGGPIB();
                             }
                             if (SignalGenModelCheck == -1)
@@ -378,24 +376,18 @@ namespace FlexRFCableTester
                             if (checkBoxPowerM.Checked)
                             {
                                 PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
-                                if (PowerMeterModelCheck == 0)
-                                    textBoxAddressPowerM.BackColor = Color.Green;
-                                if (PowerMeterModelCheck == -1)
+                                if (PowerMeterModelCheck != 0)
                                 {
-                                    textBoxAddressPowerM.BackColor = Color.Red;
-                                    MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
+                                    MessageBox.Show("O modelo do Power Meter não compativel!!!");
                                     return -1;
                                 }
                             }
                             if (checkBoxSignalGen.Checked)
                             {
                                 SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
-                                if (SignalGenModelCheck == 0)
-                                    textBoxAddressSignalGen.BackColor = Color.Green;
-                                if (SignalGenModelCheck == -1)
+                                if (SignalGenModelCheck != 0)
                                 {
-                                    textBoxAddressSignalGen.BackColor = Color.Red;
-                                    MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
+                                    MessageBox.Show("O modelo do Signal Generator não compativel!!!");
                                     return -1;
                                 }
                             }
@@ -564,7 +556,32 @@ namespace FlexRFCableTester
                 MessageBox.Show("Falha ao exportar os dados!!!");
             }
         }
-
+        private void initializerEquipmentCheck()
+        {
+            textBoxLogInfo.Text = "Verificando Equipamentos conectados..." + Environment.NewLine;
+            try
+            {
+                visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+                textBoxAddressPowerM.BackColor = Color.Green;
+                textBoxLogInfo.Text += "->PowerMeter detectado!!!" + Environment.NewLine;
+            }
+            catch
+            {
+                textBoxLogInfo.Text += "->PowerMeter não detectado!!!" + Environment.NewLine;
+                textBoxAddressPowerM.BackColor = Color.Red;
+            }
+            try
+            {
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                textBoxAddressSignalGen.BackColor = Color.Green;
+                textBoxLogInfo.Text += "->SignalGenerator detectado!!!" + Environment.NewLine;
+            }
+            catch
+            {
+                textBoxLogInfo.Text += "->SignalGenerator não detectado!!!" + Environment.NewLine;
+                textBoxAddressSignalGen.BackColor = Color.Red;
+            }
+        }
         private void buttonClearGraph_Click(object sender, EventArgs e)
         {
             foreach (var series in chartResults.Series)

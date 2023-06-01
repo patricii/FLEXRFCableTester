@@ -88,6 +88,8 @@
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBoxLogInfo = new System.Windows.Forms.GroupBox();
+            this.textBoxLogInfo = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -99,6 +101,7 @@
             this.tabPageInfoGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBoxLogInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAppName
@@ -125,6 +128,7 @@
             // 
             // tabPageMain
             // 
+            this.tabPageMain.Controls.Add(this.groupBoxLogInfo);
             this.tabPageMain.Controls.Add(this.groupBoxLan);
             this.tabPageMain.Controls.Add(this.groupBoxGPIB);
             this.tabPageMain.Location = new System.Drawing.Point(4, 30);
@@ -144,9 +148,9 @@
             this.groupBoxLan.Controls.Add(this.checkBoxCMW100);
             this.groupBoxLan.Controls.Add(this.labelLanAlias);
             this.groupBoxLan.Controls.Add(this.labelEquipmentsLAN);
-            this.groupBoxLan.Location = new System.Drawing.Point(21, 181);
+            this.groupBoxLan.Location = new System.Drawing.Point(383, 19);
             this.groupBoxLan.Name = "groupBoxLan";
-            this.groupBoxLan.Size = new System.Drawing.Size(330, 142);
+            this.groupBoxLan.Size = new System.Drawing.Size(330, 523);
             this.groupBoxLan.TabIndex = 1;
             this.groupBoxLan.TabStop = false;
             this.groupBoxLan.Text = "LAN Alias";
@@ -217,7 +221,7 @@
             this.groupBoxGPIB.Controls.Add(this.labelEquipmentNames);
             this.groupBoxGPIB.Location = new System.Drawing.Point(21, 19);
             this.groupBoxGPIB.Name = "groupBoxGPIB";
-            this.groupBoxGPIB.Size = new System.Drawing.Size(330, 142);
+            this.groupBoxGPIB.Size = new System.Drawing.Size(330, 523);
             this.groupBoxGPIB.TabIndex = 0;
             this.groupBoxGPIB.TabStop = false;
             this.groupBoxGPIB.Text = "GPIB Address";
@@ -653,6 +657,24 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // groupBoxLogInfo
+            // 
+            this.groupBoxLogInfo.Controls.Add(this.textBoxLogInfo);
+            this.groupBoxLogInfo.Location = new System.Drawing.Point(739, 19);
+            this.groupBoxLogInfo.Name = "groupBoxLogInfo";
+            this.groupBoxLogInfo.Size = new System.Drawing.Size(502, 523);
+            this.groupBoxLogInfo.TabIndex = 2;
+            this.groupBoxLogInfo.TabStop = false;
+            this.groupBoxLogInfo.Text = "Log Info";
+            // 
+            // textBoxLogInfo
+            // 
+            this.textBoxLogInfo.Location = new System.Drawing.Point(7, 38);
+            this.textBoxLogInfo.Multiline = true;
+            this.textBoxLogInfo.Name = "textBoxLogInfo";
+            this.textBoxLogInfo.Size = new System.Drawing.Size(489, 479);
+            this.textBoxLogInfo.TabIndex = 0;
+            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -685,6 +707,8 @@
             this.tabPageInfoGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBoxLogInfo.ResumeLayout(false);
+            this.groupBoxLogInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,6 +770,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartResults;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Button buttonClearGraph;
+        private System.Windows.Forms.GroupBox groupBoxLogInfo;
+        private System.Windows.Forms.TextBox textBoxLogInfo;
     }
 }
 
