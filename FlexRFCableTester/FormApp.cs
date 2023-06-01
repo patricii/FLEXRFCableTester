@@ -443,8 +443,8 @@ namespace FlexRFCableTester
                         {
                             logger.logMessage("Aferição do cabo Falhou!!!");
                             MessageBox.Show("Aferição do cabo Falhou!!!");
-                            return -1;
                             startP.Close();
+                            return -1;
                         }
                         cableResults = string.Empty;
                     }

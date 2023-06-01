@@ -198,7 +198,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                return -2;
+                return -999;
             }
         }     
     }
