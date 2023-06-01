@@ -461,8 +461,8 @@ namespace FlexRFCableTester
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
             logger = new Logger();
-            logger.logGenTxt(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CableLoss:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime, @"log\MeasuresResultLog.txt");
-            logger.logGenTxt(freq + "," + loLimit + "," + hiLimit + "," + calFactor + "," + passFail, @"log\LogGraphData.txt");
+            logger.logGenTxt(count.ToString() + "-> Freq:" + freq + "MHz  " + "dBm:" + level + "  " + "Reading:" + reading + "dB  " + "LowLimit:" + loLimit + "  " + "HighLimit:" + hiLimit + "  " + "CableLoss:" + calFactor + "  " + "Result:" + passFail + "  " + "TestTime:" + testTime, "MeasuresResultLog.txt");
+            logger.logGenTxt(freq + "," + loLimit + "," + hiLimit + "," + calFactor + "," + passFail, "LogGraphData.txt");
 
             try
             {

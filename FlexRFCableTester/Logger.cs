@@ -47,7 +47,7 @@ namespace FlexRFCableTester
             {
                 logString = measuresResultLog;
                 Application.DoEvents();
-                filepath = @"log\MeasuresResultLog.txt";
+                filepath = @"log\" + fileName;
 
                 if (!File.Exists(filepath))
                 {
@@ -66,7 +66,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("diretório e/ou arquivo não encontrados!!! - log\\MeasuresResultLog.txt");
+                MessageBox.Show("diretório e/ou arquivo não encontrados!!!" + fileName);
             }
         }
     }
