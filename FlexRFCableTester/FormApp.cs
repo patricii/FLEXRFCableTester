@@ -212,7 +212,7 @@ namespace FlexRFCableTester
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
-            buttonZeroCal.BackColor = Color.Green;
+            buttonZeroCal.BackColor = Color.Yellow;
             buttonZeroCal.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
@@ -282,6 +282,9 @@ namespace FlexRFCableTester
                 setButtonToStop();
                 if (File.Exists(@"log\LogGraphData.txt"))
                     File.Delete(@"log\LogGraphData.txt");
+
+                if (File.Exists(@"log\MeasuresResultLog.txt"))
+                    File.Delete(@"log\MeasuresResultLog.txt");
 
                 writeValuesToIniFile();
                 startProcess();
@@ -532,8 +535,8 @@ namespace FlexRFCableTester
             {
                 DateTime dateNow = DateTime.Now;
 
-                string csvfilePath = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
-                string pngFileGraph = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
+                string csvfilePath = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_"  + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
+                string pngFileGraph = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
                 string[] lines = File.ReadAllLines(@"log\MeasuresResultLog.txt");
                 var result = string.Join(Environment.NewLine,
                                     lines.Select(x => x.Split(' '))
