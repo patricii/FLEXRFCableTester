@@ -212,7 +212,7 @@ namespace FlexRFCableTester
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
-            buttonZeroCal.BackColor = Color.Green;
+            buttonZeroCal.BackColor = Color.Yellow;
             buttonZeroCal.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
@@ -283,10 +283,17 @@ namespace FlexRFCableTester
                 if (File.Exists(@"log\LogGraphData.txt"))
                     File.Delete(@"log\LogGraphData.txt");
 
+                if (File.Exists(@"log\MeasuresResultLog.txt"))
+                    File.Delete(@"log\MeasuresResultLog.txt");
+
                 writeValuesToIniFile();
-                startProcess();
-                graphGenerateMethod();
-                tabControlMain.SelectedIndex = 3;
+                int status = startProcess();
+                if (status == 0)
+                {
+                    graphGenerateMethod();
+                    tabControlMain.SelectedIndex = 2;
+                }
+
                 stopAction = false;
             }
             else
@@ -295,7 +302,7 @@ namespace FlexRFCableTester
                 stopAction = true;
             }
         }
-        private void startProcess()
+        private int startProcess()
         {
             logger = new Logger();
             DateTime enteredDate;
@@ -334,9 +341,8 @@ namespace FlexRFCableTester
                 if (startP.startStatus == -2)
                 {
                     setButtonToStart();
-                    return;
+                    return -1;
                 }
-
                 if (startP.startStatus == 0)
                 {
                     int NStatus = 0;
@@ -440,15 +446,17 @@ namespace FlexRFCableTester
                         setButtonToStart();
                     }
                 }
-                else
-                {
-                    message = "Error: Realize o Zero Cal antes de começar!!!";
-                    logger.logMessage(message);
-                    MessageBox.Show(message);
-                    buttonStart.Text = "Start";
-                    buttonStart.BackColor = Color.Green;
-                }
             }
+            else
+            {
+                message = "Error: Realize o Zero Cal antes de começar!!!";
+                logger.logMessage(message);
+                MessageBox.Show(message);
+                buttonStart.Text = "Start";
+                buttonStart.BackColor = Color.Green;
+                return -1;
+            }
+            return 0;
         }
         public void fillDataGridView(int count, string freq, string level, string reading, string loLimit, string hiLimit, string calFactor, string passFail, string testTime)
         {
@@ -532,8 +540,8 @@ namespace FlexRFCableTester
             {
                 DateTime dateNow = DateTime.Now;
 
-                string csvfilePath = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
-                string pngFileGraph = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
+                string csvfilePath = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
+                string pngFileGraph = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
                 string[] lines = File.ReadAllLines(@"log\MeasuresResultLog.txt");
                 var result = string.Join(Environment.NewLine,
                                     lines.Select(x => x.Split(' '))
@@ -546,6 +554,14 @@ namespace FlexRFCableTester
             catch
             {
                 MessageBox.Show("Falha ao exportar os dados!!!");
+            }
+        }
+
+        private void buttonClearGraph_Click(object sender, EventArgs e)
+        {
+            foreach (var series in chartResults.Series)
+            {
+                series.Points.Clear();
             }
         }
     }

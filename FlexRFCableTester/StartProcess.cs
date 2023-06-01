@@ -1,5 +1,6 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -17,15 +18,11 @@ namespace FlexRFCableTester
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
             buttonStartProcess.Enabled = false;
-            labelCalStatusStartProcess.Text = "          Iniciando a medição do cabo!!!";
             startStatus = 0;
-            Application.DoEvents();
             frmMain.dataGridViewMeasureTable.Rows.Clear();
             frmMain.dataGridViewMeasureTable.Refresh();
             Application.DoEvents();
-
-            Logger logger = new Logger();
-            Close();
+            Hide();
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)

@@ -38,7 +38,7 @@
             // 
             // buttonStartProcess
             // 
-            this.buttonStartProcess.BackColor = System.Drawing.Color.Green;
+            this.buttonStartProcess.BackColor = System.Drawing.Color.Silver;
             this.buttonStartProcess.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonStartProcess.Location = new System.Drawing.Point(471, 526);
             this.buttonStartProcess.Name = "buttonStartProcess";
