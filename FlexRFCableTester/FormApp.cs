@@ -355,6 +355,7 @@ namespace FlexRFCableTester
                     {
                         MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
                         NStatus = -1;
+                        return -1;
                     }
                     try
                     {
@@ -364,6 +365,7 @@ namespace FlexRFCableTester
                     {
                         MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
                         NStatus = -1;
+                        return -1;
                     }
                     if (NStatus == 0)
                     {
@@ -382,6 +384,7 @@ namespace FlexRFCableTester
                                 {
                                     textBoxAddressPowerM.BackColor = Color.Red;
                                     MessageBox.Show("O modelo do Power Meter é diferente do correto!!!");
+                                    return -1;
                                 }
                             }
                             if (checkBoxSignalGen.Checked)
@@ -393,6 +396,7 @@ namespace FlexRFCableTester
                                 {
                                     textBoxAddressSignalGen.BackColor = Color.Red;
                                     MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
+                                    return -1;
                                 }
                             }
                             labelStatusRFTester.Text = "                   Medição em Andamento!!!";
@@ -416,12 +420,14 @@ namespace FlexRFCableTester
                                 buttonStart.Text = "Start";
                                 buttonStart.BackColor = Color.Green;
                                 Application.DoEvents();
+                                return -1;
                             }
                         }
                         catch
                         {
                             MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
                             cableResults = "Failed";
+                            return -1;
                         }
                         while (cableResults != "Finished" && cableResults == string.Empty)
                         {
@@ -437,6 +443,7 @@ namespace FlexRFCableTester
                         {
                             logger.logMessage("Aferição do cabo Falhou!!!");
                             MessageBox.Show("Aferição do cabo Falhou!!!");
+                            return -1;
                             startP.Close();
                         }
                         cableResults = string.Empty;
@@ -444,6 +451,7 @@ namespace FlexRFCableTester
                     else
                     {
                         setButtonToStart();
+                        return -1;
                     }
                 }
             }
