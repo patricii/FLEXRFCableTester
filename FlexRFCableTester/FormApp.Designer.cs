@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.labelAppName = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
@@ -51,7 +51,7 @@
             this.checkBoxPowerM = new System.Windows.Forms.CheckBox();
             this.labelAddressGPIB = new System.Windows.Forms.Label();
             this.labelEquipmentNames = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageRFTester = new System.Windows.Forms.TabPage();
             this.labelStatusRFTester = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.groupBoxCableSettings = new System.Windows.Forms.GroupBox();
@@ -81,27 +81,23 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageInfoGraph = new System.Windows.Forms.TabPage();
+            this.buttonClearGraph = new System.Windows.Forms.Button();
             this.buttonExport = new System.Windows.Forms.Button();
             this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonClearGraph = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
             this.groupBoxGPIB.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageRFTester.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tabPageInfoGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,10 +115,8 @@
             // tabControlMain
             // 
             this.tabControlMain.Controls.Add(this.tabPageMain);
-            this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPage3);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPage5);
+            this.tabControlMain.Controls.Add(this.tabPageRFTester);
+            this.tabControlMain.Controls.Add(this.tabPageInfoGraph);
             this.tabControlMain.Location = new System.Drawing.Point(12, 109);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -289,21 +283,21 @@
             this.labelEquipmentNames.TabIndex = 0;
             this.labelEquipmentNames.Text = "Equipments:";
             // 
-            // tabPage2
+            // tabPageRFTester
             // 
-            this.tabPage2.Controls.Add(this.labelStatusRFTester);
-            this.tabPage2.Controls.Add(this.buttonStart);
-            this.tabPage2.Controls.Add(this.groupBoxCableSettings);
-            this.tabPage2.Controls.Add(this.buttonZeroCal);
-            this.tabPage2.Controls.Add(this.dataGridViewMeasureTable);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1261, 563);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "RF Cable Tester";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageRFTester.Controls.Add(this.labelStatusRFTester);
+            this.tabPageRFTester.Controls.Add(this.buttonStart);
+            this.tabPageRFTester.Controls.Add(this.groupBoxCableSettings);
+            this.tabPageRFTester.Controls.Add(this.buttonZeroCal);
+            this.tabPageRFTester.Controls.Add(this.dataGridViewMeasureTable);
+            this.tabPageRFTester.Location = new System.Drawing.Point(4, 30);
+            this.tabPageRFTester.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageRFTester.Name = "tabPageRFTester";
+            this.tabPageRFTester.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPageRFTester.Size = new System.Drawing.Size(1261, 563);
+            this.tabPageRFTester.TabIndex = 1;
+            this.tabPageRFTester.Text = "RF Cable Tester";
+            this.tabPageRFTester.UseVisualStyleBackColor = true;
             // 
             // labelStatusRFTester
             // 
@@ -563,26 +557,28 @@
             this.testTime.HeaderText = "Test Time";
             this.testTime.Name = "testTime";
             // 
-            // tabPage3
+            // tabPageInfoGraph
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1261, 563);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Call Cart Check";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageInfoGraph.Controls.Add(this.buttonClearGraph);
+            this.tabPageInfoGraph.Controls.Add(this.buttonExport);
+            this.tabPageInfoGraph.Controls.Add(this.chartResults);
+            this.tabPageInfoGraph.Location = new System.Drawing.Point(4, 30);
+            this.tabPageInfoGraph.Name = "tabPageInfoGraph";
+            this.tabPageInfoGraph.Size = new System.Drawing.Size(1261, 563);
+            this.tabPageInfoGraph.TabIndex = 3;
+            this.tabPageInfoGraph.Text = "Info Graphic";
+            this.tabPageInfoGraph.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // buttonClearGraph
             // 
-            this.tabPage4.Controls.Add(this.buttonClearGraph);
-            this.tabPage4.Controls.Add(this.buttonExport);
-            this.tabPage4.Controls.Add(this.chartResults);
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1261, 563);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Info Graphic";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.buttonClearGraph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonClearGraph.Location = new System.Drawing.Point(1143, 99);
+            this.buttonClearGraph.Name = "buttonClearGraph";
+            this.buttonClearGraph.Size = new System.Drawing.Size(75, 59);
+            this.buttonClearGraph.TabIndex = 2;
+            this.buttonClearGraph.Text = "Clear Graph";
+            this.buttonClearGraph.UseVisualStyleBackColor = false;
+            this.buttonClearGraph.Click += new System.EventHandler(this.buttonClearGraph_Click);
             // 
             // buttonExport
             // 
@@ -597,53 +593,35 @@
             // 
             // chartResults
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartResults.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartResults.Legends.Add(legend1);
             this.chartResults.Location = new System.Drawing.Point(0, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Gray;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            series4.Legend = "Legend1";
-            series4.Name = "Low Limit";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Gray;
-            series5.Legend = "Legend1";
-            series5.Name = "High Limit";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.Green;
-            series6.Legend = "Legend1";
-            series6.Name = "Loss(dB)";
-            this.chartResults.Series.Add(series4);
-            this.chartResults.Series.Add(series5);
-            this.chartResults.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Gray;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            series1.Legend = "Legend1";
+            series1.Name = "Low Limit";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Gray;
+            series2.Legend = "Legend1";
+            series2.Name = "High Limit";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Green;
+            series3.Legend = "Legend1";
+            series3.Name = "Loss(dB)";
+            this.chartResults.Series.Add(series1);
+            this.chartResults.Series.Add(series2);
+            this.chartResults.Series.Add(series3);
             this.chartResults.Size = new System.Drawing.Size(1265, 561);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.textBoxResponse);
-            this.tabPage5.Location = new System.Drawing.Point(4, 30);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1261, 563);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "LOG";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // textBoxResponse
-            // 
-            this.textBoxResponse.Location = new System.Drawing.Point(7, 10);
-            this.textBoxResponse.Multiline = true;
-            this.textBoxResponse.Name = "textBoxResponse";
-            this.textBoxResponse.Size = new System.Drawing.Size(1135, 540);
-            this.textBoxResponse.TabIndex = 4;
             // 
             // labelWarning
             // 
@@ -675,17 +653,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonClearGraph
-            // 
-            this.buttonClearGraph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonClearGraph.Location = new System.Drawing.Point(1143, 99);
-            this.buttonClearGraph.Name = "buttonClearGraph";
-            this.buttonClearGraph.Size = new System.Drawing.Size(75, 59);
-            this.buttonClearGraph.TabIndex = 2;
-            this.buttonClearGraph.Text = "Clear Graph";
-            this.buttonClearGraph.UseVisualStyleBackColor = false;
-            this.buttonClearGraph.Click += new System.EventHandler(this.buttonClearGraph_Click);
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -709,16 +676,14 @@
             this.groupBoxLan.PerformLayout();
             this.groupBoxGPIB.ResumeLayout(false);
             this.groupBoxGPIB.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageRFTester.ResumeLayout(false);
+            this.tabPageRFTester.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
-            this.tabPage4.ResumeLayout(false);
+            this.tabPageInfoGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -731,7 +696,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageMain;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageRFTester;
         private System.Windows.Forms.GroupBox groupBoxLan;
         private System.Windows.Forms.TextBox textBoxeXMaLIAS;
         private System.Windows.Forms.TextBox textBoxCMW100Alias;
@@ -757,13 +722,10 @@
         private System.Windows.Forms.Label labelFinalFrequency;
         private System.Windows.Forms.Label labelStartFrequency;
         private System.Windows.Forms.Label labelCableModel;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPageInfoGraph;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonZeroCal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage5;
-        public System.Windows.Forms.TextBox textBoxResponse;
         public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
         private System.Windows.Forms.Label labelFF;
         private System.Windows.Forms.Label labelSF;

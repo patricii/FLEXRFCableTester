@@ -291,7 +291,7 @@ namespace FlexRFCableTester
                 if (status == 0)
                 {
                     graphGenerateMethod();
-                    tabControlMain.SelectedIndex = 3;
+                    tabControlMain.SelectedIndex = 2;
                 }
 
                 stopAction = false;
