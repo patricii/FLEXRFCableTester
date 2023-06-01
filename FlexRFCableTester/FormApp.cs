@@ -341,6 +341,7 @@ namespace FlexRFCableTester
                 if (startP.startStatus == -2)
                 {
                     setButtonToStart();
+                    return -1;
                 }
                 if (startP.startStatus == 0)
                 {
