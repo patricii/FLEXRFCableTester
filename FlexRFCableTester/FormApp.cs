@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
@@ -526,6 +527,28 @@ namespace FlexRFCableTester
             catch
             {
                 MessageBox.Show("Error to generate the Graph results!!!");
+            }
+        }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string csvfilePath = @"log\LogGraphData.csv";
+                string[] lines = System.IO.File.ReadAllLines(@"log\MeasuresResultLog.txt");
+                var result = string.Join(Environment.NewLine,
+                                    lines.Select(x => x.Split(' '))
+                                         .Select(x => string.Join(",", x)));
+                File.WriteAllText(csvfilePath, result);
+
+                string fileGraph = @"log/LogGraphData.png";
+                chartResults.SaveImage(fileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+
+                MessageBox.Show("Dados exportados com Sucesso na pasta log/LogGraphData.csv !!!");
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao exportar os dados!!!");
             }
         }
     }

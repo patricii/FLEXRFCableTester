@@ -89,6 +89,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxImg = new System.Windows.Forms.PictureBox();
+            this.buttonExport = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
@@ -562,6 +563,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.buttonExport);
             this.tabPage4.Controls.Add(this.chartResults);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
@@ -659,6 +661,16 @@
             this.pictureBoxImg.TabIndex = 13;
             this.pictureBoxImg.TabStop = false;
             // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(1143, 462);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(75, 59);
+            this.buttonExport.TabIndex = 1;
+            this.buttonExport.Text = "Export Data";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -755,6 +767,7 @@
         public System.Windows.Forms.CheckBox checkBoxSignalGen;
         public System.Windows.Forms.CheckBox checkBoxPowerM;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartResults;
+        private System.Windows.Forms.Button buttonExport;
     }
 }
 
