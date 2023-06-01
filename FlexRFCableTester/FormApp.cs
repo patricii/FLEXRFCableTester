@@ -12,11 +12,11 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter;
         public MessageBasedSession visaSignalGen;
+        public static string cableResults = string.Empty;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
         Logger logger;
-        public static string cableResults = string.Empty;
         private static FormApp INSTANCE = null;
         int PowerMeterModelCheck = -999;
         int SignalGenModelCheck = -999;
@@ -60,12 +60,10 @@ namespace FlexRFCableTester
             {
                 var MyIni = new IniFile("Settings.ini");
                 string pictureName = string.Empty;
-
                 if (MyIni.KeyExists("Picture", comboBoxCableSettings.Text))
                     pictureName = MyIni.Read("Picture", comboBoxCableSettings.Text);
 
                 pictureBoxImg.Image = Image.FromFile(@"img\" + pictureName + ".jpg");
-
                 getFrequencyFromFile();
             }
             catch
@@ -125,12 +123,10 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
             }
         }
-
         private void zeroCalProcess()
         {
             logger = new Logger();
             int zStatus = 0;
-
             try
             {
                 visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
@@ -155,8 +151,8 @@ namespace FlexRFCableTester
                 {
                     Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
                     Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
-
                     logger.logMessage("Starting ZeroCal process - Waiting response....");
+
                     if (checkBoxPowerM.Checked)
                     {
                         PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
@@ -534,15 +530,16 @@ namespace FlexRFCableTester
         {
             try
             {
-                string csvfilePath = @"log\LogGraphData.csv";
-                string[] lines = System.IO.File.ReadAllLines(@"log\MeasuresResultLog.txt");
+                DateTime dateNow = DateTime.Now;
+
+                string csvfilePath = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
+                string pngFileGraph = @"log\LogGraphData_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
+                string[] lines = File.ReadAllLines(@"log\MeasuresResultLog.txt");
                 var result = string.Join(Environment.NewLine,
                                     lines.Select(x => x.Split(' '))
                                          .Select(x => string.Join(",", x)));
                 File.WriteAllText(csvfilePath, result);
-
-                string fileGraph = @"log/LogGraphData.png";
-                chartResults.SaveImage(fileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                chartResults.SaveImage(pngFileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
 
                 MessageBox.Show("Dados exportados com Sucesso na pasta log/LogGraphData.csv !!!");
             }
