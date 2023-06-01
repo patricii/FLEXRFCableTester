@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelAppName = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.groupBoxLan = new System.Windows.Forms.GroupBox();
@@ -58,6 +58,7 @@
             this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
             this.textBoxDbm = new System.Windows.Forms.TextBox();
@@ -82,38 +83,38 @@
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.buttonExport = new System.Windows.Forms.Button();
             this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
-            this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonClearGraph = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLan.SuspendLayout();
             this.groupBoxGPIB.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelAppName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 33.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(431, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FLEX RF Cable Tester";
+            this.labelAppName.AutoSize = true;
+            this.labelAppName.Font = new System.Drawing.Font("Segoe UI", 33.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAppName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelAppName.Location = new System.Drawing.Point(12, 30);
+            this.labelAppName.Name = "labelAppName";
+            this.labelAppName.Size = new System.Drawing.Size(431, 61);
+            this.labelAppName.TabIndex = 0;
+            this.labelAppName.Text = "FLEX RF Cable Tester";
             // 
             // tabControlMain
             // 
@@ -379,6 +380,16 @@
             this.labelSF.TabIndex = 14;
             this.labelSF.Text = "MHz";
             // 
+            // pictureBoxImg
+            // 
+            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MiniBend9;
+            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 13;
+            this.pictureBoxImg.TabStop = false;
+            // 
             // textBoxAverage
             // 
             this.textBoxAverage.Location = new System.Drawing.Point(239, 185);
@@ -563,6 +574,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.buttonClearGraph);
             this.tabPage4.Controls.Add(this.buttonExport);
             this.tabPage4.Controls.Add(this.chartResults);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
@@ -572,33 +584,45 @@
             this.tabPage4.Text = "Info Graphic";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // buttonExport
+            // 
+            this.buttonExport.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonExport.Location = new System.Drawing.Point(1143, 462);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(75, 59);
+            this.buttonExport.TabIndex = 1;
+            this.buttonExport.Text = "Export Data";
+            this.buttonExport.UseVisualStyleBackColor = false;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // chartResults
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartResults.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartResults.Legends.Add(legend2);
             this.chartResults.Location = new System.Drawing.Point(0, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Gray;
-            series1.Legend = "Legend1";
-            series1.Name = "Low Limit";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.Gray;
-            series2.Legend = "Legend1";
-            series2.Name = "High Limit";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Green;
-            series3.Legend = "Legend1";
-            series3.Name = "Loss(dB)";
-            this.chartResults.Series.Add(series1);
-            this.chartResults.Series.Add(series2);
-            this.chartResults.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Gray;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            series4.Legend = "Legend1";
+            series4.Name = "Low Limit";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.Gray;
+            series5.Legend = "Legend1";
+            series5.Name = "High Limit";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Green;
+            series6.Legend = "Legend1";
+            series6.Name = "Loss(dB)";
+            this.chartResults.Series.Add(series4);
+            this.chartResults.Series.Add(series5);
+            this.chartResults.Series.Add(series6);
             this.chartResults.Size = new System.Drawing.Size(1265, 561);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";
@@ -651,25 +675,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBoxImg
+            // buttonClearGraph
             // 
-            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MiniBend9;
-            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 13;
-            this.pictureBoxImg.TabStop = false;
-            // 
-            // buttonExport
-            // 
-            this.buttonExport.Location = new System.Drawing.Point(1143, 462);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(75, 59);
-            this.buttonExport.TabIndex = 1;
-            this.buttonExport.Text = "Export Data";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            this.buttonClearGraph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonClearGraph.Location = new System.Drawing.Point(1143, 99);
+            this.buttonClearGraph.Name = "buttonClearGraph";
+            this.buttonClearGraph.Size = new System.Drawing.Size(75, 59);
+            this.buttonClearGraph.TabIndex = 2;
+            this.buttonClearGraph.Text = "Clear Graph";
+            this.buttonClearGraph.UseVisualStyleBackColor = false;
+            this.buttonClearGraph.Click += new System.EventHandler(this.buttonClearGraph_Click);
             // 
             // FormApp
             // 
@@ -681,7 +696,7 @@
             this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControlMain);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelAppName);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -698,13 +713,13 @@
             this.tabPage2.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -712,7 +727,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAppName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageMain;
@@ -768,6 +783,7 @@
         public System.Windows.Forms.CheckBox checkBoxPowerM;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartResults;
         private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.Button buttonClearGraph;
     }
 }
 

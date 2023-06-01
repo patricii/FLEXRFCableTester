@@ -1,5 +1,6 @@
 ﻿using NationalInstruments.VisaNS;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -16,6 +17,7 @@ namespace FlexRFCableTester
         }
         private void buttonStartProcess_Click(object sender, EventArgs e)
         {
+            buttonStartProcess.BackColor = Color.Green;
             buttonStartProcess.Enabled = false;
             labelCalStatusStartProcess.Text = "          Iniciando a medição do cabo!!!";
             startStatus = 0;
