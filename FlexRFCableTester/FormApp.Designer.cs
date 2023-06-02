@@ -60,7 +60,6 @@
             this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
             this.textBoxDbm = new System.Windows.Forms.TextBox();
@@ -84,12 +83,15 @@
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageInfoGraph = new System.Windows.Forms.TabPage();
+            this.labelCableInfo = new System.Windows.Forms.Label();
             this.buttonClearGraph = new System.Windows.Forms.Button();
             this.buttonExport = new System.Windows.Forms.Button();
             this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBoxGraphInfo = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLogInfo.SuspendLayout();
@@ -97,11 +99,12 @@
             this.groupBoxGPIB.SuspendLayout();
             this.tabPageRFTester.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPageInfoGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
+            this.groupBoxGraphInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAppName
@@ -111,9 +114,9 @@
             this.labelAppName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.labelAppName.Location = new System.Drawing.Point(12, 30);
             this.labelAppName.Name = "labelAppName";
-            this.labelAppName.Size = new System.Drawing.Size(431, 61);
+            this.labelAppName.Size = new System.Drawing.Size(463, 61);
             this.labelAppName.TabIndex = 0;
-            this.labelAppName.Text = "FLEX RF Cable Tester";
+            this.labelAppName.Text = "FLEX RF dB Loss Tester";
             // 
             // tabControlMain
             // 
@@ -318,7 +321,7 @@
             this.tabPageRFTester.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPageRFTester.Size = new System.Drawing.Size(1261, 563);
             this.tabPageRFTester.TabIndex = 1;
-            this.tabPageRFTester.Text = "RF Cable Tester";
+            this.tabPageRFTester.Text = "Loss Check";
             this.tabPageRFTester.UseVisualStyleBackColor = true;
             // 
             // labelStatusRFTester
@@ -364,7 +367,7 @@
             this.groupBoxCableSettings.Size = new System.Drawing.Size(388, 553);
             this.groupBoxCableSettings.TabIndex = 0;
             this.groupBoxCableSettings.TabStop = false;
-            this.groupBoxCableSettings.Text = "Cable Settings";
+            this.groupBoxCableSettings.Text = "Settings:";
             // 
             // labelPowerLevel
             // 
@@ -395,16 +398,6 @@
             this.labelSF.Size = new System.Drawing.Size(59, 30);
             this.labelSF.TabIndex = 14;
             this.labelSF.Text = "MHz";
-            // 
-            // pictureBoxImg
-            // 
-            this.pictureBoxImg.Image = global::FlexRFCableTester.Properties.Resources.MiniBend9;
-            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 13;
-            this.pictureBoxImg.TabStop = false;
             // 
             // textBoxAverage
             // 
@@ -506,9 +499,9 @@
             this.labelCableModel.AutoSize = true;
             this.labelCableModel.Location = new System.Drawing.Point(6, 24);
             this.labelCableModel.Name = "labelCableModel";
-            this.labelCableModel.Size = new System.Drawing.Size(100, 21);
+            this.labelCableModel.Size = new System.Drawing.Size(82, 21);
             this.labelCableModel.TabIndex = 0;
-            this.labelCableModel.Text = "Cable Model:";
+            this.labelCableModel.Text = "PN Model:";
             // 
             // buttonZeroCal
             // 
@@ -582,6 +575,7 @@
             // tabPageInfoGraph
             // 
             this.tabPageInfoGraph.Controls.Add(this.buttonClearGraph);
+            this.tabPageInfoGraph.Controls.Add(this.groupBoxGraphInfo);
             this.tabPageInfoGraph.Controls.Add(this.buttonExport);
             this.tabPageInfoGraph.Controls.Add(this.chartResults);
             this.tabPageInfoGraph.Location = new System.Drawing.Point(4, 30);
@@ -591,10 +585,21 @@
             this.tabPageInfoGraph.Text = "Info Graphic";
             this.tabPageInfoGraph.UseVisualStyleBackColor = true;
             // 
+            // labelCableInfo
+            // 
+            this.labelCableInfo.AutoSize = true;
+            this.labelCableInfo.BackColor = System.Drawing.Color.LightGray;
+            this.labelCableInfo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.labelCableInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelCableInfo.Location = new System.Drawing.Point(12, 52);
+            this.labelCableInfo.Name = "labelCableInfo";
+            this.labelCableInfo.Size = new System.Drawing.Size(0, 25);
+            this.labelCableInfo.TabIndex = 3;
+            // 
             // buttonClearGraph
             // 
             this.buttonClearGraph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonClearGraph.Location = new System.Drawing.Point(1143, 99);
+            this.buttonClearGraph.Location = new System.Drawing.Point(1143, 383);
             this.buttonClearGraph.Name = "buttonClearGraph";
             this.buttonClearGraph.Size = new System.Drawing.Size(75, 59);
             this.buttonClearGraph.TabIndex = 2;
@@ -619,7 +624,7 @@
             this.chartResults.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartResults.Legends.Add(legend1);
-            this.chartResults.Location = new System.Drawing.Point(0, 3);
+            this.chartResults.Location = new System.Drawing.Point(-1, 0);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -665,6 +670,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Developed by Arquimedes / A. Patrício";
             // 
+            // groupBoxGraphInfo
+            // 
+            this.groupBoxGraphInfo.Controls.Add(this.labelCableInfo);
+            this.groupBoxGraphInfo.Location = new System.Drawing.Point(1089, 89);
+            this.groupBoxGraphInfo.Name = "groupBoxGraphInfo";
+            this.groupBoxGraphInfo.Size = new System.Drawing.Size(167, 106);
+            this.groupBoxGraphInfo.TabIndex = 5;
+            this.groupBoxGraphInfo.TabStop = false;
+            this.groupBoxGraphInfo.Text = "Device Under Test:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -674,6 +689,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxImg
+            // 
+            this.pictureBoxImg.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImg.Image")));
+            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 13;
+            this.pictureBoxImg.TabStop = false;
             // 
             // FormApp
             // 
@@ -691,7 +716,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Flex RF Cable Tester   v1.0";
+            this.Text = "FLEX RF dB Loss Tester   v1.0";
             this.tabControlMain.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             this.groupBoxLogInfo.ResumeLayout(false);
@@ -704,11 +729,13 @@
             this.tabPageRFTester.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPageInfoGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
+            this.groupBoxGraphInfo.ResumeLayout(false);
+            this.groupBoxGraphInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -772,6 +799,8 @@
         private System.Windows.Forms.Button buttonClearGraph;
         private System.Windows.Forms.GroupBox groupBoxLogInfo;
         private System.Windows.Forms.TextBox textBoxLogInfo;
+        private System.Windows.Forms.Label labelCableInfo;
+        private System.Windows.Forms.GroupBox groupBoxGraphInfo;
     }
 }
 
