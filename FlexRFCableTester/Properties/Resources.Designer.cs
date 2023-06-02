@@ -173,9 +173,9 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zeroCalSinalG {
+        internal static System.Drawing.Bitmap zeroSignalGen {
             get {
-                object obj = ResourceManager.GetObject("zeroCalSinalG", resourceCulture);
+                object obj = ResourceManager.GetObject("zeroSignalGen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

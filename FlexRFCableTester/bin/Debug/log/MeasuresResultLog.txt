@@ -1,0 +1,1 @@
+0-> Freq:400MHz  dBm:10  Reading:9.7115dB  LowLimit:0  HighLimit:0.906  CableLoss:0.0732  Result:Pass  TestTime:3319ms

@@ -289,7 +289,7 @@ namespace FlexRFCableTester
                             }
                             cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
                             cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
-                            if (cableLossLowSpec < 0)
+                            if (cableLossLowSpec < 0 && frmMain.comboBoxCableSettings.Text != "Generico")
                                 cableLossLowSpec = 0.0;
 
                             if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))
