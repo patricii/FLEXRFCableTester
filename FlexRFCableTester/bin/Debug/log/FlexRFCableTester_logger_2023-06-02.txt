@@ -5522,3 +5522,3625 @@
 6/2/2023 10:12:53 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
 ]
 
+6/2/2023 10:17:52 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:17:53 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:17:53 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:17:53 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:18:09 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:18:09 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:31:25 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:31:25 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:31:25 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:31:26 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:31:26 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:31:27 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:31:29 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:31:29 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:31:31 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:31:31 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:31:31 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:31:31 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:31:31 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:31:32 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:31:32 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:31:32 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:31:32 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:32:23 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:32:23 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:32:23 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:32:24 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:32:24 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:32:24 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:24 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:32:25 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:32:25 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:32:25 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:32:25 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:32:27 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:32:27 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:32:29 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:32:29 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:32:29 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:32:29 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:29 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:30 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 10 dBm;*OPC?]
+
+6/2/2023 10:32:31 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:31 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:31 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:31 AM - [-> GPIB0::30::INSTR -> Write: FREQ 400MHz]
+
+6/2/2023 10:32:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:32 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:32 AM - [-> GPIB0::30::INSTR -> Read: +9.43121433E+000
+]
+
+6/2/2023 10:32:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:33 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:33 AM - [-> GPIB0::30::INSTR -> Read: +9.43128303E+000
+]
+
+6/2/2023 10:32:33 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:33 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Read: +9.43497270E+000
+]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Read: +9.43776667E+000
+]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:34 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:35 AM - [-> GPIB0::30::INSTR -> Read: +9.43984659E+000
+]
+
+6/2/2023 10:32:35 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 450MHz;*OPC?]
+
+6/2/2023 10:32:35 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:35 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:36 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:36 AM - [-> GPIB0::30::INSTR -> Write: FREQ 450MHz]
+
+6/2/2023 10:32:36 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:36 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:37 AM - [-> GPIB0::30::INSTR -> Read: +9.48124030E+000
+]
+
+6/2/2023 10:32:37 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:37 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:37 AM - [-> GPIB0::30::INSTR -> Read: +9.48162087E+000
+]
+
+6/2/2023 10:32:37 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:38 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:38 AM - [-> GPIB0::30::INSTR -> Read: +9.48200413E+000
+]
+
+6/2/2023 10:32:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:38 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:39 AM - [-> GPIB0::30::INSTR -> Read: +9.48230489E+000
+]
+
+6/2/2023 10:32:39 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:39 AM - [-> GPIB0::30::INSTR -> Read: +9.48262339E+000
+]
+
+6/2/2023 10:32:39 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 500MHz;*OPC?]
+
+6/2/2023 10:32:40 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:40 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:40 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:40 AM - [-> GPIB0::30::INSTR -> Write: FREQ 500MHz]
+
+6/2/2023 10:32:40 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:41 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:41 AM - [-> GPIB0::30::INSTR -> Read: +9.42253579E+000
+]
+
+6/2/2023 10:32:41 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:41 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:42 AM - [-> GPIB0::30::INSTR -> Read: +9.42258337E+000
+]
+
+6/2/2023 10:32:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:42 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Read: +9.42260046E+000
+]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Read: +9.42273582E+000
+]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:44 AM - [-> GPIB0::30::INSTR -> Read: +9.42288319E+000
+]
+
+6/2/2023 10:32:44 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 550MHz;*OPC?]
+
+6/2/2023 10:32:44 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:44 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:45 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:45 AM - [-> GPIB0::30::INSTR -> Write: FREQ 550MHz]
+
+6/2/2023 10:32:45 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:45 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:46 AM - [-> GPIB0::30::INSTR -> Read: +9.38585328E+000
+]
+
+6/2/2023 10:32:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:46 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:46 AM - [-> GPIB0::30::INSTR -> Read: +9.38573261E+000
+]
+
+6/2/2023 10:32:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:47 AM - [-> GPIB0::30::INSTR -> Read: +9.38587704E+000
+]
+
+6/2/2023 10:32:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:48 AM - [-> GPIB0::30::INSTR -> Read: +9.38607831E+000
+]
+
+6/2/2023 10:32:48 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:48 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:48 AM - [-> GPIB0::30::INSTR -> Read: +9.38574566E+000
+]
+
+6/2/2023 10:32:48 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 600MHz;*OPC?]
+
+6/2/2023 10:32:49 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:49 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:49 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:49 AM - [-> GPIB0::30::INSTR -> Write: FREQ 600MHz]
+
+6/2/2023 10:32:49 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:50 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:50 AM - [-> GPIB0::30::INSTR -> Read: +9.39960323E+000
+]
+
+6/2/2023 10:32:50 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:50 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:51 AM - [-> GPIB0::30::INSTR -> Read: +9.39955726E+000
+]
+
+6/2/2023 10:32:51 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Read: +9.39959627E+000
+]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Read: +9.39946251E+000
+]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:52 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:53 AM - [-> GPIB0::30::INSTR -> Read: +9.39984195E+000
+]
+
+6/2/2023 10:32:53 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 650MHz;*OPC?]
+
+6/2/2023 10:32:53 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:53 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:54 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:54 AM - [-> GPIB0::30::INSTR -> Write: FREQ 650MHz]
+
+6/2/2023 10:32:54 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:54 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:55 AM - [-> GPIB0::30::INSTR -> Read: +9.29694994E+000
+]
+
+6/2/2023 10:32:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:55 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:55 AM - [-> GPIB0::30::INSTR -> Read: +9.29674783E+000
+]
+
+6/2/2023 10:32:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:56 AM - [-> GPIB0::30::INSTR -> Read: +9.29697229E+000
+]
+
+6/2/2023 10:32:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:57 AM - [-> GPIB0::30::INSTR -> Read: +9.29690952E+000
+]
+
+6/2/2023 10:32:57 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:57 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:57 AM - [-> GPIB0::30::INSTR -> Read: +9.29684913E+000
+]
+
+6/2/2023 10:32:58 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 700MHz;*OPC?]
+
+6/2/2023 10:32:58 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:32:58 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:32:58 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:32:58 AM - [-> GPIB0::30::INSTR -> Write: FREQ 700MHz]
+
+6/2/2023 10:32:59 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:32:59 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:32:59 AM - [-> GPIB0::30::INSTR -> Read: +9.34943576E+000
+]
+
+6/2/2023 10:32:59 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:00 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:00 AM - [-> GPIB0::30::INSTR -> Read: +9.34974208E+000
+]
+
+6/2/2023 10:33:00 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:00 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:01 AM - [-> GPIB0::30::INSTR -> Read: +9.34948603E+000
+]
+
+6/2/2023 10:33:01 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:01 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:01 AM - [-> GPIB0::30::INSTR -> Read: +9.34933522E+000
+]
+
+6/2/2023 10:33:01 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:02 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:02 AM - [-> GPIB0::30::INSTR -> Read: +9.34970778E+000
+]
+
+6/2/2023 10:33:02 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 750MHz;*OPC?]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::30::INSTR -> Write: FREQ 750MHz]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:03 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:04 AM - [-> GPIB0::30::INSTR -> Read: +9.33829544E+000
+]
+
+6/2/2023 10:33:04 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:04 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Read: +9.33836609E+000
+]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Read: +9.33840613E+000
+]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:05 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:06 AM - [-> GPIB0::30::INSTR -> Read: +9.33832653E+000
+]
+
+6/2/2023 10:33:06 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:06 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:07 AM - [-> GPIB0::30::INSTR -> Read: +9.33814517E+000
+]
+
+6/2/2023 10:33:07 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 800MHz;*OPC?]
+
+6/2/2023 10:33:07 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:07 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:08 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:08 AM - [-> GPIB0::30::INSTR -> Write: FREQ 800MHz]
+
+6/2/2023 10:33:08 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:08 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Read: +9.31500722E+000
+]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Read: +9.31484431E+000
+]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:09 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:10 AM - [-> GPIB0::30::INSTR -> Read: +9.31512940E+000
+]
+
+6/2/2023 10:33:10 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:10 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:10 AM - [-> GPIB0::30::INSTR -> Read: +9.31520233E+000
+]
+
+6/2/2023 10:33:10 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:11 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:11 AM - [-> GPIB0::30::INSTR -> Read: +9.31515592E+000
+]
+
+6/2/2023 10:33:11 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 850MHz;*OPC?]
+
+6/2/2023 10:33:12 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:12 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:12 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:12 AM - [-> GPIB0::30::INSTR -> Write: FREQ 850MHz]
+
+6/2/2023 10:33:12 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:13 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:13 AM - [-> GPIB0::30::INSTR -> Read: +9.20069654E+000
+]
+
+6/2/2023 10:33:13 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:13 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:14 AM - [-> GPIB0::30::INSTR -> Read: +9.20063625E+000
+]
+
+6/2/2023 10:33:14 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:14 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:14 AM - [-> GPIB0::30::INSTR -> Read: +9.20063480E+000
+]
+
+6/2/2023 10:33:14 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:15 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:15 AM - [-> GPIB0::30::INSTR -> Read: +9.20085067E+000
+]
+
+6/2/2023 10:33:15 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:15 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:16 AM - [-> GPIB0::30::INSTR -> Read: +9.20071453E+000
+]
+
+6/2/2023 10:33:16 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 900MHz;*OPC?]
+
+6/2/2023 10:33:16 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:16 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:17 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:17 AM - [-> GPIB0::30::INSTR -> Write: FREQ 900MHz]
+
+6/2/2023 10:33:17 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:17 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:18 AM - [-> GPIB0::30::INSTR -> Read: +9.33306284E+000
+]
+
+6/2/2023 10:33:18 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:18 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:18 AM - [-> GPIB0::30::INSTR -> Read: +9.33322129E+000
+]
+
+6/2/2023 10:33:18 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:19 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:19 AM - [-> GPIB0::30::INSTR -> Read: +9.33318215E+000
+]
+
+6/2/2023 10:33:19 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:19 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:20 AM - [-> GPIB0::30::INSTR -> Read: +9.33291098E+000
+]
+
+6/2/2023 10:33:20 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:20 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:20 AM - [-> GPIB0::30::INSTR -> Read: +9.33307368E+000
+]
+
+6/2/2023 10:33:20 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 950MHz;*OPC?]
+
+6/2/2023 10:33:21 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:21 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:21 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:21 AM - [-> GPIB0::30::INSTR -> Write: FREQ 950MHz]
+
+6/2/2023 10:33:22 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:22 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:22 AM - [-> GPIB0::30::INSTR -> Read: +9.20926853E+000
+]
+
+6/2/2023 10:33:22 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:23 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:23 AM - [-> GPIB0::30::INSTR -> Read: +9.20915887E+000
+]
+
+6/2/2023 10:33:23 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:23 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Read: +9.20906909E+000
+]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Read: +9.20957956E+000
+]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:25 AM - [-> GPIB0::30::INSTR -> Read: +9.20938839E+000
+]
+
+6/2/2023 10:33:25 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1000MHz;*OPC?]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1000MHz]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:26 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:27 AM - [-> GPIB0::30::INSTR -> Read: +9.26330945E+000
+]
+
+6/2/2023 10:33:27 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:27 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:28 AM - [-> GPIB0::30::INSTR -> Read: +9.26310002E+000
+]
+
+6/2/2023 10:33:28 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:28 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:28 AM - [-> GPIB0::30::INSTR -> Read: +9.26315897E+000
+]
+
+6/2/2023 10:33:28 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:29 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:29 AM - [-> GPIB0::30::INSTR -> Read: +9.26329939E+000
+]
+
+6/2/2023 10:33:29 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:29 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:30 AM - [-> GPIB0::30::INSTR -> Read: +9.26341632E+000
+]
+
+6/2/2023 10:33:30 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1050MHz;*OPC?]
+
+6/2/2023 10:33:30 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:30 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:31 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:31 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1050MHz]
+
+6/2/2023 10:33:31 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:31 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:32 AM - [-> GPIB0::30::INSTR -> Read: +9.27928379E+000
+]
+
+6/2/2023 10:33:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:32 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:32 AM - [-> GPIB0::30::INSTR -> Read: +9.27915058E+000
+]
+
+6/2/2023 10:33:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:33 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:33 AM - [-> GPIB0::30::INSTR -> Read: +9.27887028E+000
+]
+
+6/2/2023 10:33:33 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:33 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:34 AM - [-> GPIB0::30::INSTR -> Read: +9.27884497E+000
+]
+
+6/2/2023 10:33:34 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:34 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:34 AM - [-> GPIB0::30::INSTR -> Read: +9.27924607E+000
+]
+
+6/2/2023 10:33:35 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1100MHz;*OPC?]
+
+6/2/2023 10:33:35 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:35 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:35 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:35 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1100MHz]
+
+6/2/2023 10:33:36 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:36 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:36 AM - [-> GPIB0::30::INSTR -> Read: +9.17559555E+000
+]
+
+6/2/2023 10:33:36 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:37 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:37 AM - [-> GPIB0::30::INSTR -> Read: +9.17563369E+000
+]
+
+6/2/2023 10:33:37 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:37 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:38 AM - [-> GPIB0::30::INSTR -> Read: +9.17561805E+000
+]
+
+6/2/2023 10:33:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:38 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:38 AM - [-> GPIB0::30::INSTR -> Read: +9.17526301E+000
+]
+
+6/2/2023 10:33:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:39 AM - [-> GPIB0::30::INSTR -> Read: +9.17555007E+000
+]
+
+6/2/2023 10:33:39 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1150MHz;*OPC?]
+
+6/2/2023 10:33:40 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:40 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:40 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:40 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1150MHz]
+
+6/2/2023 10:33:40 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:41 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:41 AM - [-> GPIB0::30::INSTR -> Read: +9.22818129E+000
+]
+
+6/2/2023 10:33:41 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:41 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:42 AM - [-> GPIB0::30::INSTR -> Read: +9.22812960E+000
+]
+
+6/2/2023 10:33:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:42 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:42 AM - [-> GPIB0::30::INSTR -> Read: +9.22820014E+000
+]
+
+6/2/2023 10:33:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:43 AM - [-> GPIB0::30::INSTR -> Read: +9.22795760E+000
+]
+
+6/2/2023 10:33:43 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:44 AM - [-> GPIB0::30::INSTR -> Read: +9.22818081E+000
+]
+
+6/2/2023 10:33:44 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1200MHz;*OPC?]
+
+6/2/2023 10:33:44 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:44 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:45 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:45 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1200MHz]
+
+6/2/2023 10:33:45 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:45 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:46 AM - [-> GPIB0::30::INSTR -> Read: +9.22199086E+000
+]
+
+6/2/2023 10:33:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:46 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:46 AM - [-> GPIB0::30::INSTR -> Read: +9.22218341E+000
+]
+
+6/2/2023 10:33:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:47 AM - [-> GPIB0::30::INSTR -> Read: +9.22220954E+000
+]
+
+6/2/2023 10:33:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:48 AM - [-> GPIB0::30::INSTR -> Read: +9.22255641E+000
+]
+
+6/2/2023 10:33:48 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:48 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:48 AM - [-> GPIB0::30::INSTR -> Read: +9.22230920E+000
+]
+
+6/2/2023 10:33:49 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1250MHz;*OPC?]
+
+6/2/2023 10:33:49 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:49 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:50 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:50 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1250MHz]
+
+6/2/2023 10:33:50 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:50 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Read: +9.10225097E+000
+]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Read: +9.10217388E+000
+]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:52 AM - [-> GPIB0::30::INSTR -> Read: +9.10234248E+000
+]
+
+6/2/2023 10:33:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:52 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:52 AM - [-> GPIB0::30::INSTR -> Read: +9.10202716E+000
+]
+
+6/2/2023 10:33:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:53 AM - [-> GPIB0::30::INSTR -> Read: +9.10246383E+000
+]
+
+6/2/2023 10:33:53 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1300MHz;*OPC?]
+
+6/2/2023 10:33:54 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:54 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:54 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:54 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1300MHz]
+
+6/2/2023 10:33:54 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:55 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:55 AM - [-> GPIB0::30::INSTR -> Read: +9.15541636E+000
+]
+
+6/2/2023 10:33:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:55 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:56 AM - [-> GPIB0::30::INSTR -> Read: +9.15585261E+000
+]
+
+6/2/2023 10:33:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:56 AM - [-> GPIB0::30::INSTR -> Read: +9.15568607E+000
+]
+
+6/2/2023 10:33:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:57 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:57 AM - [-> GPIB0::30::INSTR -> Read: +9.15574158E+000
+]
+
+6/2/2023 10:33:57 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:57 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:33:58 AM - [-> GPIB0::30::INSTR -> Read: +9.15568263E+000
+]
+
+6/2/2023 10:33:58 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1350MHz;*OPC?]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1350MHz]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:33:59 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:00 AM - [-> GPIB0::30::INSTR -> Read: +9.07116873E+000
+]
+
+6/2/2023 10:34:00 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:00 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Read: +9.07112565E+000
+]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Read: +9.07139364E+000
+]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:01 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:02 AM - [-> GPIB0::30::INSTR -> Read: +9.07132552E+000
+]
+
+6/2/2023 10:34:02 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:02 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:03 AM - [-> GPIB0::30::INSTR -> Read: +9.07133503E+000
+]
+
+6/2/2023 10:34:03 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1400MHz;*OPC?]
+
+6/2/2023 10:34:03 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:03 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:04 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:04 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1400MHz]
+
+6/2/2023 10:34:04 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:04 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:05 AM - [-> GPIB0::30::INSTR -> Read: +9.10339074E+000
+]
+
+6/2/2023 10:34:05 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:05 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:05 AM - [-> GPIB0::30::INSTR -> Read: +9.10357371E+000
+]
+
+6/2/2023 10:34:05 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:06 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:06 AM - [-> GPIB0::30::INSTR -> Read: +9.10354836E+000
+]
+
+6/2/2023 10:34:06 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:06 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:07 AM - [-> GPIB0::30::INSTR -> Read: +9.10333456E+000
+]
+
+6/2/2023 10:34:07 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:07 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:07 AM - [-> GPIB0::30::INSTR -> Read: +9.10323909E+000
+]
+
+6/2/2023 10:34:08 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1450MHz;*OPC?]
+
+6/2/2023 10:34:08 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:08 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:08 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:08 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1450MHz]
+
+6/2/2023 10:34:09 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:09 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:09 AM - [-> GPIB0::30::INSTR -> Read: +9.04378802E+000
+]
+
+6/2/2023 10:34:09 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:10 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:10 AM - [-> GPIB0::30::INSTR -> Read: +9.04396646E+000
+]
+
+6/2/2023 10:34:10 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:10 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:11 AM - [-> GPIB0::30::INSTR -> Read: +9.04387271E+000
+]
+
+6/2/2023 10:34:11 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:11 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:11 AM - [-> GPIB0::30::INSTR -> Read: +9.04396394E+000
+]
+
+6/2/2023 10:34:11 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:12 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:12 AM - [-> GPIB0::30::INSTR -> Read: +9.04394177E+000
+]
+
+6/2/2023 10:34:12 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1500MHz;*OPC?]
+
+6/2/2023 10:34:13 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:13 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:13 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:13 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1500MHz]
+
+6/2/2023 10:34:13 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:14 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:14 AM - [-> GPIB0::30::INSTR -> Read: +9.02173071E+000
+]
+
+6/2/2023 10:34:14 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:14 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:15 AM - [-> GPIB0::30::INSTR -> Read: +9.02207978E+000
+]
+
+6/2/2023 10:34:15 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:15 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:15 AM - [-> GPIB0::30::INSTR -> Read: +9.02180215E+000
+]
+
+6/2/2023 10:34:15 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:16 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:16 AM - [-> GPIB0::30::INSTR -> Read: +9.02152805E+000
+]
+
+6/2/2023 10:34:16 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:16 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:17 AM - [-> GPIB0::30::INSTR -> Read: +9.02192982E+000
+]
+
+6/2/2023 10:34:17 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1550MHz;*OPC?]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1550MHz]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:18 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:19 AM - [-> GPIB0::30::INSTR -> Read: +9.02663388E+000
+]
+
+6/2/2023 10:34:19 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:19 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Read: +9.02636412E+000
+]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Read: +9.02679228E+000
+]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:20 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:21 AM - [-> GPIB0::30::INSTR -> Read: +9.02671333E+000
+]
+
+6/2/2023 10:34:21 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:21 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:21 AM - [-> GPIB0::30::INSTR -> Read: +9.02674420E+000
+]
+
+6/2/2023 10:34:22 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1600MHz;*OPC?]
+
+6/2/2023 10:34:22 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:22 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:23 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:23 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1600MHz]
+
+6/2/2023 10:34:23 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:23 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Read: +9.00619327E+000
+]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Read: +9.00590292E+000
+]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:25 AM - [-> GPIB0::30::INSTR -> Read: +9.00583325E+000
+]
+
+6/2/2023 10:34:25 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:25 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:26 AM - [-> GPIB0::30::INSTR -> Read: +9.00580478E+000
+]
+
+6/2/2023 10:34:26 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:26 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:26 AM - [-> GPIB0::30::INSTR -> Read: +9.00602750E+000
+]
+
+6/2/2023 10:34:26 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1650MHz;*OPC?]
+
+6/2/2023 10:34:27 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:27 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:27 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:27 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1650MHz]
+
+6/2/2023 10:34:28 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:28 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:28 AM - [-> GPIB0::30::INSTR -> Read: +9.00522351E+000
+]
+
+6/2/2023 10:34:28 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:29 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:29 AM - [-> GPIB0::30::INSTR -> Read: +9.00522351E+000
+]
+
+6/2/2023 10:34:29 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:29 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Read: +9.00524995E+000
+]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Read: +9.00543863E+000
+]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:30 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:31 AM - [-> GPIB0::30::INSTR -> Read: +9.00542897E+000
+]
+
+6/2/2023 10:34:31 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1700MHz;*OPC?]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1700MHz]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:32 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:33 AM - [-> GPIB0::30::INSTR -> Read: +8.99060666E+000
+]
+
+6/2/2023 10:34:33 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:33 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:34 AM - [-> GPIB0::30::INSTR -> Read: +8.99033365E+000
+]
+
+6/2/2023 10:34:34 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:34 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:34 AM - [-> GPIB0::30::INSTR -> Read: +8.99071076E+000
+]
+
+6/2/2023 10:34:34 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:35 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:35 AM - [-> GPIB0::30::INSTR -> Read: +8.99107101E+000
+]
+
+6/2/2023 10:34:35 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:35 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:36 AM - [-> GPIB0::30::INSTR -> Read: +8.99160775E+000
+]
+
+6/2/2023 10:34:36 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1750MHz;*OPC?]
+
+6/2/2023 10:34:36 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:36 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:37 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:37 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1750MHz]
+
+6/2/2023 10:34:37 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:37 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:38 AM - [-> GPIB0::30::INSTR -> Read: +8.88081333E+000
+]
+
+6/2/2023 10:34:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:38 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:38 AM - [-> GPIB0::30::INSTR -> Read: +8.88100461E+000
+]
+
+6/2/2023 10:34:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:39 AM - [-> GPIB0::30::INSTR -> Read: +8.88164068E+000
+]
+
+6/2/2023 10:34:39 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:40 AM - [-> GPIB0::30::INSTR -> Read: +8.88180734E+000
+]
+
+6/2/2023 10:34:40 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:40 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:40 AM - [-> GPIB0::30::INSTR -> Read: +8.88163153E+000
+]
+
+6/2/2023 10:34:41 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1800MHz;*OPC?]
+
+6/2/2023 10:34:41 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:41 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:41 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:41 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1800MHz]
+
+6/2/2023 10:34:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:42 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:42 AM - [-> GPIB0::30::INSTR -> Read: +8.90997746E+000
+]
+
+6/2/2023 10:34:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:43 AM - [-> GPIB0::30::INSTR -> Read: +8.90979629E+000
+]
+
+6/2/2023 10:34:43 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:44 AM - [-> GPIB0::30::INSTR -> Read: +8.91031588E+000
+]
+
+6/2/2023 10:34:44 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:44 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:44 AM - [-> GPIB0::30::INSTR -> Read: +8.91074809E+000
+]
+
+6/2/2023 10:34:44 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:45 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:45 AM - [-> GPIB0::30::INSTR -> Read: +8.91088686E+000
+]
+
+6/2/2023 10:34:45 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1850MHz;*OPC?]
+
+6/2/2023 10:34:46 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:46 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:46 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:46 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1850MHz]
+
+6/2/2023 10:34:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:47 AM - [-> GPIB0::30::INSTR -> Read: +8.70117612E+000
+]
+
+6/2/2023 10:34:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:48 AM - [-> GPIB0::30::INSTR -> Read: +8.70116167E+000
+]
+
+6/2/2023 10:34:48 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:48 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:48 AM - [-> GPIB0::30::INSTR -> Read: +8.70138121E+000
+]
+
+6/2/2023 10:34:48 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:49 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:49 AM - [-> GPIB0::30::INSTR -> Read: +8.70144803E+000
+]
+
+6/2/2023 10:34:49 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:49 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:50 AM - [-> GPIB0::30::INSTR -> Read: +8.70127731E+000
+]
+
+6/2/2023 10:34:50 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1900MHz;*OPC?]
+
+6/2/2023 10:34:50 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:50 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:51 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:51 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1900MHz]
+
+6/2/2023 10:34:51 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:52 AM - [-> GPIB0::30::INSTR -> Read: +8.86823362E+000
+]
+
+6/2/2023 10:34:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:52 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:52 AM - [-> GPIB0::30::INSTR -> Read: +8.86809663E+000
+]
+
+6/2/2023 10:34:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:53 AM - [-> GPIB0::30::INSTR -> Read: +8.86819583E+000
+]
+
+6/2/2023 10:34:53 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:54 AM - [-> GPIB0::30::INSTR -> Read: +8.86854802E+000
+]
+
+6/2/2023 10:34:54 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:54 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:54 AM - [-> GPIB0::30::INSTR -> Read: +8.86802682E+000
+]
+
+6/2/2023 10:34:55 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 1950MHz;*OPC?]
+
+6/2/2023 10:34:55 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:34:55 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:34:56 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:34:56 AM - [-> GPIB0::30::INSTR -> Write: FREQ 1950MHz]
+
+6/2/2023 10:34:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Read: +8.75741468E+000
+]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Read: +8.75739045E+000
+]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:57 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:58 AM - [-> GPIB0::30::INSTR -> Read: +8.75792133E+000
+]
+
+6/2/2023 10:34:58 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:58 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:58 AM - [-> GPIB0::30::INSTR -> Read: +8.75812510E+000
+]
+
+6/2/2023 10:34:58 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:34:59 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:34:59 AM - [-> GPIB0::30::INSTR -> Read: +8.75834851E+000
+]
+
+6/2/2023 10:34:59 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2000MHz;*OPC?]
+
+6/2/2023 10:35:00 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:00 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:00 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:00 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2000MHz]
+
+6/2/2023 10:35:00 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:01 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:01 AM - [-> GPIB0::30::INSTR -> Read: +8.89670622E+000
+]
+
+6/2/2023 10:35:01 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:01 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:02 AM - [-> GPIB0::30::INSTR -> Read: +8.89660037E+000
+]
+
+6/2/2023 10:35:02 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:02 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Read: +8.89648956E+000
+]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Read: +8.89694348E+000
+]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:03 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:04 AM - [-> GPIB0::30::INSTR -> Read: +8.89693618E+000
+]
+
+6/2/2023 10:35:04 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2050MHz;*OPC?]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2050MHz]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:05 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:06 AM - [-> GPIB0::30::INSTR -> Read: +8.91637690E+000
+]
+
+6/2/2023 10:35:06 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:06 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Read: +8.91646048E+000
+]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Read: +8.91759219E+000
+]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:07 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:08 AM - [-> GPIB0::30::INSTR -> Read: +8.91823616E+000
+]
+
+6/2/2023 10:35:08 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:08 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:09 AM - [-> GPIB0::30::INSTR -> Read: +8.91855630E+000
+]
+
+6/2/2023 10:35:09 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2100MHz;*OPC?]
+
+6/2/2023 10:35:09 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:09 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:10 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:10 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2100MHz]
+
+6/2/2023 10:35:10 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:10 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:11 AM - [-> GPIB0::30::INSTR -> Read: +8.68956731E+000
+]
+
+6/2/2023 10:35:11 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:11 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:11 AM - [-> GPIB0::30::INSTR -> Read: +8.68976365E+000
+]
+
+6/2/2023 10:35:11 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:12 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:12 AM - [-> GPIB0::30::INSTR -> Read: +8.69182443E+000
+]
+
+6/2/2023 10:35:12 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:12 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:13 AM - [-> GPIB0::30::INSTR -> Read: +8.69281210E+000
+]
+
+6/2/2023 10:35:13 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:13 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:13 AM - [-> GPIB0::30::INSTR -> Read: +8.69335530E+000
+]
+
+6/2/2023 10:35:14 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2150MHz;*OPC?]
+
+6/2/2023 10:35:14 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:14 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:14 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:14 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2150MHz]
+
+6/2/2023 10:35:15 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:15 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:15 AM - [-> GPIB0::30::INSTR -> Read: +8.85162010E+000
+]
+
+6/2/2023 10:35:15 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:16 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:16 AM - [-> GPIB0::30::INSTR -> Read: +8.85147468E+000
+]
+
+6/2/2023 10:35:16 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:16 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:17 AM - [-> GPIB0::30::INSTR -> Read: +8.85172416E+000
+]
+
+6/2/2023 10:35:17 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:17 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:17 AM - [-> GPIB0::30::INSTR -> Read: +8.85184324E+000
+]
+
+6/2/2023 10:35:17 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:18 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:18 AM - [-> GPIB0::30::INSTR -> Read: +8.85201947E+000
+]
+
+6/2/2023 10:35:18 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2200MHz;*OPC?]
+
+6/2/2023 10:35:19 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:19 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:19 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:19 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2200MHz]
+
+6/2/2023 10:35:19 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:20 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:20 AM - [-> GPIB0::30::INSTR -> Read: +8.62367358E+000
+]
+
+6/2/2023 10:35:20 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:20 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:21 AM - [-> GPIB0::30::INSTR -> Read: +8.62380796E+000
+]
+
+6/2/2023 10:35:21 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:21 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:21 AM - [-> GPIB0::30::INSTR -> Read: +8.62332901E+000
+]
+
+6/2/2023 10:35:21 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:22 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:22 AM - [-> GPIB0::30::INSTR -> Read: +8.62448728E+000
+]
+
+6/2/2023 10:35:22 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:22 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:23 AM - [-> GPIB0::30::INSTR -> Read: +8.62484230E+000
+]
+
+6/2/2023 10:35:23 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2250MHz;*OPC?]
+
+6/2/2023 10:35:23 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:23 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:24 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:24 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2250MHz]
+
+6/2/2023 10:35:24 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:25 AM - [-> GPIB0::30::INSTR -> Read: +8.69906057E+000
+]
+
+6/2/2023 10:35:25 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:25 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Read: +8.69900790E+000
+]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Read: +8.69934325E+000
+]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:26 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:27 AM - [-> GPIB0::30::INSTR -> Read: +8.69918799E+000
+]
+
+6/2/2023 10:35:27 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:27 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:27 AM - [-> GPIB0::30::INSTR -> Read: +8.69946303E+000
+]
+
+6/2/2023 10:35:28 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2300MHz;*OPC?]
+
+6/2/2023 10:35:28 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:28 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:29 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:29 AM - [-> GPIB0::30::INSTR -> Write: FREQ 2300MHz]
+
+6/2/2023 10:35:29 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:29 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Read: +8.77336994E+000
+]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Read: +8.77322590E+000
+]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:30 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:31 AM - [-> GPIB0::30::INSTR -> Read: +8.77318190E+000
+]
+
+6/2/2023 10:35:31 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:31 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:32 AM - [-> GPIB0::30::INSTR -> Read: +8.77316661E+000
+]
+
+6/2/2023 10:35:32 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:35:32 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:35:32 AM - [-> GPIB0::30::INSTR -> Read: +8.77329993E+000
+]
+
+6/2/2023 10:35:33 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 2350MHz;*OPC?]
+
+6/2/2023 10:35:33 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:35:33 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:35:33 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:35:36 AM - [-> Cable DBLoss measure Finished Successfully]
+
+6/2/2023 10:35:36 AM - [-> Aferição do cabo realizada com sucesso!!!]
+
+6/2/2023 10:36:33 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:36:33 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:36:33 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:36:34 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:36:42 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:36:42 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:36:42 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:36:43 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:36:43 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:36:43 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:36:43 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:36:44 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:36:44 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:36:44 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:36:44 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:36:47 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:36:47 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:36:48 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:36:48 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:36:48 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:36:48 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:36:48 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:36:49 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:36:49 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:36:49 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:36:49 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:37:20 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:37:21 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:37:21 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:37:21 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:37:28 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:37:29 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:37:29 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:37:29 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:37:29 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:37:30 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:30 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:37:30 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:37:30 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:37:30 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:37:30 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:37:33 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:37:33 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:37:34 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:37:34 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:37:34 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:35 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 10:37:36 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:36 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 10 dBm;*OPC?]
+
+6/2/2023 10:37:36 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:36 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:37 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:37 AM - [-> GPIB0::30::INSTR -> Write: FREQ 400MHz]
+
+6/2/2023 10:37:37 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:37 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:38 AM - [-> GPIB0::30::INSTR -> Read: +9.44079853E+000
+]
+
+6/2/2023 10:37:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:38 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:38 AM - [-> GPIB0::30::INSTR -> Read: +9.44138460E+000
+]
+
+6/2/2023 10:37:38 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:39 AM - [-> GPIB0::30::INSTR -> Read: +9.44496091E+000
+]
+
+6/2/2023 10:37:39 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:39 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:40 AM - [-> GPIB0::30::INSTR -> Read: +9.44791381E+000
+]
+
+6/2/2023 10:37:40 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:40 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:40 AM - [-> GPIB0::30::INSTR -> Read: +9.44967898E+000
+]
+
+6/2/2023 10:37:40 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 450MHz;*OPC?]
+
+6/2/2023 10:37:41 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:41 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:41 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:41 AM - [-> GPIB0::30::INSTR -> Write: FREQ 450MHz]
+
+6/2/2023 10:37:41 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:42 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:42 AM - [-> GPIB0::30::INSTR -> Read: +9.49290140E+000
+]
+
+6/2/2023 10:37:42 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:42 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:43 AM - [-> GPIB0::30::INSTR -> Read: +9.49289594E+000
+]
+
+6/2/2023 10:37:43 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:43 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Read: +9.49342093E+000
+]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Read: +9.49371317E+000
+]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:44 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:45 AM - [-> GPIB0::30::INSTR -> Read: +9.49441074E+000
+]
+
+6/2/2023 10:37:45 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 500MHz;*OPC?]
+
+6/2/2023 10:37:45 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:45 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:46 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:46 AM - [-> GPIB0::30::INSTR -> Write: FREQ 500MHz]
+
+6/2/2023 10:37:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:46 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:47 AM - [-> GPIB0::30::INSTR -> Read: +9.43446502E+000
+]
+
+6/2/2023 10:37:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:47 AM - [-> GPIB0::30::INSTR -> Read: +9.43462903E+000
+]
+
+6/2/2023 10:37:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:48 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:48 AM - [-> GPIB0::30::INSTR -> Read: +9.43468892E+000
+]
+
+6/2/2023 10:37:48 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:48 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:49 AM - [-> GPIB0::30::INSTR -> Read: +9.43482160E+000
+]
+
+6/2/2023 10:37:49 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:49 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:49 AM - [-> GPIB0::30::INSTR -> Read: +9.43544348E+000
+]
+
+6/2/2023 10:37:49 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 550MHz;*OPC?]
+
+6/2/2023 10:37:50 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:50 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:50 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:50 AM - [-> GPIB0::30::INSTR -> Write: FREQ 550MHz]
+
+6/2/2023 10:37:50 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:51 AM - [-> GPIB0::30::INSTR -> Read: +9.39953032E+000
+]
+
+6/2/2023 10:37:51 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:51 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:52 AM - [-> GPIB0::30::INSTR -> Read: +9.39961949E+000
+]
+
+6/2/2023 10:37:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:52 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:52 AM - [-> GPIB0::30::INSTR -> Read: +9.39989768E+000
+]
+
+6/2/2023 10:37:52 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:53 AM - [-> GPIB0::30::INSTR -> Read: +9.40012662E+000
+]
+
+6/2/2023 10:37:53 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:54 AM - [-> GPIB0::30::INSTR -> Read: +9.39972863E+000
+]
+
+6/2/2023 10:37:54 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 600MHz;*OPC?]
+
+6/2/2023 10:37:54 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:37:54 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:37:55 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:37:55 AM - [-> GPIB0::30::INSTR -> Write: FREQ 600MHz]
+
+6/2/2023 10:37:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:55 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:56 AM - [-> GPIB0::30::INSTR -> Read: +9.41418379E+000
+]
+
+6/2/2023 10:37:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:37:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:37:56 AM - [-> GPIB0::30::INSTR -> Read: +9.41390328E+000
+]
+
+6/2/2023 10:37:56 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:18 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:18 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:38:18 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:18 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:38:36 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:37 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:38:37 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:37 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:38:44 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:44 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:38:44 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:38:45 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:38:45 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:38:45 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:38:45 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:38:46 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:38:46 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:38:46 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:38:46 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:38:49 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:38:49 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:38:50 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:38:50 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:38:50 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:38:50 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:38:50 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 10:38:51 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:38:51 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:38:51 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:38:51 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 8 dBm;*OPC?]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:38:52 AM - [-> GPIB0::30::INSTR -> Write: FREQ 100MHz]
+
+6/2/2023 10:38:53 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:53 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:38:53 AM - [-> GPIB0::30::INSTR -> Read: +7.75300563E+000
+]
+
+6/2/2023 10:38:53 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:54 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:38:54 AM - [-> GPIB0::30::INSTR -> Read: +7.75339815E+000
+]
+
+6/2/2023 10:38:54 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:54 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:38:55 AM - [-> GPIB0::30::INSTR -> Read: +7.75660590E+000
+]
+
+6/2/2023 10:38:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:55 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:38:55 AM - [-> GPIB0::30::INSTR -> Read: +7.75878102E+000
+]
+
+6/2/2023 10:38:55 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:38:56 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:38:56 AM - [-> GPIB0::30::INSTR -> Read: +7.76116299E+000
+]
+
+6/2/2023 10:39:02 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:40:27 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:40:27 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:40:27 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:40:28 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:40:43 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:40:43 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:40:43 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:40:43 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:40:48 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:40:56 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:41:03 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:41:05 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:41:39 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:41:47 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:41:51 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:41:52 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:41:53 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:42:04 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:42:10 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:42:12 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:42:15 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:42:17 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:42:19 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:42:22 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:42:24 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:42:27 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 10:42:28 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:42:28 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:42:28 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:42:33 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 10:42:40 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:42:53 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 8 dBm;*OPC?]
+
+6/2/2023 10:45:51 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:45:52 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:45:52 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:45:53 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:46:01 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:46:02 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:46:02 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:46:03 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:46:03 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:46:04 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:46:04 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:46:05 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:46:05 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:46:05 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:46:06 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:46:08 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:46:08 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:46:09 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:46:09 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:46:10 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:46:11 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:46:11 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:46:12 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:46:12 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:46:13 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:46:13 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:47:01 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:47:01 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:47:01 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:47:02 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:47:06 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:47:06 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:47:06 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:47:07 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:47:07 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:47:07 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:48:34 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:35 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:48:35 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:35 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:48:41 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:41 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:48:41 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:42 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:48:42 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:48:42 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:48:51 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:51 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:48:51 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:48:52 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:49:03 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:49:03 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:49:03 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:49:03 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:49:04 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:49:04 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:04 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:49:04 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:49:04 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:49:04 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:49:05 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:49:07 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:49:07 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:49:08 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:49:08 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:49:09 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:49:09 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:09 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5000MHz;*OPC?]
+
+6/2/2023 10:49:09 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:09 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:49:10 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:49:10 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 10:49:10 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:15 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 8 dBm;*OPC?]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::30::INSTR -> Write: FREQ 5000MHz]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:16 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:17 AM - [-> GPIB0::30::INSTR -> Read: +6.13783569E+000
+]
+
+6/2/2023 10:49:17 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:17 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:18 AM - [-> GPIB0::30::INSTR -> Read: +6.13781010E+000
+]
+
+6/2/2023 10:49:18 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:18 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:18 AM - [-> GPIB0::30::INSTR -> Read: +6.13853297E+000
+]
+
+6/2/2023 10:49:18 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:19 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:19 AM - [-> GPIB0::30::INSTR -> Read: +6.13965222E+000
+]
+
+6/2/2023 10:49:19 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:19 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:20 AM - [-> GPIB0::30::INSTR -> Read: +6.13991194E+000
+]
+
+6/2/2023 10:49:20 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5050MHz;*OPC?]
+
+6/2/2023 10:49:20 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:49:20 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:49:21 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 10:49:21 AM - [-> GPIB0::30::INSTR -> Write: FREQ 5050MHz]
+
+6/2/2023 10:49:21 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:21 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Read: +6.05824718E+000
+]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Read: +6.05863109E+000
+]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:22 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:23 AM - [-> GPIB0::30::INSTR -> Read: +6.05900195E+000
+]
+
+6/2/2023 10:49:23 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:23 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:49:23 AM - [-> GPIB0::30::INSTR -> Read: +6.05909917E+000
+]
+
+6/2/2023 10:49:23 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 10:49:24 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 10:51:02 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:51:02 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:51:02 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:51:03 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:51:13 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:51:13 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:51:13 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:51:14 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:51:14 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:51:14 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:51:14 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:51:15 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:51:15 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:51:15 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:51:15 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:51:17 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:51:17 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:51:18 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:51:18 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:51:19 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:51:19 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:51:19 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:51:19 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:51:19 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:51:20 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:51:20 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:52:31 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:52:32 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:52:32 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:52:32 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:52:41 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:52:41 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:52:41 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:52:41 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:52:41 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:52:42 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:52:42 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:52:42 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:52:42 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:52:42 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:52:42 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:52:45 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:52:45 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:52:46 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:52:46 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:52:46 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:52:47 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:52:47 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:52:47 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:52:47 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:52:48 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:52:48 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:54:38 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:54:38 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:54:38 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:54:38 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:54:44 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:54:45 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:54:45 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:54:45 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:54:45 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:54:46 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:54:46 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:54:46 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:54:46 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:54:46 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:54:46 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:54:49 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:54:49 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:54:50 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:54:53 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:54:53 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:54:54 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:54:54 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 400MHz;*OPC?]
+
+6/2/2023 10:54:54 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:54:54 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:54:55 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:54:55 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:55:55 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:55:55 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:56:42 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:56:42 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:56:42 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:56:43 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:56:49 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:56:49 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:56:49 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:56:50 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:56:50 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:56:50 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:56:50 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:56:51 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:56:51 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:56:51 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:56:51 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:56:53 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:56:53 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:56:55 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:56:55 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:56:58 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:56:59 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:58:09 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:58:09 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:58:09 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:58:10 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:58:14 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:58:14 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:58:14 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:58:15 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:58:15 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:58:15 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:58:15 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:58:16 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:58:16 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:58:16 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:58:16 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:58:18 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:58:18 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:58:20 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:58:20 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:58:20 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:58:20 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:58:20 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 10:58:21 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:58:21 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 10:58:21 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 10:58:21 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 10:59:12 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:59:12 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:59:12 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:59:13 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:59:17 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 10:59:17 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 10:59:17 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 10:59:18 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 10:59:18 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 10:59:19 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 10:59:21 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:59:21 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 10:59:22 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 10:59:22 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 10:59:26 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 10:59:28 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:00:11 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:00:11 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:00:11 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:00:12 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:00:16 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:00:16 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:00:16 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:00:17 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:00:17 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:00:17 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:00:17 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:00:18 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:00:18 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:00:18 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:00:18 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:00:21 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:00:21 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:00:22 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:00:27 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:00:27 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:00:27 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:00:27 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:00:28 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:00:28 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:00:28 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 11:00:28 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 11:02:04 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:02:04 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:02:04 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:02:05 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:02:09 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:02:09 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:02:09 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:02:10 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:02:10 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:02:11 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:02:13 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:02:13 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:02:14 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:02:14 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:02:15 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:02:19 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:02:22 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:02:22 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:02:22 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:02:23 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 11:03:10 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:11 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:03:11 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:11 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:03:36 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:36 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:03:36 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:37 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:03:43 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:44 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:03:44 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:03:44 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:03:44 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:03:45 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:03:45 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:03:45 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:03:45 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:03:45 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:03:45 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:03:48 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:03:48 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:03:49 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:03:49 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:03:49 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:03:50 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:03:51 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:03:52 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:03:52 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:03:52 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 11:04:59 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:05:00 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:05:00 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:05:00 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:05:06 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:05:07 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:05:08 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:05:08 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:05:08 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:05:08 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:05:11 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:05:11 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:05:12 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:05:12 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:05:12 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:05:12 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:05:16 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:05:17 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:05:17 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:05:17 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 11:05:17 AM - [-> Cable DBLoss  measure Failed!!!]
+
+6/2/2023 11:06:19 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:06:20 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:06:20 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:06:20 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:06:25 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:06:25 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:06:25 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:06:26 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:06:26 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:06:26 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:06:26 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:06:27 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:06:27 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:06:27 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:06:27 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:06:29 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:06:29 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:06:30 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:06:30 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:06:31 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:06:31 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:06:43 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:06:45 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:07:02 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:07:03 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 11:11:20 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:20 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:11:20 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:21 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:11:27 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:28 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:11:28 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:28 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:11:33 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:33 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/2/2023 11:11:33 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/2/2023 11:11:34 AM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/2/2023 11:11:34 AM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/2/2023 11:11:35 AM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/2/2023 11:11:37 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:11:37 AM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/2/2023 11:11:38 AM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/2/2023 11:11:38 AM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/2/2023 11:11:39 AM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/2/2023 11:11:39 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:39 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:11:39 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:39 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:11:40 AM - [-> GPIB0::2::INSTR -> Read: +128
+]
+
+6/2/2023 11:11:41 AM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 100MHz;*OPC?]
+
+6/2/2023 11:11:41 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:41 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:11:42 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 11:11:43 AM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/2/2023 11:11:43 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:43 AM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 8 dBm;*OPC?]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::30::INSTR -> Write: FREQ 100MHz]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 11:11:44 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 11:11:45 AM - [-> GPIB0::30::INSTR -> Read: +7.75598515E+000
+]
+
+6/2/2023 11:11:45 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 11:11:45 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Read: +7.75641945E+000
+]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Read: +7.75999317E+000
+]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 11:11:46 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 11:11:47 AM - [-> GPIB0::30::INSTR -> Read: +7.76265851E+000
+]
+
+6/2/2023 11:11:47 AM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/2/2023 11:11:47 AM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/2/2023 11:11:48 AM - [-> GPIB0::30::INSTR -> Read: +7.76474873E+000
+]
+
+6/2/2023 11:11:50 AM - [-> Cable DBLoss  measure Failed!!!]
+

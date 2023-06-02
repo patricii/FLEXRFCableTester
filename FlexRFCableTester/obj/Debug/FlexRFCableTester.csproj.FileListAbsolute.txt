@@ -34,4 +34,3 @@ C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCabl
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csproj.CopyComplete
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.pdb
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Debug\FlexRFCableTester.csprojAssemblyReference.cache

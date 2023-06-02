@@ -55,6 +55,7 @@ namespace FlexRFCableTester
         {
             visaSignalGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
             equipmentSignalGen = new Equipments(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
+
             equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);
             response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (Convert.ToInt32(response) != 1)
@@ -140,12 +141,23 @@ namespace FlexRFCableTester
                     if (Convert.ToInt32(response) != 1)
                         return false;
 
-                    bool status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
+                    bool status = false;
+                    int writeFreqCount = 0;
+                    do
+                    {
+                        status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
+                        Thread.Sleep(1000);
+                        writeFreqCount++;
+                    }
+                    while (writeFreqCount < 3 && status == false);
+                    writeFreqCount = 0;
+
                     if (!status)
                         return false;
 
                     labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + frmMain.textBoxStartFrequency.Text + " MHz";
                     Application.DoEvents();
+
 
                     equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
                     response = equipmentSignalGen.readCommand(visaSigGen);
