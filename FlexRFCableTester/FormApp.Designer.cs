@@ -610,7 +610,7 @@
             this.labelCableInfo.BackColor = System.Drawing.Color.LightGray;
             this.labelCableInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelCableInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCableInfo.Location = new System.Drawing.Point(114, 35);
+            this.labelCableInfo.Location = new System.Drawing.Point(116, 35);
             this.labelCableInfo.Name = "labelCableInfo";
             this.labelCableInfo.Size = new System.Drawing.Size(0, 21);
             this.labelCableInfo.TabIndex = 3;
@@ -632,7 +632,7 @@
             this.chartResults.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartResults.Legends.Add(legend1);
-            this.chartResults.Location = new System.Drawing.Point(-1, 0);
+            this.chartResults.Location = new System.Drawing.Point(-1, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -654,7 +654,7 @@
             this.chartResults.Series.Add(series1);
             this.chartResults.Series.Add(series2);
             this.chartResults.Series.Add(series3);
-            this.chartResults.Size = new System.Drawing.Size(1265, 561);
+            this.chartResults.Size = new System.Drawing.Size(1265, 558);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";
             // 

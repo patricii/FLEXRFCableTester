@@ -498,7 +498,17 @@ namespace FlexRFCableTester
                 if (comboBoxCableSettings.Text != "Generico")
                 {
                     if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
-                        lossFromIniFile = (Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text)) - 0.5);
+                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text));
+                    if (lossFromIniFile < 3)
+                    {
+                        lossFromIniFile = lossFromIniFile - 0.5;
+                        chartResults.ChartAreas[0].AxisY.Interval = 0.1;
+                    }
+                    else
+                    {
+                        lossFromIniFile = lossFromIniFile - 2;
+                        chartResults.ChartAreas[0].AxisY.Interval = 0.2;
+                    }
 
                     chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
                     chartResults.ChartAreas[0].AxisY.Interval = 0.1;
