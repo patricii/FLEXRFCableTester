@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.labelAppName = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
@@ -60,6 +60,7 @@
             this.labelPowerLevel = new System.Windows.Forms.Label();
             this.labelFF = new System.Windows.Forms.Label();
             this.labelSF = new System.Windows.Forms.Label();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.textBoxAverage = new System.Windows.Forms.TextBox();
             this.textBoxIntervalFrequency = new System.Windows.Forms.TextBox();
             this.textBoxDbm = new System.Windows.Forms.TextBox();
@@ -83,15 +84,13 @@
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageInfoGraph = new System.Windows.Forms.TabPage();
-            this.labelCableInfo = new System.Windows.Forms.Label();
             this.buttonClearGraph = new System.Windows.Forms.Button();
+            this.labelCableInfo = new System.Windows.Forms.Label();
             this.buttonExport = new System.Windows.Forms.Button();
             this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelWarning = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBoxGraphInfo = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLogInfo.SuspendLayout();
@@ -99,12 +98,11 @@
             this.groupBoxGPIB.SuspendLayout();
             this.tabPageRFTester.SuspendLayout();
             this.groupBoxCableSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).BeginInit();
             this.tabPageInfoGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).BeginInit();
-            this.groupBoxGraphInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // labelAppName
@@ -399,6 +397,16 @@
             this.labelSF.TabIndex = 14;
             this.labelSF.Text = "MHz";
             // 
+            // pictureBoxImg
+            // 
+            this.pictureBoxImg.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImg.Image")));
+            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 13;
+            this.pictureBoxImg.TabStop = false;
+            // 
             // textBoxAverage
             // 
             this.textBoxAverage.Location = new System.Drawing.Point(239, 185);
@@ -574,8 +582,8 @@
             // 
             // tabPageInfoGraph
             // 
+            this.tabPageInfoGraph.Controls.Add(this.labelCableInfo);
             this.tabPageInfoGraph.Controls.Add(this.buttonClearGraph);
-            this.tabPageInfoGraph.Controls.Add(this.groupBoxGraphInfo);
             this.tabPageInfoGraph.Controls.Add(this.buttonExport);
             this.tabPageInfoGraph.Controls.Add(this.chartResults);
             this.tabPageInfoGraph.Location = new System.Drawing.Point(4, 30);
@@ -584,17 +592,6 @@
             this.tabPageInfoGraph.TabIndex = 3;
             this.tabPageInfoGraph.Text = "Info Graphic";
             this.tabPageInfoGraph.UseVisualStyleBackColor = true;
-            // 
-            // labelCableInfo
-            // 
-            this.labelCableInfo.AutoSize = true;
-            this.labelCableInfo.BackColor = System.Drawing.Color.LightGray;
-            this.labelCableInfo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.labelCableInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCableInfo.Location = new System.Drawing.Point(12, 52);
-            this.labelCableInfo.Name = "labelCableInfo";
-            this.labelCableInfo.Size = new System.Drawing.Size(0, 25);
-            this.labelCableInfo.TabIndex = 3;
             // 
             // buttonClearGraph
             // 
@@ -606,6 +603,17 @@
             this.buttonClearGraph.Text = "Clear Graph";
             this.buttonClearGraph.UseVisualStyleBackColor = false;
             this.buttonClearGraph.Click += new System.EventHandler(this.buttonClearGraph_Click);
+            // 
+            // labelCableInfo
+            // 
+            this.labelCableInfo.AutoSize = true;
+            this.labelCableInfo.BackColor = System.Drawing.Color.LightGray;
+            this.labelCableInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelCableInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelCableInfo.Location = new System.Drawing.Point(114, 35);
+            this.labelCableInfo.Name = "labelCableInfo";
+            this.labelCableInfo.Size = new System.Drawing.Size(0, 21);
+            this.labelCableInfo.TabIndex = 3;
             // 
             // buttonExport
             // 
@@ -670,16 +678,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Developed by Arquimedes / A. Patrício";
             // 
-            // groupBoxGraphInfo
-            // 
-            this.groupBoxGraphInfo.Controls.Add(this.labelCableInfo);
-            this.groupBoxGraphInfo.Location = new System.Drawing.Point(1089, 89);
-            this.groupBoxGraphInfo.Name = "groupBoxGraphInfo";
-            this.groupBoxGraphInfo.Size = new System.Drawing.Size(167, 106);
-            this.groupBoxGraphInfo.TabIndex = 5;
-            this.groupBoxGraphInfo.TabStop = false;
-            this.groupBoxGraphInfo.Text = "Device Under Test:";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -689,16 +687,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxImg
-            // 
-            this.pictureBoxImg.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImg.Image")));
-            this.pictureBoxImg.Location = new System.Drawing.Point(6, 289);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(376, 258);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 13;
-            this.pictureBoxImg.TabStop = false;
             // 
             // FormApp
             // 
@@ -729,13 +717,12 @@
             this.tabPageRFTester.PerformLayout();
             this.groupBoxCableSettings.ResumeLayout(false);
             this.groupBoxCableSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMeasureTable)).EndInit();
             this.tabPageInfoGraph.ResumeLayout(false);
+            this.tabPageInfoGraph.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartResults)).EndInit();
-            this.groupBoxGraphInfo.ResumeLayout(false);
-            this.groupBoxGraphInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,7 +787,6 @@
         private System.Windows.Forms.GroupBox groupBoxLogInfo;
         private System.Windows.Forms.TextBox textBoxLogInfo;
         private System.Windows.Forms.Label labelCableInfo;
-        private System.Windows.Forms.GroupBox groupBoxGraphInfo;
     }
 }
 

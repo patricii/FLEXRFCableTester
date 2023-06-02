@@ -1,16 +1,12 @@
-﻿using NationalInstruments.VisaNS;
-using System;
-using System.Drawing;
+﻿using System;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
 {
     public partial class StartProcess : Form
     {
-        public MessageBasedSession visaSignalGen;
         FormApp frmMain = FormApp.getInstance();
         public int startStatus = -999;
-
         public StartProcess()
         {
             InitializeComponent();

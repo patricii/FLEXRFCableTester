@@ -55,7 +55,6 @@ namespace FlexRFCableTester
         {
             visaSignalGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
             equipmentSignalGen = new Equipments(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
-
             equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);
             response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
             if (Convert.ToInt32(response) != 1)
@@ -88,7 +87,6 @@ namespace FlexRFCableTester
                 visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
                 equipmentSignalGen = new Equipments(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
                 equipmentPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
-
                 var MyIni = new IniFile("Settings.ini");
                 var calFactoryValuesIni = new IniFile("calFactoryValues.ini");
 
@@ -97,7 +95,6 @@ namespace FlexRFCableTester
 
                 equipmentSignalGen.writeCommand("*RST;*OPC?", visaSigGen);
                 response = equipmentSignalGen.readCommand(visaSigGen);
-
                 if (Convert.ToInt32(response) == 1)
                 {
                     equipmentSignalGen.writeCommand(":FREQ:CW?", visaSigGen);
@@ -107,7 +104,7 @@ namespace FlexRFCableTester
                     maxFreqSg = maxFreqSg / 1000;
                     maxFreqSg = maxFreqSg / 1000;
 
-                    if (maxFreqSg < Convert.ToDouble(stopFreq))
+                    if (maxFreqSg < Convert.ToDouble(stopFreq)) //Verify the Maximum Equip. Freq allowed
                     {
                         message = "FREQUÊNCIA MÁXIMA permitida nesse equipamento: " + maxFreqSg / 1000 + "GHz";
                         MessageBox.Show(message, "Final Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -122,7 +119,6 @@ namespace FlexRFCableTester
                         frmMain.textBoxStopFrequency.Text = Convert.ToString(maxFreqSg);
                     }
                     stopFreq = frmMain.textBoxStopFrequency.Text;
-
                     equipmentSignalGen.writeCommand("OUTP:MOD:STAT OFF", visaSigGen);
                     equipmentPowerMeter.writeCommand("*RST;*OPC?", visaPowerMeter);
 
@@ -145,7 +141,7 @@ namespace FlexRFCableTester
                     int writeFreqCount = 0;
                     do
                     {
-                        status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text);
+                        status = writeFreqCMDSignalGen(frmMain.textBoxStartFrequency.Text); //set First freq.
                         Thread.Sleep(1000);
                         writeFreqCount++;
                     }
@@ -157,14 +153,12 @@ namespace FlexRFCableTester
 
                     labelCalStatusSg.Text = "Aguarde o processo de Zero Cal do Signal Generator -> Freq:" + frmMain.textBoxStartFrequency.Text + " MHz";
                     Application.DoEvents();
-
-
                     equipmentSignalGen.writeCommand("OUTP ON;*OPC?", visaSigGen);
                     response = equipmentSignalGen.readCommand(visaSigGen);
                     if (Convert.ToInt32(response) != 1)
                         return false;
 
-                    equipmentSignalGen.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen);
+                    equipmentSignalGen.writeCommand("SOUR:POW " + frmMain.textBoxDbm.Text + " dBm;*OPC?", visaSigGen); //Set dBm default 10dBm
                     response = equipmentSignalGen.readCommand(visaSigGen);
                     if (Convert.ToInt32(response) != 1)
                         return false;
@@ -181,11 +175,9 @@ namespace FlexRFCableTester
                         {
                             logTimer.Start();
                             startProcessWatch.Start();
-
                             equipmentPowerMeter.writeCommand("INIT1", visaPowerMeter);
                             equipmentPowerMeter.writeCommand("FETC1?", visaPowerMeter);
                             measure = Convert.ToDouble(equipmentPowerMeter.readCommand(visaPowerMeter));
-
                             if (count == 0)
                                 firstMeasure = measure;
 
@@ -231,7 +223,6 @@ namespace FlexRFCableTester
                                 deltaSpecFromFile = Convert.ToDouble(MyIni.Read("DeltaSpec", frmMain.comboBoxCableSettings.Text));
 
                             cableLoss = dbAverage - zeroCalLoss;
-
                             if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 500)
                             {
                                 if (MyIni.KeyExists("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text))

@@ -69,9 +69,7 @@ namespace FlexRFCableTester
             buttonOkPm.BackColor = Color.Green;
             buttonOkPm.Enabled = false;
             Application.DoEvents();
-
             bool result = zeroCalPowerMeterMtd();
-
             if (result)
             {
                 resultZeroCalPowerMeter = "Finished";
