@@ -561,9 +561,18 @@ namespace FlexRFCableTester
             textBoxLogInfo.Text = "Verificando Equipamentos conectados..." + Environment.NewLine;
             try
             {
-                visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
-                textBoxAddressPowerM.BackColor = Color.Green;
-                textBoxLogInfo.Text += "->PowerMeter detectado!!!" + Environment.NewLine;
+                Equipments eqp = new Equipments(visaPowerMeter,textBoxAddressPowerM.Text);
+                bool result = eqp.getEquipmentIdnbyGPIB();
+                if (result)
+                {
+                    textBoxAddressPowerM.BackColor = Color.Green;
+                    textBoxLogInfo.Text += "->PowerMeter detectado!!!" + Environment.NewLine;
+                }
+                else
+                {
+                    textBoxLogInfo.Text += "->PowerMeter não detectado!!!" + Environment.NewLine;
+                    textBoxAddressPowerM.BackColor = Color.Red;
+                }
             }
             catch
             {
@@ -572,9 +581,18 @@ namespace FlexRFCableTester
             }
             try
             {
-                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                textBoxAddressSignalGen.BackColor = Color.Green;
-                textBoxLogInfo.Text += "->SignalGenerator detectado!!!" + Environment.NewLine;
+                Equipments eqp = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+                bool result = eqp.getEquipmentIdnbyGPIB();
+                if (result)
+                {
+                    textBoxAddressSignalGen.BackColor = Color.Green;
+                    textBoxLogInfo.Text += "->SignalGenerator detectado!!!" + Environment.NewLine;
+                }
+                else
+                {
+                    textBoxLogInfo.Text += "->SignalGenerator não detectado!!!" + Environment.NewLine;
+                    textBoxAddressSignalGen.BackColor = Color.Red;
+                }
             }
             catch
             {
