@@ -309,6 +309,7 @@ namespace FlexRFCableTester
                 int status = startProcess();
                 if (status == 0)
                 {
+                    enableAll();
                     graphGenerateMethod();
                     tabControlMain.SelectedIndex = 2;
                 }
