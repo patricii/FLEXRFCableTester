@@ -256,20 +256,40 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message);
             }
-
         }
 
+        public void enableAll()
+        {
+            comboBoxCableSettings.Enabled = true;
+            textBoxIntervalFrequency.Enabled = true;
+            textBoxStartFrequency.Enabled = true;
+            textBoxStopFrequency.Enabled = true;
+            textBoxAverage.Enabled = true;
+            textBoxDbm.Enabled = true;
+            buttonZeroCal.Enabled = true;
+        }
+        public void disableAll()
+        {
+            comboBoxCableSettings.Enabled = false;
+            textBoxIntervalFrequency.Enabled = false;
+            textBoxStartFrequency.Enabled = false;
+            textBoxStopFrequency.Enabled = false;
+            textBoxAverage.Enabled = false;
+            textBoxDbm.Enabled = false;
+            buttonZeroCal.Enabled = false;
+        }
         public void setButtonToStart()
         {
             buttonStart.Text = "Start";
             buttonStart.BackColor = Color.Green;
             labelStatusRFTester.Text = "";
+            enableAll();
         }
-
         public void setButtonToStop()
         {
             buttonStart.Text = "Stop";
             buttonStart.BackColor = Color.Yellow;
+            disableAll();
         }
 
 
@@ -277,6 +297,7 @@ namespace FlexRFCableTester
         {
             if (buttonStart.Text.Contains("Start"))
             {
+                chartResults.Series[2].Color = Color.Green;
                 setButtonToStop();
                 if (File.Exists(@"log\LogGraphData.txt"))
                     File.Delete(@"log\LogGraphData.txt");
