@@ -297,24 +297,28 @@ namespace FlexRFCableTester
         {
             if (buttonStart.Text.Contains("Start"))
             {
-                chartResults.Series[2].Color = Color.Green;
-                setButtonToStop();
-                if (File.Exists(@"log\LogGraphData.txt"))
-                    File.Delete(@"log\LogGraphData.txt");
-
-                if (File.Exists(@"log\MeasuresResultLog.txt"))
-                    File.Delete(@"log\MeasuresResultLog.txt");
-                labelWarning.Text = "";
-                writeValuesToIniFile();
-                int status = startProcess();
-                if (status == 0)
+                try
                 {
-                    enableAll();
-                    graphGenerateMethod();
-                    tabControlMain.SelectedIndex = 2;
-                }
+                    chartResults.Series[2].Color = Color.Green;
+                    setButtonToStop();
+                    if (File.Exists(@"log\LogGraphData.txt"))
+                        File.Delete(@"log\LogGraphData.txt");
 
-                stopAction = false;
+                    if (File.Exists(@"log\MeasuresResultLog.txt"))
+                        File.Delete(@"log\MeasuresResultLog.txt");
+                    labelWarning.Text = "";
+                    writeValuesToIniFile();
+                    int status = startProcess();
+                    if (status == 0)
+                    {
+                        enableAll();
+                        graphGenerateMethod();
+                        tabControlMain.SelectedIndex = 2;
+                    }
+
+                    stopAction = false;
+                }
+                catch { }
             }
             else
             {
@@ -568,7 +572,7 @@ namespace FlexRFCableTester
 
                             if (comboBoxCableSettings.Text == "Generico" && countG == 0)
                             {
-                                chartResults.ChartAreas[0].AxisY.Minimum = Convert.ToInt32( Convert.ToDouble(data[3]) - 1.0);
+                                chartResults.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(data[3]) - 1.0;
                                 countG++;
                             }
                         }

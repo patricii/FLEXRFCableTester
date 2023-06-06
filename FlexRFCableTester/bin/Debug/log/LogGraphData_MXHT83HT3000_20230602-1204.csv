@@ -1,5 +1,0 @@
-0->,Freq:5800MHz,,dBm:8,,Reading:5.8749dB,,LowLimit:1.0783,,HighLimit:2.0783,,CableLoss:1.3701,,Result:Pass,,TestTime:3333ms
-1->,Freq:5850MHz,,dBm:8,,Reading:5.8895dB,,LowLimit:1.0783,,HighLimit:2.0783,,CableLoss:1.4620,,Result:Pass,,TestTime:3309ms
-2->,Freq:5900MHz,,dBm:8,,Reading:5.8673dB,,LowLimit:1.0783,,HighLimit:2.0783,,CableLoss:1.3131,,Result:Pass,,TestTime:3335ms
-3->,Freq:5950MHz,,dBm:8,,Reading:5.9673dB,,LowLimit:1.0783,,HighLimit:2.0783,,CableLoss:1.4334,,Result:Pass,,TestTime:3327ms
-4->,Freq:6000MHz,,dBm:8,,Reading:5.8835dB,,LowLimit:1.0783,,HighLimit:2.0783,,CableLoss:1.4067,,Result:Pass,,TestTime:3359ms
