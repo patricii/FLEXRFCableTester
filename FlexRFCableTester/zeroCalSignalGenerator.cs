@@ -182,7 +182,7 @@ namespace FlexRFCableTester
                                 firstMeasure = measure;
 
                             lossMeasure = firstMeasure - measure;
-                            if (lossMeasure > Convert.ToDouble(stabilityCriteria))
+                            if (lossMeasure > Convert.ToDouble(stabilityCriteria) && frmMain.comboBoxCableSettings.Text != "Generico")
                             {
                                 passFail = "Fail";
                                 count = 0;
@@ -285,6 +285,8 @@ namespace FlexRFCableTester
 
                             if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))
                                 passFail = "Fail";
+
+
                             startProcessWatch.Stop();
                             frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), cableLossLowSpec.ToString(), cableLossHighSpec.ToString(), cableLoss.ToString("F4"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
                             countStart++;
