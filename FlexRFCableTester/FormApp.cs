@@ -511,12 +511,13 @@ namespace FlexRFCableTester
         }
         public void graphGenerateMethod()
         {
-            string fileName = @"log\LogGraphData.txt";
-            string[] data;
-            double lossFromIniFile = 0.0;
-
+            int countG = 0;
             try
             {
+                string fileName = @"log\LogGraphData.txt";
+                string[] data;
+                double lossFromIniFile = 0.0;
+
                 if (comboBoxCableSettings.Text != "Generico")
                 {
                     if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
@@ -531,7 +532,6 @@ namespace FlexRFCableTester
                         lossFromIniFile = lossFromIniFile - 2;
                         chartResults.ChartAreas[0].AxisY.Interval = 0.2;
                     }
-
                     chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
                     chartResults.ChartAreas[0].AxisY.Interval = 0.1;
                 }
@@ -563,11 +563,18 @@ namespace FlexRFCableTester
                                 chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
                             }
                             chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+
+                            if (comboBoxCableSettings.Text == "Generico" && countG == 0)
+                            {
+                                chartResults.ChartAreas[0].AxisY.Minimum = Convert.ToInt32( Convert.ToDouble(data[3]) - 1.0);
+                                countG++;
+                            }
                         }
                     }
 
                     labelCableInfo.Text = comboBoxCableSettings.Text;
                 }
+                countG = 0;
             }
             catch
             {
