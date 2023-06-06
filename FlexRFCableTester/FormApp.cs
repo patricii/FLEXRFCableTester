@@ -476,6 +476,8 @@ namespace FlexRFCableTester
                 MessageBox.Show(message);
                 buttonStart.Text = "Start";
                 buttonStart.BackColor = Color.Green;
+                labelStatusRFTester.Text = message;
+                enableAll();
                 return -1;
             }
             return 0;
