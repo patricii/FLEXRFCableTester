@@ -203,13 +203,11 @@ namespace FlexRFCableTester
                         if (MyIni.KeyExists("Date", "zeroCalDate"))
                             MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
 
-
                         if (MyIni.KeyExists("snPowerMeter", "equipmentModel"))
                             MyIni.Write("snPowerMeter", equipmentvisaPowerMeter.verifyEquipmentModel(), "equipmentModel");
 
                         if (MyIni.KeyExists("snSignalGen", "equipmentModel"))
                             MyIni.Write("snSignalGen", equipmentvisavisaSignalGen.verifyEquipmentModel(), "equipmentModel");
-
                     }
                 }
                 catch
@@ -320,6 +318,7 @@ namespace FlexRFCableTester
 
                     if (File.Exists(@"log\MeasuresResultLog.txt"))
                         File.Delete(@"log\MeasuresResultLog.txt");
+
                     labelWarning.Text = "";
                     writeValuesToIniFile();
                     int status = startProcess();
@@ -354,142 +353,168 @@ namespace FlexRFCableTester
             today = DateTime.Now;
             enteredDate = DateTime.Parse(dateCompare);
             var diffOfDates = today - enteredDate;
-
-            if (diffOfDates.TotalHours < 24)
+            try
             {
-                StartProcess startP = new StartProcess();
-                startP.Show();
-                Application.DoEvents();
-                int contador = 0;
-                labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
-                do
+                visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+                visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possivel conectar com os Equipamentos!!!");
+            }
+            equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+            equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+
+            if (equipmentvisavisaSignalGen.verifyEquipmentModel().Contains(MyIni.Read("snSignalGen", "equipmentModel")) && equipmentvisaPowerMeter.verifyEquipmentModel().Contains(MyIni.Read("snPowerMeter", "equipmentModel")))
+            {
+
+                if (diffOfDates.TotalHours < 24)
                 {
-                    startP.Focus();
+                    StartProcess startP = new StartProcess();
+                    startP.Show();
                     Application.DoEvents();
-                    Thread.Sleep(500);
-                    if (contador++ > 10)
+                    int contador = 0;
+                    labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
+                    do
                     {
-                        contador = 0;
-                        labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
+                        startP.Focus();
+                        Application.DoEvents();
+                        Thread.Sleep(500);
+                        if (contador++ > 10)
+                        {
+                            contador = 0;
+                            labelStatusRFTester.Text = "            Conecte o cabo e pressione OK";
+                        }
+                        labelStatusRFTester.Text += ".";
                     }
-                    labelStatusRFTester.Text += ".";
-                }
-                while (startP.startStatus == -999);
+                    while (startP.startStatus == -999);
 
-                if (startP.startStatus == -2)
-                {
-                    setButtonToStart();
-                    return -1;
-                }
-                if (startP.startStatus == 0)
-                {
-                    int NStatus = 0;
-                    zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
-                    try
-                    {
-                        visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
-                        NStatus = -1;
-                        return -1;
-                    }
-                    try
-                    {
-                        visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
-                        NStatus = -1;
-                        return -1;
-                    }
-                    if (NStatus == 0)
-                    {
-                        labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                        try
-                        {
-                            equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
-                            equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
-
-                            if (checkBoxPowerM.Checked)
-                            {
-                                PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel();
-                                if (!PowerMeterModelCheck.Contains("E4416A"))
-                                {
-                                    MessageBox.Show("O modelo do Power Meter não compativel!!!");
-                                    return -1;
-                                }
-                            }
-                            if (checkBoxSignalGen.Checked)
-                            {
-                                SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel();
-                                if (!SignalGenModelCheck.Contains("E4438C"))
-                                {
-                                    MessageBox.Show("O modelo do Signal Generator não compativel!!!");
-                                    return -1;
-                                }
-                            }
-                            labelStatusRFTester.Text = "                   Medição em Andamento!!!";
-                            bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
-
-                            if (status)
-                            {
-                                cableResults = "Finished";
-                                logger.logMessage("Cable DBLoss measure Finished Successfully");
-                                labelStatusRFTester.Text = "                          Medição Finalizada!!!";
-                                buttonStart.Text = "Start";
-                                buttonStart.BackColor = Color.Green;
-                                Application.DoEvents();
-                            }
-                            else
-                            {
-                                cableResults = "Failed";
-                                logger.logMessage("Cable DBLoss  measure Failed!!!");
-                                MessageBox.Show("Cable DBLoss  measure Failed!!!");
-                                labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
-                                buttonStart.Text = "Start";
-                                buttonStart.BackColor = Color.Green;
-                                Application.DoEvents();
-                                return -1;
-                            }
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
-                            cableResults = "Failed";
-                            return -1;
-                        }
-                        while (cableResults != "Finished" && cableResults == string.Empty)
-                        {
-                            Thread.Sleep(1000);
-                            Application.DoEvents();
-                        }
-                        if (cableResults == "Finished")
-                        {
-                            logger.logMessage("Aferição do cabo realizada com sucesso!!!");
-                            startP.Close();
-                        }
-                        else
-                        {
-                            logger.logMessage("Aferição do cabo Falhou!!!");
-                            MessageBox.Show("Aferição do cabo Falhou!!!");
-                            startP.Close();
-                            return -1;
-                        }
-                        cableResults = string.Empty;
-                    }
-                    else
+                    if (startP.startStatus == -2)
                     {
                         setButtonToStart();
                         return -1;
                     }
+                    if (startP.startStatus == 0)
+                    {
+                        int NStatus = 0;
+                        zeroCalSignalGenerator zcsg = new zeroCalSignalGenerator();
+                        try
+                        {
+                            visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
+                            NStatus = -1;
+                            return -1;
+                        }
+                        try
+                        {
+                            visaSignalGen = new MessageBasedSession(textBoxAddressSignalGen.Text);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
+                            NStatus = -1;
+                            return -1;
+                        }
+                        if (NStatus == 0)
+                        {
+                            labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                            try
+                            {
+                                equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+                                equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+
+                                if (checkBoxPowerM.Checked)
+                                {
+                                    PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel();
+                                    if (!PowerMeterModelCheck.Contains("E4416A"))
+                                    {
+                                        MessageBox.Show("O modelo do Power Meter não compativel!!!");
+                                        return -1;
+                                    }
+                                }
+                                if (checkBoxSignalGen.Checked)
+                                {
+                                    SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel();
+                                    if (!SignalGenModelCheck.Contains("E4438C"))
+                                    {
+                                        MessageBox.Show("O modelo do Signal Generator não compativel!!!");
+                                        return -1;
+                                    }
+                                }
+                                labelStatusRFTester.Text = "                   Medição em Andamento!!!";
+                                bool status = zcsg.zeroCalSignalGenMtd(visaSignalGen, "startMeasure");
+
+                                if (status)
+                                {
+                                    cableResults = "Finished";
+                                    logger.logMessage("Cable DBLoss measure Finished Successfully");
+                                    labelStatusRFTester.Text = "                          Medição Finalizada!!!";
+                                    buttonStart.Text = "Start";
+                                    buttonStart.BackColor = Color.Green;
+                                    Application.DoEvents();
+                                }
+                                else
+                                {
+                                    cableResults = "Failed";
+                                    logger.logMessage("Cable DBLoss  measure Failed!!!");
+                                    MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                                    labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
+                                    buttonStart.Text = "Start";
+                                    buttonStart.BackColor = Color.Green;
+                                    Application.DoEvents();
+                                    return -1;
+                                }
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
+                                cableResults = "Failed";
+                                return -1;
+                            }
+                            while (cableResults != "Finished" && cableResults == string.Empty)
+                            {
+                                Thread.Sleep(1000);
+                                Application.DoEvents();
+                            }
+                            if (cableResults == "Finished")
+                            {
+                                logger.logMessage("Aferição do cabo realizada com sucesso!!!");
+                                startP.Close();
+                            }
+                            else
+                            {
+                                logger.logMessage("Aferição do cabo Falhou!!!");
+                                MessageBox.Show("Aferição do cabo Falhou!!!");
+                                startP.Close();
+                                return -1;
+                            }
+                            cableResults = string.Empty;
+                        }
+                        else
+                        {
+                            setButtonToStart();
+                            return -1;
+                        }
+                    }
+                }
+                else
+                {
+                    message = "Error: Realize o Zero Cal antes de começar!!!";
+                    logger.logMessage(message);
+                    MessageBox.Show(message);
+                    buttonStart.Text = "Start";
+                    buttonStart.BackColor = Color.Green;
+                    labelStatusRFTester.Text = message;
+                    enableAll();
+                    return -1;
                 }
             }
             else
             {
-                message = "Error: Realize o Zero Cal antes de começar!!!";
+                message = "Error: Cart diferente, faça o zero novamente!!!";
                 logger.logMessage(message);
                 MessageBox.Show(message);
                 buttonStart.Text = "Start";
