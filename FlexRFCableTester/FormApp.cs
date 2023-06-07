@@ -18,9 +18,11 @@ namespace FlexRFCableTester
         string dateCompare = string.Empty;
         Logger logger;
         private static FormApp INSTANCE = null;
-        int PowerMeterModelCheck = -999;
-        int SignalGenModelCheck = -999;
+        string PowerMeterModelCheck = string.Empty;
+        string SignalGenModelCheck = string.Empty;
         IniFile MyIni = new IniFile("Settings.ini");
+        Equipments equipmentvisaPowerMeter;
+        Equipments equipmentvisavisaSignalGen;
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -152,18 +154,18 @@ namespace FlexRFCableTester
             {
                 try
                 {
-                    Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
-                    Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+                    equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+                    equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
                     logger.logMessage("Starting ZeroCal process - Waiting response....");
 
                     if (checkBoxPowerM.Checked)
                     {
-                        PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
-                        if (PowerMeterModelCheck == 0)
+                        PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel();
+                        if (PowerMeterModelCheck.Contains("E4416A"))
                         {
                             equipmentvisaPowerMeter.setZeroCalGPIB();
                         }
-                        if (PowerMeterModelCheck == -1)
+                        else
                         {
                             MessageBox.Show("O modelo do Power Meter não compativel!!!");
                         }
@@ -174,12 +176,12 @@ namespace FlexRFCableTester
                         Application.DoEvents();
                         if (checkBoxSignalGen.Checked)
                         {
-                            SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
-                            if (SignalGenModelCheck == 0)
+                            SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel();
+                            if (SignalGenModelCheck.Contains("E4438C"))
                             {
                                 equipmentvisavisaSignalGen.setZeroCalSGGPIB();
                             }
-                            if (SignalGenModelCheck == -1)
+                            else
                             {
                                 textBoxAddressSignalGen.BackColor = Color.Red;
                                 MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
@@ -200,6 +202,14 @@ namespace FlexRFCableTester
 
                         if (MyIni.KeyExists("Date", "zeroCalDate"))
                             MyIni.Write("Date", dateNow.ToString(), "zeroCalDate");
+
+
+                        if (MyIni.KeyExists("snPowerMeter", "equipmentModel"))
+                            MyIni.Write("snPowerMeter", equipmentvisaPowerMeter.verifyEquipmentModel(), "equipmentModel");
+
+                        if (MyIni.KeyExists("snSignalGen", "equipmentModel"))
+                            MyIni.Write("snSignalGen", equipmentvisavisaSignalGen.verifyEquipmentModel(), "equipmentModel");
+
                     }
                 }
                 catch
@@ -400,13 +410,13 @@ namespace FlexRFCableTester
                         labelStatusRFTester.Text = "                   Medição em Andamento!!!";
                         try
                         {
-                            Equipments equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
-                            Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
+                            equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
+                            equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
 
                             if (checkBoxPowerM.Checked)
                             {
-                                PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel("E4416A");
-                                if (PowerMeterModelCheck != 0)
+                                PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel();
+                                if (!PowerMeterModelCheck.Contains("E4416A"))
                                 {
                                     MessageBox.Show("O modelo do Power Meter não compativel!!!");
                                     return -1;
@@ -414,8 +424,8 @@ namespace FlexRFCableTester
                             }
                             if (checkBoxSignalGen.Checked)
                             {
-                                SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel("E4438C");
-                                if (SignalGenModelCheck != 0)
+                                SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel();
+                                if (!SignalGenModelCheck.Contains("E4438C"))
                                 {
                                     MessageBox.Show("O modelo do Signal Generator não compativel!!!");
                                     return -1;

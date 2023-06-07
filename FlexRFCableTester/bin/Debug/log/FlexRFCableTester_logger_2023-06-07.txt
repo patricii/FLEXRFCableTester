@@ -50021,3 +50021,681 @@
 
 6/7/2023 2:19:59 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
 
+6/7/2023 2:32:55 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:32:55 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:32:55 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:32:56 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:33:22 PM - [-> Starting ZeroCal process - Waiting response....]
+
+6/7/2023 2:33:22 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:33:23 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:33:23 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:33:23 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:33:23 PM - [-> GPIB0::30::INSTR -> Write: *CLS]
+
+6/7/2023 2:33:23 PM - [-> GPIB0::30::INSTR -> Write: SYST:ERR?]
+
+6/7/2023 2:33:24 PM - [-> GPIB0::30::INSTR -> Read: +0,"No error"
+]
+
+6/7/2023 2:33:32 PM - [-> GPIB0::30::INSTR -> Write: CAL?]
+
+6/7/2023 2:33:33 PM - [-> Aguarde o Zero Cal do Power Meter... 44s]
+
+6/7/2023 2:33:34 PM - [-> Aguarde o Zero Cal do Power Meter... 43s]
+
+6/7/2023 2:33:35 PM - [-> Aguarde o Zero Cal do Power Meter... 42s]
+
+6/7/2023 2:33:36 PM - [-> Aguarde o Zero Cal do Power Meter... 41s]
+
+6/7/2023 2:33:37 PM - [-> Aguarde o Zero Cal do Power Meter... 40s]
+
+6/7/2023 2:33:38 PM - [-> Aguarde o Zero Cal do Power Meter... 39s]
+
+6/7/2023 2:33:39 PM - [-> Aguarde o Zero Cal do Power Meter... 38s]
+
+6/7/2023 2:33:40 PM - [-> Aguarde o Zero Cal do Power Meter... 37s]
+
+6/7/2023 2:33:41 PM - [-> Aguarde o Zero Cal do Power Meter... 36s]
+
+6/7/2023 2:33:42 PM - [-> Aguarde o Zero Cal do Power Meter... 35s]
+
+6/7/2023 2:33:43 PM - [-> Aguarde o Zero Cal do Power Meter... 34s]
+
+6/7/2023 2:33:44 PM - [-> Aguarde o Zero Cal do Power Meter... 33s]
+
+6/7/2023 2:33:45 PM - [-> Aguarde o Zero Cal do Power Meter... 32s]
+
+6/7/2023 2:33:46 PM - [-> Aguarde o Zero Cal do Power Meter... 31s]
+
+6/7/2023 2:33:47 PM - [-> Aguarde o Zero Cal do Power Meter... 30s]
+
+6/7/2023 2:33:48 PM - [-> Aguarde o Zero Cal do Power Meter... 29s]
+
+6/7/2023 2:33:49 PM - [-> Aguarde o Zero Cal do Power Meter... 28s]
+
+6/7/2023 2:33:50 PM - [-> Aguarde o Zero Cal do Power Meter... 27s]
+
+6/7/2023 2:33:51 PM - [-> Aguarde o Zero Cal do Power Meter... 26s]
+
+6/7/2023 2:33:52 PM - [-> Aguarde o Zero Cal do Power Meter... 25s]
+
+6/7/2023 2:33:53 PM - [-> Aguarde o Zero Cal do Power Meter... 24s]
+
+6/7/2023 2:33:54 PM - [-> Aguarde o Zero Cal do Power Meter... 23s]
+
+6/7/2023 2:33:55 PM - [-> Aguarde o Zero Cal do Power Meter... 22s]
+
+6/7/2023 2:33:56 PM - [-> Aguarde o Zero Cal do Power Meter... 21s]
+
+6/7/2023 2:33:57 PM - [-> Aguarde o Zero Cal do Power Meter... 20s]
+
+6/7/2023 2:33:58 PM - [-> Aguarde o Zero Cal do Power Meter... 19s]
+
+6/7/2023 2:33:59 PM - [-> Aguarde o Zero Cal do Power Meter... 18s]
+
+6/7/2023 2:34:00 PM - [-> Aguarde o Zero Cal do Power Meter... 17s]
+
+6/7/2023 2:34:01 PM - [-> Aguarde o Zero Cal do Power Meter... 16s]
+
+6/7/2023 2:34:03 PM - [-> Aguarde o Zero Cal do Power Meter... 15s]
+
+6/7/2023 2:34:04 PM - [-> Aguarde o Zero Cal do Power Meter... 14s]
+
+6/7/2023 2:34:05 PM - [-> Aguarde o Zero Cal do Power Meter... 13s]
+
+6/7/2023 2:34:06 PM - [-> Aguarde o Zero Cal do Power Meter... 12s]
+
+6/7/2023 2:34:07 PM - [-> Aguarde o Zero Cal do Power Meter... 11s]
+
+6/7/2023 2:34:08 PM - [-> Aguarde o Zero Cal do Power Meter... 10s]
+
+6/7/2023 2:34:09 PM - [-> Aguarde o Zero Cal do Power Meter... 9s]
+
+6/7/2023 2:34:10 PM - [-> Aguarde o Zero Cal do Power Meter... 8s]
+
+6/7/2023 2:34:11 PM - [-> Aguarde o Zero Cal do Power Meter... 7s]
+
+6/7/2023 2:34:12 PM - [-> Aguarde o Zero Cal do Power Meter... 6s]
+
+6/7/2023 2:34:13 PM - [-> Aguarde o Zero Cal do Power Meter... 5s]
+
+6/7/2023 2:34:14 PM - [-> Aguarde o Zero Cal do Power Meter... 4s]
+
+6/7/2023 2:34:15 PM - [-> Aguarde o Zero Cal do Power Meter... 3s]
+
+6/7/2023 2:34:16 PM - [-> Aguarde o Zero Cal do Power Meter... 2s]
+
+6/7/2023 2:34:17 PM - [-> Aguarde o Zero Cal do Power Meter... 1s]
+
+6/7/2023 2:34:18 PM - [-> Aguarde o Zero Cal do Power Meter... 0s]
+
+6/7/2023 2:34:21 PM - [-> Zero Cal Power Meter Finished Successfully]
+
+6/7/2023 2:34:21 PM - [-> Equipamento: GPIB0::30::INSTRZero Cal OK!]
+
+6/7/2023 2:34:21 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:34:21 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:34:21 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:34:22 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:34:22 PM - [-> GPIB0::2::INSTR -> Write: *CLS]
+
+6/7/2023 2:34:22 PM - [-> GPIB0::2::INSTR -> Write: SYST:ERR?]
+
+6/7/2023 2:34:22 PM - [-> GPIB0::2::INSTR -> Read: +0,"No error"
+]
+
+6/7/2023 2:34:51 PM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/7/2023 2:34:51 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:34:51 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/7/2023 2:34:51 PM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/7/2023 2:34:51 PM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/7/2023 2:34:51 PM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/7/2023 2:34:52 PM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/7/2023 2:34:54 PM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/7/2023 2:34:54 PM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/7/2023 2:34:55 PM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/7/2023 2:34:55 PM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/7/2023 2:34:56 PM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/7/2023 2:34:56 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:34:56 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5900MHz;*OPC?]
+
+6/7/2023 2:34:56 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:34:56 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:34:57 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:34:58 PM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/7/2023 2:34:58 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:34:58 PM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 10 dBm;*OPC?]
+
+6/7/2023 2:34:59 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:34:59 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:34:59 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:34:59 PM - [-> GPIB0::30::INSTR -> Write: FREQ 5900MHz]
+
+6/7/2023 2:34:59 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:00 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:00 PM - [-> GPIB0::30::INSTR -> Read: +9.11852199E+000
+]
+
+6/7/2023 2:35:00 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:00 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:01 PM - [-> GPIB0::30::INSTR -> Read: +9.11979124E+000
+]
+
+6/7/2023 2:35:01 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:01 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:02 PM - [-> GPIB0::30::INSTR -> Read: +9.12450286E+000
+]
+
+6/7/2023 2:35:02 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:02 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:02 PM - [-> GPIB0::30::INSTR -> Read: +9.12795127E+000
+]
+
+6/7/2023 2:35:02 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:03 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:03 PM - [-> GPIB0::30::INSTR -> Read: +9.13015480E+000
+]
+
+6/7/2023 2:35:03 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5950MHz;*OPC?]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::30::INSTR -> Write: FREQ 5950MHz]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:04 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:05 PM - [-> GPIB0::30::INSTR -> Read: +9.33135529E+000
+]
+
+6/7/2023 2:35:05 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:05 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:06 PM - [-> GPIB0::30::INSTR -> Read: +9.33156240E+000
+]
+
+6/7/2023 2:35:06 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:06 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:07 PM - [-> GPIB0::30::INSTR -> Read: +9.33273930E+000
+]
+
+6/7/2023 2:35:07 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:07 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:07 PM - [-> GPIB0::30::INSTR -> Read: +9.33407903E+000
+]
+
+6/7/2023 2:35:08 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:08 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:08 PM - [-> GPIB0::30::INSTR -> Read: +9.33468674E+000
+]
+
+6/7/2023 2:35:08 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 6000MHz;*OPC?]
+
+6/7/2023 2:35:09 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:35:09 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:35:09 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:35:09 PM - [-> GPIB0::30::INSTR -> Write: FREQ 6000MHz]
+
+6/7/2023 2:35:10 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:10 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:10 PM - [-> GPIB0::30::INSTR -> Read: +9.23719685E+000
+]
+
+6/7/2023 2:35:10 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:11 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:11 PM - [-> GPIB0::30::INSTR -> Read: +9.23717804E+000
+]
+
+6/7/2023 2:35:11 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:12 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:12 PM - [-> GPIB0::30::INSTR -> Read: +9.23834947E+000
+]
+
+6/7/2023 2:35:12 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:13 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:13 PM - [-> GPIB0::30::INSTR -> Read: +9.23846418E+000
+]
+
+6/7/2023 2:35:13 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:35:13 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:35:14 PM - [-> GPIB0::30::INSTR -> Read: +9.23924012E+000
+]
+
+6/7/2023 2:35:17 PM - [-> Zero Cal Signal Generator Finished Successfully]
+
+6/7/2023 2:35:17 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
+
+6/7/2023 2:40:09 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:40:09 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:40:09 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:40:10 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:40:24 PM - [-> Starting ZeroCal process - Waiting response....]
+
+6/7/2023 2:40:24 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:40:25 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:40:25 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:40:25 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:40:25 PM - [-> GPIB0::30::INSTR -> Write: *CLS]
+
+6/7/2023 2:40:25 PM - [-> GPIB0::30::INSTR -> Write: SYST:ERR?]
+
+6/7/2023 2:40:26 PM - [-> GPIB0::30::INSTR -> Read: +0,"No error"
+]
+
+6/7/2023 2:40:36 PM - [-> GPIB0::30::INSTR -> Write: CAL?]
+
+6/7/2023 2:40:37 PM - [-> Aguarde o Zero Cal do Power Meter... 44s]
+
+6/7/2023 2:40:38 PM - [-> Aguarde o Zero Cal do Power Meter... 43s]
+
+6/7/2023 2:40:39 PM - [-> Aguarde o Zero Cal do Power Meter... 42s]
+
+6/7/2023 2:40:40 PM - [-> Aguarde o Zero Cal do Power Meter... 41s]
+
+6/7/2023 2:40:41 PM - [-> Aguarde o Zero Cal do Power Meter... 40s]
+
+6/7/2023 2:40:42 PM - [-> Aguarde o Zero Cal do Power Meter... 39s]
+
+6/7/2023 2:40:43 PM - [-> Aguarde o Zero Cal do Power Meter... 38s]
+
+6/7/2023 2:40:44 PM - [-> Aguarde o Zero Cal do Power Meter... 37s]
+
+6/7/2023 2:40:45 PM - [-> Aguarde o Zero Cal do Power Meter... 36s]
+
+6/7/2023 2:40:46 PM - [-> Aguarde o Zero Cal do Power Meter... 35s]
+
+6/7/2023 2:40:47 PM - [-> Aguarde o Zero Cal do Power Meter... 34s]
+
+6/7/2023 2:40:48 PM - [-> Aguarde o Zero Cal do Power Meter... 33s]
+
+6/7/2023 2:40:49 PM - [-> Aguarde o Zero Cal do Power Meter... 32s]
+
+6/7/2023 2:40:50 PM - [-> Aguarde o Zero Cal do Power Meter... 31s]
+
+6/7/2023 2:40:51 PM - [-> Aguarde o Zero Cal do Power Meter... 30s]
+
+6/7/2023 2:40:52 PM - [-> Aguarde o Zero Cal do Power Meter... 29s]
+
+6/7/2023 2:40:53 PM - [-> Aguarde o Zero Cal do Power Meter... 28s]
+
+6/7/2023 2:40:54 PM - [-> Aguarde o Zero Cal do Power Meter... 27s]
+
+6/7/2023 2:40:55 PM - [-> Aguarde o Zero Cal do Power Meter... 26s]
+
+6/7/2023 2:40:56 PM - [-> Aguarde o Zero Cal do Power Meter... 25s]
+
+6/7/2023 2:40:57 PM - [-> Aguarde o Zero Cal do Power Meter... 24s]
+
+6/7/2023 2:40:59 PM - [-> Aguarde o Zero Cal do Power Meter... 23s]
+
+6/7/2023 2:41:00 PM - [-> Aguarde o Zero Cal do Power Meter... 22s]
+
+6/7/2023 2:41:01 PM - [-> Aguarde o Zero Cal do Power Meter... 21s]
+
+6/7/2023 2:41:02 PM - [-> Aguarde o Zero Cal do Power Meter... 20s]
+
+6/7/2023 2:41:03 PM - [-> Aguarde o Zero Cal do Power Meter... 19s]
+
+6/7/2023 2:41:04 PM - [-> Aguarde o Zero Cal do Power Meter... 18s]
+
+6/7/2023 2:41:05 PM - [-> Aguarde o Zero Cal do Power Meter... 17s]
+
+6/7/2023 2:41:06 PM - [-> Aguarde o Zero Cal do Power Meter... 16s]
+
+6/7/2023 2:41:07 PM - [-> Aguarde o Zero Cal do Power Meter... 15s]
+
+6/7/2023 2:41:08 PM - [-> Aguarde o Zero Cal do Power Meter... 14s]
+
+6/7/2023 2:41:09 PM - [-> Aguarde o Zero Cal do Power Meter... 13s]
+
+6/7/2023 2:41:10 PM - [-> Aguarde o Zero Cal do Power Meter... 12s]
+
+6/7/2023 2:41:11 PM - [-> Aguarde o Zero Cal do Power Meter... 11s]
+
+6/7/2023 2:41:12 PM - [-> Aguarde o Zero Cal do Power Meter... 10s]
+
+6/7/2023 2:41:13 PM - [-> Aguarde o Zero Cal do Power Meter... 9s]
+
+6/7/2023 2:41:14 PM - [-> Aguarde o Zero Cal do Power Meter... 8s]
+
+6/7/2023 2:41:15 PM - [-> Aguarde o Zero Cal do Power Meter... 7s]
+
+6/7/2023 2:41:16 PM - [-> Aguarde o Zero Cal do Power Meter... 6s]
+
+6/7/2023 2:41:17 PM - [-> Aguarde o Zero Cal do Power Meter... 5s]
+
+6/7/2023 2:41:18 PM - [-> Aguarde o Zero Cal do Power Meter... 4s]
+
+6/7/2023 2:41:19 PM - [-> Aguarde o Zero Cal do Power Meter... 3s]
+
+6/7/2023 2:41:20 PM - [-> Aguarde o Zero Cal do Power Meter... 2s]
+
+6/7/2023 2:41:21 PM - [-> Aguarde o Zero Cal do Power Meter... 1s]
+
+6/7/2023 2:41:22 PM - [-> Aguarde o Zero Cal do Power Meter... 0s]
+
+6/7/2023 2:41:25 PM - [-> Zero Cal Power Meter Finished Successfully]
+
+6/7/2023 2:41:25 PM - [-> Equipamento: GPIB0::30::INSTRZero Cal OK!]
+
+6/7/2023 2:41:25 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:41:25 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:41:25 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:41:26 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/7/2023 2:41:26 PM - [-> GPIB0::2::INSTR -> Write: *CLS]
+
+6/7/2023 2:41:26 PM - [-> GPIB0::2::INSTR -> Write: SYST:ERR?]
+
+6/7/2023 2:41:26 PM - [-> GPIB0::2::INSTR -> Read: +0,"No error"
+]
+
+6/7/2023 2:41:36 PM - [-> GPIB0::2::INSTR -> Write: *RST;*OPC?]
+
+6/7/2023 2:41:36 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:36 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW?]
+
+6/7/2023 2:41:36 PM - [-> GPIB0::2::INSTR -> Read: +6.0000000000000E+09
+]
+
+6/7/2023 2:41:36 PM - [-> Máxima Frequência permitida +6.0000000000000E+09
+]
+
+6/7/2023 2:41:36 PM - [-> GPIB0::2::INSTR -> Write: OUTP:MOD:STAT OFF]
+
+6/7/2023 2:41:37 PM - [-> GPIB0::30::INSTR -> Write: *RST;*OPC?]
+
+6/7/2023 2:41:39 PM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/7/2023 2:41:39 PM - [-> GPIB0::30::INSTR -> Write: DET:FUNC AVER;*OPC?]
+
+6/7/2023 2:41:40 PM - [-> GPIB0::30::INSTR -> Read: +1
+]
+
+6/7/2023 2:41:40 PM - [-> GPIB0::30::INSTR -> Write: AVER OFF]
+
+6/7/2023 2:41:41 PM - [-> GPIB0::2::INSTR -> Write: :FREQuency:MODE CW;*OPC?]
+
+6/7/2023 2:41:41 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:41 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5900MHz;*OPC?]
+
+6/7/2023 2:41:41 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:41 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:41:42 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:41:43 PM - [-> GPIB0::2::INSTR -> Write: OUTP ON;*OPC?]
+
+6/7/2023 2:41:43 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:43 PM - [-> GPIB0::2::INSTR -> Write: SOUR:POW 10 dBm;*OPC?]
+
+6/7/2023 2:41:44 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:44 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:41:44 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:41:44 PM - [-> GPIB0::30::INSTR -> Write: FREQ 5900MHz]
+
+6/7/2023 2:41:44 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:45 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:45 PM - [-> GPIB0::30::INSTR -> Read: +8.96358979E+000
+]
+
+6/7/2023 2:41:45 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:45 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:46 PM - [-> GPIB0::30::INSTR -> Read: +8.96630886E+000
+]
+
+6/7/2023 2:41:46 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:46 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:47 PM - [-> GPIB0::30::INSTR -> Read: +8.97587390E+000
+]
+
+6/7/2023 2:41:47 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:47 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:47 PM - [-> GPIB0::30::INSTR -> Read: +8.98722207E+000
+]
+
+6/7/2023 2:41:47 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:48 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:48 PM - [-> GPIB0::30::INSTR -> Read: +8.99365054E+000
+]
+
+6/7/2023 2:41:48 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 5950MHz;*OPC?]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::30::INSTR -> Write: FREQ 5950MHz]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:49 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:50 PM - [-> GPIB0::30::INSTR -> Read: +9.23133694E+000
+]
+
+6/7/2023 2:41:50 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:50 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:51 PM - [-> GPIB0::30::INSTR -> Read: +9.23223916E+000
+]
+
+6/7/2023 2:41:51 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:51 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:52 PM - [-> GPIB0::30::INSTR -> Read: +9.23517963E+000
+]
+
+6/7/2023 2:41:52 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:52 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:52 PM - [-> GPIB0::30::INSTR -> Read: +9.23746780E+000
+]
+
+6/7/2023 2:41:53 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:53 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:53 PM - [-> GPIB0::30::INSTR -> Read: +9.23923626E+000
+]
+
+6/7/2023 2:41:53 PM - [-> GPIB0::2::INSTR -> Write: :FREQ:CW 6000MHz;*OPC?]
+
+6/7/2023 2:41:54 PM - [-> GPIB0::2::INSTR -> Read: 1
+]
+
+6/7/2023 2:41:54 PM - [-> GPIB0::2::INSTR -> Write: *ESR?]
+
+6/7/2023 2:41:54 PM - [-> GPIB0::2::INSTR -> Read: +0
+]
+
+6/7/2023 2:41:54 PM - [-> GPIB0::30::INSTR -> Write: FREQ 6000MHz]
+
+6/7/2023 2:41:55 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:55 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:55 PM - [-> GPIB0::30::INSTR -> Read: +9.11978381E+000
+]
+
+6/7/2023 2:41:56 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:56 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:56 PM - [-> GPIB0::30::INSTR -> Read: +9.12010627E+000
+]
+
+6/7/2023 2:41:56 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:57 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:57 PM - [-> GPIB0::30::INSTR -> Read: +9.12137209E+000
+]
+
+6/7/2023 2:41:57 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:57 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:58 PM - [-> GPIB0::30::INSTR -> Read: +9.12307957E+000
+]
+
+6/7/2023 2:41:58 PM - [-> GPIB0::30::INSTR -> Write: INIT1]
+
+6/7/2023 2:41:58 PM - [-> GPIB0::30::INSTR -> Write: FETC1?]
+
+6/7/2023 2:41:59 PM - [-> GPIB0::30::INSTR -> Read: +9.12381354E+000
+]
+
+6/7/2023 2:42:02 PM - [-> Zero Cal Signal Generator Finished Successfully]
+
+6/7/2023 2:42:02 PM - [-> Equipamento: GPIB0::2::INSTRZero Cal OK!]
+
+6/7/2023 2:42:02 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/7/2023 2:42:02 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/7/2023 2:42:02 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/7/2023 2:42:03 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
