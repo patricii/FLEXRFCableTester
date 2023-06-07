@@ -213,11 +213,13 @@ namespace FlexRFCableTester
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
             buttonZeroCal.BackColor = Color.Yellow;
-            buttonZeroCal.Enabled = false;
+            disableAll();
+            buttonStart.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
             buttonZeroCal.BackColor = Color.White;
-            buttonZeroCal.Enabled = true;
+            enableAll();
+            buttonStart.Enabled = true;
         }
         private void writeValuesToIniFile()
         {
