@@ -70,6 +70,8 @@ namespace FlexRFCableTester
             catch
             {
                 MessageBox.Show("Imagem não disponível!!!");
+                pictureBoxImg.Image = Image.FromFile(@"img\Generico.jpg");
+
             }
         }
         public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
@@ -586,6 +588,7 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Error to generate the Graph results!!!");
             }
+
         }
 
         private void buttonExport_Click(object sender, EventArgs e)
