@@ -132,6 +132,8 @@ namespace FlexRFCableTester
         {
             logger = new Logger();
             int zStatus = 0;
+            zeroCalPowerMeter.resultZeroCalPowerMeter = string.Empty;
+            zeroCalSignalGenerator.resultZeroCalSigGen = string.Empty;
             try
             {
                 visaPowerMeter = new MessageBasedSession(textBoxAddressPowerM.Text);
@@ -189,10 +191,17 @@ namespace FlexRFCableTester
                         }
                     }
                     else
+                    {
                         MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+                        labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
+                    }
 
                     if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
+                    {
                         MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
+                        labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
+                    }
+
                     else
                     {
                         labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
