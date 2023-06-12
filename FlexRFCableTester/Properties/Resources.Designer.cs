@@ -22,7 +22,7 @@ namespace FlexRFCableTester.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace FlexRFCableTester.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FlexRFCableTester.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace FlexRFCableTester.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EF400_1600mm {
+        public static System.Drawing.Bitmap EF400_1600mm {
             get {
                 object obj = ResourceManager.GetObject("EF400_1600mm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EF400_600mm {
+        public static System.Drawing.Bitmap EF400_600mm {
             get {
                 object obj = ResourceManager.GetObject("EF400_600mm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap flex {
+        public static System.Drawing.Bitmap flex {
             get {
                 object obj = ResourceManager.GetObject("flex", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap generico {
+        public static System.Drawing.Bitmap generico {
             get {
                 object obj = ResourceManager.GetObject("generico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LA500 {
+        public static System.Drawing.Bitmap LA500 {
             get {
                 object obj = ResourceManager.GetObject("LA500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MiniBend9 {
+        public static System.Drawing.Bitmap MiniBend9 {
             get {
                 object obj = ResourceManager.GetObject("MiniBend9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MXHS83SK2800 {
+        public static System.Drawing.Bitmap MXHS83SK2800 {
             get {
                 object obj = ResourceManager.GetObject("MXHS83SK2800", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MXHT83HT3000 {
+        public static System.Drawing.Bitmap MXHT83HT3000 {
             get {
                 object obj = ResourceManager.GetObject("MXHT83HT3000", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Splitter_ZN4PD_272_S_ {
+        public static System.Drawing.Bitmap Splitter_ZN4PD_272_S_ {
             get {
                 object obj = ResourceManager.GetObject("Splitter_ZN4PD-272-S+", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap StartProcess {
+        public static System.Drawing.Bitmap StartProcess {
             get {
                 object obj = ResourceManager.GetObject("StartProcess", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -161,9 +161,29 @@ namespace FlexRFCableTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        public static System.Drawing.Icon success_icon {
+            get {
+                object obj = ResourceManager.GetObject("success_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zeroCal {
+        public static System.Drawing.Bitmap success_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("success_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap zeroCal {
             get {
                 object obj = ResourceManager.GetObject("zeroCal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +193,7 @@ namespace FlexRFCableTester.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zeroSignalGen {
+        public static System.Drawing.Bitmap zeroSignalGen {
             get {
                 object obj = ResourceManager.GetObject("zeroSignalGen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

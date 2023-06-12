@@ -12390,3 +12390,617 @@
 
 6/12/2023 10:23:12 AM - [-> Aferição do cabo realizada com sucesso!!!]
 
+6/12/2023 11:18:57 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:18:58 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:18:58 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:18:58 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:19:20 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:20 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:19:21 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:21 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:19:28 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:29 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:19:29 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:29 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:19:37 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:37 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:19:37 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:38 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:19:50 AM - [-> Starting ZeroCal process - Waiting response....]
+
+6/12/2023 11:19:50 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:50 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:19:50 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:19:51 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:19:51 AM - [-> GPIB0::30::INSTR -> Write: *CLS]
+
+6/12/2023 11:19:51 AM - [-> GPIB0::30::INSTR -> Write: SYST:ERR?]
+
+6/12/2023 11:19:52 AM - [-> GPIB0::30::INSTR -> Read: +0,"No error"
+]
+
+6/12/2023 11:19:55 AM - [-> GPIB0::30::INSTR -> Write: CAL?]
+
+6/12/2023 11:19:56 AM - [-> Aguarde o Zero Cal do Power Meter... 44s]
+
+6/12/2023 11:19:57 AM - [-> Aguarde o Zero Cal do Power Meter... 43s]
+
+6/12/2023 11:19:58 AM - [-> Aguarde o Zero Cal do Power Meter... 42s]
+
+6/12/2023 11:19:59 AM - [-> Aguarde o Zero Cal do Power Meter... 41s]
+
+6/12/2023 11:20:00 AM - [-> Aguarde o Zero Cal do Power Meter... 40s]
+
+6/12/2023 11:20:01 AM - [-> Aguarde o Zero Cal do Power Meter... 39s]
+
+6/12/2023 11:20:02 AM - [-> Aguarde o Zero Cal do Power Meter... 38s]
+
+6/12/2023 11:20:03 AM - [-> Aguarde o Zero Cal do Power Meter... 37s]
+
+6/12/2023 11:20:04 AM - [-> Aguarde o Zero Cal do Power Meter... 36s]
+
+6/12/2023 11:20:05 AM - [-> Aguarde o Zero Cal do Power Meter... 35s]
+
+6/12/2023 11:20:06 AM - [-> Aguarde o Zero Cal do Power Meter... 34s]
+
+6/12/2023 11:20:07 AM - [-> Aguarde o Zero Cal do Power Meter... 33s]
+
+6/12/2023 11:20:08 AM - [-> Aguarde o Zero Cal do Power Meter... 32s]
+
+6/12/2023 11:20:09 AM - [-> Aguarde o Zero Cal do Power Meter... 31s]
+
+6/12/2023 11:20:10 AM - [-> Aguarde o Zero Cal do Power Meter... 30s]
+
+6/12/2023 11:20:11 AM - [-> Aguarde o Zero Cal do Power Meter... 29s]
+
+6/12/2023 11:20:12 AM - [-> Aguarde o Zero Cal do Power Meter... 28s]
+
+6/12/2023 11:20:13 AM - [-> Aguarde o Zero Cal do Power Meter... 27s]
+
+6/12/2023 11:20:14 AM - [-> Aguarde o Zero Cal do Power Meter... 26s]
+
+6/12/2023 11:20:15 AM - [-> Aguarde o Zero Cal do Power Meter... 25s]
+
+6/12/2023 11:20:16 AM - [-> Aguarde o Zero Cal do Power Meter... 24s]
+
+6/12/2023 11:20:17 AM - [-> Aguarde o Zero Cal do Power Meter... 23s]
+
+6/12/2023 11:20:18 AM - [-> Aguarde o Zero Cal do Power Meter... 22s]
+
+6/12/2023 11:20:19 AM - [-> Aguarde o Zero Cal do Power Meter... 21s]
+
+6/12/2023 11:20:20 AM - [-> Aguarde o Zero Cal do Power Meter... 20s]
+
+6/12/2023 11:20:21 AM - [-> Aguarde o Zero Cal do Power Meter... 19s]
+
+6/12/2023 11:20:22 AM - [-> Aguarde o Zero Cal do Power Meter... 18s]
+
+6/12/2023 11:20:23 AM - [-> Aguarde o Zero Cal do Power Meter... 17s]
+
+6/12/2023 11:20:24 AM - [-> Aguarde o Zero Cal do Power Meter... 16s]
+
+6/12/2023 11:20:25 AM - [-> Aguarde o Zero Cal do Power Meter... 15s]
+
+6/12/2023 11:20:26 AM - [-> Aguarde o Zero Cal do Power Meter... 14s]
+
+6/12/2023 11:20:27 AM - [-> Aguarde o Zero Cal do Power Meter... 13s]
+
+6/12/2023 11:20:28 AM - [-> Aguarde o Zero Cal do Power Meter... 12s]
+
+6/12/2023 11:20:29 AM - [-> Aguarde o Zero Cal do Power Meter... 11s]
+
+6/12/2023 11:20:30 AM - [-> Aguarde o Zero Cal do Power Meter... 10s]
+
+6/12/2023 11:20:31 AM - [-> Aguarde o Zero Cal do Power Meter... 9s]
+
+6/12/2023 11:20:32 AM - [-> Aguarde o Zero Cal do Power Meter... 8s]
+
+6/12/2023 11:20:33 AM - [-> Aguarde o Zero Cal do Power Meter... 7s]
+
+6/12/2023 11:20:34 AM - [-> Aguarde o Zero Cal do Power Meter... 6s]
+
+6/12/2023 11:20:35 AM - [-> Aguarde o Zero Cal do Power Meter... 5s]
+
+6/12/2023 11:20:36 AM - [-> Aguarde o Zero Cal do Power Meter... 4s]
+
+6/12/2023 11:20:37 AM - [-> Aguarde o Zero Cal do Power Meter... 3s]
+
+6/12/2023 11:20:38 AM - [-> Aguarde o Zero Cal do Power Meter... 2s]
+
+6/12/2023 11:20:39 AM - [-> Aguarde o Zero Cal do Power Meter... 1s]
+
+6/12/2023 11:20:40 AM - [-> Aguarde o Zero Cal do Power Meter... 0s]
+
+6/12/2023 11:20:43 AM - [-> Power Meter Zero Cal Failed!!!]
+
+6/12/2023 11:20:43 AM - [-> Zero Cal Power Meter Failed!!!]
+
+6/12/2023 11:20:43 AM - [-> Equipamento: GPIB0::30::INSTRZero Cal FAILED!]
+
+6/12/2023 11:29:30 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:29:30 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:29:30 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:29:31 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:29:33 AM - [-> Starting ZeroCal process - Waiting response....]
+
+6/12/2023 11:29:33 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:29:33 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:29:33 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:29:34 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:29:34 AM - [-> GPIB0::30::INSTR -> Write: *CLS]
+
+6/12/2023 11:29:34 AM - [-> GPIB0::30::INSTR -> Write: SYST:ERR?]
+
+6/12/2023 11:29:35 AM - [-> GPIB0::30::INSTR -> Read: +0,"No error"
+]
+
+6/12/2023 11:29:58 AM - [-> GPIB0::30::INSTR -> Write: CAL?]
+
+6/12/2023 11:29:59 AM - [-> Aguarde o Zero Cal do Power Meter... 44s]
+
+6/12/2023 11:30:00 AM - [-> Aguarde o Zero Cal do Power Meter... 43s]
+
+6/12/2023 11:30:01 AM - [-> Aguarde o Zero Cal do Power Meter... 42s]
+
+6/12/2023 11:30:02 AM - [-> Aguarde o Zero Cal do Power Meter... 41s]
+
+6/12/2023 11:30:03 AM - [-> Aguarde o Zero Cal do Power Meter... 40s]
+
+6/12/2023 11:30:04 AM - [-> Aguarde o Zero Cal do Power Meter... 39s]
+
+6/12/2023 11:30:05 AM - [-> Aguarde o Zero Cal do Power Meter... 38s]
+
+6/12/2023 11:30:06 AM - [-> Aguarde o Zero Cal do Power Meter... 37s]
+
+6/12/2023 11:30:07 AM - [-> Aguarde o Zero Cal do Power Meter... 36s]
+
+6/12/2023 11:30:08 AM - [-> Aguarde o Zero Cal do Power Meter... 35s]
+
+6/12/2023 11:30:09 AM - [-> Aguarde o Zero Cal do Power Meter... 34s]
+
+6/12/2023 11:30:10 AM - [-> Aguarde o Zero Cal do Power Meter... 33s]
+
+6/12/2023 11:30:11 AM - [-> Aguarde o Zero Cal do Power Meter... 32s]
+
+6/12/2023 11:30:12 AM - [-> Aguarde o Zero Cal do Power Meter... 31s]
+
+6/12/2023 11:30:13 AM - [-> Aguarde o Zero Cal do Power Meter... 30s]
+
+6/12/2023 11:30:14 AM - [-> Aguarde o Zero Cal do Power Meter... 29s]
+
+6/12/2023 11:30:15 AM - [-> Aguarde o Zero Cal do Power Meter... 28s]
+
+6/12/2023 11:30:16 AM - [-> Aguarde o Zero Cal do Power Meter... 27s]
+
+6/12/2023 11:30:17 AM - [-> Aguarde o Zero Cal do Power Meter... 26s]
+
+6/12/2023 11:30:18 AM - [-> Aguarde o Zero Cal do Power Meter... 25s]
+
+6/12/2023 11:30:19 AM - [-> Aguarde o Zero Cal do Power Meter... 24s]
+
+6/12/2023 11:30:20 AM - [-> Aguarde o Zero Cal do Power Meter... 23s]
+
+6/12/2023 11:30:21 AM - [-> Aguarde o Zero Cal do Power Meter... 22s]
+
+6/12/2023 11:30:22 AM - [-> Aguarde o Zero Cal do Power Meter... 21s]
+
+6/12/2023 11:30:23 AM - [-> Aguarde o Zero Cal do Power Meter... 20s]
+
+6/12/2023 11:30:24 AM - [-> Aguarde o Zero Cal do Power Meter... 19s]
+
+6/12/2023 11:30:25 AM - [-> Aguarde o Zero Cal do Power Meter... 18s]
+
+6/12/2023 11:30:26 AM - [-> Aguarde o Zero Cal do Power Meter... 17s]
+
+6/12/2023 11:30:27 AM - [-> Aguarde o Zero Cal do Power Meter... 16s]
+
+6/12/2023 11:30:28 AM - [-> Aguarde o Zero Cal do Power Meter... 15s]
+
+6/12/2023 11:30:29 AM - [-> Aguarde o Zero Cal do Power Meter... 14s]
+
+6/12/2023 11:30:30 AM - [-> Aguarde o Zero Cal do Power Meter... 13s]
+
+6/12/2023 11:30:31 AM - [-> Aguarde o Zero Cal do Power Meter... 12s]
+
+6/12/2023 11:30:32 AM - [-> Aguarde o Zero Cal do Power Meter... 11s]
+
+6/12/2023 11:30:33 AM - [-> Aguarde o Zero Cal do Power Meter... 10s]
+
+6/12/2023 11:30:34 AM - [-> Aguarde o Zero Cal do Power Meter... 9s]
+
+6/12/2023 11:30:35 AM - [-> Aguarde o Zero Cal do Power Meter... 8s]
+
+6/12/2023 11:30:36 AM - [-> Aguarde o Zero Cal do Power Meter... 7s]
+
+6/12/2023 11:30:37 AM - [-> Aguarde o Zero Cal do Power Meter... 6s]
+
+6/12/2023 11:30:39 AM - [-> Aguarde o Zero Cal do Power Meter... 5s]
+
+6/12/2023 11:30:40 AM - [-> Aguarde o Zero Cal do Power Meter... 4s]
+
+6/12/2023 11:30:41 AM - [-> Aguarde o Zero Cal do Power Meter... 3s]
+
+6/12/2023 11:30:42 AM - [-> Aguarde o Zero Cal do Power Meter... 2s]
+
+6/12/2023 11:30:43 AM - [-> Aguarde o Zero Cal do Power Meter... 1s]
+
+6/12/2023 11:30:44 AM - [-> Aguarde o Zero Cal do Power Meter... 0s]
+
+6/12/2023 11:30:47 AM - [-> Power Meter Zero Cal Failed!!!]
+
+6/12/2023 11:30:47 AM - [-> Zero Cal Power Meter Failed!!!]
+
+6/12/2023 11:30:47 AM - [-> Equipamento: GPIB0::30::INSTRZero Cal FAILED!]
+
+6/12/2023 11:40:28 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:40:28 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:40:28 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:40:29 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:41:13 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:13 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:41:13 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:14 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:41:33 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:34 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:41:34 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:34 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:41:49 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:49 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:41:49 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:41:50 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:42:07 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:08 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:42:08 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:08 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:42:29 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:29 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:42:29 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:30 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:42:51 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:51 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:42:51 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:42:51 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:43:06 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:07 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:43:07 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:07 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:43:23 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:24 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:43:24 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:24 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:43:38 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:38 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:43:38 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:39 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 11:43:51 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:51 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 11:43:51 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 11:43:52 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:47:16 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:47:16 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:47:16 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:47:17 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:47:30 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:47:30 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:47:30 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:47:31 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:50:23 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:50:24 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:50:24 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:50:24 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:51:02 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:51:02 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:51:02 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:51:03 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:51:37 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:51:38 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:51:38 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:51:38 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:53:04 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:53:04 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:53:04 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:53:05 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:53:42 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:53:42 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:53:42 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:53:42 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:55:35 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:55:36 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:55:36 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:55:36 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:57:34 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:57:35 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:57:35 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:57:35 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:58:14 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:58:14 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:58:14 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:58:15 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 2:59:08 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 2:59:08 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 2:59:08 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 2:59:09 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:00:49 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:00:49 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:00:49 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:00:50 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:02:00 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:02:00 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:02:00 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:02:01 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:02:49 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:02:49 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:02:49 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:02:50 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:03:27 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:03:28 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:03:28 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:03:28 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:03:50 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:03:50 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:03:50 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:03:51 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:04:07 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:04:07 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:04:07 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:04:07 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:05:07 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:05:08 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:05:08 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:05:08 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:05:42 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:05:42 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:05:42 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:05:43 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:06:07 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:06:07 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:06:07 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:06:08 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:06:48 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:06:48 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:06:48 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:06:48 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
+6/12/2023 3:11:50 PM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/12/2023 3:11:50 PM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/12/2023 3:11:50 PM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/12/2023 3:11:51 PM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+

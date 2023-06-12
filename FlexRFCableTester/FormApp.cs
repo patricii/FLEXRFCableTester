@@ -57,6 +57,7 @@ namespace FlexRFCableTester
                 }
             }
         }
+
         private void comboBoxCableSettings_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -140,7 +141,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
+                MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!", "Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 zStatus = -1;
             }
             try
@@ -149,7 +150,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
+                MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!", "Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 zStatus = -1;
             }
             if (zStatus == 0)
@@ -169,7 +170,7 @@ namespace FlexRFCableTester
                         }
                         else
                         {
-                            MessageBox.Show("O modelo do Power Meter não compativel!!!");
+                            MessageBox.Show("O modelo do Power Meter não compativel!!!", "Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
@@ -186,19 +187,19 @@ namespace FlexRFCableTester
                             else
                             {
                                 textBoxAddressSignalGen.BackColor = Color.Red;
-                                MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!");
+                                MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!", "Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!");
+                        MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!", "Zero Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
                     }
 
                     if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
                     {
-                        MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!");
+                        MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!", "Zero Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
                     }
 
@@ -223,7 +224,7 @@ namespace FlexRFCableTester
                 {
                     message = "Comunicação perdida no meio do processo de Zero Cal!!!";
                     logger.logMessage(message);
-                    MessageBox.Show(message);
+                    MessageBox.Show(message, "Comunicação Perdida - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -251,7 +252,7 @@ namespace FlexRFCableTester
                     if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
                         MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
                     else
-                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
+                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Start Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
@@ -260,7 +261,7 @@ namespace FlexRFCableTester
                     if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
                         MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
                     else
-                        MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!");
+                        MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Stop Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
                     MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
@@ -275,7 +276,7 @@ namespace FlexRFCableTester
             {
                 message = "Erro ao gravar valores no arquivo Settings.ini";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -369,7 +370,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("Não foi possivel conectar com os Equipamentos!!!");
+                MessageBox.Show("Não foi possivel conectar com os Equipamentos!!!", "Equipamentos - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             equipmentvisaPowerMeter = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
             equipmentvisavisaSignalGen = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
@@ -413,7 +414,7 @@ namespace FlexRFCableTester
                         }
                         catch
                         {
-                            MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!");
+                            MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!", "Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             NStatus = -1;
                             return -1;
                         }
@@ -423,7 +424,7 @@ namespace FlexRFCableTester
                         }
                         catch
                         {
-                            MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!");
+                            MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!", "Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             NStatus = -1;
                             return -1;
                         }
@@ -440,7 +441,7 @@ namespace FlexRFCableTester
                                     PowerMeterModelCheck = equipmentvisaPowerMeter.verifyEquipmentModel();
                                     if (!PowerMeterModelCheck.Contains("E4416A"))
                                     {
-                                        MessageBox.Show("O modelo do Power Meter não compativel!!!");
+                                        MessageBox.Show("O modelo do Power Meter não compativel!!!", "Modelo Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return -1;
                                     }
                                 }
@@ -449,7 +450,7 @@ namespace FlexRFCableTester
                                     SignalGenModelCheck = equipmentvisavisaSignalGen.verifyEquipmentModel();
                                     if (!SignalGenModelCheck.Contains("E4438C"))
                                     {
-                                        MessageBox.Show("O modelo do Signal Generator não compativel!!!");
+                                        MessageBox.Show("O modelo do Signal Generator não compativel!!!", "Modelo Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return -1;
                                     }
                                 }
@@ -469,7 +470,7 @@ namespace FlexRFCableTester
                                 {
                                     cableResults = "Failed";
                                     logger.logMessage("Cable DBLoss  measure Failed!!!");
-                                    MessageBox.Show("Cable DBLoss  measure Failed!!!");
+                                    MessageBox.Show("Cable DBLoss  measure Failed!!!", "Medição - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
                                     buttonStart.Text = "Start";
                                     buttonStart.BackColor = Color.Green;
@@ -479,7 +480,7 @@ namespace FlexRFCableTester
                             }
                             catch
                             {
-                                MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!");
+                                MessageBox.Show("Comunicação perdida no meio do processo de aferição!!!", "Comunicação Perdida - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 cableResults = "Failed";
                                 return -1;
                             }
@@ -496,7 +497,7 @@ namespace FlexRFCableTester
                             else
                             {
                                 logger.logMessage("Aferição do cabo Falhou!!!");
-                                MessageBox.Show("Aferição do cabo Falhou!!!");
+                                MessageBox.Show("Aferição do cabo Falhou!!!", "Medição - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 startP.Close();
                                 return -1;
                             }
@@ -513,7 +514,7 @@ namespace FlexRFCableTester
                 {
                     message = "Error: Realize o Zero Cal antes de começar!!!";
                     logger.logMessage(message);
-                    MessageBox.Show(message);
+                    MessageBox.Show(message, "Zero Cal - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     buttonStart.Text = "Start";
                     buttonStart.BackColor = Color.Green;
                     labelStatusRFTester.Text = message;
@@ -525,7 +526,7 @@ namespace FlexRFCableTester
             {
                 message = "Error: Cart diferente, faça o zero novamente!!!";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Cart Incorreto - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 buttonStart.Text = "Start";
                 buttonStart.BackColor = Color.Green;
                 labelStatusRFTester.Text = message;
@@ -632,7 +633,7 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("Error to generate the Graph results!!!");
+                MessageBox.Show("Error to generate the Graph results!!!", "Graph Results - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -652,11 +653,11 @@ namespace FlexRFCableTester
                 File.WriteAllText(csvfilePath, result);
                 chartResults.SaveImage(pngFileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
 
-                MessageBox.Show("Dados exportados com Sucesso na pasta log/LogGraphData.csv !!!");
+                messageBoxFrmOk("Dados exportados com Sucesso na pasta" + Environment.NewLine + "log / LogGraphData.csv !!!", "Dados Exportados - SUCCESSFULLY!!!");
             }
             catch
             {
-                MessageBox.Show("Falha ao exportar os dados!!!");
+                MessageBox.Show("Falha ao exportar os dados!!!", "Dados Exportados - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void initializerEquipmentCheck()
@@ -709,6 +710,13 @@ namespace FlexRFCableTester
             {
                 series.Points.Clear();
             }
+        }
+        private void messageBoxFrmOk(string label, string tittle)
+        {
+            FormExportOk fEok = new FormExportOk();
+            fEok.Show();
+            fEok.labelStatusFinishIcon.Text = label;
+            fEok.Text = tittle;
         }
     }
 }
