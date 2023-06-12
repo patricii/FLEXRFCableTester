@@ -183,22 +183,16 @@ namespace FlexRFCableTester
             }
             return true;
         }
-        public int verifyEquipmentModel(string model)
+        public string verifyEquipmentModel()
         {
             try
             {
                 writeCommand("*IDN?", equipmentName);
-                string idnEquip = readCommand(equipmentName);
-
-                if (idnEquip.Contains(model))
-                    return 0;
-
-                else
-                    return -1;
+                return readCommand(equipmentName);
             }
             catch
             {
-                return -999;
+                return "Null";
             }
         }     
     }
