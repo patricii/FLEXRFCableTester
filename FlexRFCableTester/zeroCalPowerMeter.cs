@@ -11,10 +11,11 @@ namespace FlexRFCableTester
         public static string resultZeroCalPowerMeter = string.Empty;
         FormApp frmMain = FormApp.getInstance();
         public MessageBasedSession visaPowerMeter;
+        Logger logger = new Logger();
         int count = 45;
         int delay = 1000;
         string message = string.Empty;
-        Logger logger = new Logger();
+
         public zeroCalPowerMeter()
         {
             InitializeComponent();

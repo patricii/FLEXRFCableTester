@@ -7,11 +7,11 @@ namespace FlexRFCableTester
     {
         IniFile MyIni = new IniFile("settings.ini");
         FormApp frmApp = FormApp.getInstance();
+        Logger logger = new Logger();
+        Utils utils = new Utils();
         string message = string.Empty;
         string frequencyOfCableLossFromSettings = string.Empty;
-        Logger logger = new Logger();
         double lossFromIniFile = 0.0;
-        Utils utils = new Utils();
 
         public void readMeasureAndFillCalFactoryValues(string freq, double value)
         {
@@ -74,9 +74,8 @@ namespace FlexRFCableTester
                 MessageBox.Show(message, "Settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        public double startMeasuresIniFunction() {
-
-
+        public double startMeasuresIniFunction()
+        {
             if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 500)
             {
                 if (MyIni.KeyExists("CableLoss0.5GHz", frmApp.comboBoxCableSettings.Text))

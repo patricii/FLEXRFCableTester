@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using NationalInstruments.VisaNS;
@@ -12,20 +11,20 @@ namespace FlexRFCableTester
     {
         public MessageBasedSession visaPowerMeter;
         public MessageBasedSession visaSignalGen;
+        private static FormApp INSTANCE = null;
+        Equipments equipmentvisaPowerMeter;
+        Equipments equipmentvisavisaSignalGen;
+        Logger logger;
+        GraphicChart chartGraph;
+        Utils utils;
+        IniFunctions IniFunct;
         public static string cableResults = string.Empty;
         string message = string.Empty;
         string measuresResultLog = string.Empty;
         string dateCompare = string.Empty;
-        Logger logger;
-        private static FormApp INSTANCE = null;
         string PowerMeterModelCheck = string.Empty;
         string SignalGenModelCheck = string.Empty;
-        Equipments equipmentvisaPowerMeter;
-        Equipments equipmentvisavisaSignalGen;
         int countGraphOverlap = 0;
-        GraphicChart chartGraph;
-        Utils utils;
-        IniFunctions IniFunct;
 
         public bool stopAction { get; set; }
 
