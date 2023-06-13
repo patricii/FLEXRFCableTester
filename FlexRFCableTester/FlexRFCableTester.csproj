@@ -67,6 +67,7 @@
     <Compile Include="FormExportOk.Designer.cs">
       <DependentUpon>FormExportOk.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraphicChart.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="FormApp.cs">

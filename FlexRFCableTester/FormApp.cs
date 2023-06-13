@@ -24,6 +24,7 @@ namespace FlexRFCableTester
         Equipments equipmentvisaPowerMeter;
         Equipments equipmentvisavisaSignalGen;
         int countGraphOverlap = 0;
+        GraphicChart chartGraph = new GraphicChart();
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -351,7 +352,7 @@ namespace FlexRFCableTester
                     if (status == 0)
                     {
                         enableAll();
-                        graphGenerateMethod();
+                        chartGraph.graphGenerateMethod(countGraphOverlap);
                         tabControlMain.SelectedIndex = 2;
                         countGraphOverlap ++;
                     }
@@ -364,7 +365,6 @@ namespace FlexRFCableTester
                 setButtonToStart();
                 stopAction = true;
             }
-           // chartResults.Series[2].Points.Dispose();
         }
         private int startProcess()
         {
@@ -579,91 +579,7 @@ namespace FlexRFCableTester
             {
                 logger.logMessage("Error to add values to DataGridView - reason: " + ex);
             }
-        }
-        public void graphGenerateMethod()
-        {
-            int countG = 0;
-            try
-            {
-                string fileName = @"log\LogGraphData.txt";
-                string[] data;
-                double lossFromIniFile = 0.0;
-
-                if (comboBoxCableSettings.Text != "Generico")
-                {
-                    if (MyIni.KeyExists("CableLoss0.5GHz", comboBoxCableSettings.Text))
-                        lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", comboBoxCableSettings.Text));
-                    if (lossFromIniFile < 3)
-                    {
-                        lossFromIniFile = lossFromIniFile - 0.5;
-                        chartResults.ChartAreas[0].AxisY.Interval = 0.1;
-                    }
-                    else
-                    {
-                        lossFromIniFile = lossFromIniFile - 2;
-                        chartResults.ChartAreas[0].AxisY.Interval = 0.2;
-                    }
-                    chartResults.ChartAreas[0].AxisY.Minimum = lossFromIniFile;
-                    chartResults.ChartAreas[0].AxisY.Interval = 0.1;
-                }
-
-                chartResults.ChartAreas[0].AxisX.Minimum = Convert.ToDouble(textBoxStartFrequency.Text);
-                chartResults.ChartAreas[0].AxisX.Maximum = Convert.ToDouble(textBoxStopFrequency.Text);
-                chartResults.ChartAreas[0].AxisX.Interval = 500;
-                chartResults.Series[0].BorderWidth = 3;
-                chartResults.Series[1].BorderWidth = 3;
-                chartResults.Series[2].BorderWidth = 3;
-                chartResults.Series[3].BorderWidth = 3;
-
-                //getting the values from Graph Data Log
-
-                if (File.Exists(fileName))
-                {
-                    using (StreamReader reader = new StreamReader(fileName))
-                    {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            data = line.Split(',');
-
-                            if (data[4] == "Fail")
-                                chartResults.Series[2].Color = Color.Red;
-
-                            if (countGraphOverlap == 0)
-                            {
-                                if (comboBoxCableSettings.Text != "Generico")
-                                {
-                                    chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
-                                    chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
-                                }
-
-                                chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
-                            }
-                            else
-                            {
-                                if (data[4] == "Fail")
-                                    chartResults.Series[3].Color = Color.Red;
-
-                                chartResults.Series[3].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
-                            }
-                            if (comboBoxCableSettings.Text == "Generico" && countG == 0)
-                            {
-                                chartResults.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(data[3]) - 1.0;
-                                countG++;
-                            }
-                        }
-                    }
-
-                    labelCableInfo.Text = comboBoxCableSettings.Text;
-                }
-                countG = 0;
-            }
-            catch
-            {
-                MessageBox.Show("Error to generate the Graph results!!!", "Graph Results - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
+        }    
         private void buttonExport_Click(object sender, EventArgs e)
         {
             try
