@@ -59,7 +59,7 @@ namespace FlexRFCableTester
             {
                 string message = "Erro ao comunicar com os Equipamentos selecionados!!!";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Equipamentos - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return false;
         }

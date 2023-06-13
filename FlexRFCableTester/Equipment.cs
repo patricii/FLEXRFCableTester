@@ -91,7 +91,7 @@ namespace FlexRFCableTester
                 {
                     message = "Erro ao conectar com o Equipamento: " + address + "!!! reason: " + ex;
                     logger.logMessage(message);
-                    MessageBox.Show(message);
+                    MessageBox.Show(message, "Equipamento " + address + " - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     equip.Close();
                 }
             }
@@ -99,7 +99,7 @@ namespace FlexRFCableTester
             {
                 message = "Erro ao conectar com o Equipamento: " + address + "!!!";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Equipamento " + address + " - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void setZeroCalSGGPIB()
@@ -140,7 +140,7 @@ namespace FlexRFCableTester
                 {
                     message = "Erro ao conectar com o Equipamento: " + address + "!!! reason: " + ex;
                     logger.logMessage(message);
-                    MessageBox.Show(message);
+                    MessageBox.Show(message, "Equipamento " + address + " - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     equip.Close();
                 }
             }
@@ -148,7 +148,7 @@ namespace FlexRFCableTester
             {
                 message = "Erro ao conectar com o Equipamento: " + address + "!!!";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Equipamento " + address + " - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

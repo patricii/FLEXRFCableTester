@@ -72,9 +72,8 @@ namespace FlexRFCableTester
             }
             catch
             {
-                MessageBox.Show("Imagem não disponível!!!");
+                MessageBox.Show("Imagem não disponível!!!", "Imagem - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 pictureBoxImg.Image = Image.FromFile(@"img\Generico.jpg");
-
             }
         }
         public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
@@ -126,7 +125,7 @@ namespace FlexRFCableTester
             {
                 message = "Frequências não encontradas no arquivo Settings.ini";
                 logger.logMessage(message);
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Frequências - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void zeroCalProcess()
@@ -238,30 +237,47 @@ namespace FlexRFCableTester
             buttonZeroCal.BackColor = Color.White;
             enableAll();
             buttonStart.Enabled = true;
+            messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
         }
         private void writeValuesToIniFile()
         {
             double startFreqDefault = 0.0;
+            double startFreqCable = 0.0;
             double stopFreqDefault = 0.0;
             try
             {
                 if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
                     startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
 
+                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                    startFreqCable = (Convert.ToDouble(MyIni.Read("StartFrequency", comboBoxCableSettings.Text)));
+
+
                 if (Convert.ToDouble(textBoxStartFrequency.Text) != startFreqDefault)
+                {
                     if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
                         MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
                     else
                         MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Start Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (startFreqCable != 0)
+                {
+                    if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
+                        MyIni.Write("StartFrequency", "0", comboBoxCableSettings.Text);
+                    else
+                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Start Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
                 if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
                     stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
 
                 if (Convert.ToDouble(textBoxStopFrequency.Text) != stopFreqDefault)
+                {
                     if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
                         MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
                     else
                         MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Stop Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
                 if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
                     MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
@@ -314,7 +330,6 @@ namespace FlexRFCableTester
             disableAll();
         }
 
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (buttonStart.Text.Contains("Start"))
@@ -338,7 +353,6 @@ namespace FlexRFCableTester
                         graphGenerateMethod();
                         tabControlMain.SelectedIndex = 2;
                     }
-
                     stopAction = false;
                 }
                 catch { }
@@ -348,6 +362,7 @@ namespace FlexRFCableTester
                 setButtonToStart();
                 stopAction = true;
             }
+           // chartResults.Series[2].Points.Dispose();
         }
         private int startProcess()
         {
@@ -377,7 +392,6 @@ namespace FlexRFCableTester
 
             if (equipmentvisavisaSignalGen.verifyEquipmentModel().Contains(MyIni.Read("snSignalGen", "equipmentModel")) && equipmentvisaPowerMeter.verifyEquipmentModel().Contains(MyIni.Read("snPowerMeter", "equipmentModel")))
             {
-
                 if (diffOfDates.TotalHours < 24)
                 {
                     StartProcess startP = new StartProcess();
@@ -617,7 +631,9 @@ namespace FlexRFCableTester
                                 chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
                                 chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
                             }
+
                             chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+
 
                             if (comboBoxCableSettings.Text == "Generico" && countG == 0)
                             {
@@ -635,7 +651,6 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Error to generate the Graph results!!!", "Graph Results - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void buttonExport_Click(object sender, EventArgs e)
@@ -710,6 +725,7 @@ namespace FlexRFCableTester
             {
                 series.Points.Clear();
             }
+            labelCableInfo.Text = "";
         }
         private void messageBoxFrmOk(string label, string tittle)
         {
