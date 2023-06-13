@@ -11,7 +11,6 @@ namespace FlexRFCableTester
         public GraphicChart() { }
         FormApp frmApp = FormApp.getInstance();
         IniFile MyIni = new IniFile("settings.ini");
-        Utils utils = new Utils();
 
         public void graphGenerateMethod(int countOverlap)
         {
@@ -106,9 +105,9 @@ namespace FlexRFCableTester
         }
         public void exportGraphData()
         {
-
             try
             {
+                Utils utils = new Utils();
                 DateTime dateNow = DateTime.Now;
 
                 string csvfilePath = @"log\LogGraphData_" + frmApp.comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";

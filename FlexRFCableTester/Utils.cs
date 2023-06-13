@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿
+using System.Drawing;
 
 namespace FlexRFCableTester
 {
@@ -41,11 +42,11 @@ namespace FlexRFCableTester
         }
         public void messageBoxFrmOk(string label, string tittle)
         {
-            FormExportOk fEok = new FormExportOk();
-            fEok.Show();
-            fEok.labelStatusFinishIcon.Text = label;
-            fEok.Text = tittle;
-        }
+            FormExportOk formEOk = new FormExportOk();
+            formEOk.Show();
+            formEOk.labelStatusFinishIcon.Text = label;
+            formEOk.Text = tittle;
+        }     
 
     }
 }

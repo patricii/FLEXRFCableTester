@@ -17,6 +17,7 @@ namespace FlexRFCableTester
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
         Utils utils = new Utils();
+        IniFunctions IniFunct = new IniFunctions();
 
         int count = 0;
         int countRecovery = 0;
@@ -213,7 +214,7 @@ namespace FlexRFCableTester
                         dbAverage = sum / values.Length;
 
                         if (mode == "zeroCal")
-                            frmMain.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
+                            IniFunct.readMeasureAndFillCalFactoryValues(frmMain.textBoxStartFrequency.Text, dbAverage);
 
                         if (mode == "startMeasure")
                         {
@@ -310,7 +311,7 @@ namespace FlexRFCableTester
                     if (status)
                     {
                         labelCalStatusSg.Text = "Processo de Zero Cal do Signal Generator realizado com sucesso!!!";
-                        frmMain.getFrequencyFromFile();
+                        IniFunct.getFrequencyFromFile();
                         Application.DoEvents();
                         Thread.Sleep(3000);
                     }

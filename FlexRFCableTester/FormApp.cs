@@ -20,21 +20,23 @@ namespace FlexRFCableTester
         private static FormApp INSTANCE = null;
         string PowerMeterModelCheck = string.Empty;
         string SignalGenModelCheck = string.Empty;
-        IniFile MyIni = new IniFile("settings.ini");
         Equipments equipmentvisaPowerMeter;
         Equipments equipmentvisavisaSignalGen;
         int countGraphOverlap = 0;
         GraphicChart chartGraph;
         Utils utils;
+        IniFunctions IniFunct;
+
         public bool stopAction { get; set; }
 
         public FormApp()
         {
             InitializeComponent();
             readSettingsAndFillComboBox();
-            getFrequencyFromFile();
             INSTANCE = this;
             initializerEquipmentCheck();
+            IniFunct = new IniFunctions();
+            IniFunct.getFrequencyFromFile();
         }
         public static FormApp getInstance()
         {
@@ -65,72 +67,22 @@ namespace FlexRFCableTester
         {
             try
             {
+                IniFunct = new IniFunctions();
                 var MyIni = new IniFile("Settings.ini");
                 string pictureName = string.Empty;
                 if (MyIni.KeyExists("Picture", comboBoxCableSettings.Text))
                     pictureName = MyIni.Read("Picture", comboBoxCableSettings.Text);
 
                 pictureBoxImg.Image = Image.FromFile(@"img\" + pictureName + ".jpg");
-                getFrequencyFromFile();
+                IniFunct.getFrequencyFromFile();
             }
             catch
             {
                 MessageBox.Show("Imagem não disponível!!!", "Imagem - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 pictureBoxImg.Image = Image.FromFile(@"img\Generico.jpg");
             }
-        }
-        public void readMeasureAndFillCalFactoryValues(string freq, double value)//to do!!
-        {
-            var MyIni = new IniFile("calFactoryValues.ini");
-            MyIni.Write(freq, value.ToString("F2"), "dbLossZeroCalFrequency");
-        }
-        public void getFrequencyFromFile()
-        {
-            logger = new Logger();
-            try
-            {
-                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                {
-                    string startFrequency = MyIni.Read("StartFrequency", comboBoxCableSettings.Text);
-                    if (!string.IsNullOrEmpty(startFrequency) && startFrequency != "0")
-                    {
-                        textBoxStartFrequency.Text = startFrequency;
-                    }
-                    else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                        textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-                }
-                else if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                    textBoxStartFrequency.Text = MyIni.Read("StartFrequency", "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
-                {
-                    string stopFrequency = MyIni.Read("StopFrequency", comboBoxCableSettings.Text);
-                    if (!string.IsNullOrEmpty(stopFrequency) && stopFrequency != "0")
-                    {
-                        textBoxStopFrequency.Text = stopFrequency;
-                    }
-                    else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                        textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
-                }
-                else if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                    textBoxStopFrequency.Text = MyIni.Read("StopFrequency", "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
-                    textBoxIntervalFrequency.Text = MyIni.Read("Interval", "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
-                    textBoxAverage.Text = MyIni.Read("MeasureAverage", "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
-                    textBoxDbm.Text = MyIni.Read("PowerLevel", "ZeroCalFrequency");
-            }
-            catch
-            {
-                message = "Frequências não encontradas no arquivo Settings.ini";
-                logger.logMessage(message);
-                MessageBox.Show(message, "Frequências - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+        }  
+     
         private void zeroCalProcess()
         {
             logger = new Logger();
@@ -233,79 +185,26 @@ namespace FlexRFCableTester
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
             utils = new Utils();
+            IniFunct = new IniFunctions();
+
             buttonZeroCal.BackColor = Color.Yellow;
             utils.disableAll();
             buttonStart.Enabled = false;
-            writeValuesToIniFile();
+            IniFunct.writeValuesToIniFile();
             zeroCalProcess();
             buttonZeroCal.BackColor = Color.White;
             utils.enableAll();
             buttonStart.Enabled = true;
         }
-        private void writeValuesToIniFile()
-        {
-            double startFreqDefault = 0.0;
-            double startFreqCable = 0.0;
-            double stopFreqDefault = 0.0;
-            try
-            {
-                if (MyIni.KeyExists("StartFrequency", "ZeroCalFrequency"))
-                    startFreqDefault = (Convert.ToDouble(MyIni.Read("StartFrequency", "ZeroCalFrequency")));
-
-                if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                    startFreqCable = (Convert.ToDouble(MyIni.Read("StartFrequency", comboBoxCableSettings.Text)));
-
-
-                if (Convert.ToDouble(textBoxStartFrequency.Text) != startFreqDefault)
-                {
-                    if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                        MyIni.Write("StartFrequency", textBoxStartFrequency.Text, comboBoxCableSettings.Text);
-                    else
-                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Start Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (startFreqCable != 0)
-                {
-                    if (MyIni.KeyExists("StartFrequency", comboBoxCableSettings.Text))
-                        MyIni.Write("StartFrequency", "0", comboBoxCableSettings.Text);
-                    else
-                        MessageBox.Show("Não foi encontrado a chave de StartFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Start Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                if (MyIni.KeyExists("StopFrequency", "ZeroCalFrequency"))
-                    stopFreqDefault = (Convert.ToDouble(MyIni.Read("StopFrequency", "ZeroCalFrequency")));
-
-                if (Convert.ToDouble(textBoxStopFrequency.Text) != stopFreqDefault)
-                {
-                    if (MyIni.KeyExists("StopFrequency", comboBoxCableSettings.Text))
-                        MyIni.Write("StopFrequency", textBoxStopFrequency.Text, comboBoxCableSettings.Text);
-                    else
-                        MessageBox.Show("Não foi encontrado a chave de StopFrequency do cabo " + comboBoxCableSettings.Text + "!!!", "Stop Frequency - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                if (MyIni.KeyExists("Interval", "ZeroCalFrequency"))
-                    MyIni.Write("Interval", textBoxIntervalFrequency.Text, "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("MeasureAverage", "ZeroCalFrequency"))
-                    MyIni.Write("MeasureAverage", textBoxAverage.Text, "ZeroCalFrequency");
-
-                if (MyIni.KeyExists("PowerLevel", "ZeroCalFrequency"))
-                    MyIni.Write("PowerLevel", textBoxDbm.Text, "ZeroCalFrequency");
-            }
-            catch
-            {
-                message = "Erro ao gravar valores no arquivo Settings.ini";
-                logger.logMessage(message);
-                MessageBox.Show(message, "Settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+ 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             utils = new Utils();
+            IniFunct = new IniFunctions();
             if (buttonStart.Text.Contains("Start"))
             {
                 try
                 {
-
                     chartResults.Series[2].Color = Color.Green;
                     utils.setButtonToStop();
                     if (File.Exists(@"log\LogGraphData.txt"))
@@ -315,7 +214,7 @@ namespace FlexRFCableTester
                         File.Delete(@"log\MeasuresResultLog.txt");
 
                     labelWarning.Text = "";
-                    writeValuesToIniFile();
+                    IniFunct.writeValuesToIniFile();
                     int status = startProcess();
                     if (status == 0)
                     {
