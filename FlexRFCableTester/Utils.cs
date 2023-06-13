@@ -44,6 +44,13 @@ namespace FlexRFCableTester
             frmApp.buttonStart.BackColor = Color.Yellow;
             disableAll();
         }
+        public void messageBoxFrmOk(string label, string tittle)
+        {
+            FormExportOk fEok = new FormExportOk();
+            fEok.Show();
+            fEok.labelStatusFinishIcon.Text = label;
+            fEok.Text = tittle;
+        }
 
     }
 }

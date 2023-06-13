@@ -240,7 +240,7 @@ namespace FlexRFCableTester
             buttonZeroCal.BackColor = Color.White;
             utils.enableAll();
             buttonStart.Enabled = true;
-            messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
+            utils.messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
         }
         private void writeValuesToIniFile()
         {
@@ -599,12 +599,6 @@ namespace FlexRFCableTester
             chartGraph.clearGraphicResults();
             countGraphOverlap = 0;
         }
-        public void messageBoxFrmOk(string label, string tittle)
-        {
-            FormExportOk fEok = new FormExportOk();
-            fEok.Show();
-            fEok.labelStatusFinishIcon.Text = label;
-            fEok.Text = tittle;
-        }
+ 
     }
 }

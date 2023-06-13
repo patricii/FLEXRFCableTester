@@ -10,7 +10,8 @@ namespace FlexRFCableTester
     {
         public GraphicChart() { }
         FormApp frmApp = FormApp.getInstance();
-        IniFile MyIni;
+        IniFile MyIni = new IniFile("Settings.ini");
+        Utils utils = new Utils();
 
         public void graphGenerateMethod(int countOverlap)
         {
@@ -119,7 +120,7 @@ namespace FlexRFCableTester
                 File.WriteAllText(csvfilePath, result);
                 frmApp.chartResults.SaveImage(pngFileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
 
-                frmApp.messageBoxFrmOk("Dados exportados com Sucesso na pasta" + Environment.NewLine + "log / LogGraphData.csv !!!", "Dados Exportados - SUCCESSFULLY!!!");
+                utils.messageBoxFrmOk("Dados exportados com Sucesso na pasta" + Environment.NewLine + "log / LogGraphData.csv !!!", "Dados Exportados - SUCCESSFULLY!!!");
             }
             catch
             {
