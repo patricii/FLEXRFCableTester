@@ -774,8 +774,8 @@
         private System.Windows.Forms.Label labelStartFrequency;
         private System.Windows.Forms.Label labelCableModel;
         private System.Windows.Forms.TabPage tabPageInfoGraph;
-        private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button buttonZeroCal;
+        public System.Windows.Forms.Button buttonStart;
+        public System.Windows.Forms.Button buttonZeroCal;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
         private System.Windows.Forms.Label labelFF;

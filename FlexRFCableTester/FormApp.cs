@@ -25,6 +25,7 @@ namespace FlexRFCableTester
         Equipments equipmentvisavisaSignalGen;
         int countGraphOverlap = 0;
         GraphicChart chartGraph = new GraphicChart();
+        Utils utils = new Utils();
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -232,12 +233,12 @@ namespace FlexRFCableTester
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
             buttonZeroCal.BackColor = Color.Yellow;
-            disableAll();
+            utils.disableAll();
             buttonStart.Enabled = false;
             writeValuesToIniFile();
             zeroCalProcess();
             buttonZeroCal.BackColor = Color.White;
-            enableAll();
+            utils.enableAll();
             buttonStart.Enabled = true;
             messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
         }
@@ -297,41 +298,6 @@ namespace FlexRFCableTester
                 MessageBox.Show(message, "Settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        public void enableAll()
-        {
-            comboBoxCableSettings.Enabled = true;
-            textBoxIntervalFrequency.Enabled = true;
-            textBoxStartFrequency.Enabled = true;
-            textBoxStopFrequency.Enabled = true;
-            textBoxAverage.Enabled = true;
-            textBoxDbm.Enabled = true;
-            buttonZeroCal.Enabled = true;
-        }
-        public void disableAll()
-        {
-            comboBoxCableSettings.Enabled = false;
-            textBoxIntervalFrequency.Enabled = false;
-            textBoxStartFrequency.Enabled = false;
-            textBoxStopFrequency.Enabled = false;
-            textBoxAverage.Enabled = false;
-            textBoxDbm.Enabled = false;
-            buttonZeroCal.Enabled = false;
-        }
-        public void setButtonToStart()
-        {
-            buttonStart.Text = "Start";
-            buttonStart.BackColor = Color.Green;
-            labelStatusRFTester.Text = "";
-            enableAll();
-        }
-        public void setButtonToStop()
-        {
-            buttonStart.Text = "Stop";
-            buttonStart.BackColor = Color.Yellow;
-            disableAll();
-        }
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (buttonStart.Text.Contains("Start"))
@@ -339,7 +305,7 @@ namespace FlexRFCableTester
                 try
                 {
                     chartResults.Series[2].Color = Color.Green;
-                    setButtonToStop();
+                    utils.setButtonToStop();
                     if (File.Exists(@"log\LogGraphData.txt"))
                         File.Delete(@"log\LogGraphData.txt");
 
@@ -351,7 +317,7 @@ namespace FlexRFCableTester
                     int status = startProcess();
                     if (status == 0)
                     {
-                        enableAll();
+                        utils.enableAll();
                         chartGraph.graphGenerateMethod(countGraphOverlap);
                         tabControlMain.SelectedIndex = 2;
                         countGraphOverlap ++;
@@ -362,7 +328,7 @@ namespace FlexRFCableTester
             }
             else
             {
-                setButtonToStart();
+                utils.setButtonToStart();
                 stopAction = true;
             }
         }
@@ -417,7 +383,7 @@ namespace FlexRFCableTester
 
                     if (startP.startStatus == -2)
                     {
-                        setButtonToStart();
+                        utils.setButtonToStart();
                         return -1;
                     }
                     if (startP.startStatus == 0)
@@ -521,7 +487,7 @@ namespace FlexRFCableTester
                         }
                         else
                         {
-                            setButtonToStart();
+                            utils.setButtonToStart();
                             return -1;
                         }
                     }
@@ -534,7 +500,7 @@ namespace FlexRFCableTester
                     buttonStart.Text = "Start";
                     buttonStart.BackColor = Color.Green;
                     labelStatusRFTester.Text = message;
-                    enableAll();
+                    utils.enableAll();
                     return -1;
                 }
             }
@@ -546,7 +512,7 @@ namespace FlexRFCableTester
                 buttonStart.Text = "Start";
                 buttonStart.BackColor = Color.Green;
                 labelStatusRFTester.Text = message;
-                enableAll();
+                utils.enableAll();
                 return -1;
             }
             return 0;

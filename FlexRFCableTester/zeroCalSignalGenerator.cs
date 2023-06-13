@@ -16,6 +16,7 @@ namespace FlexRFCableTester
         Equipments equipmentSignalGen = new Equipments();
         Equipments equipmentPowerMeter = new Equipments();
         Logger logger = new Logger();
+        Utils utils = new Utils();
 
         int count = 0;
         int countRecovery = 0;
@@ -276,7 +277,7 @@ namespace FlexRFCableTester
                             {
                                 MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 frmMain.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
-                                frmMain.enableAll();
+                                utils.enableAll();
                                 return false;
                             }
                             cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);

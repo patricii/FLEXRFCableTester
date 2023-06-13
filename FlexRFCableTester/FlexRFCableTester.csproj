@@ -90,6 +90,7 @@
     <Compile Include="StartProcess.Designer.cs">
       <DependentUpon>StartProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="zeroCalPowerMeter.cs">
       <SubType>Form</SubType>
     </Compile>
