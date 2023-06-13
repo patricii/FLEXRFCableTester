@@ -660,7 +660,7 @@
             series3.Name = "Loss(dB)";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Lime;
+            series4.Color = System.Drawing.Color.LimeGreen;
             series4.Legend = "Legend1";
             series4.Name = "Loss(dB)2";
             this.chartResults.Series.Add(series1);

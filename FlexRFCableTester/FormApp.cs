@@ -613,6 +613,7 @@ namespace FlexRFCableTester
                 chartResults.Series[0].BorderWidth = 3;
                 chartResults.Series[1].BorderWidth = 3;
                 chartResults.Series[2].BorderWidth = 3;
+                chartResults.Series[3].BorderWidth = 3;
 
                 //getting the values from Graph Data Log
 
