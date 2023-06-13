@@ -23,6 +23,7 @@ namespace FlexRFCableTester
         IniFile MyIni = new IniFile("Settings.ini");
         Equipments equipmentvisaPowerMeter;
         Equipments equipmentvisavisaSignalGen;
+        int countGraphOverlap = 0;
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -352,6 +353,7 @@ namespace FlexRFCableTester
                         enableAll();
                         graphGenerateMethod();
                         tabControlMain.SelectedIndex = 2;
+                        countGraphOverlap ++;
                     }
                     stopAction = false;
                 }
@@ -626,15 +628,23 @@ namespace FlexRFCableTester
                             if (data[4] == "Fail")
                                 chartResults.Series[2].Color = Color.Red;
 
-                            if (comboBoxCableSettings.Text != "Generico")
+                            if (countGraphOverlap == 0)
                             {
-                                chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
-                                chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
+                                if (comboBoxCableSettings.Text != "Generico")
+                                {
+                                    chartResults.Series[0].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]));
+                                    chartResults.Series[1].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[2]));
+                                }
+
+                                chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
                             }
+                            else
+                            {
+                                if (data[4] == "Fail")
+                                    chartResults.Series[3].Color = Color.Red;
 
-                            chartResults.Series[2].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
-
-
+                                chartResults.Series[3].Points.AddXY(Convert.ToDouble(data[0]), Convert.ToDouble(data[3]));
+                            }
                             if (comboBoxCableSettings.Text == "Generico" && countG == 0)
                             {
                                 chartResults.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(data[3]) - 1.0;
@@ -726,6 +736,7 @@ namespace FlexRFCableTester
                 series.Points.Clear();
             }
             labelCableInfo.Text = "";
+            countGraphOverlap = 0;
         }
         private void messageBoxFrmOk(string label, string tittle)
         {
