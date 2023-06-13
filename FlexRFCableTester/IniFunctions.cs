@@ -8,7 +8,10 @@ namespace FlexRFCableTester
         IniFile MyIni = new IniFile("settings.ini");
         FormApp frmApp = FormApp.getInstance();
         string message = string.Empty;
+        string frequencyOfCableLossFromSettings = string.Empty;
         Logger logger = new Logger();
+        double lossFromIniFile = 0.0;
+        Utils utils = new Utils();
 
         public void readMeasureAndFillCalFactoryValues(string freq, double value)
         {
@@ -70,6 +73,70 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message, "Settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        public double startMeasuresIniFunction() {
+
+
+            if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 500)
+            {
+                if (MyIni.KeyExists("CableLoss0.5GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss0.5GHz";
+            }
+            else if ((Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 500) && (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 1000))
+            {
+                if (MyIni.KeyExists("CableLoss1GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss1GHz";
+            }
+            else if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 2000)
+            {
+                if (MyIni.KeyExists("CableLoss2GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss2GHz";
+            }
+            else if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 3000)
+            {
+                if (MyIni.KeyExists("CableLoss3GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss3GHz";
+            }
+            else if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 4000)
+            {
+                if (MyIni.KeyExists("CableLoss4GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss4GHz";
+            }
+            else if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 5000)
+            {
+                if (MyIni.KeyExists("CableLoss5GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss5GHz";
+            }
+            else if (Convert.ToDouble(frmApp.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmApp.textBoxStartFrequency.Text) <= 6000)
+            {
+                if (MyIni.KeyExists("CableLoss6GHz", frmApp.comboBoxCableSettings.Text))
+                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmApp.comboBoxCableSettings.Text));
+                else
+                    frequencyOfCableLossFromSettings = "CableLoss6GHz";
+            }
+            if (frequencyOfCableLossFromSettings != string.Empty)
+            {
+                MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmApp.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmApp.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
+                utils.enableAll();
+                lossFromIniFile = -999;
+                return lossFromIniFile;
+
+            }
+            return lossFromIniFile;
+
         }
         public void getFrequencyFromFile()
         {

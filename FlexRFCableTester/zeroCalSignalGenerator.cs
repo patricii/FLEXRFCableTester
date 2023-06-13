@@ -225,64 +225,14 @@ namespace FlexRFCableTester
                                 deltaSpecFromFile = Convert.ToDouble(MyIni.Read("DeltaSpec", frmMain.comboBoxCableSettings.Text));
 
                             cableLoss = dbAverage - zeroCalLoss;
-                            if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 500)
-                            {
-                                if (MyIni.KeyExists("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss0.5GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss0.5GHz";
-                            }
-                            else if ((Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 500) && (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 1000))
-                            {
-                                if (MyIni.KeyExists("CableLoss1GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss1GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss1GHz";
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 1000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 2000)
-                            {
-                                if (MyIni.KeyExists("CableLoss2GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss2GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss2GHz";
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 2000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 3000)
-                            {
-                                if (MyIni.KeyExists("CableLoss3GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss3GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss3GHz";
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 3000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 4000)
-                            {
-                                if (MyIni.KeyExists("CableLoss4GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss4GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss4GHz";
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 4000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 5000)
-                            {
-                                if (MyIni.KeyExists("CableLoss5GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss5GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss5GHz";
-                            }
-                            else if (Convert.ToDouble(frmMain.textBoxStartFrequency.Text) > 5000 && Convert.ToDouble(frmMain.textBoxStartFrequency.Text) <= 6000)
-                            {
-                                if (MyIni.KeyExists("CableLoss6GHz", frmMain.comboBoxCableSettings.Text))
-                                    lossFromIniFile = Convert.ToDouble(MyIni.Read("CableLoss6GHz", frmMain.comboBoxCableSettings.Text));
-                                else
-                                    frequencyOfCableLossFromSettings = "CableLoss6GHz";
-                            }
-                            if (frequencyOfCableLossFromSettings != string.Empty)
-                            {
-                                MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                frmMain.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
-                                utils.enableAll();
+
+                            lossFromIniFile = IniFunct.startMeasuresIniFunction();
+
+                            if (lossFromIniFile == -999)
                                 return false;
-                            }
-                            cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
-                            cableLossLowSpec = (lossFromIniFile - deltaSpecFromFile);
+                            
+                            cableLossHighSpec = lossFromIniFile + deltaSpecFromFile;
+                            cableLossLowSpec = lossFromIniFile - deltaSpecFromFile;
                             if (cableLossLowSpec < 0 && frmMain.comboBoxCableSettings.Text != "Generico")
                                 cableLossLowSpec = 0.0;
 
