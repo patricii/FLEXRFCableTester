@@ -579,30 +579,8 @@ namespace FlexRFCableTester
             {
                 logger.logMessage("Error to add values to DataGridView - reason: " + ex);
             }
-        }    
-        private void buttonExport_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DateTime dateNow = DateTime.Now;
-
-                string csvfilePath = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
-                string pngFileGraph = @"log\LogGraphData_" + comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
-                string[] lines = File.ReadAllLines(@"log\MeasuresResultLog.txt");
-                var result = string.Join(Environment.NewLine,
-                                    lines.Select(x => x.Split(' '))
-                                         .Select(x => string.Join(",", x)));
-                File.WriteAllText(csvfilePath, result);
-                chartResults.SaveImage(pngFileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
-
-                messageBoxFrmOk("Dados exportados com Sucesso na pasta" + Environment.NewLine + "log / LogGraphData.csv !!!", "Dados Exportados - SUCCESSFULLY!!!");
-            }
-            catch
-            {
-                MessageBox.Show("Falha ao exportar os dados!!!", "Dados Exportados - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
-        private void initializerEquipmentCheck()
+        public void initializerEquipmentCheck()
         {
             textBoxLogInfo.Text = "Verificando Equipamentos conectados..." + Environment.NewLine;
             try
@@ -646,16 +624,16 @@ namespace FlexRFCableTester
                 textBoxAddressSignalGen.BackColor = Color.Red;
             }
         }
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            chartGraph.exportGraphData();
+        }     
         private void buttonClearGraph_Click(object sender, EventArgs e)
         {
-            foreach (var series in chartResults.Series)
-            {
-                series.Points.Clear();
-            }
-            labelCableInfo.Text = "";
+            chartGraph.clearGraphicResults();
             countGraphOverlap = 0;
         }
-        private void messageBoxFrmOk(string label, string tittle)
+        public void messageBoxFrmOk(string label, string tittle)
         {
             FormExportOk fEok = new FormExportOk();
             fEok.Show();

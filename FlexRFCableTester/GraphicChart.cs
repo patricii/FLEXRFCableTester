@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FlexRFCableTester
@@ -93,6 +94,38 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Error to generate the Graph results!!!", "Graph Results - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+        public void clearGraphicResults()
+        {
+            foreach (var series in frmApp.chartResults.Series)
+            {
+                series.Points.Clear();
+            }
+            frmApp.labelCableInfo.Text = "";
+        }
+        public void exportGraphData()
+        {
+
+            try
+            {
+                DateTime dateNow = DateTime.Now;
+
+                string csvfilePath = @"log\LogGraphData_" + frmApp.comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".csv";
+                string pngFileGraph = @"log\LogGraphData_" + frmApp.comboBoxCableSettings.Text + "_" + dateNow.ToString("yyyyMMdd-HHmm") + ".png";
+                string[] lines = File.ReadAllLines(@"log\MeasuresResultLog.txt");
+                var result = string.Join(Environment.NewLine,
+                                    lines.Select(x => x.Split(' '))
+                                         .Select(x => string.Join(",", x)));
+                File.WriteAllText(csvfilePath, result);
+                frmApp.chartResults.SaveImage(pngFileGraph, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+
+                frmApp.messageBoxFrmOk("Dados exportados com Sucesso na pasta" + Environment.NewLine + "log / LogGraphData.csv !!!", "Dados Exportados - SUCCESSFULLY!!!");
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao exportar os dados!!!", "Dados Exportados - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
     }
