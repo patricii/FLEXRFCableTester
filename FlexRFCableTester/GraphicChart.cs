@@ -10,7 +10,7 @@ namespace FlexRFCableTester
     {
         public GraphicChart() { }
         FormApp frmApp = FormApp.getInstance();
-        IniFile MyIni = new IniFile("Settings.ini");
+        IniFile MyIni = new IniFile("settings.ini");
         Utils utils = new Utils();
 
         public void graphGenerateMethod(int countOverlap)

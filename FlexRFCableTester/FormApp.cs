@@ -20,12 +20,12 @@ namespace FlexRFCableTester
         private static FormApp INSTANCE = null;
         string PowerMeterModelCheck = string.Empty;
         string SignalGenModelCheck = string.Empty;
-        IniFile MyIni = new IniFile("Settings.ini");
+        IniFile MyIni = new IniFile("settings.ini");
         Equipments equipmentvisaPowerMeter;
         Equipments equipmentvisavisaSignalGen;
         int countGraphOverlap = 0;
-        GraphicChart chartGraph = new GraphicChart();
-        Utils utils = new Utils();
+        GraphicChart chartGraph;
+        Utils utils;
         public bool stopAction { get; set; }
 
         public FormApp()
@@ -208,7 +208,7 @@ namespace FlexRFCableTester
                     else
                     {
                         labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
-
+                        utils.messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
                         DateTime dateNow = DateTime.Now;
                         var MyIni = new IniFile("calFactoryValues.ini");
 
@@ -232,6 +232,7 @@ namespace FlexRFCableTester
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
+            utils = new Utils();
             buttonZeroCal.BackColor = Color.Yellow;
             utils.disableAll();
             buttonStart.Enabled = false;
@@ -240,7 +241,6 @@ namespace FlexRFCableTester
             buttonZeroCal.BackColor = Color.White;
             utils.enableAll();
             buttonStart.Enabled = true;
-            utils.messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
         }
         private void writeValuesToIniFile()
         {
@@ -300,10 +300,12 @@ namespace FlexRFCableTester
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            utils = new Utils();
             if (buttonStart.Text.Contains("Start"))
             {
                 try
                 {
+
                     chartResults.Series[2].Color = Color.Green;
                     utils.setButtonToStop();
                     if (File.Exists(@"log\LogGraphData.txt"))
@@ -337,6 +339,7 @@ namespace FlexRFCableTester
             logger = new Logger();
             DateTime enteredDate;
             DateTime today;
+            utils = new Utils();
 
             var MyIni = new IniFile("calFactoryValues.ini");
 
@@ -498,7 +501,7 @@ namespace FlexRFCableTester
                     logger.logMessage(message);
                     MessageBox.Show(message, "Zero Cal - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     buttonStart.Text = "Start";
-                    buttonStart.BackColor = Color.Green;
+                    buttonStart.BackColor = Color.White;
                     labelStatusRFTester.Text = message;
                     utils.enableAll();
                     return -1;
@@ -510,7 +513,7 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message, "Cart Incorreto - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 buttonStart.Text = "Start";
-                buttonStart.BackColor = Color.Green;
+                buttonStart.BackColor = Color.White;
                 labelStatusRFTester.Text = message;
                 utils.enableAll();
                 return -1;
@@ -592,10 +595,12 @@ namespace FlexRFCableTester
         }
         private void buttonExport_Click(object sender, EventArgs e)
         {
+            chartGraph = new GraphicChart();
             chartGraph.exportGraphData();
         }     
         private void buttonClearGraph_Click(object sender, EventArgs e)
         {
+            chartGraph = new GraphicChart();
             chartGraph.clearGraphicResults();
             countGraphOverlap = 0;
         }
