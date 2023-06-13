@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormExportOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportOk.Designer.cs">
+      <DependentUpon>FormExportOk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logger.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="FormApp.cs">
@@ -95,11 +101,14 @@
     <Compile Include="zeroCalSignalGenerator.Designer.cs">
       <DependentUpon>zeroCalSignalGenerator.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormExportOk.resx">
+      <DependentUpon>FormExportOk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormApp.resx">
       <DependentUpon>FormApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -167,6 +176,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\success_icon.png" />
+    <None Include="Resources\success-icon.ico" />
     <None Include="img\Splitter_ZN4PD-272-S+.jpg" />
     <None Include="bin\Debug\img\StartProcess.jpg" />
     <Content Include="FLEX_logo.ico" />

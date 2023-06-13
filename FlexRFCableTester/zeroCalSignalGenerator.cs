@@ -276,6 +276,7 @@ namespace FlexRFCableTester
                             {
                                 MessageBox.Show("Preencha o campo " + frequencyOfCableLossFromSettings + " do cabo " + frmMain.comboBoxCableSettings.Text + " no arquivo settings.ini !!!", "settings.ini - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 frmMain.labelWarning.Text = "                            Erro no arquivo settings.ini!!!";
+                                frmMain.enableAll();
                                 return false;
                             }
                             cableLossHighSpec = (lossFromIniFile + deltaSpecFromFile);
@@ -285,7 +286,6 @@ namespace FlexRFCableTester
 
                             if (((cableLoss > cableLossHighSpec) || (cableLoss < cableLossLowSpec)))
                                 passFail = "Fail";
-
 
                             startProcessWatch.Stop();
                             frmMain.fillDataGridView(countStart, frmMain.textBoxStartFrequency.Text, frmMain.textBoxDbm.Text, measure.ToString("F4"), cableLossLowSpec.ToString(), cableLossHighSpec.ToString(), cableLoss.ToString("F4"), passFail, startProcessWatch.ElapsedMilliseconds.ToString() + "ms");
@@ -339,7 +339,7 @@ namespace FlexRFCableTester
             {
                 resultZeroCalSigGen = "Failed";
                 logger.logMessage("Zero Cal Signal Generator Failed!!!");
-                MessageBox.Show("Zero Cal Signal Generator Failed!!!");
+                MessageBox.Show("Zero Cal Signal Generator Failed!!!", "Zero Cal Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

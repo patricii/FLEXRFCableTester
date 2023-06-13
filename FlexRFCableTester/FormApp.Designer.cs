@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelAppName = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
@@ -75,14 +76,6 @@
             this.labelCableModel = new System.Windows.Forms.Label();
             this.buttonZeroCal = new System.Windows.Forms.Button();
             this.dataGridViewMeasureTable = new System.Windows.Forms.DataGridView();
-            this.tabPageInfoGraph = new System.Windows.Forms.TabPage();
-            this.labelCableInfo = new System.Windows.Forms.Label();
-            this.buttonClearGraph = new System.Windows.Forms.Button();
-            this.buttonExport = new System.Windows.Forms.Button();
-            this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.labelWarning = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +84,14 @@
             this.calFactor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passOrFail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.testTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageInfoGraph = new System.Windows.Forms.TabPage();
+            this.labelCableInfo = new System.Windows.Forms.Label();
+            this.buttonClearGraph = new System.Windows.Forms.Button();
+            this.buttonExport = new System.Windows.Forms.Button();
+            this.chartResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelWarning = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.groupBoxLogInfo.SuspendLayout();
@@ -540,6 +541,52 @@
             this.dataGridViewMeasureTable.Size = new System.Drawing.Size(854, 494);
             this.dataGridViewMeasureTable.TabIndex = 16;
             // 
+            // frequency
+            // 
+            this.frequency.HeaderText = "Frequency";
+            this.frequency.Name = "frequency";
+            this.frequency.Width = 110;
+            // 
+            // level
+            // 
+            this.level.HeaderText = "Level";
+            this.level.Name = "level";
+            this.level.Width = 80;
+            // 
+            // reading
+            // 
+            this.reading.HeaderText = "Reading";
+            this.reading.Name = "reading";
+            // 
+            // lowLimit
+            // 
+            this.lowLimit.HeaderText = "Low Limit";
+            this.lowLimit.Name = "lowLimit";
+            this.lowLimit.Width = 110;
+            // 
+            // highLimit
+            // 
+            this.highLimit.HeaderText = "High Limit";
+            this.highLimit.Name = "highLimit";
+            this.highLimit.Width = 110;
+            // 
+            // calFactor
+            // 
+            this.calFactor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.calFactor.HeaderText = "Path Loss";
+            this.calFactor.Name = "calFactor";
+            // 
+            // passOrFail
+            // 
+            this.passOrFail.HeaderText = "P/F";
+            this.passOrFail.Name = "passOrFail";
+            this.passOrFail.Width = 80;
+            // 
+            // testTime
+            // 
+            this.testTime.HeaderText = "Test Time";
+            this.testTime.Name = "testTime";
+            // 
             // tabPageInfoGraph
             // 
             this.tabPageInfoGraph.Controls.Add(this.labelCableInfo);
@@ -588,32 +635,38 @@
             // 
             // chartResults
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartResults.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartResults.Legends.Add(legend1);
             this.chartResults.Location = new System.Drawing.Point(-1, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Gray;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            series1.Legend = "Legend1";
+            series1.Name = "Low Limit";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Gray;
+            series2.Legend = "Legend1";
+            series2.Name = "High Limit";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Green;
+            series3.Legend = "Legend1";
+            series3.Name = "Loss(dB)";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Gray;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            series4.Color = System.Drawing.Color.LimeGreen;
             series4.Legend = "Legend1";
-            series4.Name = "Low Limit";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Gray;
-            series5.Legend = "Legend1";
-            series5.Name = "High Limit";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.Green;
-            series6.Legend = "Legend1";
-            series6.Name = "Loss(dB)";
+            series4.Name = "Loss(dB)2";
+            this.chartResults.Series.Add(series1);
+            this.chartResults.Series.Add(series2);
+            this.chartResults.Series.Add(series3);
             this.chartResults.Series.Add(series4);
-            this.chartResults.Series.Add(series5);
-            this.chartResults.Series.Add(series6);
             this.chartResults.Size = new System.Drawing.Size(1265, 558);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";
@@ -647,52 +700,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // frequency
-            // 
-            this.frequency.HeaderText = "Frequency";
-            this.frequency.Name = "frequency";
-            this.frequency.Width = 110;
-            // 
-            // level
-            // 
-            this.level.HeaderText = "Level";
-            this.level.Name = "level";
-            this.level.Width = 80;
-            // 
-            // reading
-            // 
-            this.reading.HeaderText = "Reading";
-            this.reading.Name = "reading";
-            // 
-            // lowLimit
-            // 
-            this.lowLimit.HeaderText = "Low Limit";
-            this.lowLimit.Name = "lowLimit";
-            this.lowLimit.Width = 110;
-            // 
-            // highLimit
-            // 
-            this.highLimit.HeaderText = "High Limit";
-            this.highLimit.Name = "highLimit";
-            this.highLimit.Width = 110;
-            // 
-            // calFactor
-            // 
-            this.calFactor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.calFactor.HeaderText = "Path Loss";
-            this.calFactor.Name = "calFactor";
-            // 
-            // passOrFail
-            // 
-            this.passOrFail.HeaderText = "P/F";
-            this.passOrFail.Name = "passOrFail";
-            this.passOrFail.Width = 80;
-            // 
-            // testTime
-            // 
-            this.testTime.HeaderText = "Test Time";
-            this.testTime.Name = "testTime";
             // 
             // FormApp
             // 
