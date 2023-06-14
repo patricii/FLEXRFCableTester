@@ -80,8 +80,8 @@ namespace FlexRFCableTester
                 MessageBox.Show("Imagem não disponível!!!", "Imagem - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 pictureBoxImg.Image = Image.FromFile(@"img\Generico.jpg");
             }
-        }  
-     
+        }
+
         private void zeroCalProcess()
         {
             logger = new Logger();
@@ -195,7 +195,7 @@ namespace FlexRFCableTester
             utils.enableAll();
             buttonStart.Enabled = true;
         }
- 
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
             utils = new Utils();
@@ -220,7 +220,7 @@ namespace FlexRFCableTester
                         utils.enableAll();
                         chartGraph.graphGenerateMethod(countGraphOverlap);
                         tabControlMain.SelectedIndex = 2;
-                        countGraphOverlap ++;
+                        countGraphOverlap++;
                     }
                     stopAction = false;
                 }
@@ -450,6 +450,11 @@ namespace FlexRFCableTester
         public void initializerEquipmentCheck()
         {
             textBoxLogInfo.Text = "Verificando Equipamentos conectados..." + Environment.NewLine;
+            initializerEquipmentPowerMeter();
+            initializerEquipmentSignalGen();
+        }
+        private void initializerEquipmentPowerMeter()
+        {
             try
             {
                 Equipments eqp = new Equipments(visaPowerMeter, textBoxAddressPowerM.Text);
@@ -470,6 +475,9 @@ namespace FlexRFCableTester
                 textBoxLogInfo.Text += "->PowerMeter não detectado!!!" + Environment.NewLine;
                 textBoxAddressPowerM.BackColor = Color.Red;
             }
+        }
+        private void initializerEquipmentSignalGen()
+        {
             try
             {
                 Equipments eqp = new Equipments(visaSignalGen, textBoxAddressSignalGen.Text);
@@ -495,13 +503,13 @@ namespace FlexRFCableTester
         {
             chartGraph = new GraphicChart();
             chartGraph.exportGraphData();
-        }     
+        }
         private void buttonClearGraph_Click(object sender, EventArgs e)
         {
             chartGraph = new GraphicChart();
             chartGraph.clearGraphicResults();
             countGraphOverlap = 0;
         }
- 
+
     }
 }
