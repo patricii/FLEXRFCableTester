@@ -189,7 +189,6 @@ namespace FlexRFCableTester
             buttonZeroCal.BackColor = Color.Yellow;
             utils.disableAll();
             buttonStart.Enabled = false;
-            IniFunct.writeValuesToIniFile();
             zeroCalProcess();
             buttonZeroCal.BackColor = Color.White;
             utils.enableAll();
@@ -209,6 +208,8 @@ namespace FlexRFCableTester
             cableResults = string.Empty;
             utils = new Utils();
             IniFunct = new IniFunctions();
+            chartGraph = new GraphicChart();
+
             if (buttonStart.Text.Contains("Start"))
             {
                 try
