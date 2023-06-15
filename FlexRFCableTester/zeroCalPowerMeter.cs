@@ -25,8 +25,8 @@ namespace FlexRFCableTester
             try
             {
                 visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
-                Equipments equipmentvisaPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
-                equipmentvisaPowerMeter.writeCommand("CAL?", equipmentvisaPowerMeter.equipmentName);
+                PowerMeter equipmentvisaPowerMeter = new PowerMeter();
+                equipmentvisaPowerMeter.writeCommand("CAL?", visaPowerMeter);
                 do
                 {
                     Thread.Sleep(delay);
@@ -38,7 +38,7 @@ namespace FlexRFCableTester
                 }
                 while (count != 0);
 
-                string zeroPowerMeter = equipmentvisaPowerMeter.equipmentName.ReadString();
+                string zeroPowerMeter = equipmentvisaPowerMeter.readCommand(visaPowerMeter);
 
                 if (zeroPowerMeter.Contains("+0"))
                 {

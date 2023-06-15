@@ -16,6 +16,7 @@ C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.cs
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CopyComplete
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe
 C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.pdb
+C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormExportOk.resources
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe.config
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\FlexRFCableTester.pdb
@@ -24,6 +25,7 @@ C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\National
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\bin\Release\NationalInstruments.VisaNS.dll
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe.config
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.ResolveComReference.cache
+C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormExportOk.resources
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormApp.resources
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.Properties.Resources.resources
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.StartProcess.resources
@@ -34,4 +36,3 @@ C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCa
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.csproj.CopyComplete
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.exe
 C:\DEVELOPMENT PROJECTS\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.pdb
-C:\Projetos\FLEXRFCableTester\FlexRFCableTester\obj\Release\FlexRFCableTester.FormExportOk.resources
