@@ -200,7 +200,7 @@ namespace FlexRFCableTester
             textBoxIntervalFrequency.Text = "50";
             textBoxStartFrequency.Text = "50";
             textBoxStopFrequency.Text = "6000";
-            textBoxAverage.Text = "5";
+            textBoxAverage.Text = "3";
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
