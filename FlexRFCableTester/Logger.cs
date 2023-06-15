@@ -8,8 +8,9 @@ namespace FlexRFCableTester
     {
         string logString = string.Empty;
         string filepath = string.Empty;
-        DateTime logNameTime = DateTime.Now;
         string StrLogNameTime = string.Empty;
+        DateTime logNameTime = DateTime.Now;
+
         public Logger() { }
         public void logMessage(string message)
         {

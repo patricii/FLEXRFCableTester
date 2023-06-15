@@ -774,8 +774,8 @@
         private System.Windows.Forms.Label labelStartFrequency;
         private System.Windows.Forms.Label labelCableModel;
         private System.Windows.Forms.TabPage tabPageInfoGraph;
-        private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button buttonZeroCal;
+        public System.Windows.Forms.Button buttonStart;
+        public System.Windows.Forms.Button buttonZeroCal;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridViewMeasureTable;
         private System.Windows.Forms.Label labelFF;
@@ -786,12 +786,11 @@
         private System.Windows.Forms.Label labelPowerLevel;
         public System.Windows.Forms.CheckBox checkBoxSignalGen;
         public System.Windows.Forms.CheckBox checkBoxPowerM;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartResults;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Button buttonClearGraph;
         private System.Windows.Forms.GroupBox groupBoxLogInfo;
         private System.Windows.Forms.TextBox textBoxLogInfo;
-        private System.Windows.Forms.Label labelCableInfo;
+        public System.Windows.Forms.Label labelCableInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn level;
         private System.Windows.Forms.DataGridViewTextBoxColumn reading;
@@ -800,6 +799,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calFactor;
         private System.Windows.Forms.DataGridViewTextBoxColumn passOrFail;
         private System.Windows.Forms.DataGridViewTextBoxColumn testTime;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chartResults;
     }
 }
 

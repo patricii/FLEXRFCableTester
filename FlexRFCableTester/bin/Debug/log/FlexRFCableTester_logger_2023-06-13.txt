@@ -40147,3 +40147,17 @@
 
 6/13/2023 2:21:46 PM - [-> Aferição do cabo realizada com sucesso!!!]
 
+6/13/2023 3:12:36 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 3:13:52 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 3:14:06 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 3:14:47 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 3:43:59 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 4:53:52 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
+6/13/2023 5:26:18 PM - [-> Error: Cart diferente, faça o zero novamente!!!]
+
