@@ -13,8 +13,8 @@ namespace FlexRFCableTester
         public MessageBasedSession visaSignalGen;
         public MessageBasedSession visaPowerMeter;
         FormApp frmMain = FormApp.getInstance();
-        Equipments equipmentSignalGen = new Equipments();
-        Equipments equipmentPowerMeter = new Equipments();
+        SignalGen equipmentSignalGen = new SignalGen();
+        PowerMeter equipmentPowerMeter = new PowerMeter();
         Logger logger = new Logger();
         Utils utils = new Utils();
         IniFunctions IniFunct = new IniFunctions();
@@ -56,14 +56,14 @@ namespace FlexRFCableTester
         public bool writeFreqCMDSignalGen(string freq)
         {
             visaSignalGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
-            equipmentSignalGen = new Equipments(visaSignalGen, frmMain.textBoxAddressSignalGen.Text);
-            equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", equipmentSignalGen.equipmentName);
-            response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
+            equipmentSignalGen = new SignalGen();
+            equipmentSignalGen.writeCommand(":FREQ:CW " + freq + "MHz;*OPC?", visaSignalGen);
+            response = equipmentSignalGen.readCommand(visaSignalGen);
             if (Convert.ToInt32(response) != 1)
                 return false;
 
-            equipmentSignalGen.writeCommand("*ESR?", equipmentSignalGen.equipmentName);
-            response = equipmentSignalGen.readCommand(equipmentSignalGen.equipmentName);
+            equipmentSignalGen.writeCommand("*ESR?", visaSignalGen);
+            response = equipmentSignalGen.readCommand(visaSignalGen);
             if (!response.Contains("+0"))
                 return false;
 
@@ -87,8 +87,8 @@ namespace FlexRFCableTester
             {
                 visaSigGen = new MessageBasedSession(frmMain.textBoxAddressSignalGen.Text);
                 visaPowerMeter = new MessageBasedSession(frmMain.textBoxAddressPowerM.Text);
-                equipmentSignalGen = new Equipments(visaSigGen, frmMain.textBoxAddressSignalGen.Text);
-                equipmentPowerMeter = new Equipments(visaPowerMeter, frmMain.textBoxAddressPowerM.Text);
+                equipmentSignalGen = new SignalGen();
+                equipmentPowerMeter = new PowerMeter();
                 var MyIni = new IniFile("Settings.ini");
                 var calFactoryValuesIni = new IniFile("calFactoryValues.ini");
 
