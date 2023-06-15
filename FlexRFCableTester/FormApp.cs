@@ -185,7 +185,7 @@ namespace FlexRFCableTester
         {
             utils = new Utils();
             IniFunct = new IniFunctions();
-
+            zeroSettings();
             buttonZeroCal.BackColor = Color.Yellow;
             utils.disableAll();
             buttonStart.Enabled = false;
@@ -196,8 +196,17 @@ namespace FlexRFCableTester
             buttonStart.Enabled = true;
         }
 
+        public void zeroSettings()
+        {
+            textBoxIntervalFrequency.Text = "50";
+            textBoxStartFrequency.Text = "50";
+            textBoxStopFrequency.Text = "6000";
+            textBoxAverage.Text = "5";
+        }
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            cableResults = string.Empty;
             utils = new Utils();
             IniFunct = new IniFunctions();
             if (buttonStart.Text.Contains("Start"))
