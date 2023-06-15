@@ -8,14 +8,7 @@ namespace FlexRFCableTester
 {
     class Equipments
     {
-        public MessageBasedSession equipmentName { get; set; } //GPIB
-        public string address { get; set; } //GPIB
-        public FormattedIO488 ioTestSet { get; set; } //LAN
-        public string equipAlias { get; set; } //LAN
         string message = string.Empty;
-
-        public Ivi.Visa.Interop.ResourceManager resourceMng; //LAN
-
         Logger logger = new Logger();
 
         public Equipments() { }
@@ -146,7 +139,7 @@ namespace FlexRFCableTester
             }
             return true;
         }
-        public bool getEquipmentIdnByLAN()
+        public bool getEquipmentIdnByLAN(FormattedIO488 ioTestSet, Ivi.Visa.Interop.ResourceManager resourceMng, string equipAlias)
         {
             try
             {

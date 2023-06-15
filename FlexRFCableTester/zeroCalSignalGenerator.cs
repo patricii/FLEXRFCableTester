@@ -76,6 +76,7 @@ namespace FlexRFCableTester
             interval = frmMain.textBoxIntervalFrequency.Text;
             powerLevel = frmMain.textBoxDbm.Text;
             average = frmMain.textBoxAverage.Text;
+
             double[] values = new double[Convert.ToInt32(average)];
             Stopwatch logTimer = new Stopwatch();
             Stopwatch startProcessWatch = new Stopwatch();
