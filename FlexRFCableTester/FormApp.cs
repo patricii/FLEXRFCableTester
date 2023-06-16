@@ -82,7 +82,7 @@ namespace FlexRFCableTester
             }
         }
 
-        private void zeroCalProcess()
+        private bool zeroCalProcess()
         {
             logger = new Logger();
             int zStatus = 0;
@@ -96,6 +96,7 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Não foi possivel conectar com o Equipamento Power Meter!!!", "Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 zStatus = -1;
+                return false;
             }
             try
             {
@@ -105,6 +106,7 @@ namespace FlexRFCableTester
             {
                 MessageBox.Show("Não foi possivel conectar com o Equipamento Signal Generator!!!", "Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 zStatus = -1;
+                return false;
             }
             if (zStatus == 0)
             {
@@ -124,6 +126,7 @@ namespace FlexRFCableTester
                         else
                         {
                             MessageBox.Show("O modelo do Power Meter não compativel!!!", "Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
                         }
                     }
                     if (zeroCalPowerMeter.resultZeroCalPowerMeter == "Finished")
@@ -141,6 +144,7 @@ namespace FlexRFCableTester
                             {
                                 textBoxAddressSignalGen.BackColor = Color.Red;
                                 MessageBox.Show("O modelo do Signal Generator é diferente do correto!!!", "Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return false;
                             }
                         }
                     }
@@ -148,18 +152,19 @@ namespace FlexRFCableTester
                     {
                         MessageBox.Show("Falha no Zero Cal do Power Meter, realize o Zero Cal novamente!!!", "Zero Power Meter - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
+                        return false;
                     }
 
                     if (zeroCalSignalGenerator.resultZeroCalSigGen != "Finished")
                     {
                         MessageBox.Show("Falha no Zero Cal do Signal Generator, realize o Zero Cal novamente!!!", "Zero Signal Generator - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         labelStatusRFTester.Text = "             Falha em zerar os Equipamentos";
+                        return false;
                     }
 
                     else
                     {
                         labelStatusRFTester.Text = "Zero Cal do SignalGen realizado com sucesso!!!";
-                        utils.messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
                         DateTime dateNow = DateTime.Now;
                         var MyIni = new IniFile("calFactoryValues.ini");
 
@@ -171,6 +176,7 @@ namespace FlexRFCableTester
 
                         if (MyIni.KeyExists("snSignalGen", "equipmentModel"))
                             MyIni.Write("snSignalGen", equipmentvisavisaSignalGen.verifyEquipmentModel(visaSignalGen, textBoxAddressSignalGen.Text), "equipmentModel");
+                        return true;
                     }
                 }
                 catch
@@ -178,8 +184,10 @@ namespace FlexRFCableTester
                     message = "Comunicação perdida no meio do processo de Zero Cal!!!";
                     logger.logMessage(message);
                     MessageBox.Show(message, "Comunicação Perdida - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
                 }
             }
+            return false;
         }
         private void buttonZeroCal_Click(object sender, EventArgs e)
         {
@@ -189,7 +197,9 @@ namespace FlexRFCableTester
             buttonZeroCal.BackColor = Color.Yellow;
             utils.disableAll();
             buttonStart.Enabled = false;
-            zeroCalProcess();
+            bool zeroResult = zeroCalProcess();
+            if (zeroResult)
+                utils.messageBoxFrmOk("Zero Cal realizado com sucesso!!!", "Zero Cal");
             buttonZeroCal.BackColor = Color.White;
             utils.enableAll();
             buttonStart.Enabled = true;
@@ -364,7 +374,7 @@ namespace FlexRFCableTester
                                     logger.logMessage("Cable DBLoss measure Finished Successfully");
                                     labelStatusRFTester.Text = "                          Medição Finalizada!!!";
                                     buttonStart.Text = "Start";
-                                    buttonStart.BackColor = Color.Green;
+                                    buttonStart.BackColor = Color.DeepSkyBlue;
                                     Application.DoEvents();
                                 }
                                 else
@@ -374,7 +384,7 @@ namespace FlexRFCableTester
                                     MessageBox.Show("Cable DBLoss  measure Failed!!!", "Medição - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     labelStatusRFTester.Text = "             Aferição do cabo não foi realizada!!!";
                                     buttonStart.Text = "Start";
-                                    buttonStart.BackColor = Color.Green;
+                                    buttonStart.BackColor = Color.DeepSkyBlue;
                                     Application.DoEvents();
                                     return -1;
                                 }
@@ -417,7 +427,7 @@ namespace FlexRFCableTester
                     logger.logMessage(message);
                     MessageBox.Show(message, "Zero Cal - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     buttonStart.Text = "Start";
-                    buttonStart.BackColor = Color.White;
+                    buttonStart.BackColor = Color.DeepSkyBlue;
                     labelStatusRFTester.Text = message;
                     utils.enableAll();
                     return -1;
@@ -429,7 +439,7 @@ namespace FlexRFCableTester
                 logger.logMessage(message);
                 MessageBox.Show(message, "Cart Incorreto - ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 buttonStart.Text = "Start";
-                buttonStart.BackColor = Color.White;
+                buttonStart.BackColor = Color.DeepSkyBlue;
                 labelStatusRFTester.Text = message;
                 utils.enableAll();
                 return -1;
