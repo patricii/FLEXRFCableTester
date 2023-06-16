@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelAppName = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
@@ -110,7 +110,7 @@
             // 
             this.labelAppName.AutoSize = true;
             this.labelAppName.Font = new System.Drawing.Font("Segoe UI", 33.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAppName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelAppName.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.labelAppName.Location = new System.Drawing.Point(12, 30);
             this.labelAppName.Name = "labelAppName";
             this.labelAppName.Size = new System.Drawing.Size(463, 61);
@@ -334,7 +334,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonStart.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonStart.Location = new System.Drawing.Point(1142, 515);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(112, 42);
@@ -635,38 +635,38 @@
             // 
             // chartResults
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartResults.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartResults.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chartResults.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartResults.Legends.Add(legend4);
             this.chartResults.Location = new System.Drawing.Point(-1, 3);
             this.chartResults.Name = "chartResults";
             this.chartResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Gray;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            series1.Legend = "Legend1";
-            series1.Name = "Low Limit";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.Gray;
-            series2.Legend = "Legend1";
-            series2.Name = "High Limit";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Green;
-            series3.Legend = "Legend1";
-            series3.Name = "Loss(dB)";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.LimeGreen;
-            series4.Legend = "Legend1";
-            series4.Name = "Loss(dB)2";
-            this.chartResults.Series.Add(series1);
-            this.chartResults.Series.Add(series2);
-            this.chartResults.Series.Add(series3);
-            this.chartResults.Series.Add(series4);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Color = System.Drawing.Color.Gray;
+            series13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            series13.Legend = "Legend1";
+            series13.Name = "Low Limit";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series14.Color = System.Drawing.Color.Gray;
+            series14.Legend = "Legend1";
+            series14.Name = "High Limit";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series15.Color = System.Drawing.Color.Green;
+            series15.Legend = "Legend1";
+            series15.Name = "Loss(dB)";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series16.Color = System.Drawing.Color.LimeGreen;
+            series16.Legend = "Legend1";
+            series16.Name = "Loss(dB)2";
+            this.chartResults.Series.Add(series13);
+            this.chartResults.Series.Add(series14);
+            this.chartResults.Series.Add(series15);
+            this.chartResults.Series.Add(series16);
             this.chartResults.Size = new System.Drawing.Size(1265, 558);
             this.chartResults.TabIndex = 0;
             this.chartResults.Text = "Measures Results";

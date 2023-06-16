@@ -29,7 +29,7 @@ namespace FlexRFCableTester
         public void setButtonToStart()
         {
             frmApp.buttonStart.Text = "Start";
-            frmApp.buttonStart.BackColor = Color.Green;
+            frmApp.buttonStart.BackColor = Color.DeepSkyBlue;
             frmApp.labelStatusRFTester.Text = "";
             enableAll();
         }
