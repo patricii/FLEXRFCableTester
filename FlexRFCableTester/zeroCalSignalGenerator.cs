@@ -273,6 +273,7 @@ namespace FlexRFCableTester
             catch (Exception ex)
             {
                 logger.logMessage("Exception: " + ex);
+                return false;
             }
             return true;
         }

@@ -242,6 +242,11 @@ namespace FlexRFCableTester
                         tabControlMain.SelectedIndex = 2;
                         countGraphOverlap++;
                     }
+                    else
+                    {
+                        utils.enableAll();
+                        utils.setButtonToStart();
+                    }
                     stopAction = false;
                 }
                 catch
