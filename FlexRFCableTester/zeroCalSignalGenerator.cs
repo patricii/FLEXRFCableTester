@@ -279,8 +279,11 @@ namespace FlexRFCableTester
         }
         private void buttonOkSg_Click(object sender, System.EventArgs e)
         {
+            resultZeroCalSigGen = string.Empty;
             buttonOkSg.BackColor = Color.Green;
             buttonOkSg.Enabled = false;
+            frmMain.dataGridViewMeasureTable.Rows.Clear();
+            frmMain.dataGridViewMeasureTable.Refresh();
             Application.DoEvents();
             bool result = zeroCalSignalGenMtd(visaSignalGen, "zeroCal");
 
