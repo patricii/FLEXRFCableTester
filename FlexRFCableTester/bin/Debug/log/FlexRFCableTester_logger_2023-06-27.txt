@@ -31985,3 +31985,13 @@
 
 6/27/2023 10:38:33 AM - [-> Aferição do cabo realizada com sucesso!!!]
 
+6/27/2023 11:02:23 AM - [-> GPIB0::30::INSTR -> Write: *IDN?]
+
+6/27/2023 11:02:23 AM - [-> GPIB0::30::INSTR -> Read: Keysight Technologies,E4416A,MY52180001,A1.05.06
+]
+
+6/27/2023 11:02:23 AM - [-> GPIB0::2::INSTR -> Write: *IDN?]
+
+6/27/2023 11:02:24 AM - [-> GPIB0::2::INSTR -> Read: Agilent Technologies, E4438C, MY50142633, A. 01. 51
+]
+
